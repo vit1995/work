@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1756146950100"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756146950100">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
+				<div class="header__container">
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+					<a href="#" class="header__logo">
+						<picture>
+							<img alt="#" src="./assets/img/footer/logo.webp">
+						</picture>
+						<div class="header__logo-text">
+							<p>PEREVOZIM.BY</p>
+							<span>грузоперевозки по доступным ценам</span>
+						</div>
+					</a>
+					<div data-fls-dynamic=".menu__body, 600" class="header__phone-body">
+						<a class="header__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+						<p class="header__phone-text">круглосуточно</p>
+					</div>
+					<div class="header__menu menu">
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+						<!--
+<include
+src="@components/layout/menu/menu.html"
+locals='{"active":"Home"}'
+></include>
+-->
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item menu__item--icon-cube">
+									<!-- <i class="--icon-cube"></i> -->
+									<a href="" class="menu__link">Услуги</a>
+								</li>
+								<li class="menu__item menu__item--icon-pricetag-multiple">
+									<!-- <i class="--icon-pricetag-multiple"></i> -->
+									<a href="" class="menu__link">Цены</a>
+								</li>
+								<li class="menu__item menu__item--icon-transport">
+									<!-- <i class="--icon-car-with-luggage"></i> -->
+									<a href="" class="menu__link">Автопарк</a>
+								</li>
+								<li class="menu__item menu__item--icon-calculator">
+									<!-- <i class="--icon-calculator"></i> -->
+									<a href="" class="menu__link">Калькулятор</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="page page--home">
+				<section class="hero">
+					<div class="hero__container">
+						<picture>
+							<source media="(max-width: 600px)" srcset="./assets/img/hero/bg-600.webp" type="image/webp">
+							<source media="(max-width: 1200px)" srcset="./assets/img/hero/bg-1200.webp" type="image/webp">
+							<img class="hero__img" alt="@" src="./assets/img/hero/bg.webp">
+						</picture>
+						<div class="hero__body">
+							<div class="hero__content">
+								<h1 class="hero__title">
+									<span>Грузоперевозки</span>
+									В МИНСКЕ И ОБЛАСТИ ПО НИЗКОЙ ЦЕНЕ
+								</h1>
+								<p class="hero__subtitle">Закажите грузоперевозки на 10-15% дешевле, чем в среднем по городу.</p>
+								<div class="hero__price">
+									<div class="hero__icon-body hero__icon-body--icon-percent-circle"><!-- <i class="hero__icon hero__icon--icon-percentage"></i> --></div>
+									<div class="hero__price-text">
+										<p>СКИДКА 10%</p>
+										<span>КВАРТИРНЫЙ ПЕРЕЕЗД</span>
+									</div>
+								</div>
+								<a href="#" class="button" data-fls-button="" data-fls-ripple="">
+									<span class="shadow"></span>
+									<span class="edge"></span>
+									<span class="button-text">заказать сейчас</span>
+								</a>
+							</div>
+						</div>
+						<div data-fls-showmore="" class="hero__text text-hero">
+							<div data-fls-showmore-content="" class="text-hero__content">
+								<p>
+									Ищете надежные грузоперевозки в Минске и области? Мы принимаем
+            срочные и предварительные заявки на перевозки по Минску, включая
+            квартирные и офисные переезды, а также вывоз диванов. Наши услуги
+            охватывают перевозку любых грузов с профессиональными грузчиками, а
+            также разборку и сборку мебели, а также предоставление упаковочных
+            материалов для безопасной транспортировки.
+								</p>
+								<p>
+									Почему выбирают именно нас? Мы предлагаем грузоперевозки по ценам на
+            10-15% ниже средних по Минску, что делает наши услуги особенно
+            выгодными. Наши опытные операторы помогут подобрать оптимальный
+            тариф, учитывая тип груза, район доставки и ваши индивидуальные
+            пожелания. Автомобильные грузоперевозки доступны круглосуточно и в
+            любую погоду, что обеспечивает гибкость и надежность сервиса.
+								</p>
+								<p>
+									Если вам нужна недорогая автоперевозка из Минска, стоимость
+            рассчитывается прямо на нашем сайте. Используйте наши тарифы для
+            быстрого и точного определения стоимости грузоперевозки и планируйте
+            переезд без лишних хлопот.
+								</p>
+							</div>
+							<button hidden data-fls-showmore-button="" type="button" class="text-hero__more">
+								<span>Показать ещё</span>
+								<span>Скрыть</span>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="services">
+					<div class="services__container">
+						<h2 class="services__title title">УСЛУГИ ГРУЗОПЕРЕВОЗОК В МИНСКЕ:</h2>
+						<div class="services__items">
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Грузоперевозки Минск</p>
+								<p class="services__price">Цена от 20 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Квартирный переезд</p>
+								<p class="services__price">Цена от 20 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Грузоперевозки мебели</p>
+								<p class="services__price">Цена от 20 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Дачного переезда</p>
+								<p class="services__price">Цена от 20 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Грузоперевозки вещей</p>
+								<p class="services__price">Цена от 20 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Офисный переезд</p>
+								<p class="services__price">Цена от 30 р.ч.</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Перевозка торгового оборудования</p>
+								<p class="services__price">Цена по запросу</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Грузоперевозки склада</p>
+								<p class="services__price">Цена по запросу</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">грузоперевозки банка</p>
+								<p class="services__price">Цена по запросу</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+							<div class="services__item">
+								<div class="services__image">
+									<picture>
+										<img alt="#" src="./assets/img/services/01.webp">
+									</picture>
+								</div>
+								<p class="services__name">Грузоперевозки выставочных стендов Дополнительные услуги:</p>
+								<p class="services__price">Цена по запросу</p>
+								<p class="services__text">
+									Предоставим стандартную или удлиненную машину для перевозок
+            стройматериалов, мебели, промтоваров, продуктов питания.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="popular">
+					<div class="popular__container">
+						<h2 class="popular__title title">Популярные услуги</h2>
+						<div class="popular__items">
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Услуги грузчиков</h3>
+									<p class="popular__item-price">1400 ₽/грузчик</p>
+								</div>
+								<p class="popular__item-text">
+									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
+            этаж
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Картонная коробка</h3>
+									<p class="popular__item-price">130 ₽/коробка</p>
+								</div>
+								<p class="popular__item-text">
+									Универсальная упаковка. Подойдет для одежды, посуды, архивов
+            документов и прочего
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Паллетирование</h3>
+									<p class="popular__item-price">500 ₽/паллет</p>
+								</div>
+								<p class="popular__item-text">
+									Надежная фиксация. Защита груза от внешних воздействий и
+            механических повреждений
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Воздушно-пузырчатая пленка (ВПП)</h3>
+									<p class="popular__item-price">
+										190 ₽/м
+										<sup>2</sup>
+									</p>
+								</div>
+								<p class="popular__item-text">Надежная защита от повреждений хрупких предметов при транспортировке</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Обрешетка / Жесткая упаковка (ЖУ)</h3>
+									<p class="popular__item-price">
+										1500 ₽/м
+										<sup>3</sup>
+									</p>
+								</div>
+								<p class="popular__item-text">
+									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
+            этаж
+								</p>
+							</div>
+							<div class="popular__item popular__item--all">
+								<p>Еще услуги</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="car">
+					<div class="car__container">
+						<h2 class="car__title title">Наш автопарк</h2>
+						<!-- Оболочка слайдера -->
+						<div data-fls-slider="" class="car__slider swiper">
+							<!-- Часть слайдера, которая двигается -->
+							<div class="car__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1.5</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+							</div>
+							<!-- Если нужна пагинация -->
+							<div class="swiper-pagination"></div>
+							<button type="button" class="swiper-button-prev"></button>
+							<button type="button" class="swiper-button-next"></button>
+							<!-- Если нужен -->
+						</div>
+					</div>
+				</section>
+				<section class="advantages">
+					<div class="advantages__container">
+						<h2 class="advantages__title title">Грузоперевозки с грузчиками – это удобно и недорого</h2>
+						<p class="advantages__text">
+							Профессиональные опытные грузчики грамотно упакуют ваши вещи перед
+        перевозкой, аккуратно загрузят в авто, закрепят в кузове для безопасной
+        транспортировки. У нас – самые недорогие услуги грузчиков и аренды авто
+        в Минске и области: оставьте заявку на перевозку, и вы убедитесь в этом
+        сами!
+						</p>
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<picture>
+									<img class="advantages__item-image" alt="#" src="./assets/img/advantages/01.webp">
+								</picture>
+								<p class="advantages__item-text">Наши грузчики умеют обращаться с хрупкими предметами</p>
+							</div>
+							<div class="advantages__item">
+								<picture>
+									<img class="advantages__item-image" alt="#" src="./assets/img/advantages/02.webp">
+								</picture>
+								<p class="advantages__item-text">Наши грузчики</p>
+							</div>
+							<div class="advantages__item">
+								<picture>
+									<img class="advantages__item-image" alt="#" src="./assets/img/advantages/03.webp">
+								</picture>
+								<p class="advantages__item-text">Наши грузчики</p>
+							</div>
+						</div>
+						<form class="advantages__form form-advantages" action="files/sendmail/sendmail.php" method="POST">
+							<div class="form-advantages__item">
+								<input type="text" name="name" data-fls-input="" data-error="Заполните поле" placeholder="Ваше имя:" class="form-advantages__input input">
+								<input type="text" name="phone" data-fls-input="" data-fls-input-mask="+375(__) ___ __ __" data-error="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+							</div>
+							<div class="form-advantages__block">
+								<button type="submit" class="form-advantages__button button">Отправить</button>
+								<div class="form-advantages__phone-body">
+									<p class="form-advantages__phone-text">подробности по телефону:</p>
+									<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+								</div>
+								<!--
+<p class="form-advantages__ring">
+<span class="form-advantages__star">*</span> Перезвоним сразу же!
+</p>
+-->
+							</div>
+						</form>
+					</div>
+				</section>
+				<section class="questions">
+					<div class="questions__container">
+						<h2 class="questions__title title">Часто задаваемые вопросы по грузоперевозкам</h2>
+						<p class="questions__text">
+							Переезжаем? Легко, недорого и без стресса! Вот уже более 17 лет мы
+        отвечаем за грузовые перевозки в Минске и по всей Минской области.
+        Доставим в срок из точки А в точку Б и целую квартиру, и пианино, и
+        склад. Если вам нужна перевозка грузов по Минску и области, мы это
+        сделаем безупречно. Осуществляем грузоперевозки по городу недорого, с
+        гарантией четкого соблюдения сроков и полной сохранности ваших вещей.
+        Интересуют грузовые перевозки? Будем рады помочь. Закажите машину прямо
+        сейчас!
+						</p>
+						<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Сколько стоит перевозка мебели в Минске?</summary>
+								<div class="spollers__body">
+									<p>
+										Цена зависит от объёма мебели, расстояния и количества грузчиков. У нас перевозка мебели недорого, стоимость рассчитывается индивидуально и без скрытых платежей.
+									</p>
+									<p>
+										Пожалуйста, позвоните нашему диспетчеру
+										<a href="tel:+375447866149">+375 (44) 786-61-49</a>
+										. И мы постараемся решить Вашу задачу в минимальные сроки.
+									</p>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Заголовок спойлера</summary>
+								<div class="spollers__body">Контент спойлера</div>
+							</details>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__top">
+						<a href="#" class="footer__logo">
+							<picture>
+								<img alt="#" src="./assets/img/footer/logo.webp">
+							</picture>
+							<div class="footer__logo-text">
+								<p>PEREVOZIM.BY</p>
+								<span>грузоперевозки по доступным ценам</span>
+							</div>
+						</a>
+						<div class="footer__info">
+							<a class="footer__phone" href="tel:375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							<p class="footer__anytime">Звоните круглосуточно! Мы работаем каждый день.</p>
+							<p class="footer__address">Адрес офиса: г. Минск, ул. Толстого д. 10</p>
+						</div>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li>
+									<a href="#">Офисный переезд</a>
+								</li>
+								<li>
+									<a href="#">Перевозка мебели</a>
+								</li>
+								<li>
+									<a href="#">Квартирный переезд</a>
+								</li>
+								<li>
+									<a href="#">Дачный переезд</a>
+								</li>
+								<li>
+									<a href="#">Грузовое такси</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="footer__menu">
+							<ul class="footer__list">
+								<li>
+									<a href="#">Заказ грузоперевозки</a>
+								</li>
+								<li>
+									<a href="#">Перевозка грузов</a>
+								</li>
+								<li>
+									<a href="#">Транспортные услуги</a>
+								</li>
+								<li>
+									<a href="#">Машина с грузчиками</a>
+								</li>
+								<li>
+									<a href="#">Грузоперевозки</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__bottom">
+						<p>
+							2008 -
+							<script type="text/javascript">
+                document.write(new Date().getFullYear());
+							</script>
+							© Грузоперевозки в Минске. Все права защищены.
+						</p>
+						<p>
+							Информация на данном интернет-сайте носит исключительно ознакомительный
+        характер и ни при каких условиях не является публичной офертой.
+						</p>
+						<p>
+							Все материалы сайта защищены законом Республики Беларусь от 17 мая 2011
+        года №262-З "Об авторском праве и смежных правах" Копирование и
+        распространение материалов без согласия владельцев сайта запрещено.
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
