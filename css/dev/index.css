@@ -1519,7 +1519,7 @@ textarea.input {
   align-items: center;
   align-self: flex-start;
 }
-.advantages__item-image {
+.advantages__item-image img {
   aspect-ratio: 200/200;
   max-width: 12.5rem;
   width: 100%;
