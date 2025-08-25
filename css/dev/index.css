@@ -1238,7 +1238,6 @@ textarea.input {
 .hero {
   position: relative;
   margin-top: 3.75rem;
-  min-height: 100svh;
 }
 .hero__img {
   position: absolute;
