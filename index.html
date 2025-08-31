@@ -5,12 +5,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1756219286133"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756219286133">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1756641358788"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756641358788">
 	</head>
 	<body>
 		<div class="wrapper">
 			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
+				<div class="header__action action-header">
+					<div class="action-header__container">
+						<div class="action-header__text">
+							Только сегодня акция
+							<div class="action-header__num">
+								<span>-5%</span>
+							</div>
+							на заказ перевозки на завтра!
+						</div>
+						<button class="action-header__button action-header__button--icon-x-circle"></button>
+					</div>
+				</div>
 				<div class="header__container">
 					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
 					<a href="#" class="header__logo">
@@ -40,26 +52,360 @@ locals='{"active":"Home"}'
 							<ul class="menu__list">
 								<li class="menu__item menu__item--icon-cube">
 									<!-- <i class="--icon-cube"></i> -->
-									<a href="" class="menu__link">Услуги</a>
+									<a href="#" data-fls-scrollto-header="" data-fls-scrollto=".services" class="menu__link">Услуги</a>
 								</li>
 								<li class="menu__item menu__item--icon-pricetag-multiple">
 									<!-- <i class="--icon-pricetag-multiple"></i> -->
-									<a href="" class="menu__link">Цены</a>
+									<a data-fls-scrollto-header="" data-fls-scrollto=".cheap" href="#" class="menu__link">Цены</a>
 								</li>
 								<li class="menu__item menu__item--icon-transport">
 									<!-- <i class="--icon-car-with-luggage"></i> -->
-									<a href="" class="menu__link">Автопарк</a>
+									<a data-fls-scrollto-header="" data-fls-scrollto=".car" href="#" class="menu__link">Автопарк</a>
 								</li>
 								<li class="menu__item menu__item--icon-calculator">
 									<!-- <i class="--icon-calculator"></i> -->
-									<a href="" class="menu__link">Калькулятор</a>
+									<a data-fls-scrollto-header="" data-fls-scrollto=".calculator" href="#" class="menu__link">Калькулятор</a>
 								</li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</header>
+			<div data-fls-popup="popup" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<div class="select__wrapper">
+									<p class="select__label">Откуда:</p>
+									<select required name="when" data-fls-select="" data-fls-select-modif="form">
+										<option value="Сегодня" selected>Сегодня</option>
+										<option value="Завтра">Завтра</option>
+										<option value="Послезавтра">Послезавтра</option>
+										<option value="Другой день">Другой день</option>
+									</select>
+								</div>
+								<input data-fls-input="" autocomplete="off" type="text" required name="where-from" data-fls-form-errtext="Заполните поле" placeholder="Откуда:" class="popup__input input">
+								<input data-fls-input="" autocomplete="off" type="text" required name="where" data-fls-form-errtext="Заполните поле" placeholder="Куда::" class="popup__input input">
+								<div class="select__wrapper">
+									<p class="select__label">Куда:</p>
+									<select required name="tonnage" data-fls-select="" data-fls-select-modif="form">
+										<option value="1 тонна" selected>1 тонна</option>
+										<option value="1.5 тонны">1.5 тонны</option>
+										<option value="3 тонны">3 тонны</option>
+										<option value="5 тонн">5 тонн</option>
+										<option value="7 тонн">7 тонн</option>
+										<option value="20 тонн">20 тонн</option>
+									</select>
+								</div>
+								<input data-fls-input="" autocomplete="off" type="text" name="Loader" required data-fls-form-errtext="Заполните поле" placeholder="Грузчики:" class="popup__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<!--
+<div data-fls-quantity class="quantity">
+<button
+data-fls-quantity-minus
+type="button"
+class="quantity__button quantity__button--minus"
+></button>
+<div class="quantity__input">
+<input
+data-fls-quantity-value
+autocomplete="off"
+type="text"
+name="form[]"
+value="1"
+/>
+</div>
+<button
+data-fls-quantity-plus
+type="button"
+class="quantity__button quantity__button--plus"
+></button>
+</div>
+-->
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-1" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>МИНИ</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-2" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>МИНИ+</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-3" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Легко</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-4" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Легко+</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-5" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Просто</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-6" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Просто+</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-7" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Максимум</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-tab-18" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">
+								Тариф
+								<span>Максимум+</span>
+							</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-threa" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">Получить специальное предложение</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-message" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 style="color: red; line-height: 1.2; text-transform: uppercase" class="popup__title">СПАСИБО ВАША ФОРМА УСПЕШНО ОТПРАВЛЕНА!</h2>
+						</div>
+					</div>
+				</div>
+			</div>
 			<main class="page page--home">
+				<div class="tools">
+					<a href="#" class="tools__item">
+						<p class="--icon-whatsapp-fill"></p>
+					</a>
+					<a href="#" class="tools__item">
+						<p class="--icon-viber-chat-app"></p>
+					</a>
+					<a href="#" class="tools__item">
+						<p class="--icon-instagram"></p>
+					</a>
+				</div>
 				<section class="hero">
 					<div class="hero__img">
 						<picture>
@@ -84,7 +430,7 @@ locals='{"active":"Home"}'
 										<span>КВАРТИРНЫЙ ПЕРЕЕЗД</span>
 									</div>
 								</div>
-								<a href="#" class="button" data-fls-button="" data-fls-ripple="">
+								<a href="#" data-fls-popup-link="popup" class="button" data-fls-button="" data-fls-ripple="">
 									<span class="shadow"></span>
 									<span class="edge"></span>
 									<span class="button-text">заказать сейчас</span>
@@ -120,6 +466,469 @@ locals='{"active":"Home"}'
 								<span>Показать ещё</span>
 								<span>Скрыть</span>
 							</button>
+						</div>
+					</div>
+				</section>
+				<section class="recommend">
+					<div class="recommend__container">
+						<div class="recommend__star">
+							<picture>
+								<img alt="Image" src="./assets/img/recommend/01.webp">
+							</picture>
+						</div>
+						<div class="recommend__content">
+							<h2 class="recommend__title">
+								Нас рекомендуют
+								<span>
+									97
+									<small>%</small>
+								</span>
+								клиентов
+							</h2>
+							<div class="recommend__text">
+								<p>
+									Нам не приходится тратить огромные суммы на рекламу, ведь абсолютное
+            большинство из тех, кто заказал у нас грузоперевозки по Минску,
+            становятся нашими постоянными клиентами. Более 97% заказчиков готовы
+            рекомендовать наши услуги родным, друзьям и коллегам. Чтобы
+            отблагодарить постоянных клиентов, мы выполняем для них
+            грузоперевозки по специальным сниженным тарифам.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="capacity">
+					<div class="capacity__container">
+						<div class="capacity__item">
+							<p class="capacity__top capacity__top--icon-point-coin-2">от 20</p>
+							<p class="capacity__title">рублей - стоимость на 1 час</p>
+							<p class="capacity__text">(грузоперевозки до 15% дешевле, чем в других ТК в МИНСКЕ)</p>
+						</div>
+						<div class="capacity__item">
+							<p class="capacity__top apacity__top--icon-clock">24</p>
+							<p class="capacity__title">часа в сутки</p>
+							<p class="capacity__text">(перевезем ваш груз в любое время суток)</p>
+						</div>
+						<div class="capacity__item">
+							<p class="capacity__top capacity__top--icon-car-traffic-transport-4">105</p>
+							<p class="capacity__title">собственных грузовиков</p>
+							<p class="capacity__text">(быстро перевезем груз любого веса и объема)</p>
+						</div>
+						<div class="capacity__item">
+							<p class="capacity__top capacity__top--icon-cube">9</p>
+							<p class="capacity__title">лет успешной работы</p>
+							<p class="capacity__text">(на рынке Минска и области)</p>
+						</div>
+					</div>
+				</div>
+				<div class="form">
+					<div class="form__container">
+						<div class="form__circle">
+							<p>Заказать</p>
+							<span>ГРУЗОВИК</span>
+							<p>прямо сейчас:</p>
+						</div>
+						<form data-fls-form="ajax" data-fls-form-popup="popup" method="POST" action="files/sendmail/sendmail.php" class="form__body">
+							<div class="form__item">
+								<div data-fls-radio="" class="options">
+									<label class="options__item">
+										<input class="options__input" checked type="radio" value="Для переезда по городу" name="option">
+										<span class="options__text">Для переезда по городу</span>
+									</label>
+									<label class="options__item">
+										<input class="options__input" type="radio" value="Для доставки товаров" name="option">
+										<span class="options__text">Для доставки товаров</span>
+									</label>
+									<label class="options__item">
+										<input class="options__input" type="radio" value="Для грузоперевозки в область" name="option">
+										<span class="options__text">Для грузоперевозки в область</span>
+									</label>
+									<label class="options__item">
+										<input class="options__input" type="radio" value="Для перевозки мебели" name="option">
+										<span class="options__text">Для перевозки мебели</span>
+									</label>
+									<label class="options__item">
+										<input class="options__input" type="radio" value="Для прочих перевозок" name="option">
+										<span class="options__text">Для прочих перевозок</span>
+									</label>
+								</div>
+								<p class="form__ring">
+									<span class="form__star">*</span>
+									Перезвоним через 3 минуты
+								</p>
+							</div>
+							<div class="form__item">
+								<input type="text" name="name" data-fls-input="" required data-fls-form-errtext="Заполните поле" placeholder="Ваше имя:" class="form-advantages__input input">
+								<input type="text" required name="phone" data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<label data-fls-checkbox="" class="checkbox">
+									<input data-error="Ошибка" class="checkbox__input" type="checkbox" value="Авто с грузчиками" name="check">
+									<span class="checkbox__text">Авто с грузчиками</span>
+								</label>
+								<button type="submit" class="form__button form-advantages__button button">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<section class="cheap">
+					<div class="cheap__container">
+						<h2 class="cheap__title title">Самые низкие цены в МИНСКЕ</h2>
+						<div data-fls-showmore="" class="cheap__text-body">
+							<div data-fls-showmore-content="400" class="c cheap__body">
+								<p class="cheap__text">
+									Перевозим все и всех! Вот уже более 15 лет мы безупречно оказываем
+            транспортные услуги грузоперевозок для переезда частных клиентов.
+            Также мы готовы предложить свои услуги и для бизнеса. Грузовой
+            переезд с нашей компанией – это услуга, в которую все включено, а
+            именно: транспорт для переезда, погрузка и перевозка груза,
+            транспортировка грузов, подъем на этаж.
+								</p>
+								<div class="cheap__banner">
+									<picture>
+										<img class="cheap__image" alt="Image" src="./assets/img/banner/banner.webp">
+									</picture>
+									<div class="cheap__items">
+										<div class="cheap__item">
+											<div class="cheap__item-title">Получить специальное предложение</div>
+											<p class="cheap__item-text">для корпоративных клиентов</p>
+										</div>
+										<div class="cheap__item cheap__item--link">
+											<div class="cheap__block">
+												<a href="tel:+375 (44) 786-61-49" class="cheap__item-link">+375 (44) 786-61-49</a>
+												<p class="cheap__item-text">для юридических лиц</p>
+											</div>
+											<a data-fls-popup-link="popup-threa" class="cheap__button cheap__button--icon-play-circle-fil" href="#"></a>
+										</div>
+									</div>
+								</div>
+								<p class="cheap__text">
+									Перевозим все и всех! Вот уже более 15 лет мы безупречно оказываем
+            транспортные услуги грузоперевозок для переезда частных клиентов.
+            Также мы готовы предложить свои услуги и для бизнеса. Грузовой
+            переезд с нашей компанией – это услуга, в которую все включено, а
+            именно: транспорт для переезда, погрузка и перевозка груза,
+            транспортировка грузов, подъем на этаж.
+								</p>
+							</div>
+							<button hidden data-fls-showmore-button="" type="button" class="cheap__text-more">
+								<span>Показать ещё</span>
+								<span>Скрыть</span>
+							</button>
+						</div>
+					</div>
+				</section>
+				<section class="tabs-block">
+					<div class="tabs-block__container">
+						<div data-fls-tabs="" data-fls-tabs-animate="1000" class="tabs">
+							<div data-fls-tabs-body="" class="tabs__content">
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини"</span>
+										</h3>
+										<div class="tabs__label label">самый популярный</div>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">Без грузчика</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">35 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">20 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-1" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/car/01.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-2" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/car/01.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>""Легко""</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 человек</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">65 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">35 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-3" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/03.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-4" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/03.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-5" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/05.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-6" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/05.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-7" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/07.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__header">
+										<h3 class="tabs__tab-title">
+											Тариф
+											<span>"Мини+"</span>
+										</h3>
+									</div>
+									<div class="tabs__main">
+										<div class="tabs__column">
+											<table class="tabs__table">
+												<tr>
+													<th scope="row" class="name">Время</th>
+													<td class="value">min - 2 час</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Грузчики</th>
+													<td class="value">1 грузчик</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Стоимость</th>
+													<td class="value">60 руб</td>
+												</tr>
+												<tr>
+													<th scope="row" class="name">Доп. час</th>
+													<td class="value">30 руб</td>
+												</tr>
+											</table>
+											<p class="tabs__car-name">Авто до 10 куб</p>
+											<a data-fls-popup-link="popup-tab-8" class="tabs__button button" href="#">заказать</a>
+										</div>
+										<div class="tabs__picture">
+											<picture>
+												<img alt="Image" src="./assets/img/tab/07.webp">
+											</picture>
+										</div>
+									</div>
+								</div>
+							</div>
+							<nav data-fls-tabs-titles="" class="tabs__navigation">
+								<button type="button" class="tabs__title --tab-active">Мини</button>
+								<button type="button" class="tabs__title">Мини+</button>
+								<button type="button" class="tabs__title">Легко</button>
+								<button type="button" class="tabs__title">Легко+</button>
+								<button type="button" class="tabs__title">Просто</button>
+								<button type="button" class="tabs__title">Просто+</button>
+								<button type="button" class="tabs__title">Максимум</button>
+								<button type="button" class="tabs__title">Максимум+</button>
+							</nav>
 						</div>
 					</div>
 				</section>
@@ -260,65 +1069,52 @@ locals='{"active":"Home"}'
 						</div>
 					</div>
 				</section>
-				<section class="popular">
-					<div class="popular__container">
-						<h2 class="popular__title title">Популярные услуги</h2>
-						<div class="popular__items">
-							<div class="popular__item">
-								<div class="popular__top">
-									<h3 class="popular__item-title">Услуги грузчиков</h3>
-									<p class="popular__item-price">1400 ₽/грузчик</p>
-								</div>
-								<p class="popular__item-text">
-									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
-            этаж
-								</p>
+				<section class="discounts">
+					<div class="discounts__container">
+						<div class="discounts__body">
+							<div class="discounts__picture">
+								<picture>
+									<img alt="Image" src="./assets/img/discounts/01.webp">
+								</picture>
 							</div>
-							<div class="popular__item">
-								<div class="popular__top">
-									<h3 class="popular__item-title">Картонная коробка</h3>
-									<p class="popular__item-price">130 ₽/коробка</p>
-								</div>
-								<p class="popular__item-text">
-									Универсальная упаковка. Подойдет для одежды, посуды, архивов
-            документов и прочего
-								</p>
-							</div>
-							<div class="popular__item">
-								<div class="popular__top">
-									<h3 class="popular__item-title">Паллетирование</h3>
-									<p class="popular__item-price">500 ₽/паллет</p>
-								</div>
-								<p class="popular__item-text">
-									Надежная фиксация. Защита груза от внешних воздействий и
-            механических повреждений
-								</p>
-							</div>
-							<div class="popular__item">
-								<div class="popular__top">
-									<h3 class="popular__item-title">Воздушно-пузырчатая пленка (ВПП)</h3>
-									<p class="popular__item-price">
-										190 ₽/м
-										<sup>2</sup>
+							<div class="discounts__content">
+								<div class="discounts__header">
+									<h2 class="discounts__title title">Постоянные Скидки</h2>
+									<p class="discounts__subtitle">
+										Предоставим дополнительную скидку
+										<strong>10%</strong>
+										на услуги
+              грузоперевозок по Минску.
 									</p>
 								</div>
-								<p class="popular__item-text">Надежная защита от повреждений хрупких предметов при транспортировке</p>
-							</div>
-							<div class="popular__item">
-								<div class="popular__top">
-									<h3 class="popular__item-title">Обрешетка / Жесткая упаковка (ЖУ)</h3>
-									<p class="popular__item-price">
-										1500 ₽/м
-										<sup>3</sup>
-									</p>
+								<div class="discounts__main">
+									<p class="discounts__text">Мы уверены, что наши предложения станут отличным подарком для вас!</p>
+									<ul class="discounts__list">
+										<li>
+											<strong>- СКИДКА ПЕНСИОНЕРАМ</strong>
+										</li>
+										<li>
+											<strong>- СКИДКА НОВОСЕЛАМ</strong>
+										</li>
+										<li>
+											<strong>- СКИДКА ВЕТЕРАНАМ</strong>
+										</li>
+									</ul>
 								</div>
-								<p class="popular__item-text">
-									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
-            этаж
-								</p>
-							</div>
-							<div class="popular__item popular__item--all">
-								<p>Еще услуги</p>
+								<form data-fls-form="ajax" class="discounts__form" action="files/sendmail/sendmail.php" method="POST">
+									<input type="text" name="phone" data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" data-required="" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+									<button type="submit" class="discounts__button button">Отправить</button>
+									<div class="form-advantages__phone-body">
+										<p class="form-advantages__phone-text">подробности по телефону:</p>
+										<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+									</div>
+								</form>
+								<!--
+<div class="discounts__phone-body">
+<p class="discounts__phone-text"></p>
+<a class="discounts__phone-link" href="tel:"></a>
+</div>
+-->
 							</div>
 						</div>
 					</div>
@@ -396,7 +1192,7 @@ locals='{"active":"Home"}'
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -464,7 +1260,7 @@ locals='{"active":"Home"}'
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -532,7 +1328,7 @@ locals='{"active":"Home"}'
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -600,7 +1396,75 @@ locals='{"active":"Home"}'
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+									</div>
+								</div>
+								<div class="car__slide swiper-slide">
+									<div class="car__circle">
+										<p>
+											до
+											<span>1.5</span>
+											т.
+										</p>
+									</div>
+									<picture>
+										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
+									</picture>
+									<div class="car__name">АВТО 10М³</div>
+									<div class="car__specialization">Для гипермаркетов.</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__items">
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+										<div class="car__item">
+											<p class="car__label">Объём:</p>
+											<p class="car__info">
+												до 2
+												<sup>3</sup>
+											</p>
+										</div>
+									</div>
+									<div class="car__prise">
+										<p>
+											от
+											<span>45</span>
+											РУБ.ЧАС.
+										</p>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -668,75 +1532,7 @@ locals='{"active":"Home"}'
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a class="car__button button" href="#">Заказать</a>
-									</div>
-								</div>
-								<div class="car__slide swiper-slide">
-									<div class="car__circle">
-										<p>
-											до
-											<span>1</span>
-											т.
-										</p>
-									</div>
-									<picture>
-										<img class="car__image" alt="#" src="./assets/img/car/01.webp">
-									</picture>
-									<div class="car__name">АВТО 10М³</div>
-									<div class="car__specialization">Для гипермаркетов.</div>
-									<div class="car__items">
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-									</div>
-									<div class="car__items">
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-										<div class="car__item">
-											<p class="car__label">Объём:</p>
-											<p class="car__info">
-												до 2
-												<sup>3</sup>
-											</p>
-										</div>
-									</div>
-									<div class="car__prise">
-										<p>
-											от
-											<span>45</span>
-											РУБ.ЧАС.
-										</p>
-										<a class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -746,6 +1542,111 @@ locals='{"active":"Home"}'
 							<button type="button" class="swiper-button-next"></button>
 							<!-- Если нужен -->
 						</div>
+					</div>
+				</section>
+				<section class="popular">
+					<div class="popular__container">
+						<h2 class="popular__title title">Популярные услуги</h2>
+						<div class="popular__items">
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Услуги грузчиков</h3>
+									<p class="popular__item-price">1400 ₽/грузчик</p>
+								</div>
+								<p class="popular__item-text">
+									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
+            этаж
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Картонная коробка</h3>
+									<p class="popular__item-price">130 ₽/коробка</p>
+								</div>
+								<p class="popular__item-text">
+									Универсальная упаковка. Подойдет для одежды, посуды, архивов
+            документов и прочего
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Паллетирование</h3>
+									<p class="popular__item-price">500 ₽/паллет</p>
+								</div>
+								<p class="popular__item-text">
+									Надежная фиксация. Защита груза от внешних воздействий и
+            механических повреждений
+								</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Воздушно-пузырчатая пленка (ВПП)</h3>
+									<p class="popular__item-price">
+										190 ₽/м
+										<sup>2</sup>
+									</p>
+								</div>
+								<p class="popular__item-text">Надежная защита от повреждений хрупких предметов при транспортировке</p>
+							</div>
+							<div class="popular__item">
+								<div class="popular__top">
+									<h3 class="popular__item-title">Обрешетка / Жесткая упаковка (ЖУ)</h3>
+									<p class="popular__item-price">
+										1500 ₽/м
+										<sup>3</sup>
+									</p>
+								</div>
+								<p class="popular__item-text">
+									Разберут, упакуют, промаркируют, погрузят, разгрузят и поднимут на
+            этаж
+								</p>
+							</div>
+							<div class="popular__item popular__item--all">
+								<p>Еще услуги</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="calculator">
+					<div class="calculator__container">
+						<h2 class="calculator__title title">Рассчитайте стоимость перевозки</h2>
+						<form data-fls-form="ajax" class="calculator__form discounts__form" action="files/sendmail/sendmail.php" method="POST">
+							<div class="calculator__item">
+								<input data-fls-input="" autocomplete="off" type="text" required name="where-from" data-fls-form-errtext="Заполните поле" placeholder="Откуда:" class="popup__input input">
+								<input data-fls-input="" autocomplete="off" type="text" required name="where" data-fls-form-errtext="Заполните поле" placeholder="Куда:" class="popup__input input">
+							</div>
+							<div class="calculator__item">
+								<div class="calculator__block">
+									<p class="calculator__label">Выбрать автомобиль:</p>
+									<select required name="tonnage" data-fls-select="" data-fls-select-modif="calculator">
+										<option value="1 тонна" selected data-fls-select-asset="assets/img/tab/01.png">1 тонна</option>
+										<option data-fls-select-asset="assets/img/tab/02.png" value="1.5 тонны">1.5 тонны</option>
+										<option value="3 тонны" data-fls-select-asset="assets/img/tab/03.png">3 тонны</option>
+										<option data-fls-select-asset="assets/img/tab/01.png" value="5 тонн">5 тонн</option>
+										<option data-fls-select-asset="assets/img/tab/01.png" value="7 тонн">7 тонн</option>
+										<option value="20 тонн" data-fls-select-asset="assets/img/tab/01.png">20 тонн</option>
+									</select>
+								</div>
+								<div class="calculator__block">
+									<p class="calculator__label">Количество грузчиков:</p>
+									<div data-fls-rating="set" class="rating"></div>
+								</div>
+							</div>
+							<div class="calculator__item">
+								<div class="quantity__body">
+									<p class="quantity__title">Срок аренды:</p>
+									<div data-fls-quantity="" class="quantity">
+										<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+										<div class="quantity__input">
+											<input data-fls-quantity-value="" autocomplete="off" type="text" name="quantity" value="1">
+											<span class="quantity__label">часа</span>
+										</div>
+										<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+									</div>
+								</div>
+								<button class="calculator__button button" type="submit">Рассчитать</button>
+							</div>
+						</form>
 					</div>
 				</section>
 				<section class="advantages">
@@ -784,10 +1685,10 @@ locals='{"active":"Home"}'
 								<p class="advantages__item-text">Наши грузчики умеют обращаться с хрупкими предметами</p>
 							</div>
 						</div>
-						<form class="advantages__form form-advantages" action="files/sendmail/sendmail.php" method="POST">
+						<form data-fls-form="ajax" class="advantages__form form-advantages" action="files/sendmail/sendmail.php" method="POST">
 							<div class="form-advantages__item">
-								<input type="text" name="name" data-fls-input="" data-error="Заполните поле" placeholder="Ваше имя:" class="form-advantages__input input">
-								<input type="text" name="phone" data-fls-input="" data-fls-input-mask="+375(__) ___ __ __" data-error="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<input type="text" name="name" data-fls-input="" data-fls-form-errtext="Заполните поле" data-required="" placeholder="Ваше имя:" class="form-advantages__input input">
+								<input type="text" name="phone" data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" data-required="" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
 							</div>
 							<div class="form-advantages__block">
 								<button type="submit" class="form-advantages__button button">Отправить</button>
@@ -802,6 +1703,123 @@ locals='{"active":"Home"}'
 -->
 							</div>
 						</form>
+					</div>
+				</section>
+				<section class="foto">
+					<div class="foto__container">
+						<h2 class="foto__title title">ФОТО ВЫПОЛНЕННЫХ ГРУЗОПЕРЕВОЗОК В МИНСКЕ</h2>
+						<div data-fls-gallery="" class="gallery">
+							<div class="gallery__items">
+								<a class="gallery__item gallery__item--big" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/02.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/02-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/02-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/02.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+							</div>
+							<div class="gallery__items">
+								<a class="gallery__item gallery__item--big-reverse" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/02.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/02-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/02-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/02.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+								<a class="gallery__item" href="./assets/img/foto/01.webp">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/foto/01-600.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/foto/01-1200.webp" type="image/webp">
+										<img alt="" src="./assets/img/foto/01.webp">
+									</picture>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="banner">
+					<picture>
+						<source media="(max-width: 600px)" srcset="./assets/img/banner-two/01-600.webp" type="image/webp">
+						<source media="(max-width: 1200px)" srcset="./assets/img/banner-two/01-1200.webp" type="image/webp">
+						<img class="banner__image" alt="Image" src="./assets/img/banner-two/01.webp">
+					</picture>
+					<div class="banner__container">
+						<h2 class="banner__title">
+							<p>Дешевле</p>
+							<span class="tabs__label label">не бывает</span>
+						</h2>
+						<div class="banner__item">
+							<p class="banner__text">Перевезти:</p>
+							<p class="banner__text">Диван или холодильник, или шкаф и т.д.</p>
+						</div>
+						<div class="banner__price">от 50 руб.</div>
+						<ul class="banner__list">
+							<li>2 часа работы</li>
+							<li>+ грузчики</li>
+						</ul>
 					</div>
 				</section>
 				<section class="questions">
@@ -870,6 +1888,9 @@ locals='{"active":"Home"}'
 						</div>
 					</div>
 				</section>
+				<div class="nav">
+					<a class="nav__button nav__button--icon-arrow-up-circle" href="#"></a>
+				</div>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
