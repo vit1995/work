@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1756663089881"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756663089881">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1757017150091"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1757017150091">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -50,7 +50,47 @@ locals='{"active":"Home"}'
 							<ul class="menu__list">
 								<li class="menu__item menu__item--icon-cube">
 									<!-- <i class="--icon-cube"></i> -->
-									<a href="#" data-fls-scrollto-header="" data-fls-scrollto=".services" class="menu__link">Услуги</a>
+									<a data-fls-scrollto-header="" data-fls-scrollto=".services" class="menu__link menu__link--icon-chevron-down">Услуги</a>
+									<ul class="sub-menu">
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Грузчики</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link sub-menu__link--icon-chevron-down">Грузовое такси</a>
+											<ul class="sub-menu">
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Грузчики</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Грузовое такси</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Машины</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Грузчики</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Грузовое такси</a>
+												</li>
+												<li class="sub-menu__item">
+													<a class="sub-menu__link" href="#">Машины</a>
+												</li>
+											</ul>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Машины</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Машина для переезда</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Грузовое такси</a>
+										</li>
+										<li class="sub-menu__item">
+											<a class="sub-menu__link" href="#">Машины</a>
+										</li>
+									</ul>
 								</li>
 								<li class="menu__item menu__item--icon-pricetag-multiple">
 									<!-- <i class="--icon-pricetag-multiple"></i> -->
@@ -79,9 +119,9 @@ locals='{"active":"Home"}'
 							</svg>
 						</button>
 						<div data-fls-popup-content="" class="popup__text">
-							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+							<form data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
 								<div class="select__wrapper">
-									<p class="select__label">Откуда:</p>
+									<p class="select__label">Когда:</p>
 									<select required name="when" data-fls-select="" data-fls-select-modif="form">
 										<option value="Сегодня" selected>Сегодня</option>
 										<option value="Завтра">Завтра</option>
@@ -90,9 +130,9 @@ locals='{"active":"Home"}'
 									</select>
 								</div>
 								<input data-fls-input="" autocomplete="off" type="text" required name="where-from" data-fls-form-errtext="Заполните поле" placeholder="Откуда:" class="popup__input input">
-								<input data-fls-input="" autocomplete="off" type="text" required name="where" data-fls-form-errtext="Заполните поле" placeholder="Куда::" class="popup__input input">
+								<input data-fls-input="" autocomplete="off" type="text" required name="where" data-fls-form-errtext="Заполните поле" placeholder="Куда:" class="popup__input input">
 								<div class="select__wrapper">
-									<p class="select__label">Куда:</p>
+									<p class="select__label">Машина:</p>
 									<select required name="tonnage" data-fls-select="" data-fls-select-modif="form">
 										<option value="1 тонна" selected>1 тонна</option>
 										<option value="1.5 тонны">1.5 тонны</option>
@@ -392,8 +432,174 @@ class="quantity__button quantity__button--plus"
 					</div>
 				</div>
 			</div>
+			<div data-fls-popup="popup-car" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="black" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="black" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 id="popup-car-name" class="popup__title">Получить специальное предложение</h2>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="files/sendmail/sendmail.php" class="popup__form">
+								<input type="text" name="name" data-fls-input="" required placeholder="Имя:" data-fls-form-errtext="Заполните поле" class="form-advantages__input input">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button form-advantages__button button">Заказать</button>
+							</form>
+							<div class="form-advantages__phone-body">
+								<p class="form-advantages__phone-text">подробности по телефону:</p>
+								<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49">+375 (44) 786-61-49</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--
+<div data-fls-popup="popup-calc" aria-hidden="true" class="popup">
+<div data-fls-popup-wrapper class="popup__wrapper">
+<div data-fls-popup-body class="popup__body">
+<button data-fls-popup-close type="button" class="popup__close">
+<svg
+width="23"
+height="23"
+viewBox="0 0 23 23"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+>
+<path
+opacity="0.850056"
+d="M1.73333 1.48883L21.5469 21.0288"
+stroke="black"
+stroke-linecap="square"
+/>
+<path
+opacity="0.850056"
+d="M21.2667 1.48883L1.45309 21.0288"
+stroke="black"
+stroke-linecap="square"
+/>
+</svg>
+</button>
+<div data-fls-popup-content class="popup__text">
+<form
+data-fls-form="ajax"
+data-fls-form-popup="popup-message"
+method="POST"
+action="files/sendmail/sendmail.php"
+method="POST"
+class="popup__form"
+>
+<input
+data-fls-input
+autocomplete="off"
+type="text"
+required
+name="where-from"
+data-fls-form-errtext="Заполните поле"
+placeholder="Откуда:"
+class="popup__input input"
+/>
+<input
+data-fls-input
+autocomplete="off"
+type="text"
+required
+name="where"
+data-fls-form-errtext="Заполните поле"
+placeholder="Куда:"
+class="popup__input input"
+/>
+<div class="select__wrapper">
+<p class="select__label">Машина:</p>
+<select
+required
+name="tonnage"
+data-fls-select
+data-fls-select-modif="form"
+>
+<option value="1 тонна" selected>1 тонна</option>
+<option value="1.5 тонны">1.5 тонны</option>
+<option value="3 тонны">3 тонны</option>
+<option value="5 тонн">5 тонн</option>
+<option value="7 тонн">7 тонн</option>
+<option value="20 тонн">20 тонн</option>
+</select>
+</div>
+<input
+type="text"
+name="phone"
+required
+data-fls-input
+data-fls-input-mask="+375(99) 999 99 99"
+data-fls-form-errtext="Заполните поле"
+placeholder="+375(__) ___ __ __"
+class="form-advantages__input input"
+/>
+<button
+type="submit"
+class="form__button form-advantages__button button"
+>
+Рассчитать
+</button>
+</form>
+<div class="form-advantages__phone-body">
+<p class="form-advantages__phone-text">подробности по телефону:</p>
+<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49"
+>+375 (44) 786-61-49</a
+>
+</div>
+</div>
+</div>
+</div>
+</div>
+-->
+			<div data-fls-popup="popup-calc" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">×</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title">Подтверждение расчета</h2>
+							<!-- Блок для отображения данных -->
+							<div class="calc-summary">
+								<div class="calc-summary__item">
+									<span>Откуда:</span>
+									<strong id="summary-from">-</strong>
+								</div>
+								<div class="calc-summary__item">
+									<span>Куда:</span>
+									<strong id="summary-to">-</strong>
+								</div>
+								<div class="calc-summary__item">
+									<span>Автомобиль:</span>
+									<strong id="summary-car">-</strong>
+								</div>
+								<div class="calc-summary__item">
+									<span>Грузчики:</span>
+									<strong id="summary-loaders">-</strong>
+								</div>
+								<div class="calc-summary__item">
+									<span>Часы аренды:</span>
+									<strong id="summary-hours">-</strong>
+								</div>
+							</div>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" class="popup__form" method="POST" action="files/sendmail/sendmail.php">
+								<!-- Скрытые поля для отправки данных -->
+								<input type="hidden" name="where-from" id="hidden-from">
+								<input type="hidden" name="where" id="hidden-to">
+								<input type="hidden" name="tonnage" id="hidden-car">
+								<input type="hidden" name="loaders" id="hidden-loaders">
+								<input type="hidden" name="hours" id="hidden-hours">
+								<input type="text" name="phone" required data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" placeholder="+375(__) ___ __ __" class="form-advantages__input input">
+								<button type="submit" class="form__button button">Подтвердить заказ</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<main class="page page--home">
-				<div class="tools">
+				<div data-fls-tools="" class="tools">
 					<a href="#" class="tools__item">
 						<p class="--icon-whatsapp-fill"></p>
 					</a>
@@ -608,8 +814,8 @@ class="quantity__button quantity__button--plus"
 					</div>
 				</section>
 				<section class="tabs-block">
-					<div class="tabs-block__container">
-						<div data-fls-tabs="" data-fls-tabs-animate="1000" class="tabs">
+					<div data-fls-tabs="" data-fls-tabs-animate="1000" class="tabs">
+						<div class="tabs__box">
 							<div data-fls-tabs-body="" class="tabs__content">
 								<div class="tabs__body">
 									<div class="tabs__header">
@@ -617,7 +823,7 @@ class="quantity__button quantity__button--plus"
 											Тариф
 											<span>"Мини"</span>
 										</h3>
-										<div class="tabs__label label">самый популярный</div>
+										<div data-fls-image-ignore="" class="tabs__label label">самый популярный</div>
 									</div>
 									<div class="tabs__main">
 										<div class="tabs__column">
@@ -916,10 +1122,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Грузоперевозки Минск</p>
 								<p class="services__price">Цена от 20 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -927,10 +1137,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Квартирный переезд</p>
 								<p class="services__price">Цена от 20 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -938,10 +1152,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Грузоперевозки мебели</p>
 								<p class="services__price">Цена от 20 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -949,10 +1167,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Дачного переезда</p>
 								<p class="services__price">Цена от 20 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -960,10 +1182,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Грузоперевозки вещей</p>
 								<p class="services__price">Цена от 20 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -971,10 +1197,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Офисный переезд</p>
 								<p class="services__price">Цена от 30 р.ч.</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -982,10 +1212,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Перевозка торгового оборудования</p>
 								<p class="services__price">Цена по запросу</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -993,10 +1227,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Грузоперевозки склада</p>
 								<p class="services__price">Цена по запросу</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -1004,10 +1242,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">грузоперевозки банка</p>
 								<p class="services__price">Цена по запросу</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 							<div class="services__item">
 								<div class="services__image">
@@ -1015,10 +1257,14 @@ class="quantity__button quantity__button--plus"
 								</div>
 								<p class="services__name">Грузоперевозки выставочных стендов Дополнительные услуги:</p>
 								<p class="services__price">Цена по запросу</p>
-								<p class="services__text">
-									Предоставим стандартную или удлиненную машину для перевозок
-            стройматериалов, мебели, промтоваров, продуктов питания.
-								</p>
+								<a class="services__button" href="#">Заказать</a>
+								<div class="services__text">
+									<p>
+										Предоставим стандартную или удлиненную машину для перевозок
+              стройматериалов, мебели, промтоваров, продуктов питания.
+									</p>
+									<a class="services__text-button" href="#">Подробнее</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1142,7 +1388,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -1154,7 +1400,7 @@ class="quantity__button quantity__button--plus"
 										</p>
 									</div>
 									<img class="car__image" alt="#" src="./assets/img/car/02.webp">
-									<div class="car__name">АВТО 10М³</div>
+									<div class="car__name">АВТО 15М³</div>
 									<div class="car__specialization">Для гипермаркетов.</div>
 									<div class="car__items">
 										<div class="car__item">
@@ -1208,7 +1454,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -1220,7 +1466,7 @@ class="quantity__button quantity__button--plus"
 										</p>
 									</div>
 									<img class="car__image" alt="#" src="./assets/img/car/03.webp">
-									<div class="car__name">АВТО 10М³</div>
+									<div class="car__name">АВТО 20М³</div>
 									<div class="car__specialization">Для гипермаркетов.</div>
 									<div class="car__items">
 										<div class="car__item">
@@ -1274,7 +1520,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -1340,7 +1586,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -1406,7 +1652,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 								<div class="car__slide swiper-slide">
@@ -1472,7 +1718,7 @@ class="quantity__button quantity__button--plus"
 											<span>45</span>
 											РУБ.ЧАС.
 										</p>
-										<a data-fls-popup-link="popup-two" class="car__button button" href="#">Заказать</a>
+										<a data-fls-popup-link="popup-car" class="car__button button" href="#">Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -1584,7 +1830,7 @@ class="quantity__button quantity__button--plus"
 										<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
 									</div>
 								</div>
-								<button class="calculator__button button" type="submit">Рассчитать</button>
+								<a href="#" data-fls-popup-link="popup-calc" class="calculator__button button">Рассчитать</a>
 							</div>
 						</form>
 					</div>
@@ -1686,6 +1932,71 @@ class="quantity__button quantity__button--plus"
 						</div>
 					</div>
 				</section>
+				<section class="superiority">
+					<div class="superiority__container">
+						<h2 class="superiority__title title">Почему выбирают нас</h2>
+						<div class="superiority__body">
+							<div class="superiority__header">
+								<div class="superiority__item superiority__item--text">
+									<h3 class="superiority__name">Удобный сервис</h3>
+									<p class="superiority__text">Работаем со всеми способами оплаты. Оказываем помощь в оформлении документов</p>
+								</div>
+								<div class="superiority__item superiority__item--black superiority__item--image">
+									<div class="superiority__picture">
+										<img alt="Image" src="./assets/img/superiority/01.webp">
+									</div>
+									<div class="superiority__block">
+										<h3 class="superiority__name">Безопасная перевозка</h3>
+										<p class="superiority__text">
+											Страхуем груз от непредвиденных обстоятельств и точно знаем, где он находится в каждый момент времени
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="superiority__main">
+								<div class="superiority__item superiority__item--black superiority__item--image superiority__item--reverse">
+									<div class="superiority__picture">
+										<img alt="Image" src="./assets/img/superiority/02.webp">
+									</div>
+									<div class="superiority__block">
+										<h3 class="superiority__name">Безопасная перевозка</h3>
+										<p class="superiority__text">
+											Страхуем груз от непредвиденных обстоятельств и точно знаем, где он находится в каждый момент времени
+										</p>
+									</div>
+								</div>
+								<div class="superiority__item superiority__item--text">
+									<h3 class="superiority__name">Удобный сервис</h3>
+									<p class="superiority__text">Работаем со всеми способами оплаты. Оказываем помощь в оформлении документов</p>
+								</div>
+							</div>
+							<div class="superiority__bottom">
+								<div class="superiority__item superiority__item--image">
+									<div class="superiority__picture">
+										<img alt="Image" src="./assets/img/superiority/03.webp">
+									</div>
+									<div class="superiority__block">
+										<h3 class="superiority__name">Безопасная перевозка</h3>
+										<p class="superiority__text">
+											Страхуем груз от непредвиденных обстоятельств и точно знаем, где он находится в каждый момент времени
+										</p>
+									</div>
+								</div>
+								<div class="superiority__item superiority__item--image superiority__item--reverse">
+									<div class="superiority__picture">
+										<img alt="Image" src="./assets/img/superiority/04.webp">
+									</div>
+									<div class="superiority__block">
+										<h3 class="superiority__name">Безопасная перевозка</h3>
+										<p class="superiority__text">
+											Страхуем груз от непредвиденных обстоятельств и точно знаем, где он находится в каждый момент времени
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<section class="banner">
 					<img class="banner__image" alt="Image" src="./assets/img/banner-two/01.webp">
 					<div class="banner__container">
@@ -1702,21 +2013,42 @@ class="quantity__button quantity__button--plus"
 							<li>2 часа работы</li>
 							<li>+ грузчики</li>
 						</ul>
+						<a data-fls-popup-link="popup" class="banner__button button" href="#">Заказать</a>
 					</div>
 				</section>
 				<section class="questions">
 					<div class="questions__container">
 						<h2 class="questions__title title">Часто задаваемые вопросы по грузоперевозкам</h2>
-						<p class="questions__text">
-							Переезжаем? Легко, недорого и без стресса! Вот уже более 17 лет мы
-        отвечаем за грузовые перевозки в Минске и по всей Минской области.
-        Доставим в срок из точки А в точку Б и целую квартиру, и пианино, и
-        склад. Если вам нужна перевозка грузов по Минску и области, мы это
-        сделаем безупречно. Осуществляем грузоперевозки по городу недорого, с
-        гарантией четкого соблюдения сроков и полной сохранности ваших вещей.
-        Интересуют грузовые перевозки? Будем рады помочь. Закажите машину прямо
-        сейчас!
-						</p>
+						<!--
+<p class="questions__text">
+Переезжаем? Легко, недорого и без стресса! Вот уже более 17 лет мы
+отвечаем за грузовые перевозки в Минске и по всей Минской области.
+Доставим в срок из точки А в точку Б и целую квартиру, и пианино, и
+склад. Если вам нужна перевозка грузов по Минску и области, мы это
+сделаем безупречно. Осуществляем грузоперевозки по городу недорого, с
+гарантией четкого соблюдения сроков и полной сохранности ваших вещей.
+Интересуют грузовые перевозки? Будем рады помочь. Закажите машину прямо
+сейчас!
+</p>
+-->
+						<div data-fls-showmore="" class="questions__text-body">
+							<div style="font-weight: 400" data-fls-showmore-content="" class="questions__text">
+								<p>
+									Переезжаем? Легко, недорого и без стресса! Вот уже более 17 лет мы
+            отвечаем за грузовые перевозки в Минске и по всей Минской области.
+            Доставим в срок из точки А в точку Б и целую квартиру, и пианино, и
+            склад. Если вам нужна перевозка грузов по Минску и области, мы это
+            сделаем безупречно. Осуществляем грузоперевозки по городу недорого,
+            с гарантией четкого соблюдения сроков и полной сохранности ваших
+            вещей. Интересуют грузовые перевозки? Будем рады помочь. Закажите
+            машину прямо сейчас!
+								</p>
+							</div>
+							<button hidden data-fls-showmore-button="" type="button" class="block__more">
+								<span>Показать ещё</span>
+								<span>Скрыть</span>
+							</button>
+						</div>
 						<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
 							<details class="spollers__item">
 								<summary class="spollers__title">Сколько стоит перевозка мебели в Минске?</summary>
@@ -1770,7 +2102,7 @@ class="quantity__button quantity__button--plus"
 						</div>
 					</div>
 				</section>
-				<div class="nav">
+				<div data-fls-arrowup="" class="nav">
 					<a class="nav__button nav__button--icon-arrow-up-circle" href="#"></a>
 				</div>
 			</main>

@@ -6295,6 +6295,19 @@ class Popup {
   }
 }
 document.querySelector("[data-fls-popup]") ? window.addEventListener("load", () => window.flsPopup = new Popup({})) : null;
+document.addEventListener("DOMContentLoaded", function() {
+  const orderButtons = document.querySelectorAll('[data-fls-popup-link="popup-car"]');
+  const popupCarNameElement = document.getElementById("popup-car-name");
+  orderButtons.forEach((button) => {
+    button.addEventListener("click", function(e) {
+      const carCard = this.closest(".car__slide");
+      const carName = carCard.querySelector(".car__name").textContent;
+      if (popupCarNameElement) {
+        popupCarNameElement.textContent = carName;
+      }
+    });
+  });
+});
 function menuInit() {
   document.addEventListener("click", function(e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
@@ -11829,5 +11842,46 @@ document.addEventListener("DOMContentLoaded", function() {
       navButton.style.opacity = "0";
       navButton.style.visibility = "hidden";
     }
+  });
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const calcForm = document.querySelector(".calculator__form");
+  const openPopupBtn = document.querySelector('[data-fls-popup-link="popup-calc"]');
+  const summaryFrom = document.getElementById("summary-from");
+  const summaryTo = document.getElementById("summary-to");
+  const summaryCar = document.getElementById("summary-car");
+  const summaryLoaders = document.getElementById("summary-loaders");
+  const summaryHours = document.getElementById("summary-hours");
+  const hiddenFrom = document.getElementById("hidden-from");
+  const hiddenTo = document.getElementById("hidden-to");
+  const hiddenCar = document.getElementById("hidden-car");
+  const hiddenLoaders = document.getElementById("hidden-loaders");
+  const hiddenHours = document.getElementById("hidden-hours");
+  openPopupBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    const selectedRating = document.querySelector(".rating__input:checked");
+    let loadersValue = "0";
+    if (selectedRating) {
+      loadersValue = selectedRating.value;
+    } else {
+      const activeRatings = document.querySelectorAll(".rating__item--active .rating__input");
+      if (activeRatings.length > 0) {
+        loadersValue = activeRatings[activeRatings.length - 1].value;
+      }
+    }
+    const fromValue = calcForm.querySelector('[name="where-from"]').value;
+    const toValue = calcForm.querySelector('[name="where"]').value;
+    const carValue = calcForm.querySelector('[name="tonnage"]').value;
+    const hoursValue = calcForm.querySelector('[name="quantity"]').value;
+    summaryFrom.textContent = fromValue || "Не указано";
+    summaryTo.textContent = toValue || "Не указано";
+    summaryCar.textContent = carValue || "Не выбрано";
+    summaryLoaders.textContent = loadersValue + " человека";
+    summaryHours.textContent = hoursValue + " часа";
+    hiddenFrom.value = fromValue;
+    hiddenTo.value = toValue;
+    hiddenCar.value = carValue;
+    hiddenLoaders.value = loadersValue;
+    hiddenHours.value = hoursValue;
   });
 });
