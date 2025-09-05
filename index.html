@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1757020993017"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1757020993017">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1757080990855"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1757080990855">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -366,7 +366,7 @@ class="quantity__button quantity__button--plus"
 					</div>
 				</div>
 			</div>
-			<div data-fls-popup="popup-tab-18" aria-hidden="true" class="popup">
+			<div data-fls-popup="popup-tab-8" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close">
@@ -456,105 +456,6 @@ class="quantity__button quantity__button--plus"
 					</div>
 				</div>
 			</div>
-			<!--
-<div data-fls-popup="popup-calc" aria-hidden="true" class="popup">
-<div data-fls-popup-wrapper class="popup__wrapper">
-<div data-fls-popup-body class="popup__body">
-<button data-fls-popup-close type="button" class="popup__close">
-<svg
-width="23"
-height="23"
-viewBox="0 0 23 23"
-fill="none"
-xmlns="http://www.w3.org/2000/svg"
->
-<path
-opacity="0.850056"
-d="M1.73333 1.48883L21.5469 21.0288"
-stroke="black"
-stroke-linecap="square"
-/>
-<path
-opacity="0.850056"
-d="M21.2667 1.48883L1.45309 21.0288"
-stroke="black"
-stroke-linecap="square"
-/>
-</svg>
-</button>
-<div data-fls-popup-content class="popup__text">
-<form
-data-fls-form="ajax"
-data-fls-form-popup="popup-message"
-method="POST"
-action="files/sendmail/sendmail.php"
-method="POST"
-class="popup__form"
->
-<input
-data-fls-input
-autocomplete="off"
-type="text"
-required
-name="where-from"
-data-fls-form-errtext="Заполните поле"
-placeholder="Откуда:"
-class="popup__input input"
-/>
-<input
-data-fls-input
-autocomplete="off"
-type="text"
-required
-name="where"
-data-fls-form-errtext="Заполните поле"
-placeholder="Куда:"
-class="popup__input input"
-/>
-<div class="select__wrapper">
-<p class="select__label">Машина:</p>
-<select
-required
-name="tonnage"
-data-fls-select
-data-fls-select-modif="form"
->
-<option value="1 тонна" selected>1 тонна</option>
-<option value="1.5 тонны">1.5 тонны</option>
-<option value="3 тонны">3 тонны</option>
-<option value="5 тонн">5 тонн</option>
-<option value="7 тонн">7 тонн</option>
-<option value="20 тонн">20 тонн</option>
-</select>
-</div>
-<input
-type="text"
-name="phone"
-required
-data-fls-input
-data-fls-input-mask="+375(99) 999 99 99"
-data-fls-form-errtext="Заполните поле"
-placeholder="+375(__) ___ __ __"
-class="form-advantages__input input"
-/>
-<button
-type="submit"
-class="form__button form-advantages__button button"
->
-Рассчитать
-</button>
-</form>
-<div class="form-advantages__phone-body">
-<p class="form-advantages__phone-text">подробности по телефону:</p>
-<a class="form-advantages__phone-link" href="tel:+375 (44) 786-61-49"
->+375 (44) 786-61-49</a
->
-</div>
-</div>
-</div>
-</div>
-</div>
--->
 			<div data-fls-popup="popup-calc" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
@@ -731,23 +632,23 @@ class="form__button form-advantages__button button"
 							<div class="form__item">
 								<div data-fls-radio="" class="options">
 									<label class="options__item">
-										<input class="options__input" checked type="radio" value="Для переезда по городу" name="option">
+										<input class="options__input" checked type="radio" value="Для переезда по городу" name="option-check">
 										<span class="options__text">Для переезда по городу</span>
 									</label>
 									<label class="options__item">
-										<input class="options__input" type="radio" value="Для доставки товаров" name="option">
+										<input class="options__input" type="radio" value="Для доставки товаров" name="option-check">
 										<span class="options__text">Для доставки товаров</span>
 									</label>
 									<label class="options__item">
-										<input class="options__input" type="radio" value="Для грузоперевозки в область" name="option">
+										<input class="options__input" type="radio" value="Для грузоперевозки в область" name="option-check">
 										<span class="options__text">Для грузоперевозки в область</span>
 									</label>
 									<label class="options__item">
-										<input class="options__input" type="radio" value="Для перевозки мебели" name="option">
+										<input class="options__input" type="radio" value="Для перевозки мебели" name="option-check">
 										<span class="options__text">Для перевозки мебели</span>
 									</label>
 									<label class="options__item">
-										<input class="options__input" type="radio" value="Для прочих перевозок" name="option">
+										<input class="options__input" type="radio" value="Для прочих перевозок" name="option-check">
 										<span class="options__text">Для прочих перевозок</span>
 									</label>
 								</div>
@@ -1932,6 +1833,25 @@ class="form__button form-advantages__button button"
 						</div>
 					</div>
 				</section>
+				<section class="banner">
+					<img class="banner__image" alt="Image" src="./assets/img/banner-two/01.webp">
+					<div class="banner__container">
+						<h2 class="banner__title">
+							<p>Дешевле</p>
+							<span class="tabs__label label">не бывает</span>
+						</h2>
+						<div class="banner__item">
+							<p class="banner__text">Перевезти:</p>
+							<p class="banner__text">Диван или холодильник, или шкаф и т.д.</p>
+						</div>
+						<div class="banner__price">от 50 руб.</div>
+						<ul class="banner__list">
+							<li>2 часа работы</li>
+							<li>+ грузчики</li>
+						</ul>
+						<a data-fls-popup-link="popup" class="banner__button button" href="#">Заказать</a>
+					</div>
+				</section>
 				<section class="superiority">
 					<div class="superiority__container">
 						<h2 class="superiority__title title">Почему выбирают нас</h2>
@@ -1999,7 +1919,15 @@ class="form__button form-advantages__button button"
 				</section>
 				<section class="type-services">
 					<div class="type-services__container">
-						<h2 class="type-services__title title">Услуги перевозки</h2>
+						<div class="type-services__header">
+							<h2 class="type-services__title title">Услуги перевозки</h2>
+							<div class="type-services__navigacion">
+								<button type="button" class="type-services-button-prev type-services-button-prev--icon-arrow-right-2
+ swiper-button-prev"></button>
+								<button type="button" class="type-services-button-next type-services-button-prev--icon-arrow-right-2
+ swiper-button-next"></button>
+							</div>
+						</div>
 						<!-- Оболочка слайдера -->
 						<div data-fls-slider="" class="type-services__slider swiper">
 							<!-- Часть слайдера, которая двигается -->
@@ -2078,30 +2006,23 @@ class="form__button form-advantages__button button"
 							</div>
 							<!-- Если нужна пагинация -->
 							<div class="type-services-pagination swiper-pagination"></div>
-							<div class="type-services__navigacion">
-								<button type="button" class="type-services-button-prev swiper-button-prev"></button>
-								<button type="button" class="type-services-button-next swiper-button-next"></button>
-							</div>
 						</div>
 					</div>
 				</section>
-				<section class="banner">
-					<img class="banner__image" alt="Image" src="./assets/img/banner-two/01.webp">
-					<div class="banner__container">
-						<h2 class="banner__title">
-							<p>Дешевле</p>
-							<span class="tabs__label label">не бывает</span>
-						</h2>
-						<div class="banner__item">
-							<p class="banner__text">Перевезти:</p>
-							<p class="banner__text">Диван или холодильник, или шкаф и т.д.</p>
-						</div>
-						<div class="banner__price">от 50 руб.</div>
-						<ul class="banner__list">
-							<li>2 часа работы</li>
-							<li>+ грузчики</li>
-						</ul>
-						<a data-fls-popup-link="popup" class="banner__button button" href="#">Заказать</a>
+				<section class="professional">
+					<div class="professional__container">
+						<h2 class="professional__title title">Доверьте транспортировку вашего груза профессионалам</h2>
+						<p class="professional__text">Заполните форму и мы подберем оптимальный вариант перевозки</p>
+						<form data-fls-form="ajax" class="professional__form" action="files/sendmail/sendmail.php" method="POST">
+							<input type="text" name="name" data-fls-input="" data-fls-form-errtext="Заполните поле" data-required="" placeholder="Ваше имя:" class="professional__input input">
+							<input type="text" name="phone" data-fls-input="" data-fls-input-mask="+375(99) 999 99 99" data-fls-form-errtext="Заполните поле" data-required="" placeholder="+375(__) ___ __ __" class="professional__input input">
+							<div class="professional__button-body">
+								<button class="professional__button button" type="submit">Заказать звонок</button>
+								<p>
+									Нажимая кнопку «Заказать звонок» вы соглашаетесь с условиями пользовательского соглашения
+								</p>
+							</div>
+						</form>
 					</div>
 				</section>
 				<section class="questions">
@@ -2190,6 +2111,10 @@ class="form__button form-advantages__button button"
 						</div>
 					</div>
 				</section>
+				<div class="phone">
+					<div class="phone__icon phone__icon--icon-viber-chat-app"></div>
+					<a class="phone__link" href="tel:+375296582077">+375 (29) 658-20-77</a>
+				</div>
 				<div data-fls-arrowup="" class="nav">
 					<a class="nav__button nav__button--icon-arrow-up-circle" href="#"></a>
 				</div>
