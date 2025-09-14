@@ -5992,6 +5992,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const headerClose = document.querySelector(".action-header__button");
+headerClose.addEventListener("click", function(e) {
+  const headerCloseBody = document.querySelector(".action-header");
+  if (headerCloseBody) {
+    headerCloseBody.classList.add("header-close");
+  }
+});
 /*!
  * lightgallery | 2.9.0-beta.1 | June 15th 2025
  * http://www.lightgalleryjs.com/
