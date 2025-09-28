@@ -2948,7 +2948,7 @@ tex .hero__subtitle:not(:last-child) {
 .registration__item {
   display: flex;
   flex-direction: column;
-  gap: 0.3125rem;
+  gap: 0.4375rem;
 }
 .registration__number {
   font-weight: 700;
@@ -3015,6 +3015,10 @@ tex .hero__subtitle:not(:last-child) {
   left: 0;
   z-index: 0;
   transform: translateX(-20%) translateY(-20%);
+}
+.loader__block {
+  display: flex;
+  flex-direction: column;
 }
 .loader__item-icon {
   position: relative;
@@ -3473,12 +3477,20 @@ body::after {
     width: 1.875rem;
     height: 1.875rem;
   }
+  .registration__item {
+    flex-direction: row;
+  }
   .registration__number::before {
     width: 1.4375rem;
     height: 1.4375rem;
   }
   .loader__text:not(:last-child) {
     margin-bottom: 0.9375rem;
+  }
+  .loader__item-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
   }
 }
 
@@ -3853,6 +3865,9 @@ body::after {
     gap: 0.625rem;
   }
   .loader__item {
+    gap: 0.625rem;
+  }
+  .loader__block {
     gap: 0.625rem;
   }
   .loader__item-icon::before {
@@ -4297,6 +4312,9 @@ body::after {
     gap: clamp( 0.625rem , 0.17045454545625rem  +  2.2727272727vw , 1.875rem );
   }
   .loader__item {
+    gap: clamp( 0.625rem , 0.397727272725rem  +  1.1363636364vw , 1.25rem );
+  }
+  .loader__block {
     gap: clamp( 0.625rem , 0.397727272725rem  +  1.1363636364vw , 1.25rem );
   }
   .loader__item-icon::before {
@@ -4759,6 +4777,9 @@ body::after {
     gap: 1.875rem;
   }
   .loader__item {
+    gap: 1.25rem;
+  }
+  .loader__block {
     gap: 1.25rem;
   }
   .loader__item-icon::before {
