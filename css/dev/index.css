@@ -1270,6 +1270,10 @@ button.swiper-pagination-bullet {
   left: 0;
   z-index: 50;
 }
+[data-fls-header-scroll].--header-scroll .header__container {
+  padding: 0.9375rem;
+  gap: 0.625rem;
+}
 
 [data-fls-header-scroll-show].--header-scroll {
   transition: translate 0.3s;
@@ -3399,7 +3403,7 @@ body::after {
     grid-template-columns: 1fr;
   }
   .hero {
-    padding-top: 7.5rem;
+    padding-top: 6.25rem;
   }
   .flat__container {
     grid-template-columns: 1fr;
@@ -3442,6 +3446,9 @@ body::after {
     flex-wrap: nowrap;
     align-items: normal;
   }
+  .header__container {
+    padding: 0.9375rem 0.9375rem;
+  }
   .top-header__logo p {
     font-size: 0.75rem;
   }
@@ -3453,6 +3460,9 @@ body::after {
   }
   .title:not(:last-child) {
     margin-bottom: 0.9375rem;
+  }
+  .hero {
+    padding-top: 5rem;
   }
   .hero__subtitle:not(:last-child) {
     margin-bottom: 0.9375rem;
