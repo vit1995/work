@@ -5,47 +5,54 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1775822413312"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1775822413312">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1777468610876"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777468610876">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
+			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header">
 				<div class="header__container">
-					<div class="header__logo-body">
-						<a href="#" class="header__logo">
-							<img src="./assets/img/header/Logo.svg" alt="#">
-						</a>
-						<p class="header__logo-text" data-fls-dynamic=".menu__body, 768">Тюнинг выхлопных систем в Москве</p>
-					</div>
+					<a href="#" class="header__logo">Диванчик39</a>
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li class="menu__item">
-									<a data-fls-scrollto=".service" href="#" class="menu__link">о сервисе</a>
+									<a href="#" class="menu__link">Главная</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".price" href="#" class="menu__link">услуги и цены</a>
+									<a data-fls-scrollto=".advantages" href="#" class="menu__link">Услуги</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".diagnostics" href="#" class="menu__link">бесплатная диагностика</a>
+									<a data-fls-scrollto=".price" href="#" class="menu__link">Цены</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".video-reviews" href="#" class="menu__link">наши работы и отзывы</a>
+									<a data-fls-scrollto=".before-after-secticon" href="#" class="menu__link">Наши работы</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".stamps" href="#" class="menu__link">партнеры</a>
+									<a data-fls-scrollto=".advantages" href="#" class="menu__link">Вакансии</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".contacts" href="#" class="menu__link">контакты</a>
+									<a data-fls-scrollto=".contacts" href="#" class="menu__link">Контакты</a>
 								</li>
 							</ul>
 						</nav>
 					</div>
-					<div class="header__info">
-						<div class="header__clock">Ежедневно 10-20</div>
-						<a class="header__phone" href="tel:74951658716">+7 (495) 165-87-16</a>
+					<div data-fls-dynamic=".menu__body, 768" class="header__info">
+						<a class="header__phone" href="tel:+79097878481">+7 (909) 787-84-81</a>
+						<div class="header__online">Мы онлайн - звоните!</div>
 					</div>
+					<div data-fls-dynamic=".menu__body, 550" class="header__socials">
+						<a class="header__social" href="#">
+							<img alt="viber" src="./assets/img/icon-social/viber.webp">
+						</a>
+						<a class="header__social" href="#">
+							<img alt="telegram" src="./assets/img/icon-social/telegram.webp">
+						</a>
+						<a class="header__social" href="#">
+							<img alt="instagram" src="./assets/img/icon-social/instagram.webp">
+						</a>
+					</div>
+					<a data-fls-popup-link="popup" data-fls-button="" class="header__button button button--h40" href="#">Заказать звонок</a>
 					<button type="button" data-fls-menu="" class="menu__icon icon-menu">
 						<span></span>
 					</button>
@@ -61,17 +68,19 @@
 							</svg>
 						</button>
 						<div data-fls-popup-content="" class="popup__box">
-							<h2 class="popup__title">ЗАЯВКА НА ПРОСЧЕТ</h2>
-							<p class="popup__text">
-								Пожалуйста, оставьте свои контактные данные, и наш менеджер перезвонит
-          вам в ближайшее вемя
-							</p>
-							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php" class="popup__form">
-								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Ваше имя" class="input">
-								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="input">
-								<button type="submit" class="button">Отправить заявку</button>
+							<h2 class="popup__title">Заказать звонок</h2>
+							<form class="popup__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
+								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="popup__input input">
+								<label data-fls-checkbox="" class="checkbox">
+									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+									<span class="checkbox__text">
+										Я принимаю политику конфиденциальности и даю согласие на
+              обработку персональных данных
+									</span>
+								</label>
+								<button data-fls-ripple="" type="submit" class="popup__button button">Оставить заявку</button>
 							</form>
-							<p class="popup__text">Мы не передаем ваши данные третьим лицам</p>
 						</div>
 					</div>
 				</div>
@@ -91,1276 +100,1458 @@
 					</div>
 				</div>
 			</div>
-			<main class="page page--home">
+			<main class="page">
 				<section class="hero">
-					<!--
-<img class="hero__img-bg" src="@img/hero/bg.webp" alt="Image" />
-<img class="hero__hero-bg-two" src="@img/hero/bg-2.webp" alt="Image" />
--->
-					<img class="hero__image" alt="Image" src="./assets/img/hero/image.webp">
 					<div class="hero__container">
-						<h1 class="hero__title">
-							<span>тюнинг</span>
-							выхлопных систем
-						</h1>
-						<p class="hero__text">Индивидуальная настройка выхлопа – такой будет только у вас</p>
+						<h1 class="hero__title">Перетяжка и восстановление мягкой мебели с гарантией!</h1>
 						<div class="hero__items">
 							<div class="hero__item">
 								<div class="hero__icon">
-									<img src="./assets/img/hero/check.svg" alt="Image">
+									<img alt="" src="./assets/img/hero/01.webp">
 								</div>
-								<p class="hero__item-text">Только опытные и квалифицированные мастера</p>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
 							</div>
 							<div class="hero__item">
 								<div class="hero__icon">
-									<img src="./assets/img/hero/check.svg" alt="Image">
+									<img alt="" src="./assets/img/hero/02.webp">
 								</div>
-								<p class="hero__item-text">От 2 до 5 лет гарантии на работы и детали</p>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
 							</div>
 							<div class="hero__item">
 								<div class="hero__icon">
-									<img src="./assets/img/hero/check.svg" alt="Image">
+									<img alt="" src="./assets/img/hero/03.webp">
 								</div>
-								<p class="hero__item-text">Исключительно оригинальные комплектующие</p>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img alt="" src="./assets/img/hero/04.webp">
+								</div>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img alt="" src="./assets/img/hero/01.webp">
+								</div>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img alt="" src="./assets/img/hero/01.webp">
+								</div>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img alt="" src="./assets/img/hero/01.webp">
+								</div>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img alt="" src="./assets/img/hero/01.webp">
+								</div>
+								<p class="hero__text">
+									<strong>10 дней</strong>
+									срок перетяжки
+								</p>
 							</div>
 						</div>
-						<a data-fls-button="" data-fls-popup-link="popup" class="hero__button button" href="#">заявка на просчет</a>
+						<picture class="hero__image">
+							<img alt="picture" src="./assets/img/hero/bg.webp">
+							<a href="#" data-fls-popup-link="popup" class="hero__circle">
+								<span>Рассчитать цену</span>
+							</a>
+						</picture>
 					</div>
 				</section>
-				<section class="advantages">
-					<div class="advantages__container">
-						<h2 data-fls-title="" class="title">О сервисе</h2>
-						<div class="advantages__body">
-							<div class="advantages__content">
-								<p class="advantages__text">
-									Мы – не просто рядовой сервис, предоставляющий полный спектр услуг
-            по ремонту и обслуживанию автомобилей.
-								</p>
-								<div class="advantages__items">
-									<div class="advantages__item">
-										<div class="advantages__item-icon">
-											<img alt="Image" src="./assets/img/advantages/01.webp">
-										</div>
-										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
-									</div>
-									<div class="advantages__item">
-										<div class="advantages__item-icon">
-											<img alt="Image" src="./assets/img/advantages/02.webp">
-										</div>
-										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
-									</div>
-									<div class="advantages__item">
-										<div class="advantages__item-icon">
-											<img alt="Image" src="./assets/img/advantages/03.webp">
-										</div>
-										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
-									</div>
-									<div class="advantages__item">
-										<div class="advantages__item-icon">
-											<img alt="Image" src="./assets/img/advantages/04.webp">
-										</div>
-										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
-									</div>
-								</div>
-								<a class="advantages__button button" data-fls-popup-link="popup" href="#">записаться на диагностику</a>
+				<section class="types-work">
+					<div class="types-work__container">
+						<div class="types-work__hero">
+							<h2 data-fls-title="" class="title title--white">Какие работы мы выполняем</h2>
+							<img class="types-work__img" alt="" src="./assets/img/types-work/03.webp">
+						</div>
+						<div class="types-work__items">
+							<div class="types-work__item">
+								<p>Перетяжка мебели</p>
 							</div>
-							<div class="advantages__reviews">
-								<div class="advantages__estimation">
-									<div class="advantages__estimation-number">5.0</div>
-									<div class="advantages__estimation-block">
-										<img class="advantages__estimation-stars" src="./assets/img/advantages/stars.svg" alt="Image">
-										<p class="advantages__estimation-text">Оценка сервиса на Яндекс.Картах</p>
+							<div class="types-work__item">
+								<p>Замена наполнителя мягкой мебели</p>
+							</div>
+							<div class="types-work__item">
+								<p>Замена, ремонт механизмов и фурнитуры</p>
+							</div>
+							<div class="types-work__item">
+								<p>Работы с использованием натуральной кожи (Италия)</p>
+							</div>
+							<div class="types-work__item">
+								<p>Изготовление мягкой мебели</p>
+							</div>
+							<picture class="types-work__item types-work__item--image">
+								<img alt="#" src="./assets/img/types-work/02.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section data-fls-qwiz="" class="page__calculator calculator">
+					<div class="calculator__container">
+						<h2 data-fls-title="" class="title">Рассчитать стоимость за 5 минут</h2>
+						<div class="calculator__body">
+							<div data-fls-slider="" class="calculator__slider swiper swiper-container">
+								<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" enctype="multipart/form-data" action="sendmail/sendmail.php" class="calculator__wrapper swiper-wrapper">
+									<!-- 1 Слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
+										<h3 class="slide-calculator__title">Выберите мебель которые Вам необходимо перетянуть:</h3>
+										<p class="slide-calculator__subtitle">
+											<span>Первый вопрос.</span>
+											Понимая тип Вашей мебели я пойму ориентировочные сроки перетяжки,
+              обивки
+										</p>
+										<div class="slide-calculator__items">
+											<div class="slide-calculator__body slide-calculator__body--column">
+												<div class="radio">
+													<div class="radio__item">
+														<input data-required="" id="o_1" class="radio__input" checked type="radio" value="Диванпрямой" name="option-1">
+														<label for="o_1" class="radio__label">
+															<span class="radio__text">Диван прямой</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_2" class="radio__input" type="radio" value="Модульный
+													диван" name="option-1">
+														<label for="o_2" class="radio__label">
+															<span class="radio__text">Модульный диван</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_3" class="radio__input" type="radio" value="Кресло" name="option-1">
+														<label for="o_3" class="radio__label">
+															<span class="radio__text">Кресло</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_4" class="radio__input" type="radio" value="Кухонный
+													уголок" name="option-1">
+														<label for="o_4" class="radio__label">
+															<span class="radio__text">Кухонный уголок</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_5" class="radio__input" type="radio" value="Пуф" name="option-1">
+														<label for="o_5" class="radio__label">
+															<span class="radio__text">Пуф</span>
+														</label>
+													</div>
+												</div>
+												<div class="radio">
+													<div class="radio__item">
+														<input data-required="" id="o_6" class="radio__input" checked type="radio" value="Диван
+														угловой" name="option-1">
+														<label for="o_6" class="radio__label">
+															<span class="radio__text">Диван угловой</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_7" class="radio__input" type="radio" value="Кровать" name="option-1">
+														<label for="o_7" class="radio__label">
+															<span class="radio__text">Кровать</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_8" class="radio__input" type="radio" value="Кушетка" name="option-1">
+														<label for="o_8" class="radio__label">
+															<span class="radio__text">Кушетка</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_9" class="radio__input" type="radio" value="Стулья" name="option-1">
+														<label for="o_9" class="radio__label">
+															<span class="radio__text">Стулья</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="advantages__video video-advantages">
-									<p class="video-advantages__text">
-										Приветствие от Игоря, управляющего сервиса и главного эксперта в
-              выхлопных системах
-									</p>
-									<div class="video-advantages__video">
-										<iframe src="https://www.youtube.com/embed/z-hKK7KmCHY" title="КАК И ГДЕ СДЕЛАТЬ ЛУЧШИЙ ВЫХЛОП?" frameborder="0" allow="accelerometer;
- autoplay;
- clipboard-write;
- encrypted-media;
- gyroscope;
- picture-in-picture;
- web-share;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<!-- 2 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
+										<h3 class="slide-calculator__title">
+											Выберите дополнительные параметры для замены:
+											<span>
+												<svg class="mdi-icon mdi-16px" viewbox="0 0 24 24">
+													<title>mdi-check-circle</title>
+													<path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" stroke-width="0" fill-rule="nonzero"></path>
+												</svg>
+												выберите один или несколько
+											</span>
+										</h3>
+										<p class="slide-calculator__subtitle">
+											Исходя из дополнительны параметров для замены, я помогу вам
+              рассчитать предварительную стоимость работ
+										</p>
+										<div class="slide-calculator__items">
+											<div class="slide-calculator__body">
+												<div class="radio">
+													<div class="radio__item">
+														<input id="o_10" class="radio__input" checked type="checkbox" value="Частичная замена наполнителя" name="option-2">
+														<label for="o_10" class="radio__label">
+															<span class="radio__text">Частичная замена наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_11" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-2">
+														<label for="o_11" class="radio__label">
+															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_12" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-2">
+														<label for="o_12" class="radio__label">
+															<span class="radio__text">Замена пружинных блоков</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_13" class="radio__input" type="checkbox" value="Частичная реставрация мебели" name="option-2">
+														<label for="o_13" class="radio__label">
+															<span class="radio__text">Частичная реставрация мебели</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_14" class="radio__input" type="checkbox" value="Не знаю, нужна консультация" name="option-2">
+														<label for="o_14" class="radio__label">
+															<span class="radio__text">Не знаю, нужна консультация</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="slide-calculator__image">
+												<img alt="#" src="./assets/img/qwiz/01.webp">
+											</div>
+										</div>
 									</div>
-									<div class="video-advantages__time">
-										<p>Время на просмотр: 1 мин 46 сек</p>
-										<img alt="Image" src="./assets/img/advantages/time.webp">
+									<!-- 3 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
+										<h3 class="slide-calculator__title">
+											Выберите дополнительные параметры обивки:
+											<span>
+												<svg class="mdi-icon mdi-16px" viewbox="0 0 24 24">
+													<title>mdi-check-circle</title>
+													<path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" stroke-width="0" fill-rule="nonzero"></path>
+												</svg>
+												выберите один или несколько
+											</span>
+										</h3>
+										<p class="slide-calculator__subtitle">
+											Понимая ваши предпочтения по материалам, я смогу подобрать для вас
+              несколько видов тканей из разного ценового сегмента
+										</p>
+										<div class="slide-calculator__items">
+											<div class="slide-calculator__body slide-calculator__body--column">
+												<div class="radio">
+													<div class="radio__item">
+														<input id="o_15" class="radio__input" checked type="checkbox" value="Частчная замена наполнителя" name="option-3">
+														<label for="o_15" class="radio__label">
+															<span class="radio__text">Частичная замена наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_16" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-3">
+														<label for="o_16" class="radio__label">
+															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_17" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-3">
+														<label for="o_17" class="radio__label">
+															<span class="radio__text">Замена пружинных блоков</span>
+														</label>
+													</div>
+												</div>
+												<div class="radio">
+													<div class="radio__item">
+														<input id="o_18" class="radio__input" type="checkbox" value="Частичная замена наполнителя" name="option-3">
+														<label for="o_18" class="radio__label">
+															<span class="radio__text">Частичная замена наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_19" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-3">
+														<label for="o_19" class="radio__label">
+															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_20" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-3">
+														<label for="o_20" class="radio__label">
+															<span class="radio__text">Замена пружинных блоков</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
+									<!-- 4 слайд -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
+										<h3 class="slide-calculator__title">Когда Вам удобно будет встретиться с дизайнером — замерщиком?</h3>
+										<div class="slide-calculator__subtitle">
+											<p>
+												Мы специализируемся на скорости обслуживания и готовы к вам
+                выехать в ближайший день.
+											</p>
+											<p>
+												Дизайнер — замерщик приедет в удобное для вас время и рассчитает
+                окончательную стоимость работ в 3-х вариантах, с учетом ваших
+                предпочтений.
+											</p>
+											<p>
+												Дополнительно привезет с собой образцы материалов, и вы сможете
+                определиться что для вас подходит больше всего. Т.к материалы на
+                фото и в живую очень часто имеют большое отличие.
+											</p>
+										</div>
+										<div class="slide-calculator__items">
+											<div class="slide-calculator__body slide-calculator__body--column">
+												<div class="radio">
+													<div class="radio__item">
+														<input id="o_21" class="radio__input" checked type="checkbox" value="Частчная замена наполнителя" name="option-4">
+														<label for="o_21" class="radio__label">
+															<span class="radio__text">Частичная замена наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_22" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-4">
+														<label for="o_22" class="radio__label">
+															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_23" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-4">
+														<label for="o_23" class="radio__label">
+															<span class="radio__text">Замена пружинных блоков</span>
+														</label>
+													</div>
+												</div>
+												<div class="radio">
+													<div class="radio__item">
+														<input id="o_24" class="radio__input" type="checkbox" value="Частичная замена наполнителя" name="option-4">
+														<label for="o_24" class="radio__label">
+															<span class="radio__text">Частичная замена наполнителя</span>
+														</label>
+													</div>
+													<div class="radio__item">
+														<input id="o_25" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-4">
+														<label for="o_25" class="radio__label">
+															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Конечная страница !форма! -->
+									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+										<div class="slide-calculator-block__wrapper">
+											<div class="slide-calculator-block__content">
+												<h3 class="slide-calculator-block__title-last">Оставьте свои контакты</h3>
+												<p class="slide-calculator-block__text">
+													И менеджер свяжется с вами в первую свободную минуту. обычно
+                  мы перезваниваем в течении 7 минут, в рабочее время с 10.00 до
+                  19.00
+												</p>
+											</div>
+											<div class="slide-calculator-block__form">
+												<div class="slide-calculator-block__item">
+													<label class="slide-calculator-block__label">Введите имя</label>
+													<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
+												</div>
+												<div class="slide-calculator-block__item">
+													<label class="slide-calculator-block__label">Введите телефон</label>
+													<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
+												</div>
+												<button type="submit" class="button">Отправить</button>
+												<label data-fls-checkbox="" class="checkbox">
+													<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+													<span class="checkbox__text">
+														Я принимаю политику конфиденциальности и даю согласие на
+                    обработку персональных данных
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div id="progress" class="calculator__progress">
+										<div class="calculator__progress-body">
+											<div class="calculator__pagination swiper-pagination"></div>
+											<div class="fraction-controll">
+												<span class="fraction-controll__current">01</span>
+												<span class="fraction-controll__all">10</span>
+												<div class="fraction-controll__progress">
+													<span>Готово:</span>
+													0%
+												</div>
+											</div>
+										</div>
+										<div class="calculator__button-body">
+											<div data-ripple="" type="button" class="button-yelow calculator__button-next">
+												Далее
+												<svg class="mdi-icon mdi-24px" viewbox="0 0 24 24">
+													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
+												</svg>
+											</div>
+											<div type="button" class="calculator__button-prev">
+												<svg class="mdi-icon mdi-24px" viewbox="0 0 24 24">
+													<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
 				</section>
 				<section class="price">
-					<img class="price__img-bg" alt="Image" src="./assets/img/price/bg.webp">
 					<div class="price__container">
-						<div class="price__body">
-							<div class="price__content">
-								<img class="price__logo" src="./assets/img/header/Logo.svg" alt="Image">
-								<div class="price__header">
-									<h2 data-fls-title="" class="price__title">
-										<span>ЦЕНЫ</span>
-										НА ТЮНИНГ
-									</h2>
-									<div class="price__subtitle">ВЫХЛОПНЫХ СИСТЕМ</div>
+						<div class="price__header">
+							<h2 data-fls-title="" class="title">Стоимость услуг</h2>
+							<div class="price__top">
+								<div class="price__text">
+									<img class="price__text-icon" src="./assets/img/price/Frame.svg" alt="">
+									<p>
+										Расценки на работы по перетяжке и ремонту мебели приведены без
+              учета стоимости материала. Итоговая цена рассчитываются
+              индивидуально, после осмотра мастером изделия и от выбора
+              комплектующих.
+									</p>
 								</div>
-								<p class="price__text">
-									Стоимость рассчитывается индивидуально и зависит от объема и
-            сложности работ
-								</p>
-								<div class="price__block">
-									<div class="price__icon">
-										<img src="./assets/img/hero/check.svg" alt="Image">
-									</div>
-									<p>Узнайте точную стоимость у нашего менеджера</p>
+								<div class="price__sale">
+									<span>До 50% выгода</span>
+									<p>в отличии от приобретения новой мебели</p>
 								</div>
-								<a href="#" data-fls-popup-link="popup" class="price__button button">
-									Получить консультацию и узнать стоимость
-									<!-- <span></span> -->
-								</a>
 							</div>
-							<div class="price__list list-price">
-								<div class="list-price__item">
-									<div class="list-price__name">Установка одинарной насадки</div>
-									<div class="list-price__value">от 5 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Управляемая банка</div>
-									<div class="list-price__value">от 35 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка двойных насадок</div>
-									<div class="list-price__value">от 9 500 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Изготовление трассы из нержавейки</div>
-									<div class="list-price__value">от 30 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка прямоточной банки</div>
-									<div class="list-price__value">от 12 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Переделка штатной банки глушителя</div>
-									<div class="list-price__value">от 15 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Изменение геометрии выхлопа</div>
-									<div class="list-price__value">от 5 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка активного выхлопа</div>
-									<div class="list-price__value">от 85 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Раздвоение выхлопной системы</div>
-									<div class="list-price__value">от 12 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка спортивного резонатора</div>
-									<div class="list-price__value">от 10 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка спорт ката</div>
-									<div class="list-price__value">от 30 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Установка и изготовление даунпайпа</div>
-									<div class="list-price__value">от 25 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Чип тюнинг</div>
-									<div class="list-price__value">от 10 000 руб.</div>
-								</div>
-								<div class="list-price__item">
-									<div class="list-price__name">Прошивка Pop Bangs</div>
-									<div class="list-price__value">от 15 000 руб.</div>
-								</div>
+						</div>
+						<div class="price__overdrawing overdrawing-price">
+							<h3 class="overdrawing-price__title">Перетяжка мебели</h3>
+							<div class="overdrawing-price__items">
+								<article class="overdrawing-price__item">
+									<picture class="overdrawing-price__image">
+										<img alt="#" src="./assets/img/price/01.webp">
+									</picture>
+									<div class="overdrawing-price__info">
+										<div class="overdrawing-price__name">Диван</div>
+										<div class="overdrawing-price__number">от 6 500 ₽</div>
+									</div>
+								</article>
+								<article class="overdrawing-price__item">
+									<picture class="overdrawing-price__image">
+										<img alt="#" src="./assets/img/price/02.webp">
+									</picture>
+									<div class="overdrawing-price__info">
+										<div class="overdrawing-price__name">Диван</div>
+										<div class="overdrawing-price__number">от 6 500 ₽</div>
+									</div>
+								</article>
+								<article class="overdrawing-price__item">
+									<picture class="overdrawing-price__image">
+										<img alt="#" src="./assets/img/price/03.webp">
+									</picture>
+									<div class="overdrawing-price__info">
+										<div class="overdrawing-price__name">Диван</div>
+										<div class="overdrawing-price__number">от 6 500 ₽</div>
+									</div>
+								</article>
+								<article class="overdrawing-price__item">
+									<picture class="overdrawing-price__image">
+										<img alt="#" src="./assets/img/price/04.webp">
+									</picture>
+									<div class="overdrawing-price__info">
+										<div class="overdrawing-price__name">Диван</div>
+										<div class="overdrawing-price__number">от 6 500 ₽</div>
+									</div>
+								</article>
+								<article class="overdrawing-price__item">
+									<picture class="overdrawing-price__image">
+										<img alt="#" src="./assets/img/price/01.webp">
+									</picture>
+									<div class="overdrawing-price__info">
+										<div class="overdrawing-price__name">Диван</div>
+										<div class="overdrawing-price__number">от 6 500 ₽</div>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="price__repair repair-price">
+							<h3 class="repair-price__title">Ремонт/изготовление</h3>
+							<div class="repair-price__items">
+								<article class="repair-price__item">
+									<picture class="repair-price__image">
+										<img alt="" src="./assets/img/repair/01.webp">
+									</picture>
+									<div class="repair-price__info">
+										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
+										<div class="repair-price__number">от 3 500 ₽</div>
+									</div>
+								</article>
+								<article class="repair-price__item">
+									<picture class="repair-price__image">
+										<img alt="" src="./assets/img/repair/02.webp">
+									</picture>
+									<div class="repair-price__info">
+										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
+										<div class="repair-price__number">от 3 500 ₽</div>
+									</div>
+								</article>
+								<article class="repair-price__item">
+									<picture class="repair-price__image">
+										<img alt="" src="./assets/img/repair/03.webp">
+									</picture>
+									<div class="repair-price__info">
+										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
+										<div class="repair-price__number">от 3 500 ₽</div>
+									</div>
+								</article>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="diagnostics">
-					<div class="diagnostics__container">
-						<div class="diagnostics__body">
-							<div data-fls-parallax-parent="" class="diagnostics__images">
-								<picture>
-									<img data-fls-parallax="" data-fls-parallax-coefficient="20" class="diagnostics__img" alt="Image" src="./assets/img/diagnostics/01.webp">
-								</picture>
-								<div class="diagnostics__cercle">
-									<img src="./assets/img/diagnostics/round.svg" alt="Image">
-									<p>0 B</p>
-								</div>
+				<section class="advantages">
+					<div class="advantages__container">
+						<h2 data-fls-title="" class="title">Какие работы мы выполняем</h2>
+						<div class="advantages__items">
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/01.svg" alt="#">
+								<p class="advantages__text">Гипоаллергенность и экологичность</p>
 							</div>
-							<div class="diagnostics__content">
-								<h2 data-fls-title="" class="title title--white title--notmargin">
-									Бесплатная диагностика
-									<span>без * и навязчивости</span>
-								</h2>
-								<p class="diagnostics__text">
-									Для точного просчета стоимости любых работ мастеру нужно осмотреть
-            ваш автомобиль. Без навязывания ненужных вам работ и по
-            предварительной записи. Просто оставьте заявку, и наш менеджер
-            запишет вас на подходящее время.
-								</p>
-								<a class="diagnostics__button button button--black" data-fls-popup-link="popup" href="#">записаться на диагностику</a>
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/02.svg" alt="#">
+								<p class="advantages__text">Антикоготь</p>
 							</div>
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/03.svg" alt="#">
+								<p class="advantages__text">Высокая износостойкость</p>
+							</div>
+							<div data-fls-dynamic=".advantages__items, 992,0" class="advantages__nubmer">
+								<span>3500+</span>
+								<p>видов материалов</p>
+							</div>
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/04.svg" alt="#">
+								<p class="advantages__text">Модная цветовая карта создана с учетом института Pantone</p>
+							</div>
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/05.svg" alt="#">
+								<p class="advantages__text">Дышащий материал</p>
+							</div>
+							<div class="advantages__item">
+								<img class="advantages__icon" src="./assets/img/advantages/06.svg" alt="#">
+								<p class="advantages__text">Комфорт и мягкость</p>
+							</div>
+							<picture data-fls-dynamic=".advantages__items, 992,0" class="advantages__image">
+								<img alt="#" src="./assets/img/advantages/fabric-textiles.webp">
+							</picture>
 						</div>
+						<!--
+<div class="advantages__box">
+<div class="advantages__nubmer">
+<span>3500+</span>
+<p>видов материалов</p>
+</div>
+<picture class="advantages__image">
+<img src="@img/advantages/fabric-textiles.webp" alt="#" />
+</picture>
+</div>
+-->
 					</div>
 				</section>
-				<!-- Блок видео-отзывов -->
-				<section class="video-reviews">
-					<div class="video-reviews__container">
-						<!-- Заголовок секции -->
-						<div class="video-reviews__header">
-							<div class="video-reviews__subtitle">ДОРОЖИМ СВОЕЙ РЕПУТАЦИЕЙ</div>
-							<h2 class="video-reviews__title">
-								Видео
-								<span class="video-reviews__title-accent">наших работ</span>
-							</h2>
+				<div class="consultation">
+					<div class="consultation__container">
+						<div class="consultation__content">
+							<h2 data-fls-title="" class="title title--white">Запишитесь на бесплатную консультацию</h2>
+							<div class="consultation__subtitle">по перетяжке и ремонту мебели</div>
+							<div class="consultation__text">
+								Позвоните
+								<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
+								или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
+          решения
+							</div>
+							<form class="consultation__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
+								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
+								<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
+								<div data-fls-file="" class="file-input-wrapper">
+									<input type="file" name="file" id="file" hidden>
+									<div class="file-input-custom">
+										<span class="clip-icon">
+											<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+											</svg>
+										</span>
+										<button type="button" class="attach-btn">Прикрепить файл</button>
+										<span class="file-name"></span>
+									</div>
+								</div>
+								<label data-fls-checkbox="" class="checkbox">
+									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+									<span class="checkbox__text">
+										Я принимаю политику конфиденциальности и даю согласие на
+              обработку персональных данных
+									</span>
+								</label>
+								<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
+							</form>
 						</div>
-						<!-- Сетка с видео-карточками -->
-						<div class="video-reviews__grid">
-							<!-- Карточка 1 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/3331096219b9b240c6b4cc5ae9f9f256/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl1.jpg" alt="Прокачали звук выхлопа Ауди А5" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
+						<div class="consultation__image">
+							<img class="consultation__img" alt="#" src="./assets/img/consultation/01.webp">
+							<div class="consultation__box">
+								<div class="consultation__present">
+									<img class="consultation__present-icon" src="./assets/img/consultation/Layer.svg" alt="#">
+									<p class="consultation__present-text">До 30 апреля - подарок в дополнение к заказу</p>
 								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Прокачали звук выхлопа Ауди А5</h3>
-								</div>
+								<p class="consultation__box-text">Все подробности - уточнять менеджера</p>
 							</div>
-							<!-- Карточка 2 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/ba9eb48e3bdb7b24de593f34c186d3e3/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl2.jpg" alt="Тюнинг выхлопа Ауди А5" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Тюнинг выхлопа Ауди А5</h3>
-								</div>
-							</div>
-							<!-- Карточка 3 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/73165f57de78a2bdfe561f2eb690dae5/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl3.jpg" alt="Тюнинг выхлопа Renault Logan" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Тюнинг выхлопа Renault Logan</h3>
-								</div>
-							</div>
-							<!-- Карточка 4 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/950783e4ec3e9606ee1d3af10d32f69d/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl4.jpg" alt="Топовый тюнинг Dodge Challenger 3.6" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Топовый тюнинг Dodge Challenger 3.6</h3>
-								</div>
-							</div>
-							<!-- Карточка 5 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/f2684187347481018ba5a78541c8d11a/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl5.jpg" alt="Это того стоит!" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Это того стоит! Ребятами, мастерами, звуками доволен!</h3>
-								</div>
-							</div>
-							<!-- Карточка 6 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/c4de3265eecf5133e90fb5437c406f7d/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl6.jpg" alt="Рендж Ровер тюнинг выхлопа" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Рендж Ровер тюнинг выхлопа</h3>
-								</div>
-							</div>
-							<!-- Карточка 7 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/23a47602b1ea95adb16344726867805e/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl7.jpg" alt="Тюнинг Ауди S5" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Тюнинг Ауди S5, 3 литра, 355 л.с, кабриолет</h3>
-								</div>
-							</div>
-							<!-- Карточка 8 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/a9b06277820db026cb20941e993082d9/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl8-3.jpg" alt="Geely Tugella" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Добавили стиля Geely Tugella и установили насадки</h3>
-								</div>
-							</div>
-							<!-- Карточка 9 -->
-							<div class="video-card" data-video-src="https://rutube.ru/play/embed/41ca2f3ca98f4beeb667d0eb38b707b8/">
-								<div class="video-card__preview">
-									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl9-2.jpg" alt="Mercedes Benz c200" loading="lazy">
-									<div class="video-card__play">
-										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-								</div>
-								<div class="video-card__content">
-									<h3 class="video-card__title">Тюнинг выхлопа Mercedes Benz c200 w203</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Модальное окно с видео -->
-				<div class="video-modal" id="videoModal">
-					<div class="video-modal__overlay"></div>
-					<div class="video-modal__container">
-						<button class="video-modal__close" aria-label="Закрыть видео">
-							<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M8 8L24 24M8 24L24 8" stroke="white" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div class="video-modal__content">
-							<iframe class="video-modal__iframe" src="" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
-				<section class="service">
-					<div class="service__container">
-						<h2 data-fls-title="" class="title">Наши услуги</h2>
-						<div class="service__items">
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-							<article class="service__item">
-								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
-								<h3 class="service__item-title">Замена глушителя</h3>
-								<div class="service__bottom">
-									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
-									<div class="service__icon">
-										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
-											<g>
-												<g>
-													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-							</article>
-						</div>
-						<a data-fls-popup-link="popup" class="service__link button" href="#">Записаться</a>
-					</div>
-				</section>
-				<section data-fls-parallax-parent="" class="examples">
-					<img class="examples__img-bg" alt="Image" src="./assets/img/examples/bg.webp">
-					<img data-fls-parallax="" data-fls-parallax-coefficient="20" class="examples__decor-avto" alt="Image" src="./assets/img/examples/decor-auto.webp">
-					<div class="examples__body">
-						<div class="examples__content">
-							<h2 class="examples__title">Примеры наших работ</h2>
-							<a class="examples__button button button--h-45" data-fls-popup-link="popup" href="#">Записаться в сервис</a>
-						</div>
-						<div class="examples-right" data-fls-slider="">
-							<!-- Родительский горизонтальный Swiper -->
-							<div class="swiper examples-swiper">
-								<div class="swiper-wrapper">
-									<!-- Слайд 1 -->
-									<div class="swiper-slide">
-										<div class="example">
-											<div class="example__top">
-												<div class="example__title">Тюнинг глушителя</div>
-												<div class="example__auto">Kia Ceed</div>
-											</div>
-											<div class="example__sliders">
-												<!-- Большой превью слайдер -->
-												<div class="swiper preview-swiper" data-preview-swiper="">
-													<div data-fls-gallery="" class="swiper-wrapper">
-														<a href="./assets/img/examples/01.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/01.webp">
-														</a>
-														<a href="./assets/img/examples/02.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/02.webp">
-														</a>
-														<a href="./assets/img/examples/03.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/03.webp">
-														</a>
-														<a href="./assets/img/examples/04.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/04.webp">
-														</a>
-													</div>
-													<!--
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
--->
-												</div>
-												<!-- Вертикальный слайдер миниатюр -->
-												<div class="thumbs-swiper-container">
-													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/01.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/02.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/03.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/04.webp">
-															</div>
-														</div>
-													</div>
-													<div class="thumbs-prev">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-													<div class="thumbs-next">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-												</div>
-											</div>
-											<div class="example__items">
-												<div class="example__item">
-													<div class="example__item-title">Исходные данные:</div>
-													<p class="example__item-text">
-														Владелец Kia Ceed приехал к нам с пожеланием развести
-                      выхлопную систему на две стороны и установить насадки,
-                      подходящие под стиль бампера.
-													</p>
-												</div>
-												<div class="example__item">
-													<div class="example__item-title">Наше решение:</div>
-													<p class="example__item-text">
-														Изготовили раздвоение глушителя, установили насадки
-                      глушителя фирмы Buzzer
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Слайд 2 -->
-									<div class="swiper-slide">
-										<div class="example">
-											<div class="example__top">
-												<div class="example__title">Тюнинг глушителя</div>
-												<div class="example__auto">Kia Ceed</div>
-											</div>
-											<div class="example__sliders">
-												<!-- Большой превью слайдер -->
-												<div class="swiper preview-swiper" data-preview-swiper="">
-													<div data-fls-gallery="" class="swiper-wrapper">
-														<a href="./assets/img/examples/01.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/01.webp">
-														</a>
-														<a href="./assets/img/examples/02.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/02.webp">
-														</a>
-														<a href="./assets/img/examples/03.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/03.webp">
-														</a>
-														<a href="./assets/img/examples/04.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/04.webp">
-														</a>
-													</div>
-													<!--
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
--->
-												</div>
-												<!-- Вертикальный слайдер миниатюр -->
-												<div class="thumbs-swiper-container">
-													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/01.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/02.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/03.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/04.webp">
-															</div>
-														</div>
-													</div>
-													<div class="thumbs-prev">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-													<div class="thumbs-next">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-												</div>
-											</div>
-											<div class="example__items">
-												<div class="example__item">
-													<div class="example__item-title">Исходные данные:</div>
-													<p class="example__item-text">
-														Владелец Kia Ceed приехал к нам с пожеланием развести
-                      выхлопную систему на две стороны и установить насадки,
-                      подходящие под стиль бампера.
-													</p>
-												</div>
-												<div class="example__item">
-													<div class="example__item-title">Наше решение:</div>
-													<p class="example__item-text">
-														Изготовили раздвоение глушителя, установили насадки
-                      глушителя фирмы Buzzer
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- Слайд 3 -->
-									<div class="swiper-slide">
-										<div class="example">
-											<div class="example__top">
-												<div class="example__title">Тюнинг глушителя</div>
-												<div class="example__auto">Kia Ceed</div>
-											</div>
-											<div class="example__sliders">
-												<!-- Большой превью слайдер -->
-												<div class="swiper preview-swiper" data-preview-swiper="">
-													<div data-fls-gallery="" class="swiper-wrapper">
-														<a href="./assets/img/examples/01.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/01.webp">
-														</a>
-														<a href="./assets/img/examples/02.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/02.webp">
-														</a>
-														<a href="./assets/img/examples/03.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/03.webp">
-														</a>
-														<a href="./assets/img/examples/04.webp" class="swiper-slide">
-															<img alt="" src="./assets/img/examples/04.webp">
-														</a>
-													</div>
-													<!--
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
--->
-												</div>
-												<!-- Вертикальный слайдер миниатюр -->
-												<div class="thumbs-swiper-container">
-													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
-														<div class="swiper-wrapper">
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/01.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/02.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/03.webp">
-															</div>
-															<div class="swiper-slide">
-																<img alt="" src="./assets/img/examples/04.webp">
-															</div>
-														</div>
-													</div>
-													<div class="thumbs-prev">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-													<div class="thumbs-next">
-														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
-															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
-														</svg>
-													</div>
-												</div>
-											</div>
-											<div class="example__items">
-												<div class="example__item">
-													<div class="example__item-title">Исходные данные:</div>
-													<p class="example__item-text">
-														Владелец Kia Ceed приехал к нам с пожеланием развести
-                      выхлопную систему на две стороны и установить насадки,
-                      подходящие под стиль бампера.
-													</p>
-												</div>
-												<div class="example__item">
-													<div class="example__item-title">Наше решение:</div>
-													<p class="example__item-text">
-														Изготовили раздвоение глушителя, установили насадки
-                      глушителя фирмы Buzzer
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+				<div class="dignities">
+					<div class="dignities__container">
+						<h2 data-fls-title="" class="title">Какие работы мы выполняем</h2>
+						<div class="dignities__items">
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/01.svg" alt="#">
+								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
+							</div>
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/02.svg" alt="#">
+								<p class="dignities__text">
+									Более 3500 видов ткани из Польши, Турции, России, КНР. Натуральная
+            кожа из Италии
+								</p>
+							</div>
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/03.svg" alt="#">
+								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
+							</div>
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/04.svg" alt="#">
+								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
+							</div>
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/05.svg" alt="#">
+								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
+							</div>
+							<div class="dignities__item">
+								<img class="dignities__icon" src="./assets/img/dignities/06.svg" alt="#">
+								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
 							</div>
 						</div>
 					</div>
-					<div class="examples-navigacions">
-						<div class="examples-parent-pagination"></div>
-						<div class="examples-navigacions-arrows">
-							<div class="examples-parent-prev">
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
-									<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
-								</svg>
+				</div>
+				<section class="before-after-secticon">
+					<div class="before-after__container">
+						<h2 data-fls-title="" class="title">Примеры наших работ</h2>
+						<div class="before-after__body">
+							<div data-fls-beforeafter="" class="before-after">
+								<div data-fls-beforeafter-before="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/before/01.webp">
+								</div>
+								<div data-fls-beforeafter-after="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/after/01.webp">
+								</div>
+								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
 							</div>
-							<div class="examples-parent-next">
-								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
-									<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
-								</svg>
+							<div data-fls-beforeafter="" class="before-after">
+								<div data-fls-beforeafter-before="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/before/02.webp">
+								</div>
+								<div data-fls-beforeafter-after="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/after/02.webp">
+								</div>
+								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+							</div>
+							<div data-fls-beforeafter="" class="before-after">
+								<div data-fls-beforeafter-before="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/before/03.webp">
+								</div>
+								<div data-fls-beforeafter-after="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/after/03.webp">
+								</div>
+								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+							</div>
+							<div data-fls-beforeafter="" class="before-after">
+								<div data-fls-beforeafter-before="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/before/04.webp">
+								</div>
+								<div data-fls-beforeafter-after="" class="before-after__item">
+									<img alt="" src="./assets/img/slider/after/04.webp">
+								</div>
+								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="popular">
-					<div class="popular__container">
-						<h2 data-fls-title="" class="title">
-							<span>Популярные</span>
-							виды работ
+				<section class="installments">
+					<div class="installments__container">
+						<div class="installments__content">
+							<h2 data-fls-title="" class="title title--white">Беcпроцентная рассрочка</h2>
+							<p class="installments__text">Учитываем ваш бюджет и предлагаем самые выгодные условия</p>
+							<a data-fls-button="" data-fls-popup-link="popup" class="installments__button button" href="#">Узнать подробнее</a>
+						</div>
+						<div class="installments__items">
+							<div class="installments__item">
+								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
+								<p class="installments__item-text">Без комиссии</p>
+							</div>
+							<div class="installments__item">
+								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
+								<p class="installments__item-text">Без комиссии</p>
+							</div>
+							<div class="installments__item">
+								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
+								<p class="installments__item-text">Без комиссии</p>
+							</div>
+							<div class="installments__item">
+								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
+								<p class="installments__item-text">Без комиссии</p>
+							</div>
+							<div class="installments__item">
+								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
+								<p class="installments__item-text">Первоначальный взнос - 0 рублей</p>
+							</div>
+							<picture class="installments__item-image">
+								<img alt="#" src="./assets/img/installments/01.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="block-form">
+					<div class="block-form__container">
+						<div class="block-form__body">
+							<div class="block-form__content">
+								<h2 data-fls-title="" class="title title--white">Какие работы мы выполняем</h2>
+								<div class="block-form__present">
+									<img src="./assets/img/consultation/Layer.svg" alt="#">
+									<p class="">До 30 апреля - подарок в дополнение к заказу</p>
+								</div>
+							</div>
+							<div class="block-form__body-form">
+								<div class="consultation__text">
+									Позвоните
+									<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
+									или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
+            решения
+								</div>
+								<form class="consultation__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+									<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
+									<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
+									<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
+									<div data-fls-file="" class="file-input-wrapper">
+										<input type="file" name="file" id="file" hidden>
+										<div class="file-input-custom">
+											<span class="clip-icon">
+												<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+													<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+												</svg>
+											</span>
+											<button type="button" class="attach-btn">Прикрепить файл</button>
+											<span class="file-name"></span>
+										</div>
+									</div>
+									<label data-fls-checkbox="" class="checkbox">
+										<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+										<span class="checkbox__text">
+											Я принимаю политику конфиденциальности и даю согласие на
+                обработку персональных данных
+										</span>
+									</label>
+									<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="steaps">
+					<div class="steaps__container">
+						<div class="steaps__item steaps__item--one">
+							<h2 data-fls-title="" class="title">Этапы работ</h2>
+							<picture class="steaps__image">
+								<img alt="#" src="./assets/img/steaps/01.webp">
+							</picture>
+						</div>
+						<div class="steaps__item">
+							<div class="steaps__number">01.</div>
+							<h3 class="steaps__item-title">Оценка работ и договор</h3>
+							<div class="steaps__item-text">
+								<p>
+									Выезд технолог-дизайнера с образцами, осмотр изделия и подбор
+            подходящих материалов
+								</p>
+								<p>Заключение договора</p>
+							</div>
+						</div>
+						<div class="steaps__item">
+							<div class="steaps__number">02.</div>
+							<h3 class="steaps__item-title">Ремонт/изготовление мебели</h3>
+							<div class="steaps__item-text">
+								<p>
+									Выезд технолог-дизайнера с образцами, осмотр изделия и подбор
+            подходящих материалов
+								</p>
+							</div>
+						</div>
+						<div class="steaps__item">
+							<div class="steaps__number">03.</div>
+							<h3 class="steaps__item-title">Доставка и установка</h3>
+							<div class="steaps__item-text">
+								<p>Договариваемся о времени и доставляем мебель в назначенное место</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="materials">
+					<div class="materials__container">
+						<h2 class="materials__title title">
+							Обивочные
+							<span>материалы</span>
 						</h2>
-						<div data-fls-tabs="" data-fls-tabs-animate="1000" class="popular__tabs">
-							<nav data-fls-tabs-titles="" class="popular__navigation">
-								<button type="button" class="popular__title --tab-active">Отделка балконов</button>
-								<button type="button" class="popular__title">Остекление балконов</button>
-								<button type="button" class="popular__title">Ремонт балконов</button>
-								<button type="button" class="popular__title">Утепление балконов</button>
-							</nav>
-							<div data-fls-tabs-body="" class="popular__content">
-								<div class="popular__body tab-popular">
-									<div class="tab-popular__body">
-										<div data-fls-gallery="" class="tab-popular__images">
-											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
-												<img alt="Image" src="./assets/img/gallery/01.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
-												<img alt="Image" src="./assets/img/gallery/02.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
-												<img alt="Image" src="./assets/img/gallery/04.webp">
-											</a>
-										</div>
-										<div class="tab-popular__content">
-											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
-											<p class="tab-popular__text">
-												Система позволяет не использовать потолочную вставку.
-                  Достигается минимальное расстояние от потолка к стене.
-                  Бесщелевая система применяется в любых помещениях. Профили
-                  образуют прочное основание.
-											</p>
-											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
-											<ul class="tab-popular__list">
-												<li>нет зазора между стеной и потолком</li>
-												<li>стык не надо маскировать вставкой</li>
-												<li>четкие и ровные углы</li>
-												<li>внешне похож на гипсокартон</li>
-												<li>можно установить тканевые и пвх полотна</li>
-											</ul>
-											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
-										</div>
+						<p class="materials__subtitle">
+							В нашей коллекции более 4500+ различных материалов обивки под любой
+        запрос. Сотни реализованных заказов и довольных клиентов. Привезем
+        понравившиеся ткани!
+						</p>
+						<div class="materials__items">
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/01.webp">
+										<p class="materials__link">Подробнее</p>
 									</div>
-								</div>
-								<div class="popular__body tab-popular">
-									<div class="tab-popular__body">
-										<div data-fls-gallery="" class="tab-popular__images">
-											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
-												<img alt="Image" src="./assets/img/gallery/01.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
-												<img alt="Image" src="./assets/img/gallery/02.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
-												<img alt="Image" src="./assets/img/gallery/04.webp">
-											</a>
-										</div>
-										<div class="tab-popular__content">
-											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
-											<p class="tab-popular__text">
-												Система позволяет не использовать потолочную вставку.
-                  Достигается минимальное расстояние от потолка к стене.
-                  Бесщелевая система применяется в любых помещениях. Профили
-                  образуют прочное основание.
-											</p>
-											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
-											<ul class="tab-popular__list">
-												<li>нет зазора между стеной и потолком</li>
-												<li>стык не надо маскировать вставкой</li>
-												<li>четкие и ровные углы</li>
-												<li>внешне похож на гипсокартон</li>
-												<li>можно установить тканевые и пвх полотна</li>
-											</ul>
-											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
-										</div>
+									<p class="materials__name">Лен</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/02.webp">
+										<p class="materials__link">Подробнее</p>
 									</div>
-								</div>
-								<div class="popular__body tab-popular">
-									<div class="tab-popular__body">
-										<div data-fls-gallery="" class="tab-popular__images">
-											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
-												<img alt="Image" src="./assets/img/gallery/01.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
-												<img alt="Image" src="./assets/img/gallery/02.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
-												<img alt="Image" src="./assets/img/gallery/04.webp">
-											</a>
-										</div>
-										<div class="tab-popular__content">
-											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
-											<p class="tab-popular__text">
-												Система позволяет не использовать потолочную вставку.
-                  Достигается минимальное расстояние от потолка к стене.
-                  Бесщелевая система применяется в любых помещениях. Профили
-                  образуют прочное основание.
-											</p>
-											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
-											<ul class="tab-popular__list">
-												<li>нет зазора между стеной и потолком</li>
-												<li>стык не надо маскировать вставкой</li>
-												<li>четкие и ровные углы</li>
-												<li>внешне похож на гипсокартон</li>
-												<li>можно установить тканевые и пвх полотна</li>
-											</ul>
-											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
-										</div>
+									<p class="materials__name">Микрофибра</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/03.webp">
+										<p class="materials__link">Подробнее</p>
 									</div>
-								</div>
-								<div class="popular__body tab-popular">
-									<div class="tab-popular__body">
-										<div data-fls-gallery="" class="tab-popular__images">
-											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
-												<img alt="Image" src="./assets/img/gallery/01.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
-												<img alt="Image" src="./assets/img/gallery/02.webp">
-											</a>
-											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
-												<img alt="Image" src="./assets/img/gallery/04.webp">
-											</a>
-										</div>
-										<div class="tab-popular__content">
-											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
-											<p class="tab-popular__text">
-												Система позволяет не использовать потолочную вставку.
-                  Достигается минимальное расстояние от потолка к стене.
-                  Бесщелевая система применяется в любых помещениях. Профили
-                  образуют прочное основание.
-											</p>
-											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
-											<ul class="tab-popular__list">
-												<li>нет зазора между стеной и потолком</li>
-												<li>стык не надо маскировать вставкой</li>
-												<li>четкие и ровные углы</li>
-												<li>внешне похож на гипсокартон</li>
-												<li>можно установить тканевые и пвх полотна</li>
-											</ul>
-											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
-										</div>
+									<p class="materials__name">Мешковина</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/04.webp">
+										<p class="materials__link">Подробнее</p>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="stamps">
-					<div class="stamps__container">
-						<div data-fls-title="" class="stamps__title title">
-							<span>Марки,</span>
-							с которыми мы работаем
-						</div>
-					</div>
-					<div data-fls-marquee="" data-fls-marquee-pause="">
-						<div>
-							<img src="./assets/img/stamps/01.svg" alt="Image">
-						</div>
-						<div>
-							<img src="./assets/img/stamps/02.svg" alt="Image">
-						</div>
-						<div>
-							<img src="./assets/img/stamps/03.svg" alt="Image">
-						</div>
-						<div>
-							<img src="./assets/img/stamps/04.svg" alt="Image">
-						</div>
-						<div>
-							<img src="./assets/img/stamps/06.svg" alt="Image">
-						</div>
-					</div>
-				</section>
-				<section class="answers">
-					<div class="answers__container">
-						<h2 data-fls-title="" class="title">Часто задаваемые вопросы</h2>
-						<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
-							<details class="spollers__item">
-								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
-								<div class="spollers__body">
-									<p>
-										Выхлопная система автомобиля заводской сборки предназначена для
-              снижения шума отработанных газов, выходящих из двигателя, что
-              неизбежно приводит к уменьшению его мощности и лишает машину части
-              своих возможностей, делает звук выхлопа более мягким и
-              приглушенным. И далеко не всем автовладельцам такая ситуация
-              нравится: они хотят в полной мере раскрыть возможности мотора,
-              услышать истинный звук мощи в его голосе. Сделать это помогает
-              тюнинг выхлопной системы, который реализуется по нескольким
-              векторам.
-									</p>
-									<ol>
-										<li>Внешний тюнинг.</li>
-										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
-										<li>Повышение мощности.</li>
-									</ol>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Внешний тюнинг выхлопной системы: что это и зачем?</summary>
-								<div class="spollers__body">
-									<p>
-										Раздвоение трубы. Выпускная труба разводится на две части, как у
-              спорткаров. Раздвоение может быть полным – на каждый отвод
-              ставится свой глушитель, или неполным – один глушитель подает
-              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
-              турбодизельными ДВС, как разделение трубы на две части.
-									</p>
-									<p>
-										Раздвоение трубы. Выпускная труба разводится на две части, как у
-              спорткаров. Раздвоение может быть полным – на каждый отвод
-              ставится свой глушитель, или неполным – один глушитель подает
-              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
-              турбодизельными ДВС, как разделение трубы на две части.
-									</p>
-									<ul>
-										<li>Внешний тюнинг.</li>
-										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
-										<li>Повышение мощности.</li>
-									</ul>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
-								<div class="spollers__body">
-									<p>
-										Изменение звучания выхлопа с приданием ему спортивных нот, рокота,
-              рева, басовитых звуков осуществляется с помощью различных методов:
-									</p>
-									<ul>
-										<li>
-											монтаж новой банки глушителя – штатный элемент заменяют на
-                прямоточную заднюю банку, что меняет тональность выхлопа и
-                делает его громче;
-										</li>
-										<li>
-											модернизация стандартной банки глушителя – к такому способу
-                обычно прибегают владельцы машин на гарантии или тех, для
-                которых очень сложно подобрать банку для тюнинга по параметрам.
-                Специалисты вскрывают элемент и изменяют его устройство для
-                того, чтобы он зазвучал по-новому;
-										</li>
-										<li>
-											активный выхлоп – в данном варианте специалисты устанавливают
-                под днищем ТС источники звука (1 или 2), имитирующие звучание
-                выхлопа спорткара. Они работают синхронно с двигателем благодаря
-                сап-шине, могут воспроизводить запись конкретной модели авто или
-                создавать оригинальный звук выхлопа.
-										</li>
-										<li></li>
-									</ul>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
-								<div class="spollers__body">
-									<p>
-										Выхлопная система автомобиля заводской сборки предназначена для
-              снижения шума отработанных газов, выходящих из двигателя, что
-              неизбежно приводит к уменьшению его мощности и лишает машину части
-              своих возможностей, делает звук выхлопа более мягким и
-              приглушенным. И далеко не всем автовладельцам такая ситуация
-              нравится: они хотят в полной мере раскрыть возможности мотора,
-              услышать истинный звук мощи в его голосе. Сделать это помогает
-              тюнинг выхлопной системы, который реализуется по нескольким
-              векторам.
-									</p>
-									<ol>
-										<li>Внешний тюнинг.</li>
-										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
-										<li>Повышение мощности.</li>
-									</ol>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Внешний тюнинг выхлопной системы: что это и зачем?</summary>
-								<div class="spollers__body">
-									<p>
-										Раздвоение трубы. Выпускная труба разводится на две части, как у
-              спорткаров. Раздвоение может быть полным – на каждый отвод
-              ставится свой глушитель, или неполным – один глушитель подает
-              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
-              турбодизельными ДВС, как разделение трубы на две части.
-									</p>
-									<p>
-										Раздвоение трубы. Выпускная труба разводится на две части, как у
-              спорткаров. Раздвоение может быть полным – на каждый отвод
-              ставится свой глушитель, или неполным – один глушитель подает
-              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
-              турбодизельными ДВС, как разделение трубы на две части.
-									</p>
-									<ul>
-										<li>Внешний тюнинг.</li>
-										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
-										<li>Повышение мощности.</li>
-									</ul>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
-								<div class="spollers__body">
-									<p>
-										Изменение звучания выхлопа с приданием ему спортивных нот, рокота,
-              рева, басовитых звуков осуществляется с помощью различных методов:
-									</p>
-									<ul>
-										<li>
-											монтаж новой банки глушителя – штатный элемент заменяют на
-                прямоточную заднюю банку, что меняет тональность выхлопа и
-                делает его громче;
-										</li>
-										<li>
-											модернизация стандартной банки глушителя – к такому способу
-                обычно прибегают владельцы машин на гарантии или тех, для
-                которых очень сложно подобрать банку для тюнинга по параметрам.
-                Специалисты вскрывают элемент и изменяют его устройство для
-                того, чтобы он зазвучал по-новому;
-										</li>
-										<li>
-											активный выхлоп – в данном варианте специалисты устанавливают
-                под днищем ТС источники звука (1 или 2), имитирующие звучание
-                выхлопа спорткара. Они работают синхронно с двигателем благодаря
-                сап-шине, могут воспроизводить запись конкретной модели авто или
-                создавать оригинальный звук выхлопа.
-										</li>
-										<li></li>
-									</ul>
-								</div>
-							</details>
+									<p class="materials__name">Мех</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/05.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Шерсть</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/06.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Замша</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/07.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Букле</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/08.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Экокожа</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/09.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Антивандальная ткань</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/10.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Гобелен</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/11.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Искусственная замша</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/12.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Велюр</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/13.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Натуральная кожа</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/14.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Шенилл</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/15.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Искусственная кожа</p>
+								</a>
+							</article>
+							<article>
+								<a href="#" class="materials__item">
+									<div class="materials__image">
+										<img alt="#" src="./assets/img/materials/16.webp">
+										<p class="materials__link">Подробнее</p>
+									</div>
+									<p class="materials__name">Флок</p>
+								</a>
+							</article>
 						</div>
 					</div>
 				</section>
 				<section class="questions">
 					<div class="questions__container">
-						<div data-fls-parallax-parent="" class="questions__body">
-							<img class="questions__decor" src="./assets/img/questions/question.svg" alt="Image">
+						<picture class="questions__image">
+							<img alt="#" src="./assets/img/spoiler/faq.webp">
+						</picture>
+						<div class="questions__body">
 							<div class="questions__content">
-								<h2 data-fls-title="" class="title title--white title--notmargin">Остались вопросы?</h2>
-								<p class="questions__text">
-									Оставьте заявку на бесплатную консультацию по телефону или переписке
-            в удобном вам менеджере, и мы свяжемся с вами в ближайшее время.
-								</p>
-								<a data-fls-popup-link="popup" class="questions__button button button--black button--h-45" href="#">Получить консультацию</a>
+								<h2 class="questions__title title">
+									У вас остались
+									<span>вопросы?</span>
+								</h2>
+								<a data-ripple="" data-popup="#popup" class="questions__button button" href="#">Задать вопрос</a>
 							</div>
-							<picture data-fls-parallax="" data-fls-parallax-coefficient="20" class="questions__image">
-								<img alt="Image" src="./assets/img/questions/avto.webp">
-							</picture>
+							<div data-fls-spollers="" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Где происходит обивка/перетяжка мебели?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										<p>
+											Перетяжка мебели происходит в производственных условиях на нашей
+              фабрике в г. Долгопрудный. Крайне сложно без потери качества
+              перетянуть мебель на дому, без специального оборудования и
+              материалов.
+										</p>
+										<p>
+											Мы не рекомендуем пользоваться услугами компаний, перетягивающих
+              мебель в домашних условиях, так как в 99% случаев через месяц ваша
+              мебель разойдется по швам.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Сколько времени занимает процесс перетяжки мебели?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Файл для печати должен быть в формате TIF, PSD, либо в векторном
+            формате CorelDraw (любой версии), PDF. Все объекты, включая текст,
+            должны быть переведены в кривые.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Вы работаете по юридическому договору?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Да, мы работаем только по договору и даем гарантию на наши работы 12
+            месяцев. Мы несем ответственность за все этапы, включая сроки,
+            материалы и конечный результат. За каждую нашу ошибку мы готовы
+            выплатить компенсацию, но, благодаря опыту и ежемесячной
+            квалификации наших мастеров, ошибок мы не допускаем.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Сколько стоит выезд дизайнера для оценки работ?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										<p>
+											При заказе услуг компании, выезд дизайнера и менеджера технолога
+              бесплатный. В случае отказа от услуг, стоимость выезда составит
+              1000 руб. по Москве (в пределах МКАД) и 2000 р. по Московской
+              области (до 55 км от МКАД).
+										</p>
+										<p>
+											Мы не рекомендуем пользоваться услугами компаний, перетягивающих
+              мебель в домашних условиях, так как в 99% случаев через месяц ваша
+              мебель разойдется по швам.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Почему не стоит перетягивать на дому?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Выполнение дома спровоцировать низкое качество работы из-за
+            ограничений в пространстве и отсутствии профессионального
+            оборудования.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										У вас есть рассрочка?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										Да, наша рассрочка на перетяжку мебели в Москве и области действует
+            на 4-6 месяцев.
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">
+										Какие используются материалы?
+										<span></span>
+									</summary>
+									<div class="spollers__body">
+										В мастерской используются велюр, флок, экокожа, натуральная кожа,
+            гобелен, жаккард, а также синтетические ткани.
+									</div>
+								</details>
+							</div>
 						</div>
 					</div>
 				</section>
-				<section class="contacts">
-					<div class="contacts__container">
-						<div class="contacts__body">
-							<h2 class="contacts__title">
-								Контакты
-								<span>КАК НАС НАЙТИ</span>
-							</h2>
-							<div class="contacts__items">
-								<div class="contacts__item">
-									<div class="contacts__icon">
-										<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M3.19549 8.66668C2.29474 7.14061 1.6988 5.36467 1.45635 3.38747C1.38533 2.80823 1.34982 2.51862 1.45369 2.22371C1.56053 1.92038 1.83049 1.6153 2.11856 1.47234C2.39863 1.33334 2.72994 1.33334 3.39257 1.33334C3.93243 1.33334 4.20235 1.33334 4.42988 1.41919C4.68305 1.51472 4.90117 1.68502 5.05525 1.90747C5.19372 2.10738 5.25919 2.36924 5.39012 2.89298L5.47165 3.21909C5.66529 3.99364 5.76211 4.38091 5.74752 4.76097C5.7346 5.09753 5.65804 5.4286 5.52189 5.73667C5.36814 6.08454 5.11113 6.39 4.59711 7.00088L3.19549 8.66668ZM3.19549 8.66668C4.16556 10.3101 5.48916 11.6637 7.10548 12.6667M7.10548 12.6667C8.68161 13.6447 10.5361 14.2892 12.6126 14.5439C13.1919 14.6149 13.4816 14.6504 13.7765 14.5465C14.0798 14.4397 14.3849 14.1697 14.5279 13.8817C14.6669 13.6016 14.6669 13.2635 14.6669 12.5874C14.6669 12.0611 14.6669 11.7979 14.581 11.5703C14.4855 11.3171 14.3152 11.0991 14.0927 10.9449C13.8928 10.8065 13.6309 10.741 13.1072 10.6101L12.635 10.4921C11.912 10.3113 11.5505 10.2209 11.1933 10.2285C10.8769 10.2353 10.5643 10.2983 10.27 10.4146C9.93781 10.5459 9.63955 10.7693 9.04295 11.2159L7.10548 12.6667ZM9.33355 4.66668C9.81528 4.66668 10.2969 4.97606 10.6669 5.37128C11.0649 5.79652 11.3335 6.32114 11.3335 6.66668M9.33355 2.66668C11.5427 2.66668 13.3335 4.45754 13.3335 6.66668" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
+				<section class="features">
+					<div class="features__container">
+						<div data-fls-showmore="items" class="features__body">
+							<div data-fls-showmore-content="2" class="features__content">
+								<div class="features__item">
+									<h2 data-fls-title="" class="title">Особенности работы по перетяжке</h2>
+									<div class="features__box">
+										<div class="features__text">
+											<p>
+												Мы тщательно отбираем материалы, гарантируя качество. Работая
+                  с надежными поставщиками, мы заказываем ткани, фурнитуру из
+                  таких стран, как Италия, Бельгия, Испания, США, Израиль,
+                  Турция и Франция. Срок службы наших материалов составляет
+                  более 10 лет, что делает нашу фурнитуру красивой. Все
+                  материалы, которые мы используем, гипоаллергенны, а также
+                  износостойки. Мы проверяем все сертификаты, тестируем
+                  материалы перед покупкой, чтобы убедиться в их безопасности,
+                  качестве.
+											</p>
+											<p>
+												Каждый заказ — это наш новый проект. Мы прислушиваемся к
+                  пожеланиям, изучаем интерьер и особенности фурнитуры, чтобы
+                  предложить несколько функциональных вариантов. Если важна
+                  эксклюзивность, мы шьём обивку по вашему запросу:
+                  воспроизведём любой рисунок ткани или воплотим вашу идею. Если
+                  вы хотите обновить обивку или полностью сшить новую — мы
+                  поможем подобрать ткань, оформить заказ и проконсультируем на
+                  каждом этапе.
+											</p>
+										</div>
+										<picture class="features__image">
+											<img alt="" src="./assets/img/features/01.webp">
+										</picture>
 									</div>
-									<a class="contacts__phone" href="tel:78125096653">+7 (812) 509-66-53</a>
+									<div class="features__bottom">
+										<blockquote>
+											Мы — фирма обивка мебели, которая работает напрямую с
+                заказчиками и предлагает честную перетяжку мебели без
+                посредников. У нас вы можете заказать перетяжку мебели в любое
+                удобное время: наши мастера подъедут к вам или примут изделие в
+                мастерской. Все образцы тканей, цены и фото выполненных работ
+                доступны на сайт нашего ателье.
+										</blockquote>
+									</div>
 								</div>
-								<div class="contacts__item">
-									<div class="contacts__icon">
-										<svg width="14" height="16" viewbox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M12.1543 4.00001C12.6919 4.84958 13 5.86703 13 7.00001C13 12.2345 8.33333 14.6665 7 14.6665C5.66667 14.6665 1 12.2345 1 7.00001C1 3.66668 3.66667 1.33334 7 1.33334C8.0614 1.33334 9.05513 1.56992 9.9168 2.00001M5 7.33334C5 8.43794 5.8954 9.33334 7 9.33334C8.1046 9.33334 9 8.43794 9 7.33334C9 6.22878 8.1046 5.33334 7 5.33334" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
+								<div class="features__item">
+									<h2 data-fls-title="" class="title">Перетяжка мебели на карте Москвы</h2>
+									<div class="features__box">
+										<div class="features__text">
+											<p>
+												Если ваша гарнитура утратила первоначальный вид, не
+                  выкидывайте нее. Мы предлагаем обтяжку старой мебели,
+                  добавляем оригинальные элементы, чтобы вернуть ей вид.
+                  Предложены услуги по реставрации каркаса, наполнителя, а также
+                  обивке мягкой, корпусной гарнитуры. Наши сотрудники работают
+                  как на дому, так и в мастерской. Найти нас легко - достаточно
+                  ввести в поиск "перетяжка мебели рядом со мной на карте", и вы
+                  увидите наше расположение. Не нужно торопиться с покупкой
+                  новой гарнитуры — перетянуть мебель дешевле и быстрее.
+											</p>
+											<p>
+												Интересует цена обтянуть мебель? Мы предлагаем разумные
+                  расценки. Цена обивки фурнитуры зависит от выбранных
+                  материалов, однако мы гарантируем, что цены на наши услуги
+                  будут вполне доступными. Узнав, сколько стоит перетянуть
+                  мебель в Москве, вы убедитесь, что это экономично. У нас
+                  работает перетяжка мебели недорого качественно - мы не
+                  экономим на материалах, но предлагаем честные цены. Мы
+                  получаем положительные отзывы, потому что наши мастера по
+                  перетяжке фурнитуры тщательно подходят к каждому заказу,
+                  выполняют свою работу качественно и в срок.
+											</p>
+										</div>
+										<picture class="features__image">
+											<img alt="" src="./assets/img/features/02.webp">
+										</picture>
 									</div>
-									<address class="contacts__address">
-										Санкт-Петербург, Заневский пр-т, 77 ул. Бухарестская, 16 ул.
-              Руставели, 11а
-									</address>
 								</div>
-								<a href="#" class="contacts__item">
-									<div class="contacts__icon">
-										<img alt="Image" src="./assets/img/icon-social/viber.webp">
+								<div class="features__item">
+									<h2 data-fls-title="" class="title">Реставрация мягкой мебели в западной части Москвы</h2>
+									<p class="features__text">
+										Обновляем текстильные покрытия, заменяем наполняющие материалы,
+              восстанавливаем мягкую мебель, спальную фурнитуру, кресла, стулья,
+              выполняем реставрацию кухонных уголков. Наша обивка перетяжка
+              мебели в Москве выполняется мастерами с опытом. Московская
+              мастерская мебели функционирует в западной части столицы свыше
+              семнадцати лет. Располагаем производственным участком по
+              обновлению мебельной обивки. Организуем перевозку от клиента и
+              обратно корпоративным транспортом.
+									</p>
+									<div class="features__box">
+										<div class="features__text">
+											<p>
+												Принимаем заказы по столице и области, в западном и других
+                  административных округах города. Обращайтесь - приедем к вам
+                  домой или в рабочее помещение, предоставим консультацию,
+                  назовем цену, оперативно примем заказ к исполнению. У нас
+                  доступна обшивка мебели недорого.
+											</p>
+											<h3 class="features__subtitle">В ателье мебели возможно:</h3>
+											<ul class="features__list">
+												<li>качественно обновить мягкую фурнитуру в западном округе;</li>
+												<li>
+													изменить жесткость или мягкость изделий посредством замены
+                    наполнителя;
+												</li>
+												<li>заменить покрытие компьютерных и офисных кресел;</li>
+												<li>заказать обшивку изголовий спальных мест;</li>
+												<li>выполнить восстановление офисной фурнитуры.</li>
+											</ul>
+										</div>
+										<picture class="features__image">
+											<img alt="" src="./assets/img/features/03.webp">
+										</picture>
 									</div>
-									<div class="contacts__text">Whatsapp</div>
-								</a>
-								<a href="#" class="contacts__item">
-									<div class="contacts__icon">
-										<img alt="Image" src="./assets/img/icon-social/telegram.webp">
+								</div>
+								<div class="features__item">
+									<div class="features__box">
+										<div class="features__text">
+											<p>
+												Наши услуги обивки мебели позволяют полностью восстановить
+                  эстетику любых предметов.
+											</p>
+											<h3 class="features__subtitle">Предлагаем выбор материй для покрытий, включая:</h3>
+											<ul class="features__list">
+												<li>качественно обновить мягкую фурнитуру в западном округе;</li>
+												<li>
+													изменить жесткость или мягкость изделий посредством замены
+                    наполнителя;
+												</li>
+												<li>заменить покрытие компьютерных и офисных кресел;</li>
+											</ul>
+											<p>
+												Широкий ассортимент помогает выбрать материи под любые условия
+                  и дизайн.
+											</p>
+										</div>
+										<picture class="features__image">
+											<img alt="" src="./assets/img/features/02.webp">
+										</picture>
 									</div>
-									<div class="contacts__text">Telegram</div>
-								</a>
+								</div>
+							</div>
+							<button hidden data-fls-showmore-button="" type="button" class="features__more">
+								<span>Показать ещё</span>
+								<span>Скрыть</span>
+							</button>
+						</div>
+					</div>
+				</section>
+				<div class="consultation">
+					<div class="consultation__container">
+						<div class="consultation__content">
+							<h2 data-fls-title="" class="title title--white">Запишитесь на бесплатную консультацию</h2>
+							<div class="consultation__subtitle">по перетяжке и ремонту мебели</div>
+							<div class="consultation__text">
+								Позвоните
+								<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
+								или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
+          решения
+							</div>
+							<form class="consultation__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<input required type="email" name="text" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
+								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
+								<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
+								<div data-fls-file="" class="file-input-wrapper">
+									<input type="file" name="file" id="file" hidden>
+									<div class="file-input-custom">
+										<span class="clip-icon">
+											<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+											</svg>
+										</span>
+										<button type="button" class="attach-btn">Прикрепить файл</button>
+										<span class="file-name"></span>
+									</div>
+								</div>
+								<label data-fls-checkbox="" class="checkbox">
+									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+									<span class="checkbox__text">
+										Я принимаю политику конфиденциальности и даю согласие на
+              обработку персональных данных
+									</span>
+								</label>
+								<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
+							</form>
+						</div>
+						<div class="consultation__image">
+							<img class="consultation__img" alt="#" src="./assets/img/consultation/02.webp">
+							<div class="consultation__box">
+								<div class="consultation__present">
+									<img class="consultation__present-icon" src="./assets/img/consultation/Layer.svg" alt="#">
+									<p class="consultation__present-text">До 30 апреля - подарок в дополнение к заказу</p>
+								</div>
+								<p class="consultation__box-text">Все подробности - уточнять менеджера</p>
 							</div>
 						</div>
 					</div>
+				</div>
+				<section class="contacts" id="contacts">
 					<div class="contacts__map">
-						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae341eea60766637d6229388975a5fbd8469a3bccecc82f0fb13ec4f3b2cc10a8&amp;source=constructor" frameborder="0"></iframe>
+						<div class="contacts__map-wrapper">
+							<iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3A58c254f90ad8e35e14e6de1fc76e5dca939b61b24f93a54d27a5dca6f9d89395" frameborder="0" allowfullscreen width="100%" height="600px" style="display: block"></iframe>
+						</div>
+					</div>
+					<div class="contacts__container">
+						<div class="contacts__info">
+							<div class="contacts__card">
+								<h3 class="contacts__title">Контакты</h3>
+								<div class="contacts__phones contacts__item">
+									<a href="tel:74951859768" class="contacts__phone contacts__item-text">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="22" fill="red">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M.829 1.497C3.37-.386 5.18-.44 5.879 2.424c.625 2.558.777 2.933-1.19 4.39-1.586 1.175 4.006 9.624 5.591 8.45 1.968-1.457 2.249-1.178 4.308.317 2.304 1.674 1.637 3.456-.905 5.339C8.273 23.396-3.163 6.115.829 1.497z" fill="#151515"></path>
+										</svg>
+										<span>+7 (495) 185-97-68</span>
+									</a>
+								</div>
+								<div class="contacts__mail contacts__item">
+									<a href="mailto:ambassador-group@bk.ru" class="contacts__mail contacts__item-text">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M.707.15h14.587a.8.8 0 01.454.156L8.682 7.192c-.354.365-1.01.365-1.363 0L.303.306A.563.563 0 01.707.149zM16 1.087V11.47l-5.3-5.216L16 1.088zm-5.855 5.686l5.4 5.321c-.05 0-.15.053-.252.053H.707c-.101 0-.152-.053-.253-.053l5.4-5.32.96.938a1.637 1.637 0 002.372 0l.96-.939zM5.3 6.253L0 11.469V1.088l5.3 5.165z" fill="#151515"></path>
+										</svg>
+										<span>ambassador-group@bk.ru</span>
+									</a>
+								</div>
+								<div class="contacts__address contacts__item">
+									<div class="contacts__item-heading">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" fill="none">
+											<path d="M8 .143c-4.39 0-8 3.423-8 8.306 0 1.742.41 2.954 1.173 4.297L7.461 23.82a.615.615 0 001.078 0l6.288-11.074C15.589 11.403 16 10.19 16 8.449 16 3.566 12.39.143 8 .143zm0 4.306a3.692 3.692 0 110 7.384 3.692 3.692 0 010-7.384z" fill="#151515"></path>
+										</svg>
+										<span>Адрес производства:</span>
+									</div>
+									<div class="contacts__item-text">Московская область, Щёлково, ул. Московская, д. 70Ак1</div>
+								</div>
+								<div class="contacts__open contacts__item">
+									<div class="contacts__item-heading">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
+											<path d="M8 .13a8 8 0 100 15.996A8 8 0 108 .13zm0 2c.246 0 .444.198.444.444v5.373l3.487 3.479a.448.448 0 010 .631.449.449 0 01-.632 0L7.688 8.44a.44.44 0 01-.132-.312V2.574c0-.246.199-.445.444-.445z" fill="#151515"></path>
+										</svg>
+										<span>Режим работы:</span>
+									</div>
+									<div class="contacts__item-text">ежедневно 9:00-21:00</div>
+								</div>
+								<div class="contacts__order order">
+									<button data-fls-button="" class="button button--h40" type="button" data-fls-popup-link="popup">Хочу консультацию</button>
+								</div>
+								<div class="contacts__socials">
+									<a class="contacts__socials-link" target="_blank" href="https://t.me/+79256559037">
+										<svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M17.618 18.79c.309.217.706.271 1.06.138.355-.134.616-.434.695-.798.832-3.88 2.852-13.7 3.61-17.23a.738.738 0 00-.249-.72.773.773 0 00-.763-.132C17.952 1.522 5.578 6.125.52 7.98a.785.785 0 00-.52.76.79.79 0 00.569.725c2.268.673 5.245 1.608 5.245 1.608s1.392 4.166 2.117 6.285a.836.836 0 00.578.547.835.835 0 00.777-.197l2.967-2.777s3.423 2.488 5.365 3.86zM7.067 10.547l1.609 5.261.357-3.332 9.76-8.726a.262.262 0 00.033-.358.274.274 0 00-.36-.061l-11.4 7.216z" fill="#151515"></path>
+										</svg>
+									</a>
+									<a class="contacts__socials-link" target="_blank" href="https://vk.com/ambassador_pereobivka">
+										<svg xmlns="http://www.w3.org/2000/svg" width="29" height="17" fill="none">
+											<path d="M15.903 16.992c.736 0 1.037-.492 1.029-1.11-.038-2.328.862-3.581 2.488-1.948 1.797 1.807 2.17 3.059 4.353 3.059h3.867c.976 0 1.36-.316 1.36-.812 0-1.048-1.717-2.897-3.172-4.254-2.037-1.9-2.132-1.946-.378-4.233 2.176-2.84 5.023-6.48 2.505-6.48h-4.81c-.933 0-1 .528-1.333 1.315-1.202 2.85-3.487 6.542-4.355 5.977-.907-.589-.492-2.922-.423-6.388.018-.916.014-1.544-1.378-1.87A9.705 9.705 0 0013.47 0c-2.747 0-4.641 1.157-3.565 1.359 1.899.356 1.716 4.483 1.274 6.265-.77 3.104-3.668-2.457-4.875-5.227-.292-.665-.381-1.183-1.42-1.183H.95c-.595 0-.951.195-.951.627C0 2.57 3.577 10 6.991 13.704c3.33 3.613 6.622 3.288 8.912 3.288z" fill="#151515"></path>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
-					<div class="footer__top">
-						<div class="footer__info info-footer">
-							<a class="info-footer__logo" href="#">
-								<img src="./assets/img/header/Logo.svg" alt="Image">
-							</a>
-							<div class="info-footer__socials">
-								<a href="tel:" class="info-footer__social info-footer__social--phone">
-									<div class="info-footer__social-icon">
-										<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M3.19549 8.66668C2.29474 7.14061 1.6988 5.36467 1.45635 3.38747C1.38533 2.80823 1.34982 2.51862 1.45369 2.22371C1.56053 1.92038 1.83049 1.6153 2.11856 1.47234C2.39863 1.33334 2.72994 1.33334 3.39257 1.33334C3.93243 1.33334 4.20235 1.33334 4.42988 1.41919C4.68305 1.51472 4.90117 1.68502 5.05525 1.90747C5.19372 2.10738 5.25919 2.36924 5.39012 2.89298L5.47165 3.21909C5.66529 3.99364 5.76211 4.38091 5.74752 4.76097C5.7346 5.09753 5.65804 5.4286 5.52189 5.73667C5.36814 6.08454 5.11113 6.39 4.59711 7.00088L3.19549 8.66668ZM3.19549 8.66668C4.16556 10.3101 5.48916 11.6637 7.10548 12.6667M7.10548 12.6667C8.68161 13.6447 10.5361 14.2892 12.6126 14.5439C13.1919 14.6149 13.4816 14.6504 13.7765 14.5465C14.0798 14.4397 14.3849 14.1697 14.5279 13.8817C14.6669 13.6016 14.6669 13.2635 14.6669 12.5874C14.6669 12.0611 14.6669 11.7979 14.581 11.5703C14.4855 11.3171 14.3152 11.0991 14.0927 10.9449C13.8928 10.8065 13.6309 10.741 13.1072 10.6101L12.635 10.4921C11.912 10.3113 11.5505 10.2209 11.1933 10.2285C10.8769 10.2353 10.5643 10.2983 10.27 10.4146C9.93781 10.5459 9.63955 10.7693 9.04295 11.2159L7.10548 12.6667ZM9.33355 4.66668C9.81528 4.66668 10.2969 4.97606 10.6669 5.37128C11.0649 5.79652 11.3335 6.32114 11.3335 6.66668M9.33355 2.66668C11.5427 2.66668 13.3335 4.45754 13.3335 6.66668" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</svg>
-									</div>
-									<div class="info-footer__social-number">+7 (812) 509-66-53</div>
-								</a>
-								<a href="#" class="info-footer__social">
-									<div class="info-footer__social-icon">
-										<img alt="Image" src="./assets/img/icon-social/viber.webp">
-									</div>
-									<div class="info-footer__social-number">Whatsapp</div>
-								</a>
-								<a href="#" class="info-footer__social">
-									<div class="info-footer__social-icon">
-										<img alt="Image" src="./assets/img/icon-social/telegram.webp">
-									</div>
-									<div class="info-footer__social-number">Telegram</div>
-								</a>
-							</div>
-						</div>
-						<div class="footer__navigacion navigacion-footer">
-							<div class="navigacion-footer__item">
-								<a class="navigacion-footer__item-rewies" href="#">Отзывы</a>
-							</div>
-							<!-- data-fls-scrollto=".класс блока"   для нужной навигации -->
-							<nav class="navigacion-footer__item">
-								<ul class="navigacion-footer__list">
+					<div data-fls-spollers="479.98,max" class="footer__main">
+						<details class="footer__item">
+							<summary class="footer__title">Услуги</summary>
+							<div class="footer__item-body">
+								<ul class="footer__list">
 									<li>
-										<a href="#">Замена банок глушителя</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 									<li>
-										<a href="#">Управляемый выхлоп</a>
+										<a href="#">Перетяжка стульев</a>
 									</li>
 									<li>
-										<a href="#">Активный выхлоп</a>
+										<a href="#">Перетяжка кресел</a>
 									</li>
 									<li>
-										<a href="#">Раздвоение выхлопной системы</a>
+										<a href="#">Перетяжка мебели</a>
 									</li>
 									<li>
-										<a href="#">Насадки глушителя</a>
-									</li>
-									<li>
-										<a href="#">Тюнинг звука выхлопа</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 								</ul>
-							</nav>
-							<nav class="navigacion-footer__item">
-								<ul class="navigacion-footer__list">
+								<ul class="footer__list">
 									<li>
-										<a href="#">Даунпайп</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 									<li>
-										<a href="#">Изготовление выхлопной системы</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 									<li>
-										<a href="#">Настройка звука выхлопа</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 									<li>
-										<a href="#">Установка спортивного катализатора</a>
-									</li>
-									<li>
-										<a href="#">Тюнинг выпускного коллектора</a>
-									</li>
-									<li>
-										<a href="#">Обмотка коллектора</a>
+										<a href="#">Перетяжка дивана</a>
 									</li>
 								</ul>
-							</nav>
-						</div>
+							</div>
+						</details>
+						<details class="footer__item">
+							<summary class="footer__title">Разделы сайта</summary>
+							<div class="footer__item-body">
+								<ul class="footer__list">
+									<li>Услуги</li>
+									<li>Материалы для обивки</li>
+									<li>Отзывы</li>
+									<li>Контакты</li>
+								</ul>
+								<ul class="footer__list">
+									<li>Вопросы</li>
+									<li>О нас</li>
+									<li>Наши работы</li>
+								</ul>
+							</div>
+						</details>
+						<details class="footer__item">
+							<summary class="footer__title">Контакты</summary>
+							<div class="footer__item-info">
+								<p>Телефоны:</p>
+								<a href="tel:">+375(29)111-33-44</a>
+								<p>E-mail:</p>
+								<a href="">dabrota.ru</a>
+							</div>
+						</details>
 					</div>
 					<div class="footer__bottom">
-						<div class="footer__copyright">Copyright © 2026</div>
-						<div class="footer__privacy">
-							<a href="#" target="_blank">Политика конфиденциальности</a>
-							<a href="#" target="_blank">Обработка персональных данных</a>
-							<a href="#" target="_blank">Публичная оферта</a>
-							<a href="#" target="_blank">Рекламные и информационные рассылки</a>
-						</div>
+						<p>2026 Dragon Mebel</p>
+						<a href="#">Политика конфиденциальности и обработки персональных данных</a>
 					</div>
 				</div>
 			</footer>
+			<!--
+<div data-fls-spollers="768,max" class="spollers">
+<details class="spollers__item">
+<summary class="spollers__title">Заголовок спойлера</summary>
+<div class="spollers__body">Контент спойлера</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Заголовок спойлера</summary>
+<div class="spollers__body">Контент спойлера</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Заголовок спойлера</summary>
+<div class="spollers__body">Контент спойлера</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Заголовок спойлера</summary>
+<div class="spollers__body">Контент спойлера</div>
+</details>
+</div>
+-->
 		</div>
 	</body>
 </html>
