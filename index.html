@@ -8,8 +8,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1777492637978"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777492637978">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1777713950673"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1777713950673">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -770,49 +770,148 @@
 						</div>
 					</div>
 				</div>
-				<section class="before-after-secticon">
-					<div class="before-after__container">
+				<!-- <include src="@components/layout/beforeafter/beforeafter.html"></include> -->
+				<!--
+<section class="before-after-secticon">
+<div class="before-after__container">
+<h2 data-fls-title class="title">Примеры наших работ</h2>
+<div class="before-after__body">
+<div data-fls-beforeafter class="before-after">
+<div data-fls-beforeafter-before class="before-after__item">
+<img src="@img/slider/before/01.png" alt="" />
+</div>
+<div data-fls-beforeafter-after class="before-after__item">
+<img src="@img/slider/after/01.png" alt="" />
+</div>
+<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
+</div>
+<div data-fls-beforeafter class="before-after">
+<div data-fls-beforeafter-before class="before-after__item">
+<img src="@img/slider/before/02.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-after class="before-after__item">
+<img src="@img/slider/after/02.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
+</div>
+<div data-fls-beforeafter class="before-after">
+<div data-fls-beforeafter-before class="before-after__item">
+<img src="@img/slider/before/03.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-after class="before-after__item">
+<img src="@img/slider/after/03.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
+</div>
+<div data-fls-beforeafter class="before-after">
+<div data-fls-beforeafter-before class="before-after__item">
+<img src="@img/slider/before/04.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-after class="before-after__item">
+<img src="@img/slider/after/04.jpg" alt="" />
+</div>
+<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
+</div>
+</div>
+</div>
+</section>
+-->
+				<div data-fls-tabs="" class="tabs">
+					<div class="tabs__container">
 						<h2 data-fls-title="" class="title">Примеры наших работ</h2>
-						<div class="before-after__body">
-							<div data-fls-beforeafter="" class="before-after">
-								<div data-fls-beforeafter-before="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/before/01.png">
+						<nav data-fls-tabs-titles="" class="tabs__navigation">
+							<button type="button" class="tabs__title --tab-active">Все работы</button>
+							<button type="button" class="tabs__title">Диваны</button>
+							<button type="button" class="tabs__title">Кресла</button>
+						</nav>
+						<div data-fls-tabs-body="" class="tabs__content">
+							<div class="tabs__body">
+								<div class="before-after__body">
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/01.png">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/01.png">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/01.png">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/01.png">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/02.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/02.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/02.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/02.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
 								</div>
-								<div data-fls-beforeafter-after="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/after/01.png">
-								</div>
-								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
 							</div>
-							<div data-fls-beforeafter="" class="before-after">
-								<div data-fls-beforeafter-before="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/before/02.jpg">
+							<div class="tabs__body">
+								<div class="before-after__body">
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/02.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/02.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/02.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/02.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
 								</div>
-								<div data-fls-beforeafter-after="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/after/02.jpg">
-								</div>
-								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
 							</div>
-							<div data-fls-beforeafter="" class="before-after">
-								<div data-fls-beforeafter-before="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/before/03.jpg">
+							<div class="tabs__body">
+								<div class="before-after__body">
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/03.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/03.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
+									<div data-fls-beforeafter="" class="before-after">
+										<div data-fls-beforeafter-before="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/before/03.jpg">
+										</div>
+										<div data-fls-beforeafter-after="" class="before-after__item">
+											<img alt="" src="./assets/img/slider/after/03.jpg">
+										</div>
+										<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
+									</div>
 								</div>
-								<div data-fls-beforeafter-after="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/after/03.jpg">
-								</div>
-								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-							</div>
-							<div data-fls-beforeafter="" class="before-after">
-								<div data-fls-beforeafter-before="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/before/04.jpg">
-								</div>
-								<div data-fls-beforeafter-after="" class="before-after__item">
-									<img alt="" src="./assets/img/slider/after/04.jpg">
-								</div>
-								<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<section class="installments">
 					<div class="installments__container">
 						<div class="installments__content">
