@@ -5,57 +5,351 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1778422853077"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1778422853077">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1779637669795"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1779637669795">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header">
+			<header data-fls-header="" class="header">
 				<div class="header__container">
-					<a href="#" class="header__logo">Диванчик39</a>
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+					<div class="header__top">
+						<a href="index.html" class="header__logo">
+							<img alt="logo" src="./assets/img/header/logo.png">
+						</a>
+						<p data-fls-dynamic=".menu__body, 991.98" class="header__text">Производство и монтаж заборов в Московской области под ключ</p>
+						<div data-fls-dynamic=".menu__body, 500" class="header__address">
+							<div class="header__address-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewbox="0 0 13 16" plerdy-tracking-id="31819498101">
+									<defs>
+										<style>.cls-1 {
+                  fill-rule: evenodd;
+                }</style>
+									</defs>
+									<path data-name="Ellipse 74 copy" class="cls-1" d="M763.9,42.916h0.03L759,49h-1l-4.933-6.084h0.03a6.262,6.262,0,0,1-1.1-3.541,6.5,6.5,0,0,1,13,0A6.262,6.262,0,0,1,763.9,42.916ZM758.5,35a4.5,4.5,0,0,0-3.741,7h-0.012l3.542,4.447h0.422L762.289,42H762.24A4.5,4.5,0,0,0,758.5,35Zm0,6a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,758.5,41Z" transform="translate(-752 -33)"></path>
+								</svg>
+							</div>
+							<address>г.Минск</address>
+						</div>
+						<a data-fls-dynamic=".menu__body, 991.98" href="#" class="header__calc button">
+							<div class="header__calc-icon">
+								<img src="./assets/img/header/calc.svg" alt="">
+							</div>
+							<span>Калькулятор заборов</span>
+						</a>
+						<div data-fls-dynamic=".menu__body, 400" class="header__socials">
+							<a class="header__social" href="#">
+								<img alt="" src="./assets/img/icon-social/instagram.png">
+							</a>
+							<a class="header__social" href="#">
+								<img alt="" src="./assets/img/icon-social/telegram.png">
+							</a>
+							<a class="header__social" href="#">
+								<img alt="" src="./assets/img/icon-social/viber.png">
+							</a>
+							<a class="header__social" href="#">
+								<img alt="" src="./assets/img/icon-social/vk.png">
+							</a>
+						</div>
+						<div data-fls-dynamic=".menu__body, 700" class="header__info">
+							<div class="header__clock">10:00–19:00, без выходных</div>
+							<a class="header__phone" href="tel:89689902612">8 (968) 990 26 12</a>
+							<a data-fls-button="" data-fls-popup-link="popup" class="header__button" href="#">Заказать звонок</a>
+						</div>
+						<button type="button" data-fls-menu="" class="icon-menu">
+							<span></span>
+						</button>
+					</div>
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item">
-									<a href="#" class="menu__link">Главная</a>
+								<div style="background-color: white" class="menu__header">
+									<span style="color: black">Меню</span>
+								</div>
+								<li class="menu__item menu__item--catalog">
+									<button href="" class="menu__link menu__link--catalog menu__link--icon-burger-menu">Каталог товаров</button>
+									<div class="submenu-catalog">
+										<div class="menu__header">
+											<button class="submenu-catalog__close submenu-catalog__close--icon-arrow-left"></button>
+											<span>Каталог</span>
+										</div>
+										<!--
+<div class="submenu-catalog__item">
+</div>
+-->
+										<div class="submenu-catalog__item">
+											<a href="#" class="submenu-catalog__title">БЮДЖЕТНЫЕ ПАМЯТНИКИ:</a>
+											<div class="submenu-catalog__column">
+												<h3 class="submenu-catalog__title">ГРАНИТНЫЕ ПАМЯТНИКИ:</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"></button>
+														<span>ГРАНИТНЫЕ ПАМЯТНИКИ:</span>
+													</div>
+													<li>
+														<a href="#">Вертикальные</a>
+													</li>
+													<li>
+														<a href="#">Эконом</a>
+													</li>
+													<li>
+														<a href="#">Классические</a>
+													</li>
+													<li>
+														<a href="#">Фигурные</a>
+													</li>
+													<li>
+														<a href="#">Резные</a>
+													</li>
+													<li>
+														<a href="#">Мусульманские</a>
+													</li>
+													<li>
+														<a href="#">Православные</a>
+													</li>
+													<li>
+														<a href="#">Военным</a>
+													</li>
+													<li>
+														<a href="#">С ангелом</a>
+													</li>
+													<li>
+														<a href="#">С деревом</a>
+													</li>
+													<li>
+														<a href="#">С крестом</a>
+													</li>
+													<li>
+														<a href="#">С обколом, скалы</a>
+													</li>
+													<li>
+														<a href="#">С плащаницей</a>
+													</li>
+													<li>
+														<a href="#">С птицами</a>
+													</li>
+													<li>
+														<a href="#">С сердцем</a>
+													</li>
+													<li>
+														<a href="#">С цветами</a>
+													</li>
+													<li>
+														<a href="#">Со свечой</a>
+													</li>
+													<li>
+														<a href="#">Мужские</a>
+													</li>
+													<li>
+														<a href="#">Женские</a>
+													</li>
+													<li>
+														<a href="#">Детские</a>
+													</li>
+													<li>
+														<a href="#">Элитные</a>
+													</li>
+													<li>
+														<a href="#">Эксклюзивные</a>
+													</li>
+													<li>
+														<a href="#">Из цветного гранита</a>
+													</li>
+													<li>
+														<a href="#">Двойные гранитные</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="submenu-catalog__item">
+											<div class="submenu-catalog__column">
+												<h3 class="submenu-catalog__title">МРАМОРНЫЕ ПАМЯТНИКИ:</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"></button>
+														<span>МРАМОРНЫЕ ПАМЯТНИКИ:</span>
+													</div>
+													<li>
+														<a href="#">Вертикальные</a>
+													</li>
+													<li>
+														<a href="#">Фигурные</a>
+													</li>
+													<li>
+														<a href="#">Резные</a>
+													</li>
+													<li>
+														<a href="#">С крестом</a>
+													</li>
+													<li>
+														<a href="#">Двойные мраморные -класса</a>
+													</li>
+												</ul>
+											</div>
+											<div class="submenu-catalog__column">
+												<h3 class="submenu-catalog__title">МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"></button>
+														<span>МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:</span>
+													</div>
+													<li>
+														<a href="#">Одинарные</a>
+													</li>
+													<li>
+														<a href="#">Двойные</a>
+													</li>
+													<li>
+														<a href="#">Площадки</a>
+													</li>
+													<li>
+														<a href="#">Цоколи</a>
+													</li>
+												</ul>
+											</div>
+											<div class="submenu-catalog__column">
+												<h3 class="submenu-catalog__title">МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"></button>
+														<span>МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:</span>
+													</div>
+													<li>
+														<a href="#">Одинарные</a>
+													</li>
+													<li>
+														<a href="#">Двойные</a>
+													</li>
+													<li>
+														<a href="#">Площадки</a>
+													</li>
+													<li>
+														<a href="#">Цоколи</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!--
+<div class="submenu-catalog__item">
+<div class="submenu-catalog__column">
+<h3 class="submenu-catalog__title">
+МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:
+</h3>
+<ul class="submenu-catalog__list">
+<div class="menu__header-sub menu__header">
+<button
+class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
+></button>
+<span>МЕМОРИАЛЬНЫЕ КОМПЛЕКСЫ:</span>
+</div>
+<li><a href="#"> Одинарные </a></li>
+<li><a href="#"> Двойные </a></li>
+<li><a href="#"> Площадки </a></li>
+<li><a href="#"> Цоколи </a></li>
+</ul>
+</div>
+</div>
+<div class="submenu-catalog__item">
+<div class="submenu-catalog__column">
+<h3 class="submenu-catalog__title">БЛАГОУСТРОЙСТВО:</h3>
+<ul class="submenu-catalog__list">
+<div class="menu__header-sub menu__header">
+<button
+class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
+></button>
+<span>БЛАГОУСТРОЙСТВО:</span>
+</div>
+<li><a href="#"> Благоустройство могил </a></li>
+<li><a href="#"> Реставрация </a></li>
+<li><a href="#"> Озеленение и уход </a></li>
+</ul>
+</div>
+</div>
+-->
+										<div class="submenu-catalog__item">
+											<div class="submenu-catalog__column">
+												<h3 class="submenu-catalog__title">ДОПОЛНИТЕЛЬНО:</h3>
+												<ul class="submenu-catalog__list">
+													<div class="menu__header-sub menu__header">
+														<button class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"></button>
+														<span>ДОПОЛНИТЕЛЬНО:</span>
+													</div>
+													<li>
+														<a href="#">Вазы из камня</a>
+													</li>
+													<li>
+														<a href="#">Лампадки из камня</a>
+													</li>
+													<li>
+														<a href="#">Скульптуры из искусственного мрамора</a>
+													</li>
+													<li>
+														<a href="#">Художественное оформление гранитного памятника</a>
+													</li>
+													<li>
+														<a href="#">Плитка для облицовки памятников</a>
+													</li>
+													<li>
+														<a href="#">Фото на металлокерамике</a>
+													</li>
+													<li>
+														<a href="#">Металлические оградки, столы, скамейки</a>
+													</li>
+													<li>
+														<a href="#">Кованые изделия</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".advantages" href="#" class="menu__link">Услуги</a>
+									<a href="about-us.html" class="menu__link">Фотографии работ</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".price" href="#" class="menu__link">Цены</a>
+									<a href="" class="menu__link">Прайс-лист</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".before-after-secticon" href="#" class="menu__link">Наши работы</a>
+									<a href="" class="menu__link">О компании</a>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".advantages" href="#" class="menu__link">Вакансии</a>
+									<a class="menu__link menu__link--submenu menu__link--icon-chevron-down">Информация</a>
+									<ul class="submenu">
+										<div class="submenu__header menu__header">
+											<button class="submenu-close close --icon-arrow-left"></button>
+											<span>Услуги</span>
+										</div>
+										<li>
+											<a href="#">Доставка и оплата</a>
+										</li>
+										<li>
+											<a href="#">Рассрочка</a>
+										</li>
+										<li>
+											<a href="#">Блог</a>
+										</li>
+										<li>
+											<a href="#">Публичная оферта</a>
+										</li>
+										<li>
+											<a href="#">Вакансии</a>
+										</li>
+										<li>
+											<a href="#">Приют</a>
+										</li>
+									</ul>
 								</li>
 								<li class="menu__item">
-									<a data-fls-scrollto=".contacts" href="#" class="menu__link">Контакты</a>
+									<a href="" class="menu__link">Контакты</a>
 								</li>
 							</ul>
+							<!--
+<button type="button" data-fls-menu class="icon-menu">
+<span></span>
+</button>
+-->
 						</nav>
 					</div>
-					<div data-fls-dynamic=".menu__body, 768" class="header__info">
-						<a class="header__phone" href="tel:+79097878481">+7 (909) 787-84-81</a>
-						<div class="header__online">Мы онлайн - звоните!</div>
-					</div>
-					<div data-fls-dynamic=".menu__body, 550" class="header__socials">
-						<a class="header__social" href="#">
-							<img alt="viber" src="./assets/img/icon-social/viber.png">
-						</a>
-						<a class="header__social" href="#">
-							<img alt="telegram" src="./assets/img/icon-social/telegram.png">
-						</a>
-						<a class="header__social" href="#">
-							<img alt="instagram" src="./assets/img/icon-social/instagram.png">
-						</a>
-					</div>
-					<a data-fls-popup-link="popup" data-fls-button="" class="header__button button button--h40" href="#">Заказать звонок</a>
-					<button type="button" data-fls-menu="" class="menu__icon icon-menu">
-						<span></span>
-					</button>
 				</div>
 			</header>
 			<div data-fls-popup="popup" aria-hidden="true" class="popup">
@@ -68,24 +362,79 @@
 							</svg>
 						</button>
 						<div data-fls-popup-content="" class="popup__box">
-							<h2 class="popup__title">Заказать звонок</h2>
+							<h2 class="popup__title">Обратный звонок</h2>
+							<p class="popup__subtitle">Представьтесь, мы вам перезвоним.</p>
 							<form class="popup__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
-								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="popup__input input">
+								<input data-fls-input="" data-fls-input-mask="+375(99) 999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" required placeholder="+375(__) ___-__-__" class="popup-calc__input input">
+								<input data-fls-input="" autocomplete="off" type="text" name="name" data-fls-form-errtext="Заполните поле" required placeholder="Ваше имя" class="popup-calc__input input">
 								<label data-fls-checkbox="" class="checkbox">
-									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
-									<span class="checkbox__text">
-										Я принимаю политику конфиденциальности и даю согласие на
-              обработку персональных данных
-									</span>
+									<input data-fls-error="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check" checked>
+									<span class="checkbox__text">Даю согласие на обработку персональных данных</span>
 								</label>
-								<button data-fls-ripple="" type="submit" class="popup__button button">Оставить заявку</button>
+								<button data-fls-button="" type="submit" class="popup-calc button button--bacr">Отправить</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div data-fls-popup="popup-message" aria-hidden="true" class="popup">
+			<div data-fls-popup="popup-calc" aria-hidden="true" class="popup-calc">
+				<div data-fls-popup-wrapper="" class="popup-calc__wrapper">
+					<div data-fls-popup-body="" class="popup-calc__body">
+						<button data-fls-popup-close="" type="button" class="popup-calc__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup-calc__box">
+							<h2 class="popup-calc__title">Расчет стоимости забора</h2>
+							<form class="popup-calc__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<div class="popup-calc__item">
+									<label class="popup-calc__label">Выберите тип забора:</label>
+									<select name="type" data-fls-select="" data-fls-select-modif="form">
+										<option value="Забор из профнастила" selected>Забор из профнастила</option>
+										<option value="Забор из евроштакетника">Забор из евроштакетника</option>
+										<option value="Забор из сетки Гиттер 3D">Забор из сетки Гиттер 3D</option>
+										<option value="Забор из сетки рабица">Забор из сетки рабица</option>
+									</select>
+								</div>
+								<div class="popup-calc__row">
+									<div class="popup-calc__item">
+										<label class="popup-calc__label">Какая длина забора в метрах?</label>
+										<input data-fls-input="" autocomplete="off" type="text" name="long" data-fls-form-errtext="Заполните поле" required placeholder="Например 120 метров" class="popup-calc__input input">
+									</div>
+									<div class="popup-calc__item">
+										<label class="popup-calc__label">Какая высота забора?</label>
+										<select name="type" data-fls-select="" data-fls-select-modif="form">
+											<option value="2.0 м" selected>2.0 м</option>
+											<option value="1.8 м">1.8 м</option>
+											<option value="1.5 м">1.5 м</option>
+											<option value="Другая">Другая</option>
+										</select>
+									</div>
+								</div>
+								<div class="popup-calc__checkbox-body">
+									<label data-fls-checkbox="" class="checkbox">
+										<input data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="Нужна калитка" name="need[minidoor]">
+										<span class="checkbox__text">Нужна калитка</span>
+									</label>
+									<label data-fls-checkbox="" class="checkbox">
+										<input data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="Нужны ворота" name="need[door]">
+										<span class="checkbox__text">Нужны ворота</span>
+									</label>
+								</div>
+								<input data-fls-input="" data-fls-input-mask="+375(99) 999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" required placeholder="+375(__) ___-__-__" class="popup-calc__input input">
+								<label data-fls-checkbox="" class="checkbox">
+									<input data-fls-error="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check" checked>
+									<span class="checkbox__text">Даю согласие на обработку персональных данных</span>
+								</label>
+								<button data-fls-button="" type="submit" class="popup-calc button button--bacr">Запросить расчет</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-message" aria-hidden="true" class="popup popup--success">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close">
@@ -94,412 +443,624 @@
 								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
 							</svg>
 						</button>
-						<div data-fls-popup-content="" class="popup__text">
-							<h2 class="popup__title popup__title--mesage">Сообщение отправлено успешно. Мы обязательно вам ответим.</h2>
+						<div data-fls-popup-content="" class="popup__box popup__box--success">
+							<!-- Иконка успеха -->
+							<div class="popup__icon">
+								<svg width="80" height="80" viewbox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="40" cy="40" r="40" fill="#4CAF50"></circle>
+									<path d="M25 40L35 50L55 30" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+							<h2 class="popup__title popup__title--success">Заявка отправлена!</h2>
+							<div class="popup__message">
+								<p class="popup__text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.</p>
+								<p class="popup__hint">Обычно перезваниваем в течение 15 минут</p>
+							</div>
+							<button data-fls-popup-close="" type="button" class="popup__button button">Понятно, спасибо</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<main class="page">
+			<main class="page page--home">
 				<section class="hero">
-					<div class="hero__container">
-						<h1 class="hero__title">Перетяжка и восстановление мягкой мебели с гарантией!</h1>
-						<div class="hero__items">
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/01.png">
+					<!-- Оболочка слайдера -->
+					<div data-fls-slider="" class="hero__slider swiper">
+						<!-- Часть слайдера, которая двигается -->
+						<div class="hero__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="hero__slide swiper-slide">
+								<img class="hero__image" alt="Image" src="./assets/img/hero/01.jpg">
+								<div class="hero__container">
+									<h1 data-swiper-parallax="-1300" class="hero__title">Бесплатный выезд менеджера-замерщика</h1>
+									<div data-swiper-parallax="-800" class="hero__text">
+										<p>
+											Осуществляем
+											<span style="border-bottom: 1px dashed" data-toggle="tooltip" title="" data-original-title="при заключении договора стоимость замера включаем в стоимость проекта">бесплатный выезд менеджера</span>
+											- замерщика на участок заказчика в рамках Московской области.
+										</p>
+									</div>
+									<div class="hero__buttons">
+										<a data-swiper-parallax="-400" class="hero__button button" href="#">Договор оферта</a>
+										<a data-swiper-parallax="-400" class="hero__button button button--bacr" href="#">Вызвать замерщика</a>
+									</div>
+									<img class="hero__container-img" alt="" src="./assets/img/hero/main1.png">
 								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
 							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/02.png">
+							<div class="hero__slide swiper-slide">
+								<img class="hero__image" alt="Image" src="./assets/img/hero/02.jpg">
+								<div class="hero__container">
+									<h1 data-swiper-parallax="-1300" class="hero__title">Изготовление памятников на могилу в Санкт-Петербурге</h1>
+									<div data-swiper-parallax="-800" class="hero__text">
+										<p>Закажите памятник от производителя по низкой цене.</p>
+										<p>
+											Сделаем под ключ - от проекта до установки. Работаем на всех
+                кладбищах.
+										</p>
+									</div>
+									<a data-swiper-parallax="-400" class="hero__button button button--big" href="#">Выбрать памятник</a>
+									<img class="hero__container-img" alt="" src="./assets/img/hero/main2.png">
 								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
 							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/03.png">
+							<div class="hero__slide swiper-slide">
+								<img class="hero__image" alt="Image" src="./assets/img/hero/01.jpg">
+								<div class="hero__container">
+									<h1 data-swiper-parallax="-1300" class="hero__title">Бесплатный выезд менеджера-замерщика</h1>
+									<div data-swiper-parallax="-800" class="hero__text">
+										<p>
+											Осуществляем
+											<span style="border-bottom: 1px dashed" data-toggle="tooltip" title="" data-original-title="при заключении договора стоимость замера включаем в стоимость проекта">бесплатный выезд менеджера</span>
+											- замерщика на участок заказчика в рамках Московской области.
+										</p>
+									</div>
+									<div class="hero__buttons">
+										<a data-swiper-parallax="-400" class="hero__button button" href="#">Договор оферта</a>
+										<a data-swiper-parallax="-400" class="hero__button button button--bacr" href="#">Вызвать замерщика</a>
+									</div>
+									<img class="hero__container-img" alt="" src="./assets/img/hero/main1.png">
 								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
 							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/04.png">
+							<div class="hero__slide swiper-slide">
+								<img class="hero__image" alt="Image" src="./assets/img/hero/02.jpg">
+								<div class="hero__container">
+									<h1 data-swiper-parallax="-1300" class="hero__title">Изготовление памятников на могилу в Санкт-Петербурге</h1>
+									<div data-swiper-parallax="-800" class="hero__text">
+										<p>Закажите памятник от производителя по низкой цене.</p>
+										<p>
+											Сделаем под ключ - от проекта до установки. Работаем на всех
+                кладбищах.
+										</p>
+									</div>
+									<a data-swiper-parallax="-400" class="hero__button button button--big" href="#">Выбрать памятник</a>
+									<img class="hero__container-img" alt="" src="./assets/img/hero/main2.png">
 								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
-							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/01.png">
-								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
-							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/01.png">
-								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
-							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/01.png">
-								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
-							</div>
-							<div class="hero__item">
-								<div class="hero__icon">
-									<img alt="" src="./assets/img/hero/01.png">
-								</div>
-								<p class="hero__text">
-									<strong>10 дней</strong>
-									срок перетяжки
-								</p>
 							</div>
 						</div>
-						<picture class="hero__image">
-							<img alt="picture" src="./assets/img/hero/bg.webp">
-							<a href="#" data-fls-popup-link="popup" class="hero__circle">
-								<span>Рассчитать цену</span>
-							</a>
-						</picture>
-					</div>
-				</section>
-				<section class="types-work">
-					<div class="types-work__container">
-						<div class="types-work__hero">
-							<h2 data-fls-title="" class="title title--white">Какие работы мы выполняем</h2>
-							<img class="types-work__img" alt="" src="./assets/img/types-work/03.webp">
-						</div>
-						<div class="types-work__items">
-							<div class="types-work__item">
-								<p>Перетяжка мебели</p>
-							</div>
-							<div class="types-work__item">
-								<p>Замена наполнителя мягкой мебели</p>
-							</div>
-							<div class="types-work__item">
-								<p>Замена, ремонт механизмов и фурнитуры</p>
-							</div>
-							<div class="types-work__item">
-								<p>Работы с использованием натуральной кожи (Италия)</p>
-							</div>
-							<div class="types-work__item">
-								<p>Изготовление мягкой мебели</p>
-							</div>
-							<picture class="types-work__item types-work__item--image">
-								<img alt="#" src="./assets/img/types-work/02.webp">
-							</picture>
+						<div class="swiper-pagination"></div>
+						<div class="hero__navigacion">
+							<button type="button" class="hero-button-prev swiper-button-prev"></button>
+							<button type="button" class="hero-button-next swiper-button-next"></button>
 						</div>
 					</div>
 				</section>
-				<section data-fls-qwiz="" class="page__calculator calculator">
+				<section class="turnkey">
+					<div class="turnkey__container">
+						<div class="turnkey__top">
+							<h2 class="turnkey__title title">Установка заборов под ключ</h2>
+							<a class="turnkey__link" href="#">Все заборы</a>
+						</div>
+						<div class="turnkey__body">
+							<!--
+<div class="turnkey__content content-turnkey">
+<h3 class="content-turnkey__title">
+Наша компания специализируется на строительстве заборов полностью
+под ключ.
+</h3>
+<p class="content-turnkey__text">
+Собственное производство, постоянный штат рабочих и оптимизированная
+логистика позволяет продавать заборы по выгодной цене без ущерба для
+качества. Мы являемся обладателем более 15 патентов.
+</p>
+<p class="content-turnkey__text">
+"Заборкин" ограждает от забот! Доверьте установку ограждения
+специалистам компании!
+</p>
+<a class="content-turnkey__button button" href="#"
+>Каталог заборов от производителя</a
+>
+<p class="content-turnkey__text">
+Мы занимаемся изготовлением и монтажом ворот для частных домов и
+объектов промышленного назначения. Принимаем заказы на установку
+ворот с автоматикой и без нее.
+</p>
+<a class="content-turnkey__button button" href="#">Каталог ворот</a>
+</div>
+-->
+							<div data-fls-showmore="" data-fls-showmore-media="991.98,max" class="turnkey__content-container">
+								<div data-fls-showmore-content="" class="turnkey__content content-turnkey">
+									<h3 class="content-turnkey__title">
+										Наша компания специализируется на строительстве заборов полностью
+              под ключ.
+									</h3>
+									<p class="content-turnkey__text">
+										Собственное производство, постоянный штат рабочих и
+              оптимизированная логистика позволяет продавать заборы по выгодной
+              цене без ущерба для качества. Мы являемся обладателем более 15
+              патентов.
+									</p>
+									<p class="content-turnkey__text">
+										"Заборкин" ограждает от забот! Доверьте установку ограждения
+              специалистам компании!
+									</p>
+									<a class="content-turnkey__button button" href="#">Каталог заборов от производителя</a>
+									<p class="content-turnkey__text">
+										Мы занимаемся изготовлением и монтажом ворот для частных домов и
+              объектов промышленного назначения. Принимаем заказы на установку
+              ворот с автоматикой и без нее.
+									</p>
+									<a class="content-turnkey__button button" href="#">Каталог ворот</a>
+								</div>
+								<button hidden data-fls-showmore-button="" type="button" class="block__more">
+									<span>Показать ещё</span>
+									<span>Скрыть</span>
+								</button>
+							</div>
+							<div class="turnkey__items">
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/01.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из профнастила</h3>
+										<p class="turnkey__text">
+											Ограждения из стального листа, профилированного с помощью
+                холодного проката с полимерным покрытием.
+										</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/02.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Деревянные заборы</h3>
+										<p class="turnkey__text">Заборы из равномерно расположенных вертикальных досок.</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/03.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из сетки рабица</h3>
+										<p class="turnkey__text">Металлическая сетка рабица, в натяг или с протяжкой арматуры.</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/04.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из профнастила</h3>
+										<p class="turnkey__text">
+											Ограждения из стального листа, профилированного с помощью
+                холодного проката с полимерным покрытием.
+										</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/01.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из профнастила</h3>
+										<p class="turnkey__text">
+											Ограждения из стального листа, профилированного с помощью
+                холодного проката с полимерным покрытием.
+										</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/01.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из профнастила</h3>
+										<p class="turnkey__text">
+											Ограждения из стального листа, профилированного с помощью
+                холодного проката с полимерным покрытием.
+										</p>
+									</div>
+								</article>
+								<article class="turnkey__item">
+									<img class="turnkey__img" alt="image" src="./assets/img/turnkey/07.jpg">
+									<div class="turnkey__block">
+										<h3 class="turnkey__article-title">Заборы из профнастила</h3>
+										<p class="turnkey__text">
+											Ограждения из стального листа, профилированного с помощью
+                холодного проката с полимерным покрытием.
+										</p>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="action">
+					<div class="action__container">
+						<div data-fls-blockheader="" class="blockheader">
+							<h2 class="blockheader__title">
+								Акции и скидки
+								<span>от нашей компании</span>
+							</h2>
+						</div>
+						<!-- Оболонка слайдера -->
+						<div class="action__slider-container">
+							<div data-fls-slider="" class="action__slider swiper">
+								<!-- Частина слайдера, що рухається -->
+								<div class="action__wrapper swiper-wrapper">
+									<!-- Слайд -->
+									<div class="action__slide slide-action swiper-slide">
+										<img class="slide-action__image" alt="#" src="./assets/img/action/01.png">
+										<h3 class="slide-action__name">Калитка в ПОДАРОК</h3>
+										<p class="slide-action__text">Нажмите на кнопку “Участвовать в акции” чтобы узнать подробности</p>
+										<a data-popup="#popup-action" href="#" class="slide-action__link">
+											<span>Учавствовать в акции</span>
+											<svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.1646 8.3086L0.884766 8.30859L0.884766 10.0781L17.1646 10.0781L17.1646 8.3086Z" fill="#31B939"></path>
+												<path d="M14.0596 13.5751L12.8083 12.3238L15.9115 9.22063L12.8083 6.11748L14.0596 4.86621L18.414 9.22063L14.0596 13.5751Z" fill="#31B939"></path>
+											</svg>
+										</a>
+									</div>
+									<div class="action__slide slide-action swiper-slide">
+										<img class="slide-action__image" alt="#" src="./assets/img/action/02.png">
+										<h3 class="slide-action__name">Пенсионерам скидка -20%</h3>
+										<p class="slide-action__text">
+											Нажмите на кнопку “Учавствовать в акции” чтобы узнать
+                подробности
+										</p>
+										<a data-popup="#popup-action" href="#" class="slide-action__link">
+											<span>Учавствовать в акции</span>
+											<svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.1646 8.3086L0.884766 8.30859L0.884766 10.0781L17.1646 10.0781L17.1646 8.3086Z" fill="#31B939"></path>
+												<path d="M14.0596 13.5751L12.8083 12.3238L15.9115 9.22063L12.8083 6.11748L14.0596 4.86621L18.414 9.22063L14.0596 13.5751Z" fill="#31B939"></path>
+											</svg>
+										</a>
+									</div>
+									<div class="action__slide slide-action swiper-slide">
+										<img class="slide-action__image" alt="#" src="./assets/img/action/03.png">
+										<h3 class="slide-action__name">Скидка -15% новоселам</h3>
+										<p class="slide-action__text">Нажмите на кнопку “Участвовать в акции” чтобы узнать подробности</p>
+										<a data-popup="#popup-action" href="#" class="slide-action__link">
+											<span>Учавствовать в акции</span>
+											<svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.1646 8.3086L0.884766 8.30859L0.884766 10.0781L17.1646 10.0781L17.1646 8.3086Z" fill="#31B939"></path>
+												<path d="M14.0596 13.5751L12.8083 12.3238L15.9115 9.22063L12.8083 6.11748L14.0596 4.86621L18.414 9.22063L14.0596 13.5751Z" fill="#31B939"></path>
+											</svg>
+										</a>
+									</div>
+									<div class="action__slide slide-action swiper-slide">
+										<img class="slide-action__image" alt="#" src="./assets/img/action/04.png">
+										<h3 class="slide-action__name">Скидка на забор -50%</h3>
+										<p class="slide-action__text">Нажмите на кнопку “Участвовать в акции” чтобы узнать подробности</p>
+										<a data-popup="#popup-action" href="#" class="slide-action__link">
+											<span>Учавствовать в акции</span>
+											<svg width="19" height="19" viewbox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.1646 8.3086L0.884766 8.30859L0.884766 10.0781L17.1646 10.0781L17.1646 8.3086Z" fill="#31B939"></path>
+												<path d="M14.0596 13.5751L12.8083 12.3238L15.9115 9.22063L12.8083 6.11748L14.0596 4.86621L18.414 9.22063L14.0596 13.5751Z" fill="#31B939"></path>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="action-swiper-pagination swiper-pagination"></div>
+							</div>
+							<button type="button" class="action-swiper-button-prev swiper-button-prev">
+								<img src="./assets/img/action/prev.svg" alt="#">
+							</button>
+							<button type="button" class="action-swiper-button-next swiper-button-next">
+								<img src="./assets/img/action/next.svg" alt="#">
+							</button>
+						</div>
+					</div>
+				</section>
+				<section data-fls-calc="" class="page__calculator calculator">
 					<div class="calculator__container">
-						<h2 data-fls-title="" class="title">Рассчитать стоимость за 5 минут</h2>
 						<div class="calculator__body">
-							<div data-fls-slider="" class="calculator__slider swiper swiper-container">
-								<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" enctype="multipart/form-data" action="sendmail/sendmail.php" class="calculator__wrapper swiper-wrapper">
-									<!-- 1 Слайд -->
-									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
-										<h3 class="slide-calculator__title">Выберите мебель которые Вам необходимо перетянуть:</h3>
-										<p class="slide-calculator__subtitle">
-											<span>Первый вопрос.</span>
-											Понимая тип Вашей мебели я пойму ориентировочные сроки перетяжки,
-              обивки
-										</p>
-										<div class="slide-calculator__items">
-											<div class="slide-calculator__body slide-calculator__body--column">
-												<div class="radio">
-													<div class="radio__item">
-														<input id="o_1" class="radio__input" type="radio" value="Диванпрямой" name="option-1">
-														<label for="o_1" class="radio__label">
-															<span class="radio__text">Диван прямой</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_2" class="radio__input" type="radio" value="Модульный
-													диван" name="option-1">
-														<label for="o_2" class="radio__label">
-															<span class="radio__text">Модульный диван</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_3" class="radio__input" type="radio" value="Кресло" name="option-1">
-														<label for="o_3" class="radio__label">
-															<span class="radio__text">Кресло</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_4" class="radio__input" type="radio" value="Кухонный
-													уголок" name="option-1">
-														<label for="o_4" class="radio__label">
-															<span class="radio__text">Кухонный уголок</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_5" class="radio__input" type="radio" value="Пуф" name="option-1">
-														<label for="o_5" class="radio__label">
-															<span class="radio__text">Пуф</span>
-														</label>
-													</div>
-												</div>
-												<div class="radio">
-													<div class="radio__item">
-														<input id="o_6" class="radio__input" checked type="radio" value="Диван
-														угловой" name="option-1">
-														<label for="o_6" class="radio__label">
-															<span class="radio__text">Диван угловой</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_7" class="radio__input" type="radio" value="Кровать" name="option-1">
-														<label for="o_7" class="radio__label">
-															<span class="radio__text">Кровать</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_8" class="radio__input" type="radio" value="Кушетка" name="option-1">
-														<label for="o_8" class="radio__label">
-															<span class="radio__text">Кушетка</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_9" class="radio__input" type="radio" value="Стулья" name="option-1" checked>
-														<label for="o_9" class="radio__label">
-															<span class="radio__text">Стулья</span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 2 слайд -->
-									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
-										<h3 class="slide-calculator__title">
-											Выберите дополнительные параметры для замены:
-											<span>
-												<svg class="mdi-icon mdi-16px" viewbox="0 0 24 24">
-													<title>mdi-check-circle</title>
-													<path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-												выберите один или несколько
-											</span>
-										</h3>
-										<p class="slide-calculator__subtitle">
-											Исходя из дополнительны параметров для замены, я помогу вам
-              рассчитать предварительную стоимость работ
-										</p>
-										<div class="slide-calculator__items">
+							<!-- верх квиза -->
+							<div id="calc" class="calculator__top">
+								<div data-fls-blockheader="" class="blockheader">
+									<h2 class="blockheader__title">Рассчитайте стоимость забора в 5 кликов</h2>
+									<div class="blockheader__subtitle">и получите подарокд</div>
+								</div>
+								<!--
+<h4 data-watch data-watch-once class="calculator__top-title title">
+<b>Рассчитайте стоимость забора в 5 кликов</b>
+</h4>
+<div style="text-align: center" class="calculator__top-subtitle">
+и получите подарок
+</div>
+-->
+							</div>
+							<!-- Оболонка слайдера -->
+							<div id="wrapper-content" class="calculator__wrapper-content">
+								<div data-fls-slider="" class="calculator__slider swiper swiper-container">
+									<!-- Частина слайдера, що рухається -->
+									<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php" class="calculator__wrapper swiper-wrapper">
+										<!-- 1 Слайд -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
 											<div class="slide-calculator__body">
-												<div class="radio">
-													<div class="radio__item">
-														<input id="o_10" class="radio__input" checked type="checkbox" value="Частичная замена наполнителя" name="option-2">
-														<label for="o_10" class="radio__label">
-															<span class="radio__text">Частичная замена наполнителя</span>
+												<h5 class="slide-calculator__title">
+													<span>Вопрос 1</span>
+													<p>Какой забор хотели бы установить?</p>
+												</h5>
+												<div class="options">
+													<div class="options__item">
+														<input id="o_1" class="options__input input" checked type="radio" value="Забор жалюзи" name="step_1">
+														<label for="o_1" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/01.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Забор жалюзи</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_11" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-2">
-														<label for="o_11" class="radio__label">
-															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+													<div class="options__item">
+														<input id="o_2" class="options__input input" type="radio" value="Забор из штакетника" name="step_1">
+														<label for="o_2" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/02.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Забор из штакетника</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_12" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-2">
-														<label for="o_12" class="radio__label">
-															<span class="radio__text">Замена пружинных блоков</span>
+													<div class="options__item">
+														<input id="o_3" class="options__input input" type="radio" value="Забор рабица" name="step_1">
+														<label for="o_3" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/03.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Забор рабица</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_13" class="radio__input" type="checkbox" value="Частичная реставрация мебели" name="option-2">
-														<label for="o_13" class="radio__label">
-															<span class="radio__text">Частичная реставрация мебели</span>
+													<div class="options__item">
+														<input id="o_4" class="options__input input" type="radio" value="Забор из профнастила" name="step_1">
+														<label for="o_4" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/04.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Забор из профнастила</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_14" class="radio__input" type="checkbox" value="Не знаю, нужна консультация" name="option-2">
-														<label for="o_14" class="radio__label">
-															<span class="radio__text">Не знаю, нужна консультация</span>
+													<div class="options__item">
+														<input id="o_5" class="options__input input" type="radio" value="Не знаю" name="step_1">
+														<label for="o_5" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/05.png">
+															</div>
 														</label>
+														<h3 class="options__title">Не знаю</h3>
 													</div>
 												</div>
 											</div>
-											<div class="slide-calculator__image">
-												<img alt="#" src="./assets/img/qwiz/01.webp">
+										</div>
+										<!-- 2 слайд -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+											<div class="slide-calculator__body">
+												<h5 class="slide-calculator__title">
+													<span>Вопрос 2</span>
+													<p>Какой цвет забора жалюзи вам бы хотелось?</p>
+												</h5>
+												<div class="options">
+													<div class="options__item">
+														<input id="o_6" class="options__input input" type="radio" value="Черный" name="step_2">
+														<label for="o_6" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/06.png">
+															</div>
+														</label>
+														<h3 class="options__title">Черный</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_7" class="options__input input" type="radio" value="Коричневый" name="step_2">
+														<label for="o_7" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/07.png">
+															</div>
+														</label>
+														<h3 class="options__title">Коричневый</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_8" class="options__input input" checked type="radio" value="Серый" name="step_2">
+														<label for="o_8" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/08.png">
+															</div>
+														</label>
+														<h3 class="options__title">Серый</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_9" class="options__input input" checked type="radio" value="Красный" name="step_2">
+														<label for="o_9" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/09.png">
+															</div>
+														</label>
+														<h3 class="options__title">Красный</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_10" class="options__input input" checked type="radio" value="Граффит" name="step_2">
+														<label for="o_10" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/10.png">
+															</div>
+														</label>
+														<h3 class="options__title">Граффит</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_11" class="options__input input" checked type="radio" value="Другое" name="step_2">
+														<label for="o_11" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/05.png">
+															</div>
+														</label>
+														<h3 class="options__title">Другое</h3>
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-									<!-- 3 слайд -->
-									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
-										<h3 class="slide-calculator__title">
-											Выберите дополнительные параметры обивки:
-											<span>
-												<svg class="mdi-icon mdi-16px" viewbox="0 0 24 24">
-													<title>mdi-check-circle</title>
-													<path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" stroke-width="0" fill-rule="nonzero"></path>
-												</svg>
-												выберите один или несколько
-											</span>
-										</h3>
-										<p class="slide-calculator__subtitle">
-											Понимая ваши предпочтения по материалам, я смогу подобрать для вас
-              несколько видов тканей из разного ценового сегмента
-										</p>
-										<div class="slide-calculator__items">
-											<div class="slide-calculator__body slide-calculator__body--column">
+										<!-- 3 слайд -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+											<div class="slide-calculator__body">
+												<h5 class="slide-calculator__title">
+													<span>Вопрос 3</span>
+													<p>Выберите ворота?</p>
+												</h5>
+												<div class="options">
+													<div class="options__item">
+														<input id="o_12" class="options__input input" checked type="radio" value="Распашные ворота" name="step_3">
+														<label for="o_12" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/12.webp">
+															</div>
+														</label>
+														<h3 class="options__title">Распашные ворота</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_13" class="options__input input" checked type="radio" value="Откатные ворота" name="step_3">
+														<label for="o_13" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/13.jpg">
+															</div>
+														</label>
+														<h3 class="options__title">Откатные ворота</h3>
+													</div>
+													<div class="options__item">
+														<input id="o_14" class="options__input input" checked type="radio" value="Не нужны ворота" name="step_3">
+														<label for="o_14" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/05.png">
+															</div>
+														</label>
+														<h3 class="options__title">Не нужны ворота</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 4 слайд -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+											<div class="slide-calculator__body">
+												<h5 class="slide-calculator__title">
+													<span>Вопрос 4</span>
+													<p>Какая площадь забора вам необходима?</p>
+												</h5>
 												<div class="radio">
 													<div class="radio__item">
-														<input id="o_15" class="radio__input" checked type="checkbox" value="Частчная замена наполнителя" name="option-3">
+														<input id="o_15" class="radio__input" checked type="radio" value="до 1000" name="step_4">
 														<label for="o_15" class="radio__label">
-															<span class="radio__text">Частичная замена наполнителя</span>
+															<span class="radio__text">до 1000 кв.м.</span>
 														</label>
 													</div>
 													<div class="radio__item">
-														<input id="o_16" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-3">
+														<input id="o_16" class="radio__input" type="radio" value="от 1000 до
+													1500 кв.м" name="step_4">
 														<label for="o_16" class="radio__label">
-															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+															<span class="radio__text">от 1000 до 1500 кв.м.</span>
 														</label>
 													</div>
 													<div class="radio__item">
-														<input id="o_17" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-3">
+														<input id="o_17" class="radio__input" type="radio" value="от 1500 до
+													2000 кв.м." name="step_4">
 														<label for="o_17" class="radio__label">
-															<span class="radio__text">Замена пружинных блоков</span>
+															<span class="radio__text">от 1500 до 2000 кв.м.</span>
 														</label>
 													</div>
-												</div>
-												<div class="radio">
 													<div class="radio__item">
-														<input id="o_18" class="radio__input" type="checkbox" value="Частичная замена наполнителя" name="option-3">
+														<input id="o_18" class="radio__input" checked type="radio" value="от 2000 до
+														2500 кв.м." name="step_4">
 														<label for="o_18" class="radio__label">
-															<span class="radio__text">Частичная замена наполнителя</span>
+															<span class="radio__text">от 2000 до 2500 кв.м.</span>
 														</label>
 													</div>
 													<div class="radio__item">
-														<input id="o_19" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-3">
+														<input id="o_19" class="radio__input" type="radio" value="от 2500 до
+													3000 кв.м" name="step_4">
 														<label for="o_19" class="radio__label">
-															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+															<span class="radio__text">от 2500 до 3000 кв.м.</span>
 														</label>
 													</div>
 													<div class="radio__item">
-														<input id="o_20" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-3">
+														<input id="o_20" class="radio__input" type="radio" value="свыше 3000" name="step_4">
 														<label for="o_20" class="radio__label">
-															<span class="radio__text">Замена пружинных блоков</span>
+															<span class="radio__text">свыше 3000 кв.м. м</span>
 														</label>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<!-- 4 слайд -->
-									<div class="calculator__slide swiper-slide slide-calculator slide-calculator--two slide-main-block">
-										<h3 class="slide-calculator__title">Когда Вам удобно будет встретиться с дизайнером — замерщиком?</h3>
-										<div class="slide-calculator__subtitle">
-											<p>
-												Мы специализируемся на скорости обслуживания и готовы к вам
-                выехать в ближайший день.
-											</p>
-											<p>
-												Дизайнер — замерщик приедет в удобное для вас время и рассчитает
-                окончательную стоимость работ в 3-х вариантах, с учетом ваших
-                предпочтений.
-											</p>
-											<p>
-												Дополнительно привезет с собой образцы материалов, и вы сможете
-                определиться что для вас подходит больше всего. Т.к материалы на
-                фото и в живую очень часто имеют большое отличие.
-											</p>
-										</div>
-										<div class="slide-calculator__items">
-											<div class="slide-calculator__body slide-calculator__body--column">
-												<div class="radio">
-													<div class="radio__item">
-														<input id="o_21" class="radio__input" checked type="checkbox" value="Частчная замена наполнителя" name="option-4">
-														<label for="o_21" class="radio__label">
-															<span class="radio__text">Частичная замена наполнителя</span>
+										<!-- 5 слайд -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
+											<div class="slide-calculator__body">
+												<h5 class="slide-calculator__title">
+													<span>Вопрос 5</span>
+													<p>Какая калитка нужна?</p>
+												</h5>
+												<div class="options">
+													<div class="options__item">
+														<input id="o_21" class="options__input input" checked type="radio" value="Калитка без замка" name="step_5">
+														<label for="o_21" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/15.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Калитка без замка</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_22" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-4">
-														<label for="o_22" class="radio__label">
-															<span class="radio__text">Полная замена всех слоев наполнителя</span>
+													<div class="options__item">
+														<input id="o_22" class="options__input input" type="radio" value="Калитка с замком" name="step_5">
+														<label for="o_22" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/16.jpg">
+															</div>
 														</label>
+														<h3 class="options__title">Калитка с замком</h3>
 													</div>
-													<div class="radio__item">
-														<input id="o_23" class="radio__input" type="checkbox" value="Замена пружинных блоков" name="option-4">
-														<label for="o_23" class="radio__label">
-															<span class="radio__text">Замена пружинных блоков</span>
+													<div class="options__item">
+														<input id="o_23" class="options__input input" type="radio" value="Калитка не нужна" name="step_5">
+														<label for="o_23" class="options__label">
+															<div class="options__text options__text-ibg">
+																<img alt="#" src="./assets/img/calculator/05.png">
+															</div>
 														</label>
-													</div>
-												</div>
-												<div class="radio">
-													<div class="radio__item">
-														<input id="o_24" class="radio__input" type="checkbox" value="Частичная замена наполнителя" name="option-4">
-														<label for="o_24" class="radio__label">
-															<span class="radio__text">Частичная замена наполнителя</span>
-														</label>
-													</div>
-													<div class="radio__item">
-														<input id="o_25" class="radio__input" type="checkbox" value="Полная замена всех слоев наполнителя" name="option-4">
-														<label for="o_25" class="radio__label">
-															<span class="radio__text">Полная замена всех слоев наполнителя</span>
-														</label>
+														<h3 class="options__title">Калитка не нужна</h3>
 													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<!-- Конечная страница !форма! -->
-									<div class="calculator__slide swiper-slide slide-calculator slide-main-block">
-										<div class="slide-calculator-block__wrapper">
+										<!-- Конечная страница !форма! -->
+										<div class="calculator__slide swiper-slide slide-calculator slide-calculator-block slide-main-block">
 											<div class="slide-calculator-block__content">
-												<h3 class="slide-calculator-block__title-last">Оставьте свои контакты</h3>
-												<p class="slide-calculator-block__text">
-													И менеджер свяжется с вами в первую свободную минуту. обычно
-                  мы перезваниваем в течении 7 минут, в рабочее время с 10.00 до
-                  19.00
-												</p>
+												<p class="slide-calculator-block__text">Расчет готов</p>
+												<h3 class="slide-calculator-block__title-last">Где вам удобней получить расчет стоимости?</h3>
+												<div class="slide-calculator-block__form">
+													<select data-fls-select="" name="social" data-fls-select-modif="calculator">
+														<option data-fls-select-asset="assets/img/icon-social/w.png" value="Телефон" selected>Телефон</option>
+														<option data-fls-select-asset="assets/img/icon-social/telegram.png" value="Telegram">Telegram</option>
+														<option data-fls-select-asset="assets/img/icon-social/vk.png" value="vk">vk</option>
+														<option data-fls-select-asset="assets/img/icon-social/viber.png" value="viber">viber</option>
+													</select>
+													<input data-fls-input="" autocomplete="off" type="text" name="name" data-fls-form-errtext="Заполните поле" required placeholder="Ваше имя" class="input input--70 slide-calculator-block__input">
+													<input data-fls-input="" data-fls-input-mask="+375(99) 999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" required placeholder="+375(__) ___-__-__" class="input input--70 slide-calculator-block__input">
+													<button type="submit" class="slide-calculator-block__button button">Получить примеры + смету + подарок</button>
+													<label data-fls-checkbox="" class="checkbox">
+														<input data-fls-error="Заполните поле" class="checkbox__input" type="checkbox" value="2" name="check" checked>
+														<span class="checkbox__text">
+															Вы соглашаетесь с условиями обработки персональных
+                      данных
+														</span>
+													</label>
+												</div>
 											</div>
-											<div class="slide-calculator-block__form">
-												<div class="slide-calculator-block__item">
-													<label class="slide-calculator-block__label">Введите имя</label>
-													<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
+											<div class="slide-calculator-block__image">
+												<div class="popup__circle popup__circle--calc">
+													<img src="./assets/img/calculator/pdf-circle.svg" alt="#">
+													<svg class="circle-arrow" width="18" height="20" viewbox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M16.7251 11.4014C16.7251 15.439 13.4884 18.7127 9.50133 18.7127C5.51426 18.7127 2.27751 15.4349 2.27751 11.3973C2.27751 7.35977 5.51426 4.08607 9.50133 4.08607C10.0681 4.08607 10.6348 4.15478 11.1856 4.28815L8.86276 6.64037L9.76474 7.55377L13.4924 3.77487L9.76873 0L8.86276 0.913404L10.8303 2.89379C6.19274 2.1461 1.83849 5.35109 1.10414 10.0474C0.369784 14.7438 3.53469 19.1492 8.1723 19.8928C12.8099 20.6365 17.1602 17.4315 17.8945 12.7351C17.9624 12.2946 17.9983 11.846 17.9983 11.3973H16.7251V11.4014Z" fill="white"></path>
+														<p style="color: white">
+															Засекайте
+															<span>45</span>
+															минут
+														</p>
+													</svg>
 												</div>
-												<div class="slide-calculator-block__item">
-													<label class="slide-calculator-block__label">Введите телефон</label>
-													<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
-												</div>
-												<button type="submit" class="button">Отправить</button>
-												<label data-fls-checkbox="" class="checkbox">
-													<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
-													<span class="checkbox__text">
-														Я принимаю политику конфиденциальности и даю согласие на
-                    обработку персональных данных
-													</span>
-												</label>
+												<img alt="#" src="./assets/img/calculator/quiz-final.png">
 											</div>
 										</div>
-									</div>
+									</form>
 									<div id="progress" class="calculator__progress">
 										<div class="calculator__progress-body">
 											<div class="calculator__pagination swiper-pagination"></div>
@@ -513,1257 +1074,926 @@
 											</div>
 										</div>
 										<div class="calculator__button-body">
-											<div data-ripple="" type="button" class="button-yelow calculator__button-next">
+											<div data-ripple="" class="calculator__button-next">
 												Далее
 												<svg class="mdi-icon mdi-24px" viewbox="0 0 24 24">
 													<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" stroke-width="0" fill-rule="nonzero"></path>
 												</svg>
 											</div>
-											<div type="button" class="calculator__button-prev">
+											<div data-ripple="" class="calculator__button-prev">
 												<svg class="mdi-icon mdi-24px" viewbox="0 0 24 24">
 													<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" stroke-width="0" fill-rule="nonzero"></path>
 												</svg>
 											</div>
 										</div>
 									</div>
-								</form>
+								</div>
+								<div id="banner" class="calculator__banner banner-calculator">
+									<div class="banner-calculator__avatar">
+										<div class="banner-calculator__status">Онлайн</div>
+										<img alt="#" src="./assets/img/calculator/avatar.png">
+									</div>
+									<div class="banner-calculator__name">Станислав Резников</div>
+									<div class="banner-calculator__bottom">
+										<p class="banner-calculator__text">
+											<strong>Отвечайте на вопросы и получите</strong>
+											и получите расчет
+              стоимости забора под ключ
+										</p>
+										<p class="banner-calculator__text-end">В конце получите:</p>
+										<div class="banner-calculator__item">
+											<img class="banner-calculator__item-image" alt="#" src="./assets/img/calculator/book-1.png">
+											<span>Каталог заборов</span>
+											<div class="banner-calculator__icon">
+												<img src="./assets/img/calculator/locker.svg" alt="">
+											</div>
+										</div>
+										<div class="banner-calculator__item">
+											<img class="banner-calculator__item-image" alt="#" src="./assets/img/calculator/book-2.png">
+											<span>Подробная смета</span>
+											<div class="banner-calculator__icon">
+												<img src="./assets/img/calculator/locker.svg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="price">
-					<div class="price__container">
-						<div class="price__header">
-							<h2 data-fls-title="" class="title">Стоимость услуг</h2>
-							<div class="price__top">
-								<div class="price__text">
-									<img class="price__text-icon" src="./assets/img/price/Frame.svg" alt="">
+				<section class="gallery">
+					<div class="gallery__container">
+						<div class="gallery__body">
+							<div data-fls-blockheader="" class="blockheader">
+								<h2 class="blockheader__title">Фото установленных заборов в могилеве и области</h2>
+								<div class="blockheader__subtitle">Установили 117 заборов за год</div>
+							</div>
+							<div class="gallery__items">
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="gallery__item">
+									<div data-fls-gallery="" class="gallery__gallery">
+										<a href="./assets/img/gallery/01.webp">
+											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
+											<img alt="Image" src="./assets/img/gallery/01.webp">
+										</a>
+									</div>
+									<div class="gallery__info">
+										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
+										<div class="gallery__info-bottom">
+											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
+											<a class="gallery__phone" href="#">
+												<img src="./assets/img/gallery/phone-standart.svg" alt="">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="payment">
+					<div class="payment__wrapper">
+						<img class="payment__img-bg" alt="Image" src="./assets/img/payment/bg.webp">
+						<img class="payment__money-img" alt="Image" src="./assets/img/payment/manye.png">
+						<div class="payment__container">
+							<div class="payment__bank">
+								<h2 class="payment__bank-title">Оплачивайте так,как вам удобно</h2>
+								<div class="payment__bank-images">
+									<img alt="Image" src="./assets/img/payment/spb.png">
+									<img alt="Image" src="./assets/img/payment/mir.png">
+									<img alt="Image" src="./assets/img/payment/sber.png">
+									<img alt="Image" src="./assets/img/payment/tinkof.png">
+								</div>
+							</div>
+							<div class="payment__money">
+								<h3 class="payment__money-title">Принимаем все виды оплаты</h3>
+								<div class="payment__buttons">
+									<p>Безналичный расчет с НДС для юр. лиц</p>
+									<p>Оплата дебетовой или кредитной картой</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment__bottom">
+						<p>
+							Окончательный расчет после приемки. Постоплата только для при оплате
+        наличными. (Безнал с НДС по предоплате 70/30)
+						</p>
+					</div>
+				</section>
+				<section class="steps">
+					<div class="steps__container">
+						<div data-fls-blockheader="" class="blockheader">
+							<h2 class="blockheader__title">Как мы работаем: прозрачно и просто</h2>
+							<div class="blockheader__subtitle">
+								От заявки до приемки и гарантии— за 4 простых шага без нервов и
+          неожиданностей
+							</div>
+						</div>
+						<div class="steps__items">
+							<div class="steps__top">
+								<div class="steps__item">
+									<div class="steps__content">
+										<h3 class="steps__title">Первичная консультация</h3>
+										<p class="steps__text">
+											За
+											<strong>4 минуты</strong>
+											по телефону расскажем все, что
+                нужно знать перед утеплением.
+										</p>
+										<p class="steps__text">
+											Присылаете снимки или чертеж –
+											<strong>сразу озвучим точную цену</strong>
+											без визита.
+										</p>
+										<div class="steps__phone-body">
+											<a class="steps__phone" href="tel:79312760178">+7 (931) 276-01-78</a>
+											<p class="steps__phone-text">Или оставьте заявку на звонок</p>
+										</div>
+										<a class="steps__button button button--bacr" data-fls-popup-link="popup" href="#">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</a>
+									</div>
+									<div class="steps__image">
+										<img class="" alt="Image" src="./assets/img/steps/1.png">
+									</div>
+									<span class="steps__number">01</span>
+								</div>
+								<div class="steps__item">
+									<div class="steps__content">
+										<h3 class="steps__title">Приехали → утеплили → убрали за собой</h3>
+										<p class="steps__text">
+											Согласуем удобную дату и время выезда бригады на объект.
+											<strong>Приедем вовремя</strong>
+											и выполним работы в срок
+										</p>
+										<ul class="steps__list">
+											<li>Подскажем оптимальную толщину слоя и тип ППУ под ваш объект</li>
+											<li>Подготовим точную смету в течение дня и приступим к напылению</li>
+										</ul>
+									</div>
+									<div class="steps__image">
+										<img alt="Image" src="./assets/img/steps/2.png">
+									</div>
+									<span class="steps__number">02</span>
+								</div>
+							</div>
+							<div class="steps__bottom">
+								<div class="steps__item">
+									<div class="steps__content">
+										<h3 class="steps__title">Приехали → утеплили → убрали за собой</h3>
+										<p class="steps__text">
+											Согласуем удобную дату и время выезда бригады на объект.
+											<strong>Приедем вовремя</strong>
+											и выполним работы в срок
+										</p>
+										<ul class="steps__list">
+											<li>Подскажем оптимальную толщину слоя и тип ППУ под ваш объект</li>
+											<li>Подготовим точную смету в течение дня и приступим к напылению</li>
+										</ul>
+									</div>
+									<div class="steps__image">
+										<img alt="Image" src="./assets/img/steps/3.png">
+									</div>
+									<span class="steps__number">03</span>
+								</div>
+								<div class="steps__item">
+									<div class="steps__content">
+										<h3 class="steps__title">Приехали → утеплили → убрали за собой</h3>
+										<p class="steps__text">
+											Даём честную гарантию
+											<strong>2 года на все работы</strong>
+											и
+                толщину слоя, не пропадаем после оплаты
+										</p>
+										<p class="steps__text steps__text--border">
+											Если на протяжении этого времени у вас появятся дефекты,
+											<strong>то устраним всё за свой счет</strong>
+										</p>
+									</div>
+									<div class="steps__image">
+										<img alt="Image" src="./assets/img/steps/4.png">
+									</div>
+									<span class="steps__number">04</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="why">
+					<div class="why__container">
+						<img class="why__img-bg" alt="Image" src="./assets/img/underground/why/bg.png">
+						<div class="why__content">
+							<div class="why__top">
+								<h2 class="why__title">Почему нас выбирают</h2>
+								<div class="why__subtitle">Наши преимущества:</div>
+							</div>
+							<div class="why__items">
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+								<div class="why__item">
+									<img class="why__icon" alt="Image" src="./assets/img/underground/why/ok.png">
+									<div class="why__block">
+										<h3 class="why__item-title">Утепляем в любое время года</h3>
+										<p class="why__item-text">Готовы выполнять работу и зимой и летом в любую погоду</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="why__guarantee guarantee-why">
+							<h4 class="guarantee-why__title">Гарантии по договору Вы защищены юридически</h4>
+							<p class="guarantee-why__text">Заключаем договор на выполнение работ с заказчиком</p>
+							<div class="guarantee-why__image">
+								<img alt="Image" src="./assets/img/underground/why/Frame.png">
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="reviews">
+					<div class="reviews__container">
+						<div data-fls-blockheader="" class="blockheader">
+							<h2 class="blockheader__title">
+								Главный показатель качества нашей работы
+								<span>— это ваши благодарные отзывы!</span>
+							</h2>
+						</div>
+						<div class="reviews__top">
+							<p>Больше отзывов на</p>
+							<div class="reviews__top-item">
+								<div class="reviews__top-rating">
+									<span>4.8</span>
+									<img src="./assets/img/underground/reviews/arrow-red.svg" alt="Image">
+								</div>
+								<a href="#" class="reviews__top-yandex">
+									<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+								</a>
+							</div>
+						</div>
+						<div class="reviews__items">
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
+								</div>
+								<div class="item-reviews__text">
 									<p>
-										Расценки на работы по перетяжке и ремонту мебели приведены без
-              учета стоимости материала. Итоговая цена рассчитываются
-              индивидуально, после осмотра мастером изделия и от выбора
-              комплектующих.
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
 									</p>
 								</div>
-								<div class="price__sale">
-									<span>До 50% выгода</span>
-									<p>в отличии от приобретения новой мебели</p>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+									</div>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
 								</div>
 							</div>
-						</div>
-						<div class="price__overdrawing overdrawing-price">
-							<h3 class="overdrawing-price__title">Перетяжка мебели</h3>
-							<div class="overdrawing-price__items">
-								<article class="overdrawing-price__item">
-									<picture class="overdrawing-price__image">
-										<img alt="#" src="./assets/img/price/01.webp">
-									</picture>
-									<div class="overdrawing-price__info">
-										<div class="overdrawing-price__name">Диван</div>
-										<div class="overdrawing-price__number">от 6 500 ₽</div>
-									</div>
-								</article>
-								<article class="overdrawing-price__item">
-									<picture class="overdrawing-price__image">
-										<img alt="#" src="./assets/img/price/02.webp">
-									</picture>
-									<div class="overdrawing-price__info">
-										<div class="overdrawing-price__name">Диван</div>
-										<div class="overdrawing-price__number">от 6 500 ₽</div>
-									</div>
-								</article>
-								<article class="overdrawing-price__item">
-									<picture class="overdrawing-price__image">
-										<img alt="#" src="./assets/img/price/03.webp">
-									</picture>
-									<div class="overdrawing-price__info">
-										<div class="overdrawing-price__name">Диван</div>
-										<div class="overdrawing-price__number">от 6 500 ₽</div>
-									</div>
-								</article>
-								<article class="overdrawing-price__item">
-									<picture class="overdrawing-price__image">
-										<img alt="#" src="./assets/img/price/04.webp">
-									</picture>
-									<div class="overdrawing-price__info">
-										<div class="overdrawing-price__name">Диван</div>
-										<div class="overdrawing-price__number">от 6 500 ₽</div>
-									</div>
-								</article>
-								<article class="overdrawing-price__item">
-									<picture class="overdrawing-price__image">
-										<img alt="#" src="./assets/img/price/01.webp">
-									</picture>
-									<div class="overdrawing-price__info">
-										<div class="overdrawing-price__name">Диван</div>
-										<div class="overdrawing-price__number">от 6 500 ₽</div>
-									</div>
-								</article>
-							</div>
-						</div>
-						<div class="price__repair repair-price">
-							<h3 class="repair-price__title">Ремонт/изготовление</h3>
-							<div class="repair-price__items">
-								<article class="repair-price__item">
-									<picture class="repair-price__image">
-										<img alt="" src="./assets/img/repair/01.webp">
-									</picture>
-									<div class="repair-price__info">
-										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
-										<div class="repair-price__number">от 3 500 ₽</div>
-									</div>
-								</article>
-								<article class="repair-price__item">
-									<picture class="repair-price__image">
-										<img alt="" src="./assets/img/repair/02.webp">
-									</picture>
-									<div class="repair-price__info">
-										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
-										<div class="repair-price__number">от 3 500 ₽</div>
-									</div>
-								</article>
-								<article class="repair-price__item">
-									<picture class="repair-price__image">
-										<img alt="" src="./assets/img/repair/03.webp">
-									</picture>
-									<div class="repair-price__info">
-										<div class="repair-price__name">Замена, ремонт механизмов и фурнитуры, пружинных блоков</div>
-										<div class="repair-price__number">от 3 500 ₽</div>
-									</div>
-								</article>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="advantages">
-					<div class="advantages__container">
-						<h2 data-fls-title="" class="title">Какие работы мы выполняем</h2>
-						<div class="advantages__items">
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/01.svg" alt="#">
-								<p class="advantages__text">Гипоаллергенность и экологичность</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/02.svg" alt="#">
-								<p class="advantages__text">Антикоготь</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/03.svg" alt="#">
-								<p class="advantages__text">Высокая износостойкость</p>
-							</div>
-							<div data-fls-dynamic=".advantages__items, 992,0" class="advantages__nubmer">
-								<span>3500+</span>
-								<p>видов материалов</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/04.svg" alt="#">
-								<p class="advantages__text">Модная цветовая карта создана с учетом института Pantone</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/05.svg" alt="#">
-								<p class="advantages__text">Дышащий материал</p>
-							</div>
-							<div class="advantages__item">
-								<img class="advantages__icon" src="./assets/img/advantages/06.svg" alt="#">
-								<p class="advantages__text">Комфорт и мягкость</p>
-							</div>
-							<picture data-fls-dynamic=".advantages__items, 992,0" class="advantages__image">
-								<img alt="#" src="./assets/img/advantages/fabric-textiles.webp">
-							</picture>
-						</div>
-						<!--
-<div class="advantages__box">
-<div class="advantages__nubmer">
-<span>3500+</span>
-<p>видов материалов</p>
-</div>
-<picture class="advantages__image">
-<img src="@img/advantages/fabric-textiles.webp" alt="#" />
-</picture>
-</div>
--->
-					</div>
-				</section>
-				<div class="consultation">
-					<div class="consultation__container">
-						<div class="consultation__content">
-							<h2 data-fls-title="" class="title title--white">Запишитесь на бесплатную консультацию</h2>
-							<div class="consultation__subtitle">по перетяжке и ремонту мебели</div>
-							<div class="consultation__text">
-								Позвоните
-								<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
-								или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
-          решения
-							</div>
-							<form class="consultation__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
-								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
-								<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
-								<div data-fls-file="" class="file-input-wrapper">
-									<input type="file" name="file" id="file" hidden>
-									<div class="file-input-custom">
-										<span class="clip-icon">
-											<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
-											</svg>
-										</span>
-										<button type="button" class="attach-btn">Прикрепить файл</button>
-										<span class="file-name"></span>
-									</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
 								</div>
-								<label data-fls-checkbox="" class="checkbox">
-									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
-									<span class="checkbox__text">
-										Я принимаю политику конфиденциальности и даю согласие на
-              обработку персональных данных
-									</span>
-								</label>
-								<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
-							</form>
-						</div>
-						<div class="consultation__image">
-							<img class="consultation__img" alt="#" src="./assets/img/consultation/01.webp">
-							<div class="consultation__box">
-								<div class="consultation__present">
-									<img class="consultation__present-icon" src="./assets/img/consultation/Layer.svg" alt="#">
-									<p class="consultation__present-text">До 30 апреля - подарок в дополнение к заказу</p>
+								<div class="item-reviews__text">
+									<p>
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
+									</p>
 								</div>
-								<p class="consultation__box-text">Все подробности - уточнять менеджера</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="dignities">
-					<div class="dignities__container">
-						<h2 data-fls-title="" class="title">Какие работы мы выполняем</h2>
-						<div class="dignities__items">
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/01.svg" alt="#">
-								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
-							</div>
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/02.svg" alt="#">
-								<p class="dignities__text">
-									Более 3500 видов ткани из Польши, Турции, России, КНР. Натуральная
-            кожа из Италии
-								</p>
-							</div>
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/03.svg" alt="#">
-								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
-							</div>
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/04.svg" alt="#">
-								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
-							</div>
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/05.svg" alt="#">
-								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
-							</div>
-							<div class="dignities__item">
-								<img class="dignities__icon" src="./assets/img/dignities/06.svg" alt="#">
-								<p class="dignities__text">Все работы выполняются мастерами с опытом от 15 лет</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- <include src="@components/layout/beforeafter/beforeafter.html"></include> -->
-				<!--
-<section class="before-after-secticon">
-<div class="before-after__container">
-<h2 data-fls-title class="title">Примеры наших работ</h2>
-<div class="before-after__body">
-<div data-fls-beforeafter class="before-after">
-<div data-fls-beforeafter-before class="before-after__item">
-<img src="@img/slider/before/01.png" alt="" />
-</div>
-<div data-fls-beforeafter-after class="before-after__item">
-<img src="@img/slider/after/01.png" alt="" />
-</div>
-<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
-</div>
-<div data-fls-beforeafter class="before-after">
-<div data-fls-beforeafter-before class="before-after__item">
-<img src="@img/slider/before/02.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-after class="before-after__item">
-<img src="@img/slider/after/02.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
-</div>
-<div data-fls-beforeafter class="before-after">
-<div data-fls-beforeafter-before class="before-after__item">
-<img src="@img/slider/before/03.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-after class="before-after__item">
-<img src="@img/slider/after/03.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
-</div>
-<div data-fls-beforeafter class="before-after">
-<div data-fls-beforeafter-before class="before-after__item">
-<img src="@img/slider/before/04.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-after class="before-after__item">
-<img src="@img/slider/after/04.jpg" alt="" />
-</div>
-<div data-fls-beforeafter-arrow class="before-after__arrow"></div>
-</div>
-</div>
-</div>
-</section>
--->
-				<div data-fls-tabs="" class="tabs">
-					<div class="tabs__container">
-						<h2 data-fls-title="" class="title">Примеры наших работ</h2>
-						<nav data-fls-tabs-titles="" class="tabs__navigation">
-							<button type="button" class="tabs__title --tab-active">Все работы</button>
-							<button type="button" class="tabs__title">Диваны</button>
-							<button type="button" class="tabs__title">Кресла</button>
-						</nav>
-						<div data-fls-tabs-body="" class="tabs__content">
-							<div class="tabs__body">
-								<div data-fls-showmore="items" class="tabs__body-shomore">
-									<div data-fls-showmore-content="2" class="before-after__body">
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
 									</div>
-									<button hidden data-fls-showmore-button="" type="button" class="block__more">
-										<span>Показать ещё</span>
-										<span>Скрыть</span>
-									</button>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
 								</div>
 							</div>
-							<div class="tabs__body">
-								<div data-fls-showmore="items" class="tabs__body-shomore">
-									<div data-fls-showmore-content="1" class="before-after__body">
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
-										<div data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
+								</div>
+								<div class="item-reviews__text">
+									<p>
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
+									</p>
+								</div>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
 									</div>
-									<button hidden data-fls-showmore-button="" type="button" class="block__more">
-										<span>Показать ещё</span>
-										<span>Скрыть</span>
-									</button>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
 								</div>
 							</div>
-							<div class="tabs__body">
-								<div data-fls-showmore="items" class="tabs__body-shomore">
-									<ul data-fls-showmore-content="2" class="before-after__body">
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/01.png">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/01.png">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-										<li data-fls-beforeafter="" class="before-after">
-											<div data-fls-beforeafter-before="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/before/02.jpg">
-											</div>
-											<div data-fls-beforeafter-after="" class="before-after__item">
-												<img alt="" src="./assets/img/slider/after/02.jpg">
-											</div>
-											<div data-fls-beforeafter-arrow="" class="before-after__arrow"></div>
-										</li>
-									</ul>
-									<button hidden data-fls-showmore-button="" type="button" class="block__more">
-										<span>Показать ещё</span>
-										<span>Скрыть</span>
-									</button>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
+								</div>
+								<div class="item-reviews__text">
+									<p>
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
+									</p>
+								</div>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+									</div>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
+								</div>
+							</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
+								</div>
+								<div class="item-reviews__text">
+									<p>
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
+									</p>
+								</div>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+									</div>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
+								</div>
+							</div>
+							<div class="reviews__item item-reviews">
+								<div class="item-reviews__top">
+									<img class="item-reviews__avatar" alt="Image" src="./assets/img/underground/reviews/avatar.png">
+									<div class="item-reviews__name">Петр Малакхов</div>
+									<time class="item-reviews__tame" datetime="17.06.2025.">17.06.2025 г.</time>
+								</div>
+								<div class="item-reviews__text">
+									<p>
+										Переделывали старое утепление на ППУ. Дом стал значительно теплее
+              и комфортнее. Ещё хотел бы отметить внимательное отношение
+              менеджера к деталям и моим просьбам. Чувствовалось участие и
+              искренне желание найти оптимальное решение для улучшения изоляции.
+              Это особенно приятно. Спасибо!
+									</p>
+								</div>
+								<div class="item-reviews__bottom">
+									<div class="item-reviews__arrows">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+										<img src="./assets/img/underground/reviews/arrow.svg" alt="Image">
+									</div>
+									<a class="item-reviews__yandex" href="#">
+										<img src="./assets/img/underground/reviews/yandex.svg" alt="Image">
+									</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<section class="installments">
-					<div class="installments__container">
-						<div class="installments__content">
-							<h2 data-fls-title="" class="title title--white">Беcпроцентная рассрочка</h2>
-							<p class="installments__text">Учитываем ваш бюджет и предлагаем самые выгодные условия</p>
-							<a data-fls-button="" data-fls-popup-link="popup" class="installments__button button" href="#">Узнать подробнее</a>
-						</div>
-						<div class="installments__items">
-							<div class="installments__item">
-								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
-								<p class="installments__item-text">Без комиссии</p>
-							</div>
-							<div class="installments__item">
-								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
-								<p class="installments__item-text">Без комиссии</p>
-							</div>
-							<div class="installments__item">
-								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
-								<p class="installments__item-text">Без комиссии</p>
-							</div>
-							<div class="installments__item">
-								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
-								<p class="installments__item-text">Без комиссии</p>
-							</div>
-							<div class="installments__item">
-								<img class="installments__item-icon" src="./assets/img/installments/icon.svg" alt="">
-								<p class="installments__item-text">Первоначальный взнос - 0 рублей</p>
-							</div>
-							<picture class="installments__item-image">
-								<img alt="#" src="./assets/img/installments/01.webp">
-							</picture>
-						</div>
-					</div>
-				</section>
-				<section class="block-form">
-					<div class="block-form__container">
-						<div class="block-form__body">
-							<div class="block-form__content">
-								<h2 data-fls-title="" class="title title--white">Какие работы мы выполняем</h2>
-								<div class="block-form__present">
-									<img src="./assets/img/consultation/Layer.svg" alt="#">
-									<p class="">До 30 апреля - подарок в дополнение к заказу</p>
-								</div>
-							</div>
-							<div class="block-form__body-form">
-								<div class="consultation__text">
-									Позвоните
-									<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
-									или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
-            решения
-								</div>
-								<form class="consultation__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-									<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
-									<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
-									<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
-									<div data-fls-file="" class="file-input-wrapper">
-										<input type="file" name="file" id="file" hidden>
-										<div class="file-input-custom">
-											<span class="clip-icon">
-												<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-													<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
-												</svg>
-											</span>
-											<button type="button" class="attach-btn">Прикрепить файл</button>
-											<span class="file-name"></span>
-										</div>
-									</div>
-									<label data-fls-checkbox="" class="checkbox">
-										<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
-										<span class="checkbox__text">
-											Я принимаю политику конфиденциальности и даю согласие на
-                обработку персональных данных
-										</span>
-									</label>
-									<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
-								</form>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="steaps">
-					<div class="steaps__container">
-						<div class="steaps__item steaps__item--one">
-							<h2 data-fls-title="" class="title">Этапы работ</h2>
-							<picture class="steaps__image">
-								<img alt="#" src="./assets/img/steaps/01.webp">
-							</picture>
-						</div>
-						<div class="steaps__item">
-							<div class="steaps__number">01.</div>
-							<h3 class="steaps__item-title">Оценка работ и договор</h3>
-							<div class="steaps__item-text">
-								<p>
-									Выезд технолог-дизайнера с образцами, осмотр изделия и подбор
-            подходящих материалов
-								</p>
-								<p>Заключение договора</p>
-							</div>
-						</div>
-						<div class="steaps__item">
-							<div class="steaps__number">02.</div>
-							<h3 class="steaps__item-title">Ремонт/изготовление мебели</h3>
-							<div class="steaps__item-text">
-								<p>
-									Выезд технолог-дизайнера с образцами, осмотр изделия и подбор
-            подходящих материалов
-								</p>
-							</div>
-						</div>
-						<div class="steaps__item">
-							<div class="steaps__number">03.</div>
-							<h3 class="steaps__item-title">Доставка и установка</h3>
-							<div class="steaps__item-text">
-								<p>Договариваемся о времени и доставляем мебель в назначенное место</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="materials">
-					<div class="materials__container">
-						<h2 class="materials__title title">
-							Обивочные
-							<span>материалы</span>
-						</h2>
-						<p class="materials__subtitle">
-							В нашей коллекции более 4500+ различных материалов обивки под любой
-        запрос. Сотни реализованных заказов и довольных клиентов. Привезем
-        понравившиеся ткани!
-						</p>
-						<div class="materials__items">
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/01.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Лен</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/02.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Микрофибра</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/03.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Мешковина</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/04.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Мех</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/05.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Шерсть</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/06.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Замша</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/07.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Букле</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/08.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Экокожа</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/09.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Антивандальная ткань</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/10.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Гобелен</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/11.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Искусственная замша</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/12.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Велюр</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/13.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Натуральная кожа</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/14.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Шенилл</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/15.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Искусственная кожа</p>
-								</a>
-							</article>
-							<article>
-								<a href="#" class="materials__item">
-									<div class="materials__image">
-										<img alt="#" src="./assets/img/materials/16.jpg">
-										<p class="materials__link">Подробнее</p>
-									</div>
-									<p class="materials__name">Флок</p>
-								</a>
-							</article>
-						</div>
-					</div>
-				</section>
 				<section class="questions">
 					<div class="questions__container">
-						<picture class="questions__image">
-							<img alt="#" src="./assets/img/spoiler/faq.png">
-						</picture>
-						<div class="questions__body">
-							<div class="questions__content">
-								<h2 class="questions__title title">
-									У вас остались
-									<span>вопросы?</span>
-								</h2>
-								<a data-ripple="" data-popup="#popup" class="questions__button button" href="#">Задать вопрос</a>
+						<div data-fls-blockheader="" class="blockheader">
+							<h2 class="blockheader__title">Как мы работаем: прозрачно и просто</h2>
+							<div class="blockheader__subtitle">
+								От заявки до приемки и гарантии— за 4 простых шага без нервов и
+          неожиданностей
 							</div>
+						</div>
+						<div class="questions__body">
 							<div data-fls-spollers="" class="spollers">
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										Где происходит обивка/перетяжка мебели?
-										<span></span>
-									</summary>
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
 									<div class="spollers__body">
+										<strong>Нет.</strong>
 										<p>
-											Перетяжка мебели происходит в производственных условиях на нашей
-              фабрике в г. Долгопрудный. Крайне сложно без потери качества
-              перетянуть мебель на дому, без специального оборудования и
-              материалов.
-										</p>
-										<p>
-											Мы не рекомендуем пользоваться услугами компаний, перетягивающих
-              мебель в домашних условиях, так как в 99% случаев через месяц ваша
-              мебель разойдется по швам.
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
 										</p>
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										Сколько времени занимает процесс перетяжки мебели?
-										<span></span>
-									</summary>
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
 									<div class="spollers__body">
-										Файл для печати должен быть в формате TIF, PSD, либо в векторном
-            формате CorelDraw (любой версии), PDF. Все объекты, включая текст,
-            должны быть переведены в кривые.
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">
-										Вы работаете по юридическому договору?
-										<span></span>
-									</summary>
-									<div class="spollers__body">
-										Да, мы работаем только по договору и даем гарантию на наши работы 12
-            месяцев. Мы несем ответственность за все этапы, включая сроки,
-            материалы и конечный результат. За каждую нашу ошибку мы готовы
-            выплатить компенсацию, но, благодаря опыту и ежемесячной
-            квалификации наших мастеров, ошибок мы не допускаем.
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">
-										Сколько стоит выезд дизайнера для оценки работ?
-										<span></span>
-									</summary>
-									<div class="spollers__body">
+										<strong>Нет.</strong>
 										<p>
-											При заказе услуг компании, выезд дизайнера и менеджера технолога
-              бесплатный. В случае отказа от услуг, стоимость выезда составит
-              1000 руб. по Москве (в пределах МКАД) и 2000 р. по Московской
-              области (до 55 км от МКАД).
-										</p>
-										<p>
-											Мы не рекомендуем пользоваться услугами компаний, перетягивающих
-              мебель в домашних условиях, так как в 99% случаев через месяц ваша
-              мебель разойдется по швам.
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
 										</p>
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										Почему не стоит перетягивать на дому?
-										<span></span>
-									</summary>
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
 									<div class="spollers__body">
-										Выполнение дома спровоцировать низкое качество работы из-за
-            ограничений в пространстве и отсутствии профессионального
-            оборудования.
+										<strong>Нет.</strong>
+										<p>
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
+										</p>
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										У вас есть рассрочка?
-										<span></span>
-									</summary>
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
 									<div class="spollers__body">
-										Да, наша рассрочка на перетяжку мебели в Москве и области действует
-            на 4-6 месяцев.
+										<strong>Нет.</strong>
+										<p>
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
+										</p>
 									</div>
 								</details>
 								<details class="spollers__item">
-									<summary class="spollers__title">
-										Какие используются материалы?
-										<span></span>
-									</summary>
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
 									<div class="spollers__body">
-										В мастерской используются велюр, флок, экокожа, натуральная кожа,
-            гобелен, жаккард, а также синтетические ткани.
+										<strong>Нет.</strong>
+										<p>
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
+									<div class="spollers__body">
+										<strong>Нет.</strong>
+										<p>
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Токсичен и пахнет ли ППУ?</summary>
+									<div class="spollers__body">
+										<strong>Нет.</strong>
+										<p>
+											После застывания ППУ не выделяет вредных веществ — он безопасен
+                для жилых домов, включая детские комнаты. Мы используем
+											<strong>сертифицированные материалы</strong>
+											, прошедшие
+                испытания даже для применения в медицине и пищевой
+                промышленности.
+										</p>
 									</div>
 								</details>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section class="features">
-					<div class="features__container">
-						<div data-fls-showmore="items" class="features__body">
-							<div data-fls-showmore-content="1" class="features__content">
-								<div class="features__item">
-									<h2 data-fls-title="" class="title">Особенности работы по перетяжке</h2>
-									<div class="features__box">
-										<div class="features__text">
-											<p>
-												Мы тщательно отбираем материалы, гарантируя качество. Работая
-                  с надежными поставщиками, мы заказываем ткани, фурнитуру из
-                  таких стран, как Италия, Бельгия, Испания, США, Израиль,
-                  Турция и Франция. Срок службы наших материалов составляет
-                  более 10 лет, что делает нашу фурнитуру красивой. Все
-                  материалы, которые мы используем, гипоаллергенны, а также
-                  износостойки. Мы проверяем все сертификаты, тестируем
-                  материалы перед покупкой, чтобы убедиться в их безопасности,
-                  качестве.
-											</p>
-											<p>
-												Каждый заказ — это наш новый проект. Мы прислушиваемся к
-                  пожеланиям, изучаем интерьер и особенности фурнитуры, чтобы
-                  предложить несколько функциональных вариантов. Если важна
-                  эксклюзивность, мы шьём обивку по вашему запросу:
-                  воспроизведём любой рисунок ткани или воплотим вашу идею. Если
-                  вы хотите обновить обивку или полностью сшить новую — мы
-                  поможем подобрать ткань, оформить заказ и проконсультируем на
-                  каждом этапе.
-											</p>
-										</div>
-										<picture class="features__image">
-											<img alt="" src="./assets/img/features/01.jpg">
-										</picture>
-									</div>
-									<div class="features__bottom">
-										<blockquote>
-											Мы — фирма обивка мебели, которая работает напрямую с
-                заказчиками и предлагает честную перетяжку мебели без
-                посредников. У нас вы можете заказать перетяжку мебели в любое
-                удобное время: наши мастера подъедут к вам или примут изделие в
-                мастерской. Все образцы тканей, цены и фото выполненных работ
-                доступны на сайт нашего ателье.
-										</blockquote>
-									</div>
-								</div>
-								<div class="features__item">
-									<h2 data-fls-title="" class="title">Перетяжка мебели на карте Москвы</h2>
-									<div class="features__box">
-										<div class="features__text">
-											<p>
-												Если ваша гарнитура утратила первоначальный вид, не
-                  выкидывайте нее. Мы предлагаем обтяжку старой мебели,
-                  добавляем оригинальные элементы, чтобы вернуть ей вид.
-                  Предложены услуги по реставрации каркаса, наполнителя, а также
-                  обивке мягкой, корпусной гарнитуры. Наши сотрудники работают
-                  как на дому, так и в мастерской. Найти нас легко - достаточно
-                  ввести в поиск "перетяжка мебели рядом со мной на карте", и вы
-                  увидите наше расположение. Не нужно торопиться с покупкой
-                  новой гарнитуры — перетянуть мебель дешевле и быстрее.
-											</p>
-											<p>
-												Интересует цена обтянуть мебель? Мы предлагаем разумные
-                  расценки. Цена обивки фурнитуры зависит от выбранных
-                  материалов, однако мы гарантируем, что цены на наши услуги
-                  будут вполне доступными. Узнав, сколько стоит перетянуть
-                  мебель в Москве, вы убедитесь, что это экономично. У нас
-                  работает перетяжка мебели недорого качественно - мы не
-                  экономим на материалах, но предлагаем честные цены. Мы
-                  получаем положительные отзывы, потому что наши мастера по
-                  перетяжке фурнитуры тщательно подходят к каждому заказу,
-                  выполняют свою работу качественно и в срок.
-											</p>
-										</div>
-										<picture class="features__image">
-											<img alt="" src="./assets/img/features/02.jpg">
-										</picture>
-									</div>
-								</div>
-								<div class="features__item">
-									<h2 data-fls-title="" class="title">Реставрация мягкой мебели в западной части Москвы</h2>
-									<p class="features__text">
-										Обновляем текстильные покрытия, заменяем наполняющие материалы,
-              восстанавливаем мягкую мебель, спальную фурнитуру, кресла, стулья,
-              выполняем реставрацию кухонных уголков. Наша обивка перетяжка
-              мебели в Москве выполняется мастерами с опытом. Московская
-              мастерская мебели функционирует в западной части столицы свыше
-              семнадцати лет. Располагаем производственным участком по
-              обновлению мебельной обивки. Организуем перевозку от клиента и
-              обратно корпоративным транспортом.
-									</p>
-									<div class="features__box">
-										<div class="features__text">
-											<p>
-												Принимаем заказы по столице и области, в западном и других
-                  административных округах города. Обращайтесь - приедем к вам
-                  домой или в рабочее помещение, предоставим консультацию,
-                  назовем цену, оперативно примем заказ к исполнению. У нас
-                  доступна обшивка мебели недорого.
-											</p>
-											<h3 class="features__subtitle">В ателье мебели возможно:</h3>
-											<ul class="features__list">
-												<li>качественно обновить мягкую фурнитуру в западном округе;</li>
-												<li>
-													изменить жесткость или мягкость изделий посредством замены
-                    наполнителя;
-												</li>
-												<li>заменить покрытие компьютерных и офисных кресел;</li>
-												<li>заказать обшивку изголовий спальных мест;</li>
-												<li>выполнить восстановление офисной фурнитуры.</li>
-											</ul>
-										</div>
-										<picture class="features__image">
-											<img alt="" src="./assets/img/features/03.jpg">
-										</picture>
-									</div>
-								</div>
-								<div class="features__item">
-									<div class="features__box">
-										<div class="features__text">
-											<p>
-												Наши услуги обивки мебели позволяют полностью восстановить
-                  эстетику любых предметов.
-											</p>
-											<h3 class="features__subtitle">Предлагаем выбор материй для покрытий, включая:</h3>
-											<ul class="features__list">
-												<li>качественно обновить мягкую фурнитуру в западном округе;</li>
-												<li>
-													изменить жесткость или мягкость изделий посредством замены
-                    наполнителя;
-												</li>
-												<li>заменить покрытие компьютерных и офисных кресел;</li>
-											</ul>
-											<p>
-												Широкий ассортимент помогает выбрать материи под любые условия
-                  и дизайн.
-											</p>
-										</div>
-										<picture class="features__image">
-											<img alt="" src="./assets/img/features/02.jpg">
-										</picture>
-									</div>
-								</div>
+				<section class="solved">
+					<div class="solved__wrapper">
+						<img class="solved__img-bg" alt="Image" src="./assets/img/solved/bg.png">
+						<div class="solved__container">
+							<div class="solved__content">
+								<h2 class="solved__title">Решим любые ваши вопросы</h2>
+								<p class="solved__text">и расскажем о самых выгодных предложениях в Центре ППУ :)</p>
 							</div>
-							<button hidden data-fls-showmore-button="" type="button" class="features__more">
-								<span>Показать ещё</span>
-								<span>Скрыть</span>
-							</button>
-						</div>
-					</div>
-				</section>
-				<div class="consultation">
-					<div class="consultation__container">
-						<div class="consultation__content">
-							<h2 data-fls-title="" class="title title--white">Запишитесь на бесплатную консультацию</h2>
-							<div class="consultation__subtitle">по перетяжке и ремонту мебели</div>
-							<div class="consultation__text">
-								Позвоните
-								<a href="tel:+79097878481" target="_blank">+7 (909) 787-84-81</a>
-								или оставьте заявку ниже – мы ответим на вопросы и предложим лучшие
-          решения
-							</div>
-							<form class="consultation__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required type="email" name="text" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="consultation__input input">
-								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="consultation__input input">
-								<div class="consultation__text">У вас есть фотография? Приложите ее файлом, чтобы ускорить процесс</div>
-								<div data-fls-file="" class="file-input-wrapper">
-									<input type="file" name="file" id="file" hidden>
-									<div class="file-input-custom">
-										<span class="clip-icon">
-											<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
-											</svg>
-										</span>
-										<button type="button" class="attach-btn">Прикрепить файл</button>
-										<span class="file-name"></span>
-									</div>
-								</div>
+							<form class="solved__form" data-fls-form="ajax" data-fls-form-popup="popup" method="POST" action="sendmail/sendmail.php">
+								<div class="solved__logo">CENTERPPU.RU</div>
+								<input data-fls-input="" data-fls-input-mask="+375(99) 999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" required placeholder="+375(__) ___-__-__" class="input input--70">
 								<label data-fls-checkbox="" class="checkbox">
-									<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
-									<span class="checkbox__text">
-										Я принимаю политику конфиденциальности и даю согласие на
-              обработку персональных данных
-									</span>
+									<input data-fls-error="Заполните поле" class="checkbox__input" type="checkbox" value="2" name="check" checked>
+									<span class="checkbox__text">Вы соглашаетесь с условиями обработки персональных данных</span>
 								</label>
-								<button type="submit" class="consultation__button button button--black">Оставить заявку</button>
+								<button data-fls-button="" type="submit" class="hero__button button button--bacr">УТЕПЛИТЬСЯ СЕЙЧАС</button>
+								<p class="solved__form-text">или пишите в WhatsApp</p>
+								<a class="solved__phone" href="tel:+79312760178">+7 (931) 276-01-78</a>
 							</form>
 						</div>
-						<div class="consultation__image">
-							<img class="consultation__img" alt="#" src="./assets/img/consultation/02.webp">
-							<div class="consultation__box">
-								<div class="consultation__present">
-									<img class="consultation__present-icon" src="./assets/img/consultation/Layer.svg" alt="#">
-									<p class="consultation__present-text">До 30 апреля - подарок в дополнение к заказу</p>
-								</div>
-								<p class="consultation__box-text">Все подробности - уточнять менеджера</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<section class="contacts" id="contacts">
-					<div class="contacts__map">
-						<div class="contacts__map-wrapper">
-							<iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=true&amp;source=constructor-api&amp;um=constructor%3A58c254f90ad8e35e14e6de1fc76e5dca939b61b24f93a54d27a5dca6f9d89395" frameborder="0" allowfullscreen width="100%" height="600px" style="display: block"></iframe>
-						</div>
-					</div>
-					<div class="contacts__container">
-						<div class="contacts__info">
-							<div class="contacts__card">
-								<h3 class="contacts__title">Контакты</h3>
-								<div class="contacts__phones contacts__item">
-									<a href="tel:74951859768" class="contacts__phone contacts__item-text">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="22" fill="red">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M.829 1.497C3.37-.386 5.18-.44 5.879 2.424c.625 2.558.777 2.933-1.19 4.39-1.586 1.175 4.006 9.624 5.591 8.45 1.968-1.457 2.249-1.178 4.308.317 2.304 1.674 1.637 3.456-.905 5.339C8.273 23.396-3.163 6.115.829 1.497z" fill="#151515"></path>
-										</svg>
-										<span>+7 (495) 185-97-68</span>
-									</a>
-								</div>
-								<div class="contacts__mail contacts__item">
-									<a href="mailto:ambassador-group@bk.ru" class="contacts__mail contacts__item-text">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" fill="none">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M.707.15h14.587a.8.8 0 01.454.156L8.682 7.192c-.354.365-1.01.365-1.363 0L.303.306A.563.563 0 01.707.149zM16 1.087V11.47l-5.3-5.216L16 1.088zm-5.855 5.686l5.4 5.321c-.05 0-.15.053-.252.053H.707c-.101 0-.152-.053-.253-.053l5.4-5.32.96.938a1.637 1.637 0 002.372 0l.96-.939zM5.3 6.253L0 11.469V1.088l5.3 5.165z" fill="#151515"></path>
-										</svg>
-										<span>ambassador-group@bk.ru</span>
-									</a>
-								</div>
-								<div class="contacts__address contacts__item">
-									<div class="contacts__item-heading">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" fill="none">
-											<path d="M8 .143c-4.39 0-8 3.423-8 8.306 0 1.742.41 2.954 1.173 4.297L7.461 23.82a.615.615 0 001.078 0l6.288-11.074C15.589 11.403 16 10.19 16 8.449 16 3.566 12.39.143 8 .143zm0 4.306a3.692 3.692 0 110 7.384 3.692 3.692 0 010-7.384z" fill="#151515"></path>
-										</svg>
-										<span>Адрес производства:</span>
-									</div>
-									<div class="contacts__item-text">Московская область, Щёлково, ул. Московская, д. 70Ак1</div>
-								</div>
-								<div class="contacts__open contacts__item">
-									<div class="contacts__item-heading">
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
-											<path d="M8 .13a8 8 0 100 15.996A8 8 0 108 .13zm0 2c.246 0 .444.198.444.444v5.373l3.487 3.479a.448.448 0 010 .631.449.449 0 01-.632 0L7.688 8.44a.44.44 0 01-.132-.312V2.574c0-.246.199-.445.444-.445z" fill="#151515"></path>
-										</svg>
-										<span>Режим работы:</span>
-									</div>
-									<div class="contacts__item-text">ежедневно 9:00-21:00</div>
-								</div>
-								<div class="contacts__order order">
-									<button data-fls-button="" class="button button--h40" type="button" data-fls-popup-link="popup">Хочу консультацию</button>
-								</div>
-								<div class="contacts__socials">
-									<a class="contacts__socials-link" target="_blank" href="https://t.me/+79256559037">
-										<svg xmlns="http://www.w3.org/2000/svg" width="23" height="19" fill="none">
-											<path fill-rule="evenodd" clip-rule="evenodd" d="M17.618 18.79c.309.217.706.271 1.06.138.355-.134.616-.434.695-.798.832-3.88 2.852-13.7 3.61-17.23a.738.738 0 00-.249-.72.773.773 0 00-.763-.132C17.952 1.522 5.578 6.125.52 7.98a.785.785 0 00-.52.76.79.79 0 00.569.725c2.268.673 5.245 1.608 5.245 1.608s1.392 4.166 2.117 6.285a.836.836 0 00.578.547.835.835 0 00.777-.197l2.967-2.777s3.423 2.488 5.365 3.86zM7.067 10.547l1.609 5.261.357-3.332 9.76-8.726a.262.262 0 00.033-.358.274.274 0 00-.36-.061l-11.4 7.216z" fill="#151515"></path>
-										</svg>
-									</a>
-									<a class="contacts__socials-link" target="_blank" href="https://vk.com/ambassador_pereobivka">
-										<svg xmlns="http://www.w3.org/2000/svg" width="29" height="17" fill="none">
-											<path d="M15.903 16.992c.736 0 1.037-.492 1.029-1.11-.038-2.328.862-3.581 2.488-1.948 1.797 1.807 2.17 3.059 4.353 3.059h3.867c.976 0 1.36-.316 1.36-.812 0-1.048-1.717-2.897-3.172-4.254-2.037-1.9-2.132-1.946-.378-4.233 2.176-2.84 5.023-6.48 2.505-6.48h-4.81c-.933 0-1 .528-1.333 1.315-1.202 2.85-3.487 6.542-4.355 5.977-.907-.589-.492-2.922-.423-6.388.018-.916.014-1.544-1.378-1.87A9.705 9.705 0 0013.47 0c-2.747 0-4.641 1.157-3.565 1.359 1.899.356 1.716 4.483 1.274 6.265-.77 3.104-3.668-2.457-4.875-5.227-.292-.665-.381-1.183-1.42-1.183H.95c-.595 0-.951.195-.951.627C0 2.57 3.577 10 6.991 13.704c3.33 3.613 6.622 3.288 8.912 3.288z" fill="#151515"></path>
-										</svg>
-									</a>
-								</div>
-							</div>
-						</div>
 					</div>
 				</section>
-				<div data-fls-phonebottom="" class="phone">
-					<div class="phone__icon">
-						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewbox="0 0 48 48">
-							<path fill="#fff" d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"></path>
-							<path fill="#7e57c2" d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"></path>
-							<path fill="#7e57c2" d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"></path>
-							<path fill="#7e57c2" d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"></path>
-						</svg>
-					</div>
-					<a class="phone__link" href="tel:+375296582077">+375 (29) 658-20-77</a>
-				</div>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
-					<div data-fls-spollers="479.98,max" class="footer__main">
-						<details class="footer__item">
-							<summary class="footer__title">Услуги</summary>
-							<div class="footer__item-body">
-								<ul class="footer__list">
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка стульев</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка кресел</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка мебели</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-								</ul>
-								<ul class="footer__list">
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-									<li>
-										<a href="#">Перетяжка дивана</a>
-									</li>
-								</ul>
+					<div class="footer__banner banner">
+						<div class="banner__logo-body">
+							<a href="#" class="banner__logo">CENTERPPU.RU</a>
+							<p class="banner__text">ЦЕНТР ППУ — держим тепло с 2018 года</p>
+						</div>
+						<ul class="banner__list">
+							<li>
+								<a href="#">Утепление каркасных домов</a>
+							</li>
+							<li>
+								<a href="#">Утепление под домом</a>
+							</li>
+							<li>
+								<a href="#">Утепление ангаров</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__main main-footer">
+						<div class="main-footer__content">
+							<p class="main-footer__text">
+								Утепление сооружений
+								<strong>пенополиуретаном</strong>
+								в
+          Санкт-Петербурге и ЛО
+							</p>
+							<a data-fls-popup-link="popup" class="main-footer__button button button--60" href="#">Обратный звонок</a>
+							<div class="main-footer__socials">
+								<a class="main-footer__social-link" href="#">
+									<img alt="Image" src="./assets/img/icon-social/viber.png">
+								</a>
+								<a class="main-footer__social-link" href="#">
+									<img alt="Image" src="./assets/img/icon-social/telegram.png">
+								</a>
+								<a class="main-footer__social-link" href="#">
+									<img alt="Image" src="./assets/img/icon-social/instagram.png">
+								</a>
+								<a class="main-footer__social-link" href="#">
+									<img alt="Image" src="./assets/img/icon-social/tiktok.png">
+								</a>
 							</div>
-						</details>
-						<details class="footer__item">
-							<summary class="footer__title">Разделы сайта</summary>
-							<div class="footer__item-body">
-								<ul class="footer__list">
-									<li>
-										<a href="#">Услуги</a>
-									</li>
-									<li>
-										<a href="#">Материалы для обивки</a>
-									</li>
-									<li>
-										<a href="#">Отзывы</a>
-									</li>
-									<li>
-										<a href="#">Контакты</a>
-									</li>
-								</ul>
-								<ul class="footer__list">
-									<li>
-										<a href="#">Вопросы</a>
-									</li>
-									<li>
-										<a href="#">О нас</a>
-									</li>
-									<li>
-										<a href="#">Наши работы</a>
-									</li>
-								</ul>
+							<div class="main-footer__copyright">
+								Copyright © 2008 -
+								<script type="text/javascript">
+                  document.write(new Date().getFullYear());
+								</script>
+								2026 Все права защищены - УНП 791134290 Утепление пенополиуретаном
+          ppu-uteplenie.by
+								<br>
+								Информация на данном интернет-сайте носит исключительно
+          ознакомительный характер и ни при каких условиях не является публичной
+          офертой. Все материалы сайта защищены законом Республики Беларусь от
+          17 мая 2011 года №262-З "Об авторском праве и смежных правах".
+          Копирование и распространение материалов без согласия владельцев сайта
+          запрещено.20008
 							</div>
-						</details>
-						<details class="footer__item">
-							<summary class="footer__title">Контакты</summary>
-							<div class="footer__item-info">
-								<p>Телефоны:</p>
-								<a href="tel:">+375(29)111-33-44</a>
-								<p>E-mail:</p>
-								<a href="">dabrota.ru</a>
-							</div>
-						</details>
+						</div>
+						<div class="main-footer__info">
+							<h3 class="main-footer__title">Контакты</h3>
+							<a class="main-footer__phone" href="tel:79312760178">+7 (931) 276-01-78</a>
+							<a class="main-footer__mail" href="mailto:79312760178@yandex.ru">79312760178@yandex.ru</a>
+							<p class="main-footer__text">Санкт-Петербург, ул. Федора Абрамова, д 8</p>
+							<a class="main-footer__map-link" href="#">Посмотреть на карте</a>
+						</div>
+						<nav class="main-footer__menu">
+							<h3 class="main-footer__title">Меню</h3>
+							<ul class="main-footer__list">
+								<li>
+									<a href="#">Главная</a>
+								</li>
+								<li>
+									<a href="#">Стоимость</a>
+								</li>
+								<li>
+									<a href="#">Выбор типа ППУ</a>
+								</li>
+								<li>
+									<a href="#">Расчет стоимости</a>
+								</li>
+								<li>
+									<a href="#">Примеры работ</a>
+								</li>
+								<li>
+									<a href="#">Частые вопросы</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 					<div class="footer__bottom">
-						<p>2026 Dragon Mebel</p>
-						<a href="#">Политика конфиденциальности и обработки персональных данных</a>
+						<div class="footer__bottom-left">
+							<a href="https://t.me/pandas_web" target="_blank">Продвижение сайта Pandas.web</a>
+						</div>
+						<a class="footer__politicy" href="#">Политика конфиденциальности</a>
 					</div>
 				</div>
 			</footer>
+			<div data-fls-phonebottom="" class="phone">
+				<div class="phone__icon">
+					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewbox="0 0 48 48">
+						<path fill="#fff" d="M24,5C21.361,5,13.33,5,8.89,9.054C6.246,11.688,5,15.494,5,21v3c0,5.506,1.246,9.312,3.921,11.976 c1.332,1.215,3.148,2.186,5.368,2.857L15,39.047v5.328C15,45,15.181,45,15.241,45c0.123,0,0.32-0.039,0.694-0.371 c0.09-0.089,0.75-0.803,3.96-4.399l0.324-0.363l0.485,0.031C21.779,39.965,22.888,40,24,40c2.639,0,10.67,0,15.11-4.055 C41.753,33.311,43,29.505,43,24v-3c0-5.506-1.246-9.312-3.921-11.976C34.67,5,26.639,5,24,5z"></path>
+						<path fill="#7e57c2" d="M33.451 28.854c-1.111-.936-1.624-1.219-3.158-2.14C29.654 26.331 28.68 26 28.169 26c-.349 0-.767.267-1.023.523C26.49 27.179 26.275 28 25.125 28c-1.125 0-3.09-1.145-4.5-2.625C19.145 23.965 18 22 18 20.875c0-1.15.806-1.38 1.462-2.037C19.718 18.583 20 18.165 20 17.816c0-.511-.331-1.47-.714-2.109-.921-1.535-1.203-2.048-2.14-3.158-.317-.376-.678-.548-1.056-.549-.639-.001-1.478.316-2.046.739-.854.637-1.747 1.504-1.986 2.584-.032.147-.051.295-.057.443-.046 1.125.396 2.267.873 3.234 1.123 2.279 2.609 4.485 4.226 6.455.517.63 1.08 1.216 1.663 1.782.566.582 1.152 1.145 1.782 1.663 1.97 1.617 4.176 3.103 6.455 4.226.958.472 2.086.906 3.2.874.159-.005.318-.023.477-.058 1.08-.238 1.947-1.132 2.584-1.986.423-.568.74-1.406.739-2.046C33.999 29.532 33.827 29.171 33.451 28.854zM34 24c-.552 0-1-.448-1-1v-1c0-4.962-4.038-9-9-9-.552 0-1-.448-1-1s.448-1 1-1c6.065 0 11 4.935 11 11v1C35 23.552 34.552 24 34 24zM27.858 22c-.444 0-.85-.298-.967-.748-.274-1.051-1.094-1.872-2.141-2.142-.535-.139-.856-.684-.718-1.219.138-.534.682-.855 1.219-.718 1.748.453 3.118 1.822 3.575 3.574.139.535-.181 1.08-.715 1.22C28.026 21.989 27.941 22 27.858 22z"></path>
+						<path fill="#7e57c2" d="M31,23c-0.552,0-1-0.448-1-1c0-3.188-2.494-5.818-5.678-5.986c-0.552-0.029-0.975-0.5-0.946-1.051 c0.029-0.552,0.508-0.976,1.051-0.946C28.674,14.241,32,17.748,32,22C32,22.552,31.552,23,31,23z"></path>
+						<path fill="#7e57c2" d="M24,4C19.5,4,12.488,4.414,8.216,8.316C5.196,11.323,4,15.541,4,21c0,0.452-0.002,0.956,0.002,1.5 C3.998,23.043,4,23.547,4,23.999c0,5.459,1.196,9.677,4.216,12.684c1.626,1.485,3.654,2.462,5.784,3.106v4.586 C14,45.971,15.049,46,15.241,46h0.009c0.494-0.002,0.921-0.244,1.349-0.624c0.161-0.143,2.02-2.215,4.042-4.481 C21.845,40.972,22.989,41,23.999,41c0,0,0,0,0,0s0,0,0,0c4.5,0,11.511-0.415,15.784-4.317c3.019-3.006,4.216-7.225,4.216-12.684 c0-0.452,0.002-0.956-0.002-1.5c0.004-0.544,0.002-1.047,0.002-1.5c0-5.459-1.196-9.677-4.216-12.684C35.511,4.414,28.5,4,24,4z M41,23.651l0,0.348c0,4.906-1.045,8.249-3.286,10.512C33.832,38,26.437,38,23.999,38c-0.742,0-1.946-0.001-3.367-0.1 C20.237,38.344,16,43.083,16,43.083V37.22c-2.104-0.505-4.183-1.333-5.714-2.708C8.045,32.248,7,28.905,7,23.999l0-0.348 c0-0.351-0.001-0.73,0.002-1.173C6.999,22.078,6.999,21.7,7,21.348L7,21c0-4.906,1.045-8.249,3.286-10.512 C14.167,6.999,21.563,6.999,24,6.999c2.437,0,9.832,0,13.713,3.489c2.242,2.263,3.286,5.606,3.286,10.512l0,0.348 c0,0.351,0.001,0.73-0.002,1.173C41,22.922,41,23.3,41,23.651z"></path>
+					</svg>
+				</div>
+				<a class="phone__link" href="tel:+375296582077">+375 (29) 658-20-77</a>
+			</div>
+			<div data-fls-arrowup="" class="nav">
+				<a class="nav__button" href="#">
+					<svg version="1.1" id="icons_1_" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewbox="0 0 128 128" style="enable-background: new 0 0 128 128" xml:space="preserve">
+						<g id="row1_1_">
+							<g id="_x31__3_">
+								<path class="st2" d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm0 121.6C32.2 121.6 6.4 95.8 6.4 64S32.2 6.4 64 6.4s57.6 25.8 57.6 57.6-25.8 57.6-57.6 57.6zM49.2 38.4 73.6 64 49.2 89.6h13.5L86.4 64 62.7 38.4H49.2z" id="_x32__2_"></path>
+							</g>
+						</g>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</body>
 </html>
