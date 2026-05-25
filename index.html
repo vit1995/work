@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1779637669795"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1779637669795">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1779715479744"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1779715479744">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -31,7 +31,7 @@
 							</div>
 							<address>г.Минск</address>
 						</div>
-						<a data-fls-dynamic=".menu__body, 991.98" href="#" class="header__calc button">
+						<a data-fls-dynamic=".menu__body, 991.98" href="#" data-fls-scrollto=".calculator" class="header__calc button">
 							<div class="header__calc-icon">
 								<img src="./assets/img/header/calc.svg" alt="">
 							</div>
@@ -304,13 +304,37 @@ class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
 									</div>
 								</li>
 								<li class="menu__item">
-									<a href="about-us.html" class="menu__link">Фотографии работ</a>
+									<a href="#" data-fls-scrollto=".gallery" class="menu__link">Фотографии работ</a>
 								</li>
 								<li class="menu__item">
 									<a href="" class="menu__link">Прайс-лист</a>
 								</li>
 								<li class="menu__item">
-									<a href="" class="menu__link">О компании</a>
+									<a href="" class="menu__link menu__link--submenu menu__link--icon-chevron-down">О компании</a>
+									<ul class="submenu">
+										<div class="submenu__header menu__header">
+											<button class="submenu-close close --icon-arrow-left"></button>
+											<span>Услуги</span>
+										</div>
+										<li>
+											<a href="#">Доставка и оплата</a>
+										</li>
+										<li>
+											<a href="#">Рассрочка</a>
+										</li>
+										<li>
+											<a href="#">Блог</a>
+										</li>
+										<li>
+											<a href="#">Публичная оферта</a>
+										</li>
+										<li>
+											<a href="#">Вакансии</a>
+										</li>
+										<li>
+											<a href="#">Приют</a>
+										</li>
+									</ul>
 								</li>
 								<li class="menu__item">
 									<a class="menu__link menu__link--submenu menu__link--icon-chevron-down">Информация</a>
@@ -339,7 +363,7 @@ class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
 										</li>
 									</ul>
 								</li>
-								<li class="menu__item">
+								<li data-fls-scrollto=".footer" class="menu__item">
 									<a href="" class="menu__link">Контакты</a>
 								</li>
 							</ul>
@@ -1089,11 +1113,13 @@ class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
 									</div>
 								</div>
 								<div id="banner" class="calculator__banner banner-calculator">
-									<div class="banner-calculator__avatar">
-										<div class="banner-calculator__status">Онлайн</div>
-										<img alt="#" src="./assets/img/calculator/avatar.png">
-									</div>
-									<div class="banner-calculator__name">Станислав Резников</div>
+									<!--
+<div class="banner-calculator__avatar">
+<div class="banner-calculator__status">Онлайн</div>
+<img src="@img/calculator/avatar.png" alt="#" />
+</div>
+<div class="banner-calculator__name">Станислав Резников</div>
+-->
 									<div class="banner-calculator__bottom">
 										<p class="banner-calculator__text">
 											<strong>Отвечайте на вопросы и получите</strong>
@@ -1129,31 +1155,6 @@ class="submenu-catalog__list-close submenu-catalog__list-close--icon-arrow-left"
 								<div class="blockheader__subtitle">Установили 117 заборов за год</div>
 							</div>
 							<div class="gallery__items">
-								<div class="gallery__item">
-									<div data-fls-gallery="" class="gallery__gallery">
-										<a href="./assets/img/gallery/01.webp">
-											<img class="gallery__gallery-img-bg" alt="Image" src="./assets/img/gallery/01.webp">
-										</a>
-										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
-											<img alt="Image" src="./assets/img/gallery/01.webp">
-										</a>
-										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
-											<img alt="Image" src="./assets/img/gallery/01.webp">
-										</a>
-										<a class="gallery__gallery-img" href="./assets/img/gallery/01.webp">
-											<img alt="Image" src="./assets/img/gallery/01.webp">
-										</a>
-									</div>
-									<div class="gallery__info">
-										<h3 class="gallery__title">Забор из профнастила в один цвет</h3>
-										<div class="gallery__info-bottom">
-											<a data-fls-popup-link="popup-calc" class="gallery__button button button--bacr" href="#">Рассчитать стоимость</a>
-											<a class="gallery__phone" href="#">
-												<img src="./assets/img/gallery/phone-standart.svg" alt="">
-											</a>
-										</div>
-									</div>
-								</div>
 								<div class="gallery__item">
 									<div data-fls-gallery="" class="gallery__gallery">
 										<a href="./assets/img/gallery/01.webp">
