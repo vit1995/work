@@ -174,19 +174,17 @@ const marquee = () => {
   };
   if (!$marqueeArray.length) return;
   const { head } = document;
+  const isFunction = (fn) => typeof fn === "function";
   const debounce = (delay, fn) => {
     let timerId;
     return (...args) => {
-      if (timerId) {
-        clearTimeout(timerId);
-      }
+      if (timerId) clearTimeout(timerId);
       timerId = setTimeout(() => {
         fn(...args);
         timerId = null;
       }, delay);
     };
   };
-  const isFunction = (fn) => typeof fn === "function";
   const onWindowWidthResize = (cb) => {
     if (!cb || !isFunction(cb)) return;
     let prevWidth = 0;
@@ -252,20 +250,11 @@ const marquee = () => {
     const setBaseStyles = (firstScreenVisibleSize2) => {
       let baseStyle = "display: flex; flex-wrap: nowrap;";
       if (isVertical) {
-        baseStyle += `
-				flex-direction: column;
-				position: relative;
-				will-change: transform;`;
-        if (direction === "bottom") {
-          baseStyle += `top: -${firstScreenVisibleSize2}px;`;
-        }
+        baseStyle += `flex-direction: column; position: relative; will-change: transform;`;
+        if (direction === "bottom") baseStyle += `top: -${firstScreenVisibleSize2}px;`;
       } else {
-        baseStyle += `
-				position: relative;
-				will-change: transform;`;
-        if (direction === "right") {
-          baseStyle += `inset-inline-start: -${firstScreenVisibleSize2}px;`;
-        }
+        baseStyle += `position: relative; will-change: transform;`;
+        if (direction === "right") baseStyle += `inset-inline-start: -${firstScreenVisibleSize2}px;`;
       }
       $marqueeInner.style.cssText = baseStyle;
     };
@@ -280,15 +269,9 @@ const marquee = () => {
     };
     const animation = () => {
       const keyFrameCss = `@keyframes ${animName} {
-					 0% {
-						 transform: translate${isVertical ? "Y" : "X"}(${!isVertical && isRtl ? -startPosition : startPosition}%);
-					 }
-					 100% {
-						 transform: translate${isVertical ? "Y" : "X"}(${setdirectionAnim(
-        !isVertical && isRtl ? -firstScreenVisibleSize : firstScreenVisibleSize
-      )}px);
-					 }
-				 }`;
+				0% { transform: translate${isVertical ? "Y" : "X"}(${!isVertical && isRtl ? -startPosition : startPosition}%); }
+				100% { transform: translate${isVertical ? "Y" : "X"}(${setdirectionAnim(!isVertical && isRtl ? -firstScreenVisibleSize : firstScreenVisibleSize)}px); }
+			}`;
       const $style = document.createElement("style");
       $style.classList.add(animName);
       $style.innerHTML = keyFrameCss;
@@ -308,9 +291,7 @@ const marquee = () => {
       $marqueeInner.style.display = "flex";
       if (isVertical) $marqueeInner.style.flexDirection = "column";
       $marqueeInner.innerHTML = "";
-      $childrenEl.forEach(($item) => {
-        $marqueeInner.append($item);
-      });
+      $childrenEl.forEach(($item) => $marqueeInner.append($item));
       $childrenEl.forEach(($item) => {
         if (isVertical) {
           $item.style.marginBottom = `${spaceBetween}px`;
@@ -323,7 +304,6 @@ const marquee = () => {
         firstScreenVisibleSize += sizeEl + spaceBetween;
         initialSizeElements += sizeEl + spaceBetween;
         counterDuplicateElements += 1;
-        return sizeEl;
       });
       const $multiplyWidth = $parentNodeWidth * 2 + initialSizeElements;
       for (; sumSize < $multiplyWidth; index += 1) {
@@ -364,21 +344,13 @@ const marquee = () => {
     init();
   });
 };
+const initMarquee = () => {
+  console.log("🟢 Marquee инициализация");
+  marquee();
+};
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", marquee);
+  document.addEventListener("DOMContentLoaded", initMarquee);
 } else {
-  marquee();
+  initMarquee();
 }
-console.log("🔴 Файл marquee загружен, запускаем...");
-setTimeout(() => {
-  console.log("🔴 Запуск marquee через setTimeout");
-  marquee();
-}, 300);
-window.addEventListener("load", () => {
-  console.log("🔴 Запуск marquee при load");
-  marquee();
-});
-if (document.readyState !== "loading") {
-  console.log("🔴 DOM уже загружен, запускаем сразу");
-  marquee();
-}
+window.addEventListener("load", initMarquee);
