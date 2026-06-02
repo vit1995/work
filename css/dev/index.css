@@ -232,18 +232,56 @@
   line-height: 1.4;
   background: #f5faff;
 }
+[data-fls-marquee] {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+[data-fls-marquee] img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  background-color: transparent;
+  aspect-ratio: 1/1;
+  display: block;
+}
+
+[data-fls-marquee-inner] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: auto;
+}
+
+[data-fls-marquee-item] {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 47.99875em) {
   [data-fls-marquee] img {
     width: 3.75rem;
     height: 3.75rem;
   }
+  [data-fls-marquee] img {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
 }
+
 @media (max-width: 29.99875em) {
   [data-fls-marquee] img {
     width: 3.125rem;
     height: 3.125rem;
   }
+  [data-fls-marquee] img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
 }
+
 @media (max-width: 20em) {
   [data-fls-marquee] {
     padding-top: 0.9375rem;
@@ -365,7 +403,14 @@
   .trust__bottom-icon img {
     height: 5rem;
   }
+  [data-fls-marquee] {
+    padding-top: 0.9375rem;
+  }
+  [data-fls-marquee] {
+    padding-bottom: 0.9375rem;
+  }
 }
+
 @media (min-width: 20em) and (max-width: 75em) {
   [data-fls-marquee] {
     padding-top: clamp( 0.9375rem , 0.14204545454375rem  +  3.9772727273vw , 3.125rem );
@@ -487,7 +532,14 @@
   .trust__bottom-icon img {
     height: clamp( 5rem , 4.54545454545625rem  +  2.2727272727vw , 6.25rem );
   }
+  [data-fls-marquee] {
+    padding-top: clamp( 0.9375rem , 0.14204545454375rem  +  3.9772727273vw , 3.125rem );
+  }
+  [data-fls-marquee] {
+    padding-bottom: clamp( 0.9375rem , 0.14204545454375rem  +  3.9772727273vw , 3.125rem );
+  }
 }
+
 @media (min-width: 75em) {
   [data-fls-marquee] {
     padding-top: 3.125rem;
@@ -609,7 +661,14 @@
   .trust__bottom-icon img {
     height: 6.25rem;
   }
+  [data-fls-marquee] {
+    padding-top: 3.125rem;
+  }
+  [data-fls-marquee] {
+    padding-bottom: 3.125rem;
+  }
 }
+
 @media (any-hover: hover) {
   .services__item:hover {
     background-color: var(--maintwo);
@@ -657,6 +716,7 @@
     color: white;
   }
 }
+
 @media (hover: none) and (pointer: coarse) {
   .services__item .services__list {
     opacity: 1;
