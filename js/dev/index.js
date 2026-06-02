@@ -369,3 +369,16 @@ if (document.readyState === "loading") {
 } else {
   marquee();
 }
+console.log("🔴 Файл marquee загружен, запускаем...");
+setTimeout(() => {
+  console.log("🔴 Запуск marquee через setTimeout");
+  marquee();
+}, 300);
+window.addEventListener("load", () => {
+  console.log("🔴 Запуск marquee при load");
+  marquee();
+});
+if (document.readyState !== "loading") {
+  console.log("🔴 DOM уже загружен, запускаем сразу");
+  marquee();
+}
