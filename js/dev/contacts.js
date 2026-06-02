@@ -1,4 +1,5 @@
 import "./app.min.js";
+import "./autoheight.min.js";
 const detailsToggle = document.querySelector(".contacts__details-toggle");
 const detailsContent = document.querySelector(".contacts__details-content");
 if (detailsToggle && detailsContent) {

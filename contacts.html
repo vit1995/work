@@ -5,10 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/contacts.min.js?v=1780402060254"></script>
+		<script type="module" crossorigin="" src="./js/contacts.min.js?v=1780405671609"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780402060254">
-		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1780402060254">
+		<link rel="modulepreload" crossorigin="" href="./js/autoheight.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780405671609">
+		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1780405671609">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -160,23 +161,30 @@ class="menu__link"
 								<div class="contacts__form-card">
 									<h3 class="contacts__form-title">Оставить заявку</h3>
 									<p class="contacts__form-desc">Заполните форму и мы свяжемся с вами в ближайшее время</p>
-									<form action="#" method="post" class="contacts__form">
+									<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php" class="contacts__form">
 										<div class="contacts__form-group">
-											<input type="text" class="contacts__input" placeholder="Ваше имя" required>
+											<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="block-form__input input">
 										</div>
 										<div class="contacts__form-group">
-											<input type="tel" class="contacts__input" placeholder="Телефон" required>
+											<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="block-form__input input">
 										</div>
 										<div class="contacts__form-group">
-											<input type="email" class="contacts__input" placeholder="Email">
+											<input type="email" class="block-form__input input" placeholder="Email">
 										</div>
 										<div class="contacts__form-group">
-											<textarea class="contacts__textarea" rows="4" placeholder="Ваш вопрос или комментарий"></textarea>
+											<textarea data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="block-form__input input"></textarea>
 										</div>
-										<button type="submit" class="contacts__submit">
-											<span>Отправить заявку</span>
-											<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-												<path d="M5 12h14M12 5l7 7-7 7"></path>
+										<button type="submit" class="block-form__button button button--arrow">
+											<span>Оставить заявку</span>
+											<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_49_641)">
+													<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+												</g>
+												<defs>
+													<clipPath id="clip0_49_641">
+														<rect width="24" height="24" fill="white"></rect>
+													</clipPath>
+												</defs>
 											</svg>
 										</button>
 										<p class="contacts__form-agree">

@@ -1,5 +1,5 @@
 import { b as getHash, d as dataMediaQueries, a as slideDown, c as setHash, s as slideUp } from "./app.min.js";
-import "./title.min.js";
+/* empty css          */
 /* empty css              */
 function tabs() {
   const tabs2 = document.querySelectorAll("[data-fls-tabs]");
