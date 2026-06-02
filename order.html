@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1780382925108"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780382925108">
+		<link rel="stylesheet" crossorigin="" href="./css/order.min.css?v=1780382925108">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header">
+				<div class="header__container">
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"order"}'></include> -->
+					<div class="header__top top-header">
+						<a href="index.html" class="top-header__logo">
+							<img alt="#" src="./assets/img/header/logo.png">
+						</a>
+						<p data-fls-dynamic=".menu__body, 992" class="top-header__text">10 лет помогаем с машинами в разных странах</p>
+						<div data-fls-dynamic=".menu__body, 1200" class="top-header__social">
+							<p class="top-header__social-text">Напишите нам напрямую</p>
+							<div class="top-header__social-icons">
+								<a href="#">
+									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/instagram.png">
+								</a>
+								<a href="#">
+									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/vk.png">
+								</a>
+								<a href="#">
+									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/telegram.png">
+								</a>
+							</div>
+						</div>
+						<div data-fls-dynamic=".menu__body, 430" class="top-header__info">
+							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
+							<a class="top-header__info-phone" href="tel:375291234567">+375(29)123-45-67</a>
+							<!--
+<a data-fls-popup-link="popup" class="top-header__info-button" href="#"
+>позвоните мне</a
+>
+-->
+						</div>
+						<a data-fls-button="" class="top-header__button button" href="#">Заказать звонок</a>
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li data-spollers="1200,max" class="menu__item _has-submenu">
+									<a href="convert.html" type="button" data-spoller="" class="menu__link">Переоборудование</a>
+									<ul class="sub-menu">
+										<li>
+											<a href="services.html">Вывоз строительного мусора</a>
+										</li>
+										<li>
+											<a href="#">Вывоз старой мебели</a>
+										</li>
+										<li>
+											<a href="#">Квартирный переезд</a>
+										</li>
+										<li>
+											<a href="#">Офисный переезд</a>
+										</li>
+										<li>
+											<a href="#">Дачный переезд</a>
+										</li>
+										<li>
+											<a href="#">Перевозка мебели</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="order.html" class="menu__link">Заказ авто</a>
+								</li>
+								<li class="menu__item">
+									<a href="company.html" class="menu__link">О компании</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Портфолио</a>
+								</li>
+								<li class="menu__item">
+									<a href="" class="menu__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="page">
+				<div class="order-hero">
+					<div class="order-hero__container">
+						<div class="order-hero__content">
+							<h1 class="order-hero__title">
+								Заказать автомобиль
+								<span>под ключ из-за границы</span>
+								в России
+							</h1>
+							<p class="order-hero__text">
+								Подбор и доставка из Японии, Кореи, Китая, Германии и США. Один договор — весь цикл: СБКТС, ЭПТС, кнопка ЭРА-ГЛОНАСС. Стоимость фиксируется до подписания
+							</p>
+							<form class="convert-hero__form" data-fls-form="ajax" data-fls-form-popup="popup-message" action="sendmail/sendmail.php" method="POST">
+								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="convert-hero__input input">
+								<button type="submit" class="convert-hero__button button button--arrow">
+									<span>Получить расчёт стоимости</span>
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_49_641)">
+											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_49_641">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+							</form>
+							<p class="order-hero__text-small">Расчёт бесплатный · Ответ в течение рабочего дня</p>
+						</div>
+						<div class="order-hero__items">
+							<div class="order-hero__item">
+								<span class="order-hero__number">01</span>
+								<h3 class="order-hero__item-title">Цена фиксируется в договоре</h3>
+								<p class="order-hero__item-text">Все расходы фиксируются до подписания — без доплат.</p>
+							</div>
+							<div class="order-hero__item">
+								<span class="order-hero__number">02</span>
+								<h3 class="order-hero__item-title">Цена фиксируется в договоре</h3>
+								<p class="order-hero__item-text">Все расходы фиксируются до подписания — без доплат.</p>
+							</div>
+							<div class="order-hero__item">
+								<span class="order-hero__number">03</span>
+								<h3 class="order-hero__item-title">Цена фиксируется в договоре</h3>
+								<p class="order-hero__item-text">Все расходы фиксируются до подписания — без доплат.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="country">
+					<div class="country__container">
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Страны</span>
+							<h2 class="blockhead__title">
+								Из каких стран можно
+								<span>заказать авто</span>
+							</h2>
+						</div>
+						<div class="country__items">
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/01.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/02.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/03.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/01.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/02.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+							<a href="#" class="country__item">
+								<div class="country__head">
+									<img class="country__flag" alt="flag" src="./assets/img/country/03.jpg">
+									<div class="country__info">
+										<div class="country__name">Корея</div>
+										<div class="country__clock">35–50 дней</div>
+									</div>
+								</div>
+								<ul class="country__car">
+									<li>Hyundai</li>
+									<li>Kia</li>
+									<li>Genesis</li>
+								</ul>
+								<p class="country__text">
+									Богатые базовые комплектации, которые официально в РФ не поставлялись. Реальный пробег подтверждается через площадку Encar.
+								</p>
+								<div class="country__arrow">
+									<svg width="22" height="22" viewbox="0 0 24 24" fill="none">
+										<path d="M7 8L14.6 8L6.3 16.3C6.1 16.5 6 16.75 6 17C6 17.27 6.1 17.52 6.29 17.71C6.48 17.9 6.73 18 7 18C7.27 18 7.52 17.9 7.71 17.71L16 9.41L16 17C16 17.27 16.1 17.52 16.29 17.71C16.48 17.9 16.73 18 17 18C17.27 18 17.52 17.9 17.71 17.71C17.9 17.52 18 17.27 18 17L18 7C18 6.73 17.9 6.48 17.71 6.29C17.52 6.1 17.27 6 17 6L7 6C6.73 6 6.48 6.1 6.29 6.29C6.1 6.48 6 6.73 6 7C6 7.27 6.1 7.52 6.29 7.71C6.48 7.9 6.73 8 7 8Z" fill="#777"></path>
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section class="benefit">
+					<div class="benefit__container">
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Почему через нас</span>
+							<h2 class="blockhead__title">
+								Почему
+								<span>заказать авто</span>
+								через нас выгоднее
+							</h2>
+							<p class="blockhead__text">
+								С октября 2024 года утилизационный сбор вырос на 70–85%, с января 2025 — ещё на 10–20%. Серые схемы ввоза через ЕАЭС законодательно закрыты. Полный расчёт всех платежей до подписания договора — единственный способ не получить доплату после выкупа.
+							</p>
+						</div>
+						<div class="benefit__items">
+							<div class="benefit__item">
+								<div class="benefit__item-title">Полный цикл в одном договоре</div>
+								<div class="benefit__item-text">
+									<ul>
+										<li>Таможня без вашего участия: пошлина, утильсбор, декларация</li>
+										<li>
+											СБКТС в рамках аккредитации компании — без субподряда и без передачи документов в сторонние лаборатории
+										</li>
+										<li>
+											Кнопка ЭРА-ГЛОНАСС: установка и регистрация как официального дилера АО «ГЛОНАСС»
+										</li>
+										<li>ЭПТС со статусом «действующий» для постановки на учёт в ГИБДД</li>
+										<li>Страхование на весь маршрут — от выкупа до получения ключей</li>
+										<li>
+											Персональный менеджер: отслеживание груза и ответы на вопросы в процессе доставки.
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="benefit__grid">
+								<div class="benefit__item">
+									<div class="benefit__item-title">Экономия и доступ к мировым брендам</div>
+									<div class="benefit__item-text">
+										<p>
+											Для части моделей выгода при покупке авто под заказ сохраняется даже с учётом новых ставок. Полная стоимость — цена лота, логистика, пошлина, утильсбор, комиссия — фиксируется в договоре до подписания. BMW, Toyota, Mercedes: после официального ухода с рынка РФ авто на заказ — единственный способ купить новую машину этих марок.
+										</p>
+									</div>
+								</div>
+								<div class="benefit__item">
+									<div class="benefit__item-title">Работа по всей России</div>
+									<div class="benefit__item-text">
+										<ul>
+											<li>
+												<strong>70+ офисов в крупных городах</strong>
+												: консультация и оформление документов доступны без поездки в Россию;
+											</li>
+											<li>
+												<strong>Дистанционное оформление</strong>
+												: заказать и получить машину можно из любого региона без поездки в офис;
+											</li>
+											<li>
+												<strong>Для юридических лиц и ИП</strong>
+												: полный пакет закрывающих документов, работа по 44-ФЗ.
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="process">
+					<div class="process__container">
+						<div class="process__body">
+							<div data-fls-blockhead="" class="blockhead">
+								<span class="blockhead__subtitle">Процесс</span>
+								<h2 class="blockhead__title">
+									Из каких стран можно
+									<span>заказать авто</span>
+								</h2>
+							</div>
+							<div class="process__items">
+								<div class="process__item">
+									<span class="process__number">1</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+									</div>
+								</div>
+								<div class="process__item">
+									<span class="process__number">2</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+									</div>
+								</div>
+								<div class="process__item">
+									<span class="process__number">3</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+										<div class="process__fixet">Цена зафиксирована</div>
+									</div>
+								</div>
+								<div class="process__item">
+									<span class="process__number">4</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+										<div class="process__fixet">Видите авто</div>
+									</div>
+								</div>
+								<div class="process__item">
+									<span class="process__number">5</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+									</div>
+								</div>
+								<div class="process__item">
+									<span class="process__number">6</span>
+									<div class="process__content">
+										<h3 class="process__item-title">Заявка и консультация</h3>
+										<p class="process__item-text">
+											Оставляете заявку с параметрами (бюджет, марка, год). Менеджер связывается в течение рабочего дня и делает полный предварительный расчёт.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="process__image">
+							<picture class="process__img">
+								<img alt="process" src="./assets/img/process/01.png">
+							</picture>
+							<p>Заказывайте автомобили с Лабораторией "Тест-Драйв"</p>
+						</div>
+					</div>
+				</section>
+				<section class="popular">
+					<div class="popular__container"></div>
+				</section>
+				<section id="questions" class="questions">
+					<div class="questions__container">
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Почему через нас</span>
+							<h2 class="blockhead__title">
+								Почему
+								<span>заказать авто</span>
+								через нас выгоднее
+							</h2>
+							<p class="blockhead__text">
+								С октября 2024 года утилизационный сбор вырос на 70–85%, с января 2025 — ещё на 10–20%. Серые схемы ввоза через ЕАЭС законодательно закрыты. Полный расчёт всех платежей до подписания договора — единственный способ не получить доплату после выкупа.
+							</p>
+						</div>
+						<div class="questions__body">
+							<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
+								<details class="spollers__item">
+									<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
+									<div class="spollers__body">
+										<p>
+											Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+									<div class="spollers__body">
+										Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+										<p></p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+									<div class="spollers__body">
+										<p>
+											Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
+									<div class="spollers__body">
+										<p>
+											Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+									<div class="spollers__body">
+										Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+										<p></p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+									<div class="spollers__body">
+										<p>
+											Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div class="footer__top">
+						<div class="footer__item">
+							<a class="footer__logo" href="#">
+								<img alt="Image" src="./assets/img/header/logo.png">
+							</a>
+							<ul class="footer__nav-list">
+								<li>
+									<a href="">О компании</a>
+								</li>
+								<li>
+									<a href="">Портфолио</a>
+								</li>
+								<li>
+									<a href="">Блог</a>
+								</li>
+								<li>
+									<a href="">Контакты</a>
+								</li>
+								<!--
+<li>
+<a href="">Переоборудование в самосвал</a>
+</li>
+-->
+							</ul>
+							<!--
+<p class="footer__text">
+Mr. Glushitel - Сеть специализированных сервисов по всей Москве,
+основные специализации которого - ремонт глушителя и тюнинг выхлопной
+системы.
+</p>
+-->
+							<!--
+<div class="footer__item-socials">
+<a href="#"><img src="@img/icon-social/telegram.png" alt="Image" /></a>
+<a href="#"><img src="@img/icon-social/vk.png" alt="Image" /></a>
+<a href="#"><img src="@img/icon-social/w.png" alt="Image" /></a>
+</div>
+-->
+						</div>
+						<div data-fls-spollers="992,max" class="footer__menu">
+							<details class="footer__nav">
+								<summary class="footer__menu-title">Переоборудование ТС</summary>
+								<ul class="footer__nav-list">
+									<li>
+										<a href="">Замена ДВС</a>
+									</li>
+									<li>
+										<a href="">Смена категории</a>
+									</li>
+									<li>
+										<a href="">Регистрация фаркопа</a>
+									</li>
+									<li>
+										<a href="">Регистрация гидроборта</a>
+									</li>
+									<li>
+										<a href="">Переоборудование в самосвал</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-fls-spollers="992,max" class="footer__menu">
+							<details class="footer__nav">
+								<summary class="footer__menu-title">Экспертиза ТС</summary>
+								<ul class="footer__nav-list">
+									<li>
+										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-acura/">Предварительная техническая экспертиза</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-audi/">Протокол проверки безопасности</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-bmw/">Заключение об экологическом классе ТС</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-fls-spollers="992,max" class="footer__menu">
+							<details class="footer__nav">
+								<summary class="footer__menu-title">Оформление ввозимых ТС</summary>
+								<ul class="footer__nav-list">
+									<li>
+										<a href="https://mr-glushitel.ru/">Заказ авто из Японии</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/uslugi-kompanii/">Заказ авто из Кореи</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/prajs-po-markam/">ЭПТС</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/primery-rabot/">СБКТС</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/o-kompanii/">ЗОЕТС</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/franshiza-mister-glushitel/">ЭПСМ</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/prajs-list/">Прайс лист</a>
+									</li>
+									<li>
+										<a href="https://mr-glushitel.ru/kontakty/">Контакты</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+						<div data-fls-spollers="992,max" class="footer__contact">
+							<details class="footer__contact-body">
+								<summary class="footer__contact-title">Контакты</summary>
+								<div class="footer__contact-content">
+									<div class="footer__contact-block">
+										<div class="footer__contact-item">
+											<div class="footer__contact-name">Почта:</div>
+											<div class="footer__contact-link">
+												<i class="--icon-arrow-right-2"></i>
+												<a href="mailto:ADR-OOO@yandex.ru" class="footer__contact-link">ADR-OOO@yandex.ru</a>
+											</div>
+										</div>
+										<div class="footer__contact-item">
+											<div class="footer__contact-name">Телефон:</div>
+											<div class="footer__contact-link">
+												<i class="--icon-arrow-right-2"></i>
+												<a href="tel:79242424343" class="footer__contact-link">+7 92 42 42 43 43</a>
+											</div>
+										</div>
+										<!--
+<div class="footer__contact-item">
+<a href="">ул. Лобачевского, д. 114</a>
+<div class="footer__contact-name">Офис компании в Москве</div>
+<div class="footer__contact-link">
+<i class="--icon-arrow-right-2"></i>
+<a hreflang="" class="footer__contact-link"
+>ул. Лобачевского, д. 114
+</a>
+</div>
+</div>
+-->
+										<ul class="footer__contact-mess">
+											<li>
+												<a href="" target="_blank">
+													<img alt="Telegram" src="./assets/img/icon-social/telegram.png">
+													<span>Telegram</span>
+												</a>
+											</li>
+											<li>
+												<a href="" target="_blank">
+													<img alt="Vk" src="./assets/img/icon-social/vk.png">
+													<span>Viber</span>
+												</a>
+											</li>
+										</ul>
+										<a data-fls-popup-link="popup" class="footer__button footer__button--icon-arrow-right-2" href="#">Заказать консультацию</a>
+									</div>
+								</div>
+							</details>
+						</div>
+					</div>
+					<div class="footer__bottom bottom-footer">
+						<div class="bottom-footer__info">
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">Наименование:</span>
+								<span class="bottom-footer__info-text">ООО «АДР-ДВ»</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">Юридический адрес:</span>
+								<span class="bottom-footer__info-text">690105, Россия, Приморский край, г Владивосток, ул. Бородинская, д. 26, офис 8</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">ИНН:</span>
+								<span class="bottom-footer__info-text">2543185502</span>
+							</div>
+						</div>
+						<div class="bottom-footer__info">
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">ОГРН:</span>
+								<span class="bottom-footer__info-text">1242500015504</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">КПП:</span>
+								<span class="bottom-footer__info-text">254301001</span>
+							</div>
+							<a class="bottom-footer__info-policy" href="#">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
