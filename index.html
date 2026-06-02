@@ -5,16 +5,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1780390305545"></script>
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1780402060252"></script>
 		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="modulepreload" crossorigin="" href="./js/title.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/slider.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/blocktext.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/title.min.js">
 		<link rel="modulepreload" crossorigin="" href="./js/blockform.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780390305545">
-		<link rel="stylesheet" crossorigin="" href="./css/title.min.css?v=1780390305545">
-		<link rel="stylesheet" crossorigin="" href="./css/blocktext.min.css?v=1780390305545">
-		<link rel="stylesheet" crossorigin="" href="./css/blockform.min.css?v=1780390305545">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1780390305545">
+		<link rel="modulepreload" crossorigin="" href="./js/qwiz.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/blocktext.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/title.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/blockform.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/qwiz.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1780402060252">
+		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1780402060252">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -69,7 +74,7 @@
 										<a href="contacts.html" class="menu__link">Контакты</a>
 									</li>
 									<li class="menu__item">
-										<a href="" class="menu__link">Блог</a>
+										<a href="blog.html" class="menu__link">Блог</a>
 									</li>
 								</ul>
 							</nav>
@@ -90,7 +95,7 @@
 						</div>
 						<div data-fls-dynamic=".menu__body, 430" class="top-header__info">
 							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
-							<a class="top-header__info-phone" href="tel:375291234567">+375(29)123-45-67</a>
+							<a class="top-header__info-phone" href="tel:+79242424343">+7 92 42 42 43 43</a>
 							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните мне</a>
 						</div>
 						<!--
@@ -271,6 +276,232 @@ class="menu__link"
 									</svg>
 								</div>
 							</a>
+						</div>
+					</div>
+				</section>
+				<section id="calculator" data-fls-qwiz="" class="calculator">
+					<div class="calculator__container">
+						<!-- Hero блок -->
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Калькулятор</span>
+							<h2 class="blockhead__title">
+								Рассчитайте стоимость
+								<span>авто под ключ</span>
+							</h2>
+							<p class="blockhead__text">Ответьте на 4 вопроса и получите точную цену с учётом всех платежей</p>
+						</div>
+						<div class="calculator__body">
+							<div class="calculator__slider swiper">
+								<form data-fls-slider="" data-fls-form-popup="popup-message" data-ajax="" action="sendmail/sendmail.php" class="calculator__wrapper swiper-wrapper">
+									<!-- Слайд 1: Страна импорта -->
+									<div class="calculator__slide swiper-slide slide-calc">
+										<div class="slide-calc__body">
+											<div class="slide-calc__step">Шаг 1 из 4</div>
+											<h3 class="slide-calc__title">Откуда будем везти авто?</h3>
+											<div class="slide-calc__options">
+												<label class="slide-calc__option">
+													<input required type="radio" name="country" value="Япония">
+													<span class="slide-calc__option-content">
+														<span class="slide-calc__option-emoji">🇯🇵</span>
+														<span class="slide-calc__option-name">Япония</span>
+														<span class="slide-calc__option-price">от 60 000 ₽ логистика</span>
+													</span>
+												</label>
+												<label class="slide-calc__option">
+													<input required type="radio" name="country" value="Корея">
+													<span class="slide-calc__option-content">
+														<span class="slide-calc__option-emoji">🇰🇷</span>
+														<span class="slide-calc__option-name">Корея</span>
+														<span class="slide-calc__option-price">от 55 000 ₽ логистика</span>
+													</span>
+												</label>
+												<label class="slide-calc__option">
+													<input required type="radio" name="country" value="Китай">
+													<span class="slide-calc__option-content">
+														<span class="slide-calc__option-emoji">🇨🇳</span>
+														<span class="slide-calc__option-name">Китай</span>
+														<span class="slide-calc__option-price">от 70 000 ₽ логистика</span>
+													</span>
+												</label>
+												<label class="slide-calc__option">
+													<input required type="radio" name="country" value="Европа">
+													<span class="slide-calc__option-content">
+														<span class="slide-calc__option-emoji">🇪🇺</span>
+														<span class="slide-calc__option-name">Европа</span>
+														<span class="slide-calc__option-price">от 120 000 ₽ логистика</span>
+													</span>
+												</label>
+											</div>
+										</div>
+										<div class="slide-calc__expert">
+											<div class="slide-calc__expert-avatar">
+												<img src="https://lab-td.ru/wp-content/uploads/2026/04/eo_icon.png" alt="Эксперт">
+											</div>
+											<div class="slide-calc__expert-info">
+												<div class="slide-calc__expert-name">Евгений Останин</div>
+												<div class="slide-calc__expert-text">Эксперт по вашему автомобилю · ответ в течение рабочего дня</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 2: Бюджет на авто -->
+									<div class="calculator__slide swiper-slide slide-calc">
+										<div class="slide-calc__body">
+											<div class="slide-calc__step">Шаг 2 из 4</div>
+											<h3 class="slide-calc__title">Какой бюджет на авто?</h3>
+											<div class="slide-calc__range">
+												<div class="slide-calc__range-value">
+													<span>до</span>
+													<span class="slide-calc__range-number" id="budgetValue">2 500 000</span>
+													<span>₽</span>
+												</div>
+												<input type="range" id="budgetRange" name="budget" min="500000" max="10000000" step="100000" value="2500000">
+												<div class="slide-calc__range-bounds">
+													<span>500 000 ₽</span>
+													<span>10 000 000 ₽</span>
+												</div>
+											</div>
+										</div>
+										<div class="slide-calc__expert">
+											<div class="slide-calc__expert-avatar">
+												<img src="https://lab-td.ru/wp-content/uploads/2026/04/eo_icon.png" alt="Эксперт">
+											</div>
+											<div class="slide-calc__expert-info">
+												<div class="slide-calc__expert-name">Евгений Останин</div>
+												<div class="slide-calc__expert-text">Подберём лучший вариант под ваш бюджет</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 3: Мощность и год -->
+									<div class="calculator__slide swiper-slide slide-calc">
+										<div class="slide-calc__body">
+											<div class="slide-calc__step">Шаг 3 из 4</div>
+											<h3 class="slide-calc__title">Характеристики авто</h3>
+											<div class="slide-calc__group">
+												<div class="slide-calc__label">Мощность двигателя</div>
+												<div class="slide-calc__pills">
+													<label class="slide-calc__pill">
+														<input required type="radio" name="power" value="до 160 л.с.">
+														<span>до 160 л.с.</span>
+													</label>
+													<label class="slide-calc__pill">
+														<input data-required="" type="radio" name="power" value="160–250 л.с.">
+														<span>160–250 л.с.</span>
+													</label>
+													<label class="slide-calc__pill">
+														<input required type="radio" name="power" value="свыше 250 л.с.">
+														<span>свыше 250 л.с.</span>
+													</label>
+												</div>
+											</div>
+											<div class="slide-calc__group">
+												<div class="slide-calc__label">Год выпуска</div>
+												<div class="slide-calc__pills">
+													<label class="slide-calc__pill">
+														<input required type="radio" name="year" value="до 3-х лет">
+														<span>до 3-х лет</span>
+													</label>
+													<label class="slide-calc__pill">
+														<input data-required="" type="radio" name="year" value="от 3 до 5 лет">
+														<span>от 3 до 5 лет</span>
+													</label>
+													<label class="slide-calc__pill">
+														<input required type="radio" name="year" value="старше 5 лет">
+														<span>старше 5 лет</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="slide-calc__expert">
+											<div class="slide-calc__expert-avatar">
+												<img src="https://lab-td.ru/wp-content/uploads/2026/04/eo_icon.png" alt="Эксперт">
+											</div>
+											<div class="slide-calc__expert-info">
+												<div class="slide-calc__expert-name">Евгений Останин</div>
+												<div class="slide-calc__expert-text">Эти параметры влияют на утильсбор и пошлины</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 4: Доп опции и контакты -->
+									<div class="calculator__slide swiper-slide slide-calc">
+										<div class="slide-calc__body">
+											<div class="slide-calc__step">Шаг 4 из 4</div>
+											<h3 class="slide-calc__title">Дополнительные услуги</h3>
+											<div class="slide-calc__checks">
+												<label class="slide-calc__check">
+													<input type="checkbox" name="extras[rf]" value="Доставка по РФ">
+													<span>Доставка по РФ</span>
+												</label>
+												<label class="slide-calc__check">
+													<input type="checkbox" name="extras[kasko]" value="Страхование КАСКО">
+													<span>Страхование КАСКО</span>
+												</label>
+												<label class="slide-calc__check">
+													<input type="checkbox" name="extras[garant]" value="Расширенная гарантия">
+													<span>Расширенная гарантия</span>
+												</label>
+											</div>
+											<div class="slide-calc__contacts">
+												<div class="slide-calc__input-group">
+													<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="bottom-hero__input input">
+												</div>
+												<div class="slide-calc__input-group">
+													<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="bottom-hero__input input">
+												</div>
+											</div>
+											<label data-fls-checkbox="" class="checkbox">
+												<input checked data-fls-form-errtext="Заполните поле" class="checkbox__input" type="checkbox" value="согласен" name="check">
+												<span class="checkbox__text">
+													Нажимая на кнопку, вы соглашаетесь с политикой
+                  конфиденциальности
+												</span>
+											</label>
+											<button type="submit" class="bottom-hero__button button button--arrow">
+												<span>Получить точный расчёт</span>
+												<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clip-path="url(#clip0_49_641)">
+														<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													</g>
+													<defs>
+														<clipPath id="clip0_49_641">
+															<rect width="24" height="24" fill="white"></rect>
+														</clipPath>
+													</defs>
+												</svg>
+											</button>
+										</div>
+										<div class="slide-calc__expert">
+											<div class="slide-calc__expert-avatar">
+												<img src="https://lab-td.ru/wp-content/uploads/2026/04/eo_icon.png" alt="Эксперт">
+											</div>
+											<div class="slide-calc__expert-info">
+												<div class="slide-calc__expert-name">Евгений Останин</div>
+												<div class="slide-calc__expert-text">Ответим в течение рабочего дня с точным расчётом</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!-- Навигация -->
+								<div class="calculator__nav">
+									<button type="button" class="calculator__prev">
+										<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M15 18l-6-6 6-6"></path>
+										</svg>
+										Назад
+									</button>
+									<div class="calculator__progress">
+										<div class="calculator__progress-bar">
+											<span style="width: 25%"></span>
+										</div>
+										<span class="calculator__progress-text">Шаг 1 из 4</span>
+									</div>
+									<button type="button" class="calculator__next">
+										Далее
+										<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M9 6l6 6-6 6"></path>
+										</svg>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -518,7 +749,20 @@ class="menu__link"
 						</div>
 					</div>
 				</section>
-				<!-- <include src="@components/effects/marquee/marquee.html"></include> -->
+				<div data-fls-marquee-space="50" data-fls-marquee-speed="800" data-fls-marquee="">
+					<div>
+						<img alt="Image" src="./assets/img/marquee/01.webp">
+					</div>
+					<div>
+						<img alt="Image" src="./assets/img/marquee/02.webp">
+					</div>
+					<div>
+						<img alt="Image" src="./assets/img/marquee/03.webp">
+					</div>
+					<div>
+						<img alt="Image" src="./assets/img/marquee/04.webp">
+					</div>
+				</div>
 				<section data-fls-blocktext="" class="block-text">
 					<div data-fls-showmore="" class="block-text__container">
 						<div data-fls-showmore-content="300" class="block-text__body">
@@ -559,61 +803,6 @@ class="menu__link"
 							<span>Показать ещё</span>
 							<span>Скрыть</span>
 						</button>
-					</div>
-				</section>
-				<section id="questions" class="questions">
-					<div class="questions__container">
-						<h2 class="blockheader__title title">Популярные вопросы, на которые важно ответить</h2>
-						<div class="questions__body">
-							<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
-								<details class="spollers__item">
-									<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
-									<div class="spollers__body">
-										<p>
-											Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
-										</p>
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
-									<div class="spollers__body">
-										Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
-										<p></p>
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">Работаете ли вы с организациями?</summary>
-									<div class="spollers__body">
-										<p>
-											Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
-										</p>
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
-									<div class="spollers__body">
-										<p>
-											Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
-										</p>
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
-									<div class="spollers__body">
-										Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
-										<p></p>
-									</div>
-								</details>
-								<details class="spollers__item">
-									<summary class="spollers__title">Работаете ли вы с организациями?</summary>
-									<div class="spollers__body">
-										<p>
-											Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
-										</p>
-									</div>
-								</details>
-							</div>
-						</div>
 					</div>
 				</section>
 			</main>

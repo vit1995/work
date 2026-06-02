@@ -5,9 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1780390305547"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780390305547">
-		<link rel="stylesheet" crossorigin="" href="./css/blog.min.css?v=1780390305547">
+		<script type="module" crossorigin="" src="./js/blog.min.js?v=1780402060257"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="modulepreload" crossorigin="" href="./js/title.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780402060257">
+		<link rel="stylesheet" crossorigin="" href="./css/title.min.css?v=1780402060257">
+		<link rel="stylesheet" crossorigin="" href="./css/blog.min.css?v=1780402060257">
+		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1780402060257">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -62,7 +66,7 @@
 										<a href="contacts.html" class="menu__link">Контакты</a>
 									</li>
 									<li class="menu__item">
-										<a href="" class="menu__link">Блог</a>
+										<a href="blog.html" class="menu__link">Блог</a>
 									</li>
 								</ul>
 							</nav>
@@ -83,7 +87,7 @@
 						</div>
 						<div data-fls-dynamic=".menu__body, 430" class="top-header__info">
 							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
-							<a class="top-header__info-phone" href="tel:375291234567">+375(29)123-45-67</a>
+							<a class="top-header__info-phone" href="tel:+79242424343">+7 92 42 42 43 43</a>
 							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните мне</a>
 						</div>
 						<!--
@@ -137,193 +141,260 @@ class="menu__link"
 				</div>
 			</header>
 			<main class="page">
-				<section class="blog">
-					<div class="blog__container">
-						<!-- Шапка страницы -->
-						<div class="blog__head">
-							<div class="blog__tag">
-								<span>📝 Полезные статьи</span>
+				<section class="hub">
+					<div class="hub__container">
+						<!-- Hero -->
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Knowledge base</span>
+							<h2 class="blockhead__title">
+								Всё, что нужно знать
+								<span>о ввозе авто</span>
+							</h2>
+							<p class="reviews__text">Статьи, гайды и ответы экспертов — в одном месте</p>
+						</div>
+						<div data-fls-tabs="" class="hub__tabs tabs">
+							<nav data-fls-tabs-titles="" class="tabs__navigation">
+								<button type="button" class="tabs__title --tab-active">📝 Статьи</button>
+								<button type="button" class="tabs__title">❓ Вопросы</button>
+							</nav>
+							<div data-fls-tabs-body="" class="tabs__content">
+								<!-- Таб 1: Статьи -->
+								<div class="tabs__body">
+									<div class="hub__grid">
+										<div class="hub__card">
+											<div class="hub__card-tag">Таможня</div>
+											<h3 class="hub__card-title">Утильсбор 2025 вырос на 70-85%</h3>
+											<p class="hub__card-text">
+												Новые ставки уже действуют. Разбираем, как изменилась итоговая
+                  цена авто под ключ.
+											</p>
+											<button class="hub__card-more">Читать →</button>
+											<div class="hub__card-hidden">
+												<p>
+													Для авто 1.5-2 литра утильсбор вырос с 150 000 до 220 000 ₽.
+                    Для двигателей 2-3 литра — с 250 000 до 380 000 ₽. Мы
+                    фиксируем все платежи в договоре.
+												</p>
+											</div>
+										</div>
+										<div class="hub__card">
+											<div class="hub__card-tag">Советы</div>
+											<h3 class="hub__card-title">Как не ошибиться с аукционом в Японии</h3>
+											<p class="hub__card-text">
+												Расшифровка оценок, отметок и скрытых дефектов. На что
+                  обращать внимание.
+											</p>
+											<button class="hub__card-more">Читать →</button>
+											<div class="hub__card-hidden">
+												<p>
+													Оценка S или 4 — отлично, 3.5 — хорошо, 3 — средне. Отметка
+                    RA — был ремонт, U — скрытые дефекты. Всегда проверяйте фото
+                    авто.
+												</p>
+											</div>
+										</div>
+										<div class="hub__card">
+											<div class="hub__card-tag">Обзоры</div>
+											<h3 class="hub__card-title">Топ-5 гибридов до 2 млн ₽</h3>
+											<p class="hub__card-text">
+												Honda Fit, Nissan Note, Toyota Aqua — что выбрать и сколько
+                  экономит гибрид.
+											</p>
+											<button class="hub__card-more">Читать →</button>
+											<div class="hub__card-hidden">
+												<p>
+													Гибриды экономят до 60 000 ₽ в год. Самые популярные: Honda
+                    Fit (3.5 л/100 км), Nissan Note (просторный салон), Toyota
+                    Aqua (надёжность).
+												</p>
+											</div>
+										</div>
+										<div class="hub__card">
+											<div class="hub__card-tag">Документы</div>
+											<h3 class="hub__card-title">СБКТС и ЭПТС — полный гайд</h3>
+											<p class="hub__card-text">Что это, зачем нужны, сколько стоят и как получить.</p>
+											<button class="hub__card-more">Читать →</button>
+											<div class="hub__card-hidden">
+												<p>
+													СБКТС (от 20 000 ₽) — свидетельство безопасности. ЭПТС (от 5
+                    000 ₽) — электронный паспорт. Оформляем сами, без очередей.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Таб 2: Вопросы -->
+								<div class="tabs__body">
+									<!--
+<section data-fls-questions id="questions" class="questions">
+<div class="questions__container">
+<h2 data-fls-title class="blockheader__title title">Популярные вопросы, на которые важно ответить</h2>
+<div class="questions__body">
+<div data-fls-spollers data-fls-spollers-one class="spollers">
+<details class="spollers__item">
+<summary class="spollers__title"> Вы являетесь аккредитованной компанией?</summary>
+<div class="spollers__body">
+<p>
+Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.            </p>
+</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+<div class="spollers__body">
+Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+</p>
+</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+<div class="spollers__body">
+<p>
+Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.            </p>
+</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title"> Вы являетесь аккредитованной компанией?</summary>
+<div class="spollers__body">
+<p>
+Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.            </p>
+</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+<div class="spollers__body">
+Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+</p>
+</div>
+</details>
+<details class="spollers__item">
+<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+<div class="spollers__body">
+<p>
+Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.            </p>
+</div>
+</details>
+</div>
+</div>
+</div>
+</section>
+-->
+									<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
+										<details class="spollers__item">
+											<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
+											<div class="spollers__body">
+												<p>
+													Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
+												</p>
+											</div>
+										</details>
+										<details class="spollers__item">
+											<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+											<div class="spollers__body">
+												Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+												<p></p>
+											</div>
+										</details>
+										<details class="spollers__item">
+											<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+											<div class="spollers__body">
+												<p>
+													Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
+												</p>
+											</div>
+										</details>
+										<details class="spollers__item">
+											<summary class="spollers__title">Вы являетесь аккредитованной компанией?</summary>
+											<div class="spollers__body">
+												<p>
+													Да, мы являемся аккредитованной компанией, благодаря собственной лаборатории и государственной аккредитации мы можем регистрировать переоборудование транспортных средств.
+												</p>
+											</div>
+										</details>
+										<details class="spollers__item">
+											<summary class="spollers__title">Сколько вы уже занимаетесь регистрацией переоборудования ТС в России?</summary>
+											<div class="spollers__body">
+												Уже 5 лет мы помогаем собственникам автомобилей в России получить документы после внесения изменений в транспортное средство, большое количество довольных клиентов и портфолио проделанных работ вы можете посмотреть на нашем сайте.
+												<p></p>
+											</div>
+										</details>
+										<details class="spollers__item">
+											<summary class="spollers__title">Работаете ли вы с организациями?</summary>
+											<div class="spollers__body">
+												<p>
+													Работаем как с физическими лицами, так и с юридическими лицами (компаниями, организациями и индивидуальными предпринимателями). Предоставляем полный пакет документов, чтобы вы были уверены в надежности нашей компании и юридически защищены законом.
+												</p>
+											</div>
+										</details>
+									</div>
+								</div>
 							</div>
-							<h1 class="blog__title">Блог</h1>
-							<p class="blog__desc">
-								Актуальные новости, советы по выбору авто и важная информация о ввозе
-          автомобилей
-							</p>
 						</div>
-						<!-- Категории -->
-						<div class="blog__categories">
-							<button type="button" class="blog__category-btn is-active">Все статьи</button>
-							<button type="button" class="blog__category-btn">Как выбрать авто</button>
-							<button type="button" class="blog__category-btn">Таможня и пошлины</button>
-							<button type="button" class="blog__category-btn">Новости</button>
-							<button type="button" class="blog__category-btn">Отзывы</button>
+						<!-- Блок цифр -->
+						<div class="hub__stats">
+							<div class="hub__stat">
+								<div class="hub__stat-value">45-60</div>
+								<div class="hub__stat-label">дней доставка</div>
+							</div>
+							<div class="hub__stat">
+								<div class="hub__stat-value">30-50%</div>
+								<div class="hub__stat-label">предоплата</div>
+							</div>
+							<div class="hub__stat">
+								<div class="hub__stat-value">от 150к</div>
+								<div class="hub__stat-label">растаможка</div>
+							</div>
+							<div class="hub__stat">
+								<div class="hub__stat-value">5 лет</div>
+								<div class="hub__stat-label">на рынке</div>
+							</div>
 						</div>
-						<!-- Сетка статей -->
-						<div class="blog__grid">
-							<!-- Статья 1 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/0088C4/white?text=Auto" alt="Как выбрать авто">
-									<div class="blog__card-category">Как выбрать авто</div>
+						<!--
+<div class="hub__banner">
+<div class="hub__banner-content">
+<div class="hub__banner-icon">🚀</div>
+<div class="hub__banner-text">
+<h3>Остались вопросы?</h3>
+<p>Свяжитесь с нами — ответим за 15 минут</p>
+</div>
+<a href="#" class="hub__banner-btn">Связаться →</a>
+</div>
+</div>
+-->
+					</div>
+				</section>
+				<section class="question-form">
+					<div class="question-form__container">
+						<form class="question-form__form" data-fls-form="ajax" data-fls-form-popup="popup-message" action="sendmail/sendmail.php" method="POST" novalidate>
+							<div class="question-form__header">
+								<div class="question-form__icon">
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+										<path d="M22 4L12 14.01L9 11.01" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
 								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">15 марта 2025</span>
-										<span class="blog__card-read">5 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Как выбрать авто под ключ из Японии: полное руководство</h3>
-									<p class="blog__card-text">
-										Рассказываем на что обратить внимание при выборе автомобиля из
-              Японии, как проверить историю и не ошибиться с аукционным лотом...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
+								<div class="question-form__text">
+									<span class="question-form__title">
+										Остались
+										<mark>вопросы?</mark>
+									</span>
+									<span class="question-form__subtitle">Оставьте заявку — перезвоним за 2 минуты</span>
 								</div>
-							</article>
-							<!-- Статья 2 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/F97316/white?text=Customs" alt="Таможня">
-									<div class="blog__card-category">Таможня и пошлины</div>
+							</div>
+							<div class="question-form__fields">
+								<div class="question-form__group">
+									<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Ваше имя" class="question-form__input">
 								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">10 марта 2025</span>
-										<span class="blog__card-read">8 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Новые ставки утильсбора с 2025 года: что изменилось</h3>
-									<p class="blog__card-text">
-										Разбираем изменения в законодательстве, новые ставки
-              утилизационного сбора и как это повлияет на конечную стоимость
-              авто...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
+								<div class="question-form__group">
+									<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="question-form__input" inputmode="text">
 								</div>
-							</article>
-							<!-- Статья 3 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/0088C4/white?text=News" alt="Новости">
-									<div class="blog__card-category">Новости</div>
-								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">5 марта 2025</span>
-										<span class="blog__card-read">4 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Открыт приём заявок на аукционы марта 2025</h3>
-									<p class="blog__card-text">
-										Свежие аукционные листы, популярные модели и лучшие предложения.
-              Успейте забронировать авто по выгодной цене...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
-								</div>
-							</article>
-							<!-- Статья 4 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/F97316/white?text=Review" alt="Отзыв">
-									<div class="blog__card-category">Отзывы</div>
-								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">28 февраля 2025</span>
-										<span class="blog__card-read">6 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Отзыв клиента: как мы привезли Toyota Land Cruiser</h3>
-									<p class="blog__card-text">
-										Реальная история клиента, который заказал авто под ключ из Японии.
-              Все этапы: от выбора до получения СТС...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
-								</div>
-							</article>
-							<!-- Статья 5 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/0088C4/white?text=Economy" alt="Экономия">
-									<div class="blog__card-category">Как выбрать авто</div>
-								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">20 февраля 2025</span>
-										<span class="blog__card-read">7 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Топ-5 экономичных гибридов до 2 млн рублей</h3>
-									<p class="blog__card-text">
-										Подборка лучших гибридных автомобилей с низким расходом топлива.
-              Сравнение цен, комплектаций и отзывов...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
-								</div>
-							</article>
-							<!-- Статья 6 -->
-							<article class="blog__card">
-								<div class="blog__card-image">
-									<img src="https://placehold.co/600x400/F97316/white?text=Documents" alt="Документы">
-									<div class="blog__card-category">Таможня и пошлины</div>
-								</div>
-								<div class="blog__card-content">
-									<div class="blog__card-meta">
-										<span class="blog__card-date">15 февраля 2025</span>
-										<span class="blog__card-read">5 мин чтения</span>
-									</div>
-									<h3 class="blog__card-title">Какие документы нужны для растаможки авто в 2025 году</h3>
-									<p class="blog__card-text">
-										Полный список документов для оформления автомобиля, советы по
-              подготовке и частые ошибки при подаче...
-									</p>
-									<a href="blog-single.html" class="blog__card-link">
-										<span>Читать статью</span>
-										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-											<path d="M5 12h14M12 5l7 7-7 7"></path>
-										</svg>
-									</a>
-								</div>
-							</article>
-						</div>
-						<!-- Пагинация -->
-						<div class="blog__pagination">
-							<button type="button" class="blog__pagination-btn is-prev" disabled>
-								<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M15 18l-6-6 6-6"></path>
-								</svg>
-							</button>
-							<button type="button" class="blog__pagination-btn is-active">1</button>
-							<button type="button" class="blog__pagination-btn">2</button>
-							<button type="button" class="blog__pagination-btn">3</button>
-							<span class="blog__pagination-dots">...</span>
-							<button type="button" class="blog__pagination-btn">7</button>
-							<button type="button" class="blog__pagination-btn is-next">
-								<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M9 6l6 6-6 6"></path>
-								</svg>
-							</button>
-						</div>
+								<button type="submit" class="question-form__button">
+									<span>Перезвоните мне</span>
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</button>
+							</div>
+						</form>
 					</div>
 				</section>
 			</main>

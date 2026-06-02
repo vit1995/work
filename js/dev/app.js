@@ -27,6 +27,15 @@
     fetch(link.href, fetchOpts);
   }
 })();
+function getHash() {
+  if (location.hash) {
+    return location.hash.replace("#", "");
+  }
+}
+function setHash(hash) {
+  hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+  history.pushState("", "", hash);
+}
 let slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains("--slide")) {
     target.classList.add("--slide");
@@ -837,8 +846,10 @@ if (document.querySelector("[data-fls-dynamic]")) {
 }
 export {
   slideDown as a,
-  gotoBlock as b,
+  getHash as b,
+  setHash as c,
   dataMediaQueries as d,
+  gotoBlock as e,
   getDigFormat as g,
   slideUp as s,
   uniqArray as u
