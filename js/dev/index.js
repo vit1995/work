@@ -1,4 +1,5 @@
 import { g as getDigFormat, u as uniqArray } from "./app.min.js";
+import "./title.min.js";
 import "./blocktext.min.js";
 import "./blockform.min.js";
 function digitsCounter() {
