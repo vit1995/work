@@ -972,7 +972,7 @@ body {
     margin-bottom: clamp( 0.9375rem , 0.59659090909375rem  +  1.7045454545vw , 1.875rem );
   }
   .top-header__logo img {
-    width: clamp( 3.125rem , 2.44318181818125rem  +  3.4090909091vw , 5rem );
+    width: clamp( 3.125rem , 2.897727272725rem  +  1.1363636364vw , 3.75rem );
   }
   .top-header__logo img {
     height: clamp( 3.4375rem , 3.3238636363625rem  +  0.5681818182vw , 3.75rem );
@@ -1051,7 +1051,7 @@ body {
     margin-bottom: 1.875rem;
   }
   .top-header__logo img {
-    width: 5rem;
+    width: 3.75rem;
   }
   .top-header__logo img {
     height: 3.75rem;
