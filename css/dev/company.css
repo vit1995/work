@@ -187,7 +187,7 @@
 .company-hero__box {
   position: relative;
   display: grid;
-  grid-template-columns: 0.9375rem 1fr minmax(auto, 75rem) 1fr 0.9375rem;
+  grid-template-columns: 0.9375rem 1fr minmax(auto, 73.125rem) 1fr 0.9375rem;
 }
 .company-hero__body {
   display: grid;
