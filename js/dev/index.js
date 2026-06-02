@@ -186,8 +186,9 @@ const marquee = () => {
       }, delay);
     };
   };
+  const isFunction = (fn) => typeof fn === "function";
   const onWindowWidthResize = (cb) => {
-    if (!cb || typeof cb !== "function") return;
+    if (!cb || !isFunction(cb)) return;
     let prevWidth = 0;
     const handleResize = () => {
       const currentWidth = window.innerWidth;
@@ -204,13 +205,9 @@ const marquee = () => {
     const $marquee = marqueeNode;
     const $childElements = $marquee.children;
     if (!$childElements.length) return;
-    $marquee.innerHTML;
-    Array.from($childElements).forEach(($childItem) => {
-      $childItem.setAttribute(ATTR_NAMES.item, "");
-    });
+    Array.from($childElements).forEach(($childItem) => $childItem.setAttribute(ATTR_NAMES.item, ""));
     const htmlStructure = `<div ${ATTR_NAMES.inner}>${$marquee.innerHTML}</div>`;
     $marquee.innerHTML = htmlStructure;
-    return $marquee.firstElementChild;
   };
   const getElSize = ($el, isVertical) => {
     if (isVertical) return $el.offsetHeight;
@@ -218,22 +215,18 @@ const marquee = () => {
   };
   $marqueeArray.forEach(($wrapper) => {
     if (!$wrapper) return;
-    const existingStyle = head.querySelector(`style[data-marquee-style]`);
-    if (existingStyle) existingStyle.remove();
-    const $marqueeInner = buildMarquee($wrapper);
+    buildMarquee($wrapper);
+    const $marqueeInner = $wrapper.firstElementChild;
     let cacheArray = [];
     if (!$marqueeInner) return;
-    const dataMarqueeSpace = parseFloat($wrapper.getAttribute("data-fls-marquee-space")) || 0;
+    const dataMarqueeSpace = parseFloat($wrapper.getAttribute("data-fls-marquee-space"));
     const $items = $wrapper.querySelectorAll(`[${ATTR_NAMES.item}]`);
     const speed = parseFloat($wrapper.getAttribute("data-fls-marquee-speed")) / 10 || 100;
     const isMousePaused = $wrapper.hasAttribute("data-fls-marquee-pause-mouse-enter");
     const direction = $wrapper.getAttribute("data-fls-marquee-direction");
     const isVertical = direction === "bottom" || direction === "top";
     const animName = `marqueeAnimation-${Math.floor(Math.random() * 1e7)}`;
-    let spaceBetweenItem = 0;
-    if ($items[0]) {
-      spaceBetweenItem = parseFloat(window.getComputedStyle($items[0])?.getPropertyValue("margin-right")) || 0;
-    }
+    let spaceBetweenItem = $items[0] ? parseFloat(window.getComputedStyle($items[0])?.getPropertyValue("margin-right")) : 0;
     let spaceBetween = spaceBetweenItem ? spaceBetweenItem : !isNaN(dataMarqueeSpace) ? dataMarqueeSpace : 30;
     let startPosition = parseFloat($wrapper.getAttribute("data-fls-marquee-start")) || 0;
     let sumSize = 0;
@@ -242,10 +235,9 @@ const marquee = () => {
     let initialElementsLength = $marqueeInner.children.length;
     let index = 0;
     let counterDuplicateElements = 0;
+    const isRtl = window.stateRtl || document.documentElement.getAttribute("dir") === "rtl" || false;
     const initEvents = () => {
-      if (startPosition) {
-        $marqueeInner.addEventListener("animationiteration", onChangeStartPosition);
-      }
+      if (startPosition) $marqueeInner.addEventListener("animationiteration", onChangeStartPosition);
       if (!isMousePaused) return;
       $marqueeInner.removeEventListener("mouseenter", onChangePaused);
       $marqueeInner.removeEventListener("mouseleave", onChangePaused);
@@ -287,21 +279,18 @@ const marquee = () => {
       }
     };
     const animation = () => {
-      const oldStyle = head.querySelector(`.${animName}`);
-      if (oldStyle) oldStyle.remove();
       const keyFrameCss = `@keyframes ${animName} {
 					 0% {
-						 transform: translate${isVertical ? "Y" : "X"}(${!isVertical && window.stateRtl ? -startPosition : startPosition}%);
+						 transform: translate${isVertical ? "Y" : "X"}(${!isVertical && isRtl ? -startPosition : startPosition}%);
 					 }
 					 100% {
 						 transform: translate${isVertical ? "Y" : "X"}(${setdirectionAnim(
-        !isVertical && window.stateRtl ? -firstScreenVisibleSize : firstScreenVisibleSize
+        !isVertical && isRtl ? -firstScreenVisibleSize : firstScreenVisibleSize
       )}px);
 					 }
 				 }`;
       const $style = document.createElement("style");
       $style.classList.add(animName);
-      $style.setAttribute("data-marquee-style", "");
       $style.innerHTML = keyFrameCss;
       head.append($style);
       $marqueeInner.style.animation = `${animName} ${(firstScreenVisibleSize + startPosition * firstScreenVisibleSize / 100) / speed}s infinite linear`;
@@ -327,7 +316,7 @@ const marquee = () => {
           $item.style.marginBottom = `${spaceBetween}px`;
         } else {
           $item.style.marginRight = `${spaceBetween}px`;
-          $item.style.flexShrink = "0";
+          $item.style.flexShrink = 0;
         }
         const sizeEl = getElSize($item, isVertical);
         sumSize += sizeEl + spaceBetween;
@@ -353,7 +342,7 @@ const marquee = () => {
     const correctSpaceBetween = () => {
       if (spaceBetweenItem && $items[0]) {
         $items.forEach(($item) => $item.style.removeProperty("margin-right"));
-        spaceBetweenItem = parseFloat(window.getComputedStyle($items[0]).getPropertyValue("margin-right")) || 0;
+        spaceBetweenItem = parseFloat(window.getComputedStyle($items[0]).getPropertyValue("margin-right"));
         spaceBetween = spaceBetweenItem ? spaceBetweenItem : !isNaN(dataMarqueeSpace) ? dataMarqueeSpace : 30;
       }
     };
@@ -364,8 +353,7 @@ const marquee = () => {
       initEvents();
     };
     const onResize = () => {
-      const existingStyle2 = head.querySelector(`.${animName}`);
-      if (existingStyle2) existingStyle2.remove();
+      head.querySelector(`.${animName}`)?.remove();
       init();
     };
     const onChangePaused = (e) => {
