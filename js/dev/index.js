@@ -1,6 +1,6 @@
 import { g as getDigFormat, u as uniqArray } from "./app.min.js";
 import "./slider.min.js";
-import "./blocktext.min.js";
+import "./gallery.min.js";
 import "./autoheight.min.js";
 import "./qwiz.min.js";
 /* empty css          */
