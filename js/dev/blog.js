@@ -1,6 +1,5 @@
 import "./app.min.js";
 import "./tabs.min.js";
-import "./form.min.js";
 /* empty css          */
 /* empty css              */
 document.querySelectorAll(".hub__card-more").forEach((btn) => {

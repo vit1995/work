@@ -5,17 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1780496902970"></script>
-		<script type="module" crossorigin="" src="./js/slider.min.js?v=1780496902970"></script>
-		<script type="module" crossorigin="" src="./js/form.min.js?v=1780496902970"></script>
-		<script type="module" crossorigin="" src="./js/qwiz.min.js?v=1780496902970"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/form.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/qwiz.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/order.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/title.min.css?v=1780496902970">
-		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1780496902970">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1780496964719"></script>
+		<script type="module" crossorigin="" src="./js/slider.min.js?v=1780496964719"></script>
+		<script type="module" crossorigin="" src="./js/qwiz.min.js?v=1780496964719"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780496964719">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1780496964719">
+		<link rel="stylesheet" crossorigin="" href="./css/qwiz.min.css?v=1780496964719">
+		<link rel="stylesheet" crossorigin="" href="./css/order.min.css?v=1780496964719">
+		<link rel="stylesheet" crossorigin="" href="./css/title.min.css?v=1780496964719">
+		<link rel="stylesheet" crossorigin="" href="./css/blockhead.min.css?v=1780496964719">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -146,6 +144,39 @@ class="menu__link"
 -->
 				</div>
 			</header>
+			<div data-fls-popup="popup" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__box">
+							<h2 class="popup__title">Оставить заявку</h2>
+							<form class="popup__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
+								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="popup__input input">
+								<textarea data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
+								<button type="submit" class="popup__button button button--arrow">
+									<span>Оставить заявку</span>
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_49_641)">
+											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_49_641">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 			<main class="page">
 				<div class="order-hero">
 					<div class="order-hero__container">
