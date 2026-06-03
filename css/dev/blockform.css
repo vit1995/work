@@ -13,12 +13,11 @@
   border-radius: 0.625rem;
 }
 .result__navigacions a {
-  font-family: "GubiaBlack", sans-serif;
   text-transform: uppercase;
   justify-content: center;
   text-align: center;
   color: var(--white);
-  padding: 0rem 1.25rem;
+  padding: 0.3125rem 1.25rem;
 }
 .result__slide {
   border-radius: 0.625rem;
@@ -140,6 +139,19 @@
   }
   .result__navigacions {
     justify-self: center;
+    padding: 0.3125rem 0.625rem;
+  }
+  .result-prev {
+    padding: 0.625rem;
+  }
+  .result-prev::after {
+    font-size: 1rem;
+  }
+  .result-next {
+    padding: 0.625rem;
+  }
+  .result-next::after {
+    font-size: 1rem;
   }
   .block-form__body {
     grid-template-columns: 1fr;
@@ -156,7 +168,7 @@
     margin-bottom: 0.9375rem;
   }
   .result__navigacions a {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .result__slide {
     gap: 0.625rem;
@@ -191,7 +203,7 @@
     margin-bottom: clamp( 0.9375rem , 0.59659090909375rem  +  1.7045454545vw , 1.875rem );
   }
   .result__navigacions a {
-    font-size: clamp( 1rem , 0.90909090909375rem  +  0.4545454545vw , 1.25rem );
+    font-size: clamp( 0.875rem , 0.7386363636375rem  +  0.6818181818vw , 1.25rem );
   }
   .result__slide {
     gap: clamp( 0.625rem , 0.5113636363625rem  +  0.5681818182vw , 0.9375rem );
