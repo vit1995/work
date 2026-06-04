@@ -351,7 +351,7 @@ body {
 .sub-menu a {
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.3125rem 0;
+  padding: 0.1875rem 0;
   color: #1a1a1a;
   text-decoration: none;
   display: block;
@@ -633,14 +633,11 @@ textarea.input {
 }
 .button svg {
   width: 1.125rem;
+  position: relative;
+  z-index: 1;
   height: 1.125rem;
   transition: transform 0.3s ease;
-  flex-shrink: 0;
-  fill: none;
   stroke: var(--white);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 .button:hover {
   background: #e06812;
@@ -5655,7 +5652,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     width: 100%;
   }
   .sub-menu a {
-    padding: 0.625rem 0;
     font-size: 1rem;
     color: var(--greytext);
   }
@@ -5672,7 +5668,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     position: absolute;
     right: 0.3125rem;
     top: 50%;
-    transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-60%) rotate(45deg);
     width: 0.5rem;
     height: 0.5rem;
     border-right: 0.125rem solid currentColor;
@@ -8687,8 +8683,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     color: var(--blue);
   }
   .footer__button:hover {
-    background-color: var(--gren);
-    color: var(--primary);
+    background-color: var(--main);
   }
   .footer__item-socials a:hover {
     background-color: var(--gren);
