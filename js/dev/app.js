@@ -766,7 +766,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (window.innerWidth >= pcBreakpoint) {
         return;
       }
-      e.preventDefault();
       e.stopPropagation();
       console.log("Клик по меню:", this.textContent);
       menuItems.forEach((otherItem) => {
