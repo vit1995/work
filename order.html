@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1780518292474"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780518292474">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1780583225960"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780583225960">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -40,7 +40,7 @@
 										</ul>
 									</li>
 									<li class="menu__item _has-submenu">
-										<a href="convert.html" class="menu__link">Заказ авто</a>
+										<a href="order.html" class="menu__link">Заказ авто</a>
 										<ul class="sub-menu">
 											<li>
 												<a href="services.html">Портфолио</a>
@@ -148,10 +148,10 @@ class="menu__link"
 						</button>
 						<div data-fls-popup-content="" class="popup__box">
 							<h2 class="popup__title">Оставить заявку</h2>
-							<form class="popup__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+							<form class="popup__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
 								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
 								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="popup__input input">
-								<textarea data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
+								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
 								<button type="submit" class="popup__button button button--arrow">
 									<span>Оставить заявку</span>
 									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,6 +170,32 @@ class="menu__link"
 					</div>
 				</div>
 			</div>
+			<div data-fls-popup="popup-message" aria-hidden="true" class="popup popup--success">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#979797" stroke-linecap="square"></path>
+								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__box popup__box--success">
+							<div class="popup__icon">
+								<svg width="80" height="80" viewbox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="40" cy="40" r="40" fill="#4CAF50"></circle>
+									<path d="M25 40L35 50L55 30" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+							<h2 class="popup__title popup__title--success">Заявка отправлена!</h2>
+							<div class="popup__message">
+								<p class="popup__text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.</p>
+								<p class="popup__hint">Обычно перезваниваем в течение 15 минут</p>
+							</div>
+							<button data-fls-popup-close="" type="button" class="popup__button button">Понятно, спасибо</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			<main class="page">
 				<div class="order-hero">
 					<div class="order-hero__container">
@@ -184,7 +210,7 @@ class="menu__link"
           договор — весь цикл: СБКТС, ЭПТС, кнопка ЭРА-ГЛОНАСС. Стоимость
           фиксируется до подписания
 							</p>
-							<form class="convert-hero__form" data-fls-form="ajax" data-fls-form-popup="popup-message" action="sendmail/sendmail.php" method="POST">
+							<form class="order-hero__form" data-fls-form="ajax" data-fls-form-popup="popup-message" action="sendmail/sendmail.php" method="POST">
 								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="convert-hero__input input">
 								<button type="submit" class="convert-hero__button button button--arrow">
 									<span>Получить расчёт стоимости</span>
