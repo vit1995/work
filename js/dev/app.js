@@ -3829,6 +3829,22 @@ function formInit() {
   formFieldsInit();
 }
 document.querySelector("[data-fls-form]") ? window.addEventListener("load", formInit) : null;
+const detailsToggle = document.querySelector(".contacts__details-toggle");
+const detailsContent = document.querySelector(".contacts__details-content");
+if (detailsToggle && detailsContent) {
+  detailsToggle.addEventListener("click", () => {
+    detailsToggle.classList.toggle("open");
+    detailsContent.classList.toggle("show");
+  });
+}
+document.querySelectorAll(".hub__card-more").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const card = btn.closest(".hub__card");
+    card.classList.toggle("open");
+    btn.textContent = card.classList.contains("open") ? "Скрыть ↑" : "Читать →";
+  });
+});
 function isObject$1(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -12803,19 +12819,3 @@ document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", (
   window.addEventListener("load", marquee);
   setTimeout(marquee, 500);
 })();
-const detailsToggle = document.querySelector(".contacts__details-toggle");
-const detailsContent = document.querySelector(".contacts__details-content");
-if (detailsToggle && detailsContent) {
-  detailsToggle.addEventListener("click", () => {
-    detailsToggle.classList.toggle("open");
-    detailsContent.classList.toggle("show");
-  });
-}
-document.querySelectorAll(".hub__card-more").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const card = btn.closest(".hub__card");
-    card.classList.toggle("open");
-    btn.textContent = card.classList.contains("open") ? "Скрыть ↑" : "Читать →";
-  });
-});
