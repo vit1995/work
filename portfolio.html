@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1780664876575"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780664876575">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1780927346070"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780927346070">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -26,16 +26,10 @@
 							<nav class="menu__body">
 								<ul class="menu__list">
 									<li class="menu__item _has-submenu">
-										<a class="menu__link">Переоборудование</a>
+										<a class="menu__link">Наши услуги</a>
 										<ul class="sub-menu">
 											<li>
-												<a href="convert.html">Переоборудование ГИБДД</a>
-											</li>
-											<li>
-												<a href="convert.html">Переоборудование ГИБДД</a>
-											</li>
-											<li>
-												<a href="convert.html">Переоборудование ГИБДД</a>
+												<a href="convert.html">Заказать авто</a>
 											</li>
 										</ul>
 									</li>
@@ -62,22 +56,16 @@
 									<li class="menu__item">
 										<a href="contacts.html" class="menu__link">Контакты</a>
 									</li>
-									<li class="menu__item">
-										<a href="blog.html" class="menu__link">Блог</a>
-									</li>
 								</ul>
 							</nav>
 						</div>
 						<div class="top-header__social">
 							<p class="top-header__social-text">Напишите нам напрямую</p>
 							<div class="top-header__social-icons">
-								<a href="#">
+								<a target="_blank" href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr">
 									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/instagram.png">
 								</a>
-								<a href="#">
-									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/vk.png">
-								</a>
-								<a href="#">
+								<a target="_blank" href="https://t.me/adrdv25">
 									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/telegram.png">
 								</a>
 							</div>
@@ -85,13 +73,8 @@
 						<div data-fls-dynamic=".menu__body, 600" class="top-header__info">
 							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
 							<a class="top-header__info-phone" href="tel:+79242424343">+7 92 42 42 43 43</a>
-							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните мне</a>
+							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните нам</a>
 						</div>
-						<!--
-<a data-fls-button class="top-header__button button" href="#"
->Заказать звонок</a
->
--->
 						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
 							<span></span>
 						</button>
@@ -149,9 +132,9 @@ class="menu__link"
 						<div data-fls-popup-content="" class="popup__box">
 							<h2 class="popup__title">Оставить заявку</h2>
 							<form class="popup__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
+								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя:" class="popup__input input">
 								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="popup__input input">
-								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
+								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Какое авто:" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
 								<button type="submit" class="popup__button button button--arrow">
 									<span>Оставить заявку</span>
 									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -824,159 +807,43 @@ class="menu__link"
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
-					<div class="footer__top">
-						<div class="footer__item">
-							<a class="footer__logo" href="index.html">
-								<img src="./assets/img/header/logo.svg" alt="logo">
-							</a>
-							<ul class="footer__nav-list">
-								<li>
-									<a href="company.html">О компании</a>
-								</li>
-								<li>
-									<a href="portfolio.html">Портфолио</a>
-								</li>
-								<li>
-									<a href="blog.html">Блог</a>
-								</li>
-								<li>
-									<a href="contacts.html">Контакты</a>
-								</li>
-							</ul>
-							<!--
-<p class="footer__text">
-Mr. Glushitel - Сеть специализированных сервисов по всей Москве,
-основные специализации которого - ремонт глушителя и тюнинг выхлопной
-системы.
-</p>
--->
-							<!--
-<div class="footer__item-socials">
-<a href="#"><img src="@img/icon-social/telegram.png" alt="Image" /></a>
-<a href="#"><img src="@img/icon-social/vk.png" alt="Image" /></a>
-<a href="#"><img src="@img/icon-social/w.png" alt="Image" /></a>
-</div>
--->
-						</div>
-						<div data-fls-spollers="992,max" class="footer__menu">
-							<details class="footer__nav">
-								<summary class="footer__menu-title">Переоборудование ТС</summary>
-								<ul class="footer__nav-list">
-									<li>
-										<a href="">Замена ДВС</a>
-									</li>
-									<li>
-										<a href="">Смена категории</a>
-									</li>
-									<li>
-										<a href="">Регистрация фаркопа</a>
-									</li>
-									<li>
-										<a href="">Регистрация гидроборта</a>
-									</li>
-									<li>
-										<a href="">Переоборудование в самосвал</a>
-									</li>
-								</ul>
-							</details>
-						</div>
-						<div data-fls-spollers="992,max" class="footer__menu">
-							<details class="footer__nav">
-								<summary class="footer__menu-title">Экспертиза ТС</summary>
-								<ul class="footer__nav-list">
-									<li>
-										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-acura/">Предварительная техническая экспертиза</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-audi/">Протокол проверки безопасности</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/remont-zamena-glushitelya-katalizatora-bmw/">Заключение об экологическом классе ТС</a>
-									</li>
-								</ul>
-							</details>
-						</div>
-						<div data-fls-spollers="992,max" class="footer__menu">
-							<details class="footer__nav">
-								<summary class="footer__menu-title">Оформление ввозимых ТС</summary>
-								<ul class="footer__nav-list">
-									<li>
-										<a href="https://mr-glushitel.ru/">Заказ авто из Японии</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/uslugi-kompanii/">Заказ авто из Кореи</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/prajs-po-markam/">ЭПТС</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/primery-rabot/">СБКТС</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/o-kompanii/">ЗОЕТС</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/franshiza-mister-glushitel/">ЭПСМ</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/prajs-list/">Прайс лист</a>
-									</li>
-									<li>
-										<a href="https://mr-glushitel.ru/kontakty/">Контакты</a>
-									</li>
-								</ul>
-							</details>
-						</div>
-						<div data-fls-spollers="992,max" class="footer__contact">
-							<details class="footer__contact-body">
-								<summary class="footer__contact-title">Контакты</summary>
-								<div class="footer__contact-content">
-									<div class="footer__contact-block">
-										<div class="footer__contact-item">
-											<div class="footer__contact-name">Почта:</div>
-											<div class="footer__contact-link">
-												<i class="--icon-arrow-right-2"></i>
-												<a href="mailto:ADR-OOO@yandex.ru" class="footer__contact-link">ADR-OOO@yandex.ru</a>
-											</div>
+					<div data-fls-spollers="992,max" class="footer__contact">
+						<details class="footer__contact-body">
+							<summary class="footer__contact-title">Контакты:</summary>
+							<div class="footer__contact-content">
+								<div class="footer__contact-block">
+									<div class="footer__contact-item">
+										<div class="footer__contact-name">Почта:</div>
+										<div class="footer__contact-link">
+											<i class="--icon-arrow-right-2"></i>
+											<a href="mailto:ADR-OOO@yandex.ru" class="footer__contact-link">ADR-OOO@yandex.ru</a>
 										</div>
-										<div class="footer__contact-item">
-											<div class="footer__contact-name">Телефон:</div>
-											<div class="footer__contact-link">
-												<i class="--icon-arrow-right-2"></i>
-												<a href="tel:79242424343" class="footer__contact-link">+7 92 42 42 43 43</a>
-											</div>
-										</div>
-										<!--
-<div class="footer__contact-item">
-<a href="">ул. Лобачевского, д. 114</a>
-<div class="footer__contact-name">Офис компании в Москве</div>
-<div class="footer__contact-link">
-<i class="--icon-arrow-right-2"></i>
-<a hreflang="" class="footer__contact-link"
->ул. Лобачевского, д. 114
-</a>
-</div>
-</div>
--->
-										<ul class="footer__contact-mess">
-											<li>
-												<a href="" target="_blank">
-													<img alt="Telegram" src="./assets/img/icon-social/telegram.png">
-													<span>Telegram</span>
-												</a>
-											</li>
-											<li>
-												<a href="" target="_blank">
-													<img alt="Vk" src="./assets/img/icon-social/vk.png">
-													<span>Viber</span>
-												</a>
-											</li>
-										</ul>
-										<a data-fls-popup-link="popup" class="footer__button footer__button--icon-arrow-right-2" href="#">Заказать консультацию</a>
 									</div>
+									<div class="footer__contact-item">
+										<div class="footer__contact-name">Телефон:</div>
+										<div class="footer__contact-link">
+											<i class="--icon-arrow-right-2"></i>
+											<a href="tel:79242424343" class="footer__contact-link">+7 92 42 42 43 43</a>
+										</div>
+									</div>
+									<ul class="footer__contact-mess">
+										<li>
+											<a href="https://t.me/adrdv25" target="_blank">
+												<img alt="Telegram" src="./assets/img/icon-social/telegram.png">
+												<span>Telegram</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr" target="_blank">
+												<img alt="Vk" src="./assets/img/icon-social/instagram.png">
+												<span>instagram</span>
+											</a>
+										</li>
+									</ul>
+									<a data-fls-popup-link="popup" class="footer__button footer__button--icon-arrow-right-2" href="#">Заказать консультацию</a>
 								</div>
-							</details>
-						</div>
+							</div>
+						</details>
 					</div>
 					<div class="footer__bottom bottom-footer">
 						<div class="bottom-footer__info">
