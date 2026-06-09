@@ -5,14 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1781004606519"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1781004606519">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1781027315688"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1781027315688">
 	</head>
 	<body>
 		<div class="wrapper">
 			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header">
 				<div class="header__container">
-					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"order"}'></include> -->
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"contacts"}'></include> -->
 					<div class="header__top top-header">
 						<a href="index.html" class="top-header__logo">
 							<img src="./assets/img/header/logo.svg" alt="logo">
@@ -25,13 +25,8 @@
 						<div class="header__menu menu">
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<li class="menu__item _has-submenu">
-										<a class="menu__link">Наши услуги</a>
-										<ul class="sub-menu">
-											<li>
-												<a href="order.html">Заказать авто</a>
-											</li>
-										</ul>
+									<li class="menu__item">
+										<a href="services.html" class="menu__link">Наши услуги</a>
 									</li>
 									<li class="menu__item">
 										<a href="company.html" class="menu__link">О компании</a>
@@ -166,58 +161,131 @@ class="menu__link"
 				</div>
 			</div>
 			<main class="page">
-				<div class="order-hero">
-					<div class="order-hero__container">
-						<div class="order-hero__content">
-							<h1 class="order-hero__title">
-								Заказать автомобиль
-								<span>под ключ из-за границы</span>
-								в России
-							</h1>
-							<p class="order-hero__text">
-								Подбор и доставка из Японии, Кореи, Китая, Германии и США. Один
-          договор — весь цикл: СБКТС, ЭПТС, кнопка ЭРА-ГЛОНАСС. Стоимость
-          фиксируется до подписания
+				<section class="services">
+					<div class="services__container">
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">АДР-ДВ</span>
+							<h2 class="blockhead__title">Наши услуги</h2>
+							<p class="blockhead__text">
+								Комплексное сопровождение транспорта, перевозок и документов. Помогаем
+          решить вопросы с регистрацией, проверкой, переоборудованием,
+          перевозками и взаимодействием с государственными органами.
 							</p>
-							<form class="order-hero__form" data-fls-form="ajax" data-fls-form-popup="popup-message" action="sendmail/sendmail.php" method="POST">
-								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="convert-hero__input input">
-								<button type="submit" data-fls-button="" class="convert-hero__button button button--arrow">
-									<span>Получить расчёт стоимости</span>
-									<svg width="24" height="24" viewbox="0 0 24 24" fill="none">
-										<path d="M5 12H19M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-									</svg>
-								</button>
-							</form>
-							<p class="order-hero__text-small">Расчёт бесплатный · Ответ в течение рабочего дня</p>
 						</div>
-						<div class="order-hero__items">
-							<div class="order-hero__item">
-								<span class="order-hero__number">01</span>
-								<h3 class="order-hero__item-title">Фиксированная цена</h3>
-								<p class="order-hero__item-text">
-									Цена закрепляется в договоре до подписания. Никаких скрытых платежей
-            и неожиданных доплат.
+						<!-- Сетка -->
+						<div class="services__grid">
+							<article class="services__card">
+								<div class="services__card-icon">📄</div>
+								<h3 class="services__card-title">Сопровождение сделок и подготовка документов</h3>
+								<p class="services__card-text">
+									Помогаем безопасно оформить сделки с транспортом: куплю-продажу,
+            регистрацию, переоформление и подготовку правовых документов.
 								</p>
-							</div>
-							<div class="order-hero__item">
-								<span class="order-hero__number">02</span>
-								<h3 class="order-hero__item-title">Полное сопровождение</h3>
-								<p class="order-hero__item-text">
-									Берём на себя весь процесс: подбор, покупку, доставку, растаможку и
-            оформление документов.
+								<div class="services__card-note">Юридически грамотно и без лишних ошибок</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🏛️</div>
+								<h3 class="services__card-title">Представление интересов в госорганах</h3>
+								<p class="services__card-text">
+									Представляем ваши интересы в ГИБДД, УГАДН, Ростехнадзоре, Таможне и
+            ASMAP. Берём на себя коммуникацию, подготовку обращений и
+            документов.
 								</p>
-							</div>
-							<div class="order-hero__item">
-								<span class="order-hero__number">03</span>
-								<h3 class="order-hero__item-title">Проверенные автомобили</h3>
-								<p class="order-hero__item-text">
-									Проверяем историю, аукционный лист и техническое состояние
-            автомобиля перед покупкой.
+								<div class="services__card-note">Экономим ваше время и нервы</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🔍</div>
+								<h3 class="services__card-title">Подбор, осмотр и проверка транспорта</h3>
+								<p class="services__card-text">
+									Подбираем и осматриваем транспортные средства перед покупкой.
+            Проверяем документы, законность владения, историю и техсостояние.
 								</p>
+								<div class="services__card-note">Покупка транспорта с уверенностью</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🚚</div>
+								<h3 class="services__card-title">Подготовка транспорта под перевозки</h3>
+								<p class="services__card-text">
+									Готовим транспорт под пассажирские, детские, опасные,
+            крупногабаритные и негабаритные грузы.
+								</p>
+								<div class="services__card-note">Для легальной и безопасной эксплуатации</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🗺️</div>
+								<h3 class="services__card-title">Разработка безопасных маршрутов</h3>
+								<p class="services__card-text">
+									Разрабатываем безопасные маршруты с учётом типа груза, транспорта и
+            нормативных требований.
+								</p>
+								<div class="services__card-note">Маршрут продуман заранее</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">📦</div>
+								<h3 class="services__card-title">Перевозка грузов автотранспортом</h3>
+								<p class="services__card-text">
+									Организуем перевозку грузов, подбираем транспорт, контролируем
+            документы и маршрут.
+								</p>
+								<div class="services__card-note">От заявки до доставки</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🔧</div>
+								<h3 class="services__card-title">Внесение изменений в конструкцию Т/С</h3>
+								<p class="services__card-text">
+									Сопровождаем оформление изменений конструкции: тюнинг, изменение
+            типа, количества мест.
+								</p>
+								<div class="services__card-note">Переоборудование без проблем с регистрацией</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">⏱️</div>
+								<h3 class="services__card-title">Тахографы ЕСТР и СКЗИ, карты водителя</h3>
+								<p class="services__card-text">
+									Установка тахографов ЕСТР и СКЗИ, оформление карт водителя и
+            консультация.
+								</p>
+								<div class="services__card-note">Соответствие требованиям контроля</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">❄️</div>
+								<h3 class="services__card-title">Проверка рефрижератора с выдачей СПС</h3>
+								<p class="services__card-text">
+									Проверка рефрижераторного оборудования и получение СПС для
+            температурных грузов.
+								</p>
+								<div class="services__card-note">Для перевозок с температурным режимом</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">🛡️</div>
+								<h3 class="services__card-title">Страхование ОСАГО, КАСКО и жизни</h3>
+								<p class="services__card-text">
+									Оформление страховых продуктов: ОСАГО, КАСКО и страхование жизни
+            водителей.
+								</p>
+								<div class="services__card-note">Защита на дороге и вне её</div>
+							</article>
+							<article class="services__card">
+								<div class="services__card-icon">✅</div>
+								<h3 class="services__card-title">Технический осмотр всех категорий</h3>
+								<p class="services__card-text">Техосмотр транспорта всех категорий с выдачей диагностической карты.</p>
+								<div class="services__card-note">Диагностическая карта официально</div>
+							</article>
+						</div>
+						<!-- CTA -->
+						<div class="services__cta">
+							<h2 class="services__cta-title">Нужна консультация по вашей ситуации?</h2>
+							<p class="services__cta-text">
+								Оставьте заявку — мы подскажем, какие документы нужны, какой порядок
+          действий выбрать и как быстрее решить ваш вопрос.
+							</p>
+							<div class="services__cta-buttons">
+								<a href="tel:+79242424343" class="services__cta-btn services__cta-btn--primary">Позвонить</a>
+								<a data-fls-popup-link="popup" class="services__cta-btn services__cta-btn--secondary">Оставить заявку</a>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
