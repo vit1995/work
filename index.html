@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1780930480973"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780930480973">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1780998297027"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1780998297027">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -118,9 +118,9 @@ class="menu__link"
 						<div data-fls-popup-content="" class="popup__box">
 							<h2 class="popup__title">Оставить заявку</h2>
 							<form class="popup__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя:" class="popup__input input">
+								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
 								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="popup__input input">
-								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Какое авто:" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
+								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Какое авто" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
 								<button data-fls-button="" type="submit" class="popup__button button button--arrow">
 									<span>Оставить заявку</span>
 									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,8 +203,11 @@ class="menu__link"
 									</p>
 								</div>
 							</div>
-							<a href="#" data-fls-popup-link="popup" type="submit" data-fls-button="" class="bottom-hero__button button button--arrow">
+							<a data-fls-popup-link="popup" data-fls-button="" class="bottom-hero__button button button--arrow">
 								<span>Оставить заявку</span>
+								<svg viewbox="0 0 24 24" fill="none">
+									<path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
 							</a>
 						</div>
 					</div>
@@ -461,15 +464,8 @@ fill="#777777"
 								<textarea data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Сообщение" data-fls-form-errtext="Заполните поле" class="block-form__input input"></textarea>
 								<button type="submit" class="block-form__button button button--arrow">
 									<span>Оставить заявку</span>
-									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_49_641)">
-											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</g>
-										<defs>
-											<clipPath id="clip0_49_641">
-												<rect width="24" height="24" fill="white"></rect>
-											</clipPath>
-										</defs>
+									<svg viewbox="0 0 24 24" fill="none">
+										<path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
 									</svg>
 								</button>
 							</form>
@@ -518,37 +514,25 @@ fill="#777777"
 							<!-- Часть слайдера, которая двигается -->
 							<div data-fls-gallery="" class="result__wrapper swiper-wrapper">
 								<!-- Слайд -->
-								<a href="./assets/img/result/1.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/1.webp">
+								<a href="./assets/img/portfolio/01.webp" class="result__slide swiper-slide">
+									<img class="result__img" alt="Image" src="./assets/img/portfolio/01.webp">
 									<div class="result__name">Установка ГБО на ГАЗ 37054С в России</div>
 								</a>
-								<a href="./assets/img/result/02.jpg" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/02.jpg">
-									<div class="result__name">Внедорожный тюнинг на Toyota Land Cruiser 150 (Prado) в России</div>
-								</a>
-								<a href="./assets/img/result/1.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/1.webp">
+								<a href="./assets/img/portfolio/02.webp" class="result__slide swiper-slide">
+									<img class="result__img" alt="Image" src="./assets/img/portfolio/02.webp">
 									<div class="result__name">Установка ГБО на ГАЗ 37054С в России</div>
 								</a>
-								<a href="./assets/img/result/02.jpg" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/02.jpg">
-									<div class="result__name">Внедорожный тюнинг на Toyota Land Cruiser 150 (Prado) в России</div>
-								</a>
-								<a href="./assets/img/result/1.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/1.webp">
+								<a href="./assets/img/portfolio/03.webp" class="result__slide swiper-slide">
+									<img class="result__img" alt="Image" src="./assets/img/portfolio/03.webp">
 									<div class="result__name">Установка ГБО на ГАЗ 37054С в России</div>
 								</a>
-								<a href="./assets/img/result/02.jpg" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/02.jpg">
-									<div class="result__name">Внедорожный тюнинг на Toyota Land Cruiser 150 (Prado) в России</div>
-								</a>
-								<a href="./assets/img/result/1.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/1.webp">
+								<a href="./assets/img/portfolio/04.webp" class="result__slide swiper-slide">
+									<img class="result__img" alt="Image" src="./assets/img/portfolio/04.webp">
 									<div class="result__name">Установка ГБО на ГАЗ 37054С в России</div>
 								</a>
-								<a href="./assets/img/result/02.jpg" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/result/02.jpg">
-									<div class="result__name">Внедорожный тюнинг на Toyota Land Cruiser 150 (Prado) в России</div>
+								<a href="./assets/img/portfolio/05.webp" class="result__slide swiper-slide">
+									<img class="result__img" alt="Image" src="./assets/img/portfolio/05.webp">
+									<div class="result__name">Установка ГБО на ГАЗ 37054С в России</div>
 								</a>
 							</div>
 						</div>
