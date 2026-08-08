@@ -5,100 +5,50 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1781151954619"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1781151954619">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1786189577663"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1786189577663">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header">
+			<header data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" class="header">
 				<div class="header__container">
-					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
-					<div class="header__top top-header">
-						<a href="index.html" class="top-header__logo">
-							<img src="./assets/img/header/logo.svg" alt="logo">
+					<div class="header__logo-body">
+						<a href="#" class="header__logo">
+							<img src="./assets/img/header/Logo.svg" alt="#">
 						</a>
-						<!--
-<p data-fls-dynamic=".menu__body, 992" class="top-header__text">
-10 лет помогаем с машинами в разных странах
-</p>
--->
-						<div class="header__menu menu">
-							<nav class="menu__body">
-								<ul class="menu__list">
-									<li class="menu__item">
-										<a href="services.html" class="menu__link">Наши услуги</a>
-									</li>
-									<li class="menu__item">
-										<a href="company.html" class="menu__link">О компании</a>
-									</li>
-									<li class="menu__item">
-										<a href="portfolio.html" class="menu__link">Портфолио</a>
-									</li>
-									<li class="menu__item">
-										<a href="contacts.html" class="menu__link">Контакты</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-						<div class="top-header__social">
-							<p class="top-header__social-text">Напишите нам напрямую</p>
-							<div class="top-header__social-icons">
-								<a target="_blank" href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr">
-									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/instagram.png">
-								</a>
-								<a target="_blank" href="https://t.me/adrdv25">
-									<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/telegram.png">
-								</a>
-							</div>
-						</div>
-						<div data-fls-dynamic=".menu__body, 600" class="top-header__info">
-							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
-							<a class="top-header__info-phone" href="tel:+79242424343">+7 92 42 42 43 43</a>
-							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните нам</a>
-						</div>
-						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
-							<span></span>
-						</button>
+						<p class="header__logo-text" data-fls-dynamic=".menu__body, 768">Тюнинг выхлопных систем в Москве</p>
 					</div>
-					<!--
-<div class="header__menu menu">
-<nav class="menu__body">
-<ul class="menu__list">
-<li data-spollers="1200,max" class="menu__item _has-submenu">
-<a
-href="convert.html"
-type="button"
-data-spoller
-class="menu__link"
->
-Переоборудование
-</a>
-<ul class="sub-menu">
-<li><a href="services.html">Вывоз строительного мусора</a></li>
-<li><a href="#">Вывоз старой мебели</a></li>
-<li><a href="#">Квартирный переезд</a></li>
-<li><a href="#">Офисный переезд</a></li>
-<li><a href="#">Дачный переезд</a></li>
-<li><a href="#">Перевозка мебели</a></li>
-</ul>
-</li>
-<li class="menu__item">
-<a href="order.html" class="menu__link">Заказ авто</a>
-</li>
-<li class="menu__item">
-<a href="company.html" class="menu__link">О компании</a>
-</li>
-<li class="menu__item">
-<a href="" class="menu__link">Портфолио</a>
-</li>
-<li class="menu__item">
-<a href="contacts.html" class="menu__link">Контакты</a>
-</li>
-<li class="menu__item"><a href="" class="menu__link">Блог</a></li>
-</ul>
-</nav>
-</div>
--->
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a data-fls-scrollto=".service" href="#" class="menu__link">о сервисе</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto=".price" href="#" class="menu__link">услуги и цены</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto=".diagnostics" href="#" class="menu__link">бесплатная диагностика</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto=".video-reviews" href="#" class="menu__link">наши работы и отзывы</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto=".stamps" href="#" class="menu__link">партнеры</a>
+								</li>
+								<li class="menu__item">
+									<a data-fls-scrollto=".contacts" href="#" class="menu__link">контакты</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__info">
+						<div class="header__clock">Ежедневно 10-20</div>
+						<a class="header__phone" href="tel:74951658716">+7 (495) 165-87-16</a>
+					</div>
+					<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+						<span></span>
+					</button>
 				</div>
 			</header>
 			<div data-fls-popup="popup" aria-hidden="true" class="popup">
@@ -111,30 +61,22 @@ class="menu__link"
 							</svg>
 						</button>
 						<div data-fls-popup-content="" class="popup__box">
-							<h2 class="popup__title">Оставить заявку</h2>
-							<form class="popup__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
-								<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Имя" class="popup__input input">
-								<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7(__) __-__-__-__" class="popup__input input">
-								<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Какое авто" data-fls-form-errtext="Заполните поле" class="popup__input input"></textarea>
-								<button data-fls-button="" type="submit" class="popup__button button button--arrow">
-									<span>Оставить заявку</span>
-									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_49_641)">
-											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-										</g>
-										<defs>
-											<clipPath id="clip0_49_641">
-												<rect width="24" height="24" fill="white"></rect>
-											</clipPath>
-										</defs>
-									</svg>
-								</button>
+							<h2 class="popup__title">ЗАЯВКА НА ПРОСЧЕТ</h2>
+							<p class="popup__text">
+								Пожалуйста, оставьте свои контактные данные, и наш менеджер перезвонит
+          вам в ближайшее вемя
+							</p>
+							<form data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php" class="popup__form">
+								<input required type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Ваше имя" class="input">
+								<input required data-fls-input="" data-fls-input-mask="+375(99)-999-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+375(__)-___-__-__" class="input">
+								<button type="submit" class="button">Отправить заявку</button>
 							</form>
+							<p class="popup__text">Мы не передаем ваши данные третьим лицам</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div data-fls-popup="popup-message" aria-hidden="true" class="popup popup--success">
+			<div data-fls-popup="popup-message" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close">
@@ -143,241 +85,1278 @@ class="menu__link"
 								<path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#979797" stroke-linecap="square"></path>
 							</svg>
 						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--success">
-							<div class="popup__icon">
-								<svg width="80" height="80" viewbox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="40" cy="40" r="40" fill="#4CAF50"></circle>
-									<path d="M25 40L35 50L55 30" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</div>
-							<h2 class="popup__title popup__title--success">Заявка отправлена!</h2>
-							<div class="popup__message">
-								<p class="popup__text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.</p>
-								<p class="popup__hint">Обычно перезваниваем в течение 15 минут</p>
-							</div>
-							<button data-fls-popup-close="" type="button" class="popup__button button">Понятно, спасибо</button>
+						<div data-fls-popup-content="" class="popup__text">
+							<h2 class="popup__title popup__title--mesage">Сообщение отправлено успешно. Мы обязательно вам ответим.</h2>
 						</div>
 					</div>
 				</div>
 			</div>
-			<main class="page">
+			<main class="page page--home">
 				<section class="hero">
-					<img class="hero__img-bg" alt="bg" src="./assets/img/hero/bg.jpg">
+					<!--
+<img class="hero__img-bg" src="@img/hero/bg.webp" alt="Image" />
+<img class="hero__hero-bg-two" src="@img/hero/bg-2.webp" alt="Image" />
+-->
+					<img class="hero__image" alt="Image" src="./assets/img/hero/image.webp">
 					<div class="hero__container">
-						<h1 class="hero__title">Если с транспортом беда, АДР-ДВ поможет Вам всегда!</h1>
-						<div class="hero__text">
-							<p>
-								«АДР-ДВ» — надёжный партнёр в сфере транспорта: берём на себя всё — от
-          оформления документов до сопровождения перевозок и сделок. Снижаем
-          риски, экономим ваше время и решаем задачи быстро, законно и без
-          лишних сложностей
-							</p>
-						</div>
-						<div class="hero__bottom bottom-hero">
-							<h2 class="bottom-hero__title">Почему выбирают именно нас:</h2>
-							<div class="bottom-hero__items">
-								<div class="bottom-hero__item">
-									<img class="bottom-hero__icon" alt="icon" src="./assets/img/hero/01.png">
-									<p class="bottom-hero__text">
-										Надёжность в каждой детали — внимательно подходим к каждому этапу
-              работы.
-									</p>
+						<h1 class="hero__title">
+							<span>тюнинг</span>
+							выхлопных систем
+						</h1>
+						<p class="hero__text">Индивидуальная настройка выхлопа – такой будет только у вас</p>
+						<div class="hero__items">
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img src="./assets/img/hero/check.svg" alt="Image">
 								</div>
-								<div class="bottom-hero__item">
-									<img class="bottom-hero__icon" alt="icon" src="./assets/img/hero/02.png">
-									<p class="bottom-hero__text">
-										Прозрачная работа — понятные действия, чёткие решения и
-              ответственность за результат.
-									</p>
-								</div>
-								<div class="bottom-hero__item">
-									<img class="bottom-hero__icon" alt="icon" src="./assets/img/hero/03.png">
-									<p class="bottom-hero__text">
-										Работаем точно и по закону — учитываем все требования и
-              минимизируем риски.
-									</p>
-								</div>
+								<p class="hero__item-text">Только опытные и квалифицированные мастера</p>
 							</div>
-							<a data-fls-popup-link="popup" data-fls-button="" class="bottom-hero__button button button--arrow">
-								<span>Оставить заявку</span>
-								<svg viewbox="0 0 24 24" fill="none">
-									<path d="M4 12h16M14 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-								</svg>
-							</a>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img src="./assets/img/hero/check.svg" alt="Image">
+								</div>
+								<p class="hero__item-text">От 2 до 5 лет гарантии на работы и детали</p>
+							</div>
+							<div class="hero__item">
+								<div class="hero__icon">
+									<img src="./assets/img/hero/check.svg" alt="Image">
+								</div>
+								<p class="hero__item-text">Исключительно оригинальные комплектующие</p>
+							</div>
 						</div>
+						<a data-fls-button="" data-fls-popup-link="popup" class="hero__button button" href="#">заявка на просчет</a>
 					</div>
 				</section>
-				<section data-fls-result="" class="result">
-					<div class="result__container">
-						<div class="result__top">
-							<h2 data-fls-title="" class="title title--notmargin">Наше портфолио</h2>
-							<div class="result__navigacions">
-								<button type="button" class="result-prev swiper-button-prev"></button>
-								<a href="portfolio.html">Смотреть все</a>
-								<button type="button" class="result-next swiper-button-next"></button>
+				<section class="advantages">
+					<div class="advantages__container">
+						<h2 data-fls-title="" class="title">О сервисе</h2>
+						<div class="advantages__body">
+							<div class="advantages__content">
+								<p class="advantages__text">
+									Мы – не просто рядовой сервис, предоставляющий полный спектр услуг
+            по ремонту и обслуживанию автомобилей.
+								</p>
+								<div class="advantages__items">
+									<div class="advantages__item">
+										<div class="advantages__item-icon">
+											<img alt="Image" src="./assets/img/advantages/01.webp">
+										</div>
+										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
+									</div>
+									<div class="advantages__item">
+										<div class="advantages__item-icon">
+											<img alt="Image" src="./assets/img/advantages/02.webp">
+										</div>
+										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
+									</div>
+									<div class="advantages__item">
+										<div class="advantages__item-icon">
+											<img alt="Image" src="./assets/img/advantages/03.webp">
+										</div>
+										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
+									</div>
+									<div class="advantages__item">
+										<div class="advantages__item-icon">
+											<img alt="Image" src="./assets/img/advantages/04.webp">
+										</div>
+										<p class="advantages__item-text">В нашем штате профессиональные сварщики с опытом работы от 5 лет</p>
+									</div>
+								</div>
+								<a class="advantages__button button" data-fls-popup-link="popup" href="#">записаться на диагностику</a>
 							</div>
-						</div>
-						<!-- Оболочка слайдера -->
-						<div data-fls-slider="" class="result__slider swiper">
-							<!-- Часть слайдера, которая двигается -->
-							<div data-fls-gallery="" class="result__wrapper swiper-wrapper">
-								<!-- Слайд -->
-								<a href="./assets/img/portfolio/01.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/portfolio/01.webp">
-									<div class="result__name">
-										1. Установка ДВС модели 3Y № 2032260 (л.с. 97) выхлопной системой,
-              ЭБУ и АКПП 2. Колеса 205/60/R16 3. Экспедиционный багажник с
-              дополнительным светом (6 шт.) 4. Спойлер на задней двери ТС 5.
-              Элементы подвески (пружины, амортизаторы) лифт +10см 6.
-              Металлическая защита переднего бампера 7. Солнцезащитный козырек
-              (спереди над лобовым стеклом) 8. Тягово-сцепное устройство с
-              розеткой
+							<div class="advantages__reviews">
+								<div class="advantages__estimation">
+									<div class="advantages__estimation-number">5.0</div>
+									<div class="advantages__estimation-block">
+										<img class="advantages__estimation-stars" src="./assets/img/advantages/stars.svg" alt="Image">
+										<p class="advantages__estimation-text">Оценка сервиса на Яндекс.Картах</p>
 									</div>
-								</a>
-								<a href="./assets/img/portfolio/02.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/portfolio/02.webp">
-									<div class="result__name">1. Мотор EJ20X, 2. Капот 3. Обвесы, 4. Спойлер 4. Колеса</div>
-								</a>
-								<a href="./assets/img/portfolio/03.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/portfolio/03.webp">
-									<div class="result__name">
-										1. Лифт +50 мм (пружины, амортизаторы) 2. Шноркель
-              (воздухозаборник) 3. Установка кронштейна крепления запасного
-              колеса 4. Установка тягово-сцепного устройства 5. Колеса
+								</div>
+								<div class="advantages__video video-advantages">
+									<p class="video-advantages__text">
+										Приветствие от Игоря, управляющего сервиса и главного эксперта в
+              выхлопных системах
+									</p>
+									<div class="video-advantages__video">
+										<iframe src="https://www.youtube.com/embed/z-hKK7KmCHY" title="КАК И ГДЕ СДЕЛАТЬ ЛУЧШИЙ ВЫХЛОП?" frameborder="0" allow="accelerometer;
+ autoplay;
+ clipboard-write;
+ encrypted-media;
+ gyroscope;
+ picture-in-picture;
+ web-share;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 									</div>
-								</a>
-								<a href="./assets/img/portfolio/04.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/portfolio/04.webp">
-									<div class="result__name">
-										• ТСУ с розеткой • Элементы подвески (амортизаторы, пружины) лифт
-              +100 мм • Колеса 285/75 с дисками R16 • НАКЛАДКА НА ЗАДНЮЮ ДВЕРЬ
-              ТС (СПОЙЛЕР) • ЭКСПЕДИЦИОННЫЙ БАГАЖНИК С ДОПОЛНИТЕЛЬНЫМ СВЕТОМ ДЛЯ
-              ИСПОЛЬЗОВАНИЯ ВНЕ ДОРОГ ОБЩЕГО ПОЛЬЗОВАНИЯ • Фары рабочего
-              освещения (4 шт.) на багажнике (установленные по бокам и сзади)
+									<div class="video-advantages__time">
+										<p>Время на просмотр: 1 мин 46 сек</p>
+										<img alt="Image" src="./assets/img/advantages/time.webp">
 									</div>
-								</a>
-								<a href="./assets/img/portfolio/05.webp" class="result__slide swiper-slide">
-									<img class="result__img" alt="Image" src="./assets/img/portfolio/05.webp">
-									<div class="result__name">
-										• 1. Установка ДВС модели TD42. 2. Воздухозаборник двигателя
-              (шноркель). 3. Экспедиционный багажник. 1. Замена штатных
-              элементов подвески на усиленные элементы подвески. 5. Колёса
-              большей размерности 315/75 с дисками R16. 6. Тягово-сцепное
-              устройство (ТСУ) с розеткой.
-									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-				<section data-fls-blocktext="" class="block-text">
-					<div data-fls-showmore="" class="block-text__container">
-						<div data-fls-showmore-content="300" class="block-text__body">
-							<h2 dta-fls-title="" class="title">Какой вид переоборудования автомобиля подлежит регистрации в 2026 году</h2>
-							<div class="block-text__text">
-								<h3>ГБО на авто</h3>
-								<p>
-									Незарегистрированное газовое оборудование — повод для серьезных
-            штрафов. Чтобы узаконить ГБО по всем правилам, обратитесь в нашу
-            лабораторию. Выдаем официальные заключения, которые примут в любом
-            подразделении ГИБДД РФ.
+				<section class="price">
+					<img class="price__img-bg" alt="Image" src="./assets/img/price/bg.webp">
+					<div class="price__container">
+						<div class="price__body">
+							<div class="price__content">
+								<img class="price__logo" src="./assets/img/header/Logo.svg" alt="Image">
+								<div class="price__header">
+									<h2 data-fls-title="" class="price__title">
+										<span>ЦЕНЫ</span>
+										НА ТЮНИНГ
+									</h2>
+									<div class="price__subtitle">ВЫХЛОПНЫХ СИСТЕМ</div>
+								</div>
+								<p class="price__text">
+									Стоимость рассчитывается индивидуально и зависит от объема и
+            сложности работ
 								</p>
-								<h3>Внесение изменений в конструкцию внедорожников</h3>
-								<p>
-									Лебедки, багажники, силовые бамперы, колесные спейсеры — эти и
-            другие элементы тюнинга меняют конструкцию ТС. Чтобы поставить их на
-            учет, пройдите экспертизу в аккредитованном испытательном центре. Мы
-            работаем не только в Москве, но и во всех регионах.
-								</p>
-								<h3>Замена основных агрегатов</h3>
-								<p>
-									Свап двигателя или коробки, кардинальные кузовные изменения — всё
-            это тоже требует обязательной регистрации. В некоторых случаях может
-            понадобиться заключение предварительной технической экспертизы. Она
-            ведётся в рамках установленного законодательства РФ.
-								</p>
-								<p>
-									Мы гарантируем конфиденциальность персональных данных и обрабатываем
-            их согласно ФЗ-152. Чтобы начать сотрудничество, отправьте заявку
-            через форму на сайте либо позвоните по номеру указанному в шапке
-            сайта. Наши специалисты ответят на вопросы по внесению изменений в
-            конструкцию авто и их оформлению, предложат оптимальное решение
-            вашей задачи.
-								</p>
+								<div class="price__block">
+									<div class="price__icon">
+										<img src="./assets/img/hero/check.svg" alt="Image">
+									</div>
+									<p>Узнайте точную стоимость у нашего менеджера</p>
+								</div>
+								<a href="#" data-fls-popup-link="popup" class="price__button button">
+									Получить консультацию и узнать стоимость
+									<!-- <span></span> -->
+								</a>
+							</div>
+							<div class="price__list list-price">
+								<div class="list-price__item">
+									<div class="list-price__name">Установка одинарной насадки</div>
+									<div class="list-price__value">от 5 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Управляемая банка</div>
+									<div class="list-price__value">от 35 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка двойных насадок</div>
+									<div class="list-price__value">от 9 500 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Изготовление трассы из нержавейки</div>
+									<div class="list-price__value">от 30 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка прямоточной банки</div>
+									<div class="list-price__value">от 12 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Переделка штатной банки глушителя</div>
+									<div class="list-price__value">от 15 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Изменение геометрии выхлопа</div>
+									<div class="list-price__value">от 5 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка активного выхлопа</div>
+									<div class="list-price__value">от 85 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Раздвоение выхлопной системы</div>
+									<div class="list-price__value">от 12 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка спортивного резонатора</div>
+									<div class="list-price__value">от 10 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка спорт ката</div>
+									<div class="list-price__value">от 30 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Установка и изготовление даунпайпа</div>
+									<div class="list-price__value">от 25 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Чип тюнинг</div>
+									<div class="list-price__value">от 10 000 руб.</div>
+								</div>
+								<div class="list-price__item">
+									<div class="list-price__name">Прошивка Pop Bangs</div>
+									<div class="list-price__value">от 15 000 руб.</div>
+								</div>
 							</div>
 						</div>
-						<button hidden data-fls-showmore-button="" type="button" class="block__more">
-							<span>Показать ещё</span>
-							<span>Скрыть</span>
+					</div>
+				</section>
+				<section class="diagnostics">
+					<div class="diagnostics__container">
+						<div class="diagnostics__body">
+							<div data-fls-parallax-parent="" class="diagnostics__images">
+								<picture>
+									<img data-fls-parallax="" data-fls-parallax-coefficient="20" class="diagnostics__img" alt="Image" src="./assets/img/diagnostics/01.webp">
+								</picture>
+								<div class="diagnostics__cercle">
+									<img src="./assets/img/diagnostics/round.svg" alt="Image">
+									<p>0 B</p>
+								</div>
+							</div>
+							<div class="diagnostics__content">
+								<h2 data-fls-title="" class="title title--white title--notmargin">
+									Бесплатная диагностика
+									<span>без * и навязчивости</span>
+								</h2>
+								<p class="diagnostics__text">
+									Для точного просчета стоимости любых работ мастеру нужно осмотреть
+            ваш автомобиль. Без навязывания ненужных вам работ и по
+            предварительной записи. Просто оставьте заявку, и наш менеджер
+            запишет вас на подходящее время.
+								</p>
+								<a class="diagnostics__button button button--black" data-fls-popup-link="popup" href="#">записаться на диагностику</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Блок видео-отзывов -->
+				<section class="video-reviews">
+					<div class="video-reviews__container">
+						<!-- Заголовок секции -->
+						<div class="video-reviews__header">
+							<div class="video-reviews__subtitle">ДОРОЖИМ СВОЕЙ РЕПУТАЦИЕЙ</div>
+							<h2 class="video-reviews__title">
+								Видео
+								<span class="video-reviews__title-accent">наших работ</span>
+							</h2>
+						</div>
+						<!-- Сетка с видео-карточками -->
+						<div class="video-reviews__grid">
+							<!-- Карточка 1 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/3331096219b9b240c6b4cc5ae9f9f256/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl1.jpg" alt="Прокачали звук выхлопа Ауди А5" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Прокачали звук выхлопа Ауди А5</h3>
+								</div>
+							</div>
+							<!-- Карточка 2 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/ba9eb48e3bdb7b24de593f34c186d3e3/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl2.jpg" alt="Тюнинг выхлопа Ауди А5" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Тюнинг выхлопа Ауди А5</h3>
+								</div>
+							</div>
+							<!-- Карточка 3 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/73165f57de78a2bdfe561f2eb690dae5/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl3.jpg" alt="Тюнинг выхлопа Renault Logan" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Тюнинг выхлопа Renault Logan</h3>
+								</div>
+							</div>
+							<!-- Карточка 4 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/950783e4ec3e9606ee1d3af10d32f69d/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl4.jpg" alt="Топовый тюнинг Dodge Challenger 3.6" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Топовый тюнинг Dodge Challenger 3.6</h3>
+								</div>
+							</div>
+							<!-- Карточка 5 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/f2684187347481018ba5a78541c8d11a/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl5.jpg" alt="Это того стоит!" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Это того стоит! Ребятами, мастерами, звуками доволен!</h3>
+								</div>
+							</div>
+							<!-- Карточка 6 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/c4de3265eecf5133e90fb5437c406f7d/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl6.jpg" alt="Рендж Ровер тюнинг выхлопа" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Рендж Ровер тюнинг выхлопа</h3>
+								</div>
+							</div>
+							<!-- Карточка 7 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/23a47602b1ea95adb16344726867805e/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl7.jpg" alt="Тюнинг Ауди S5" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Тюнинг Ауди S5, 3 литра, 355 л.с, кабриолет</h3>
+								</div>
+							</div>
+							<!-- Карточка 8 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/a9b06277820db026cb20941e993082d9/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl8-3.jpg" alt="Geely Tugella" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Добавили стиля Geely Tugella и установили насадки</h3>
+								</div>
+							</div>
+							<!-- Карточка 9 -->
+							<div class="video-card" data-video-src="https://rutube.ru/play/embed/41ca2f3ca98f4beeb667d0eb38b707b8/">
+								<div class="video-card__preview">
+									<img class="video-card__image" src="https://avtovyhlop-spb.ru/wp-content/uploads/2024/10/obl9-2.jpg" alt="Mercedes Benz c200" loading="lazy">
+									<div class="video-card__play">
+										<svg width="44" height="44" viewbox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M33 5.29404C29.8442 3.21192 26.0636 2 22 2C10.9543 2 2 10.9543 2 22C2 33.0456 10.9543 42 22 42C33.0456 42 42 33.0456 42 22C42 18.7628 41.2308 15.7052 39.8654 13M28.003 23.3312L20.4876 28.3416C19.6794 28.8804 19.2754 29.1498 18.9404 29.1298C18.6486 29.1122 18.3788 28.968 18.2024 28.7348C18 28.4672 18 27.9816 18 27.0104V16.9896C18 16.0185 18 15.5329 18.2024 15.2652C18.3788 15.032 18.6486 14.8877 18.9404 14.8703C19.2754 14.8503 19.6794 15.1196 20.4876 15.6583L28.003 20.6688C28.6708 21.1138 29.0046 21.3364 29.121 21.617C29.2226 21.8622 29.2226 22.1378 29.121 22.383C29.0046 22.6636 28.6708 22.8862 28.003 23.3312Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+								</div>
+								<div class="video-card__content">
+									<h3 class="video-card__title">Тюнинг выхлопа Mercedes Benz c200 w203</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Модальное окно с видео -->
+				<div class="video-modal" id="videoModal">
+					<div class="video-modal__overlay"></div>
+					<div class="video-modal__container">
+						<button class="video-modal__close" aria-label="Закрыть видео">
+							<svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8 8L24 24M8 24L24 8" stroke="white" stroke-width="2" stroke-linecap="round"></path>
+							</svg>
 						</button>
+						<div class="video-modal__content">
+							<iframe class="video-modal__iframe" src="" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<section class="service">
+					<div class="service__container">
+						<h2 data-fls-title="" class="title">Наши услуги</h2>
+						<div class="service__items">
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+							<article class="service__item">
+								<img class="service__img" alt="Image" src="./assets/img/service/01.webp">
+								<h3 class="service__item-title">Замена глушителя</h3>
+								<div class="service__bottom">
+									<a data-fls-popup-link="popup" class="service__button" href="#">Записаться</a>
+									<div class="service__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewbox="0 0 12 11">
+											<g>
+												<g>
+													<path fill="#fff" d="M0 6.322h6.22v4.235L12 5.277 6.22 0v4.233H0z"></path>
+												</g>
+											</g>
+										</svg>
+									</div>
+								</div>
+							</article>
+						</div>
+						<a data-fls-popup-link="popup" class="service__link button" href="#">Записаться</a>
+					</div>
+				</section>
+				<section data-fls-parallax-parent="" class="examples">
+					<img class="examples__img-bg" alt="Image" src="./assets/img/examples/bg.webp">
+					<img data-fls-parallax="" data-fls-parallax-coefficient="20" class="examples__decor-avto" alt="Image" src="./assets/img/examples/decor-auto.webp">
+					<div class="examples__body">
+						<div class="examples__content">
+							<h2 class="examples__title">Примеры наших работ</h2>
+							<a class="examples__button button button--h-45" data-fls-popup-link="popup" href="#">Записаться в сервис</a>
+						</div>
+						<div class="examples-right" data-fls-slider="">
+							<!-- Родительский горизонтальный Swiper -->
+							<div class="swiper examples-swiper">
+								<div class="swiper-wrapper">
+									<!-- Слайд 1 -->
+									<div class="swiper-slide">
+										<div class="example">
+											<div class="example__top">
+												<div class="example__title">Тюнинг глушителя</div>
+												<div class="example__auto">Kia Ceed</div>
+											</div>
+											<div class="example__sliders">
+												<!-- Большой превью слайдер -->
+												<div class="swiper preview-swiper" data-preview-swiper="">
+													<div data-fls-gallery="" class="swiper-wrapper">
+														<a href="./assets/img/examples/01.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/01.webp">
+														</a>
+														<a href="./assets/img/examples/02.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/02.webp">
+														</a>
+														<a href="./assets/img/examples/03.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/03.webp">
+														</a>
+														<a href="./assets/img/examples/04.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/04.webp">
+														</a>
+													</div>
+													<!--
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+-->
+												</div>
+												<!-- Вертикальный слайдер миниатюр -->
+												<div class="thumbs-swiper-container">
+													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/01.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/02.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/03.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/04.webp">
+															</div>
+														</div>
+													</div>
+													<div class="thumbs-prev">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+													<div class="thumbs-next">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="example__items">
+												<div class="example__item">
+													<div class="example__item-title">Исходные данные:</div>
+													<p class="example__item-text">
+														Владелец Kia Ceed приехал к нам с пожеланием развести
+                      выхлопную систему на две стороны и установить насадки,
+                      подходящие под стиль бампера.
+													</p>
+												</div>
+												<div class="example__item">
+													<div class="example__item-title">Наше решение:</div>
+													<p class="example__item-text">
+														Изготовили раздвоение глушителя, установили насадки
+                      глушителя фирмы Buzzer
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 2 -->
+									<div class="swiper-slide">
+										<div class="example">
+											<div class="example__top">
+												<div class="example__title">Тюнинг глушителя</div>
+												<div class="example__auto">Kia Ceed</div>
+											</div>
+											<div class="example__sliders">
+												<!-- Большой превью слайдер -->
+												<div class="swiper preview-swiper" data-preview-swiper="">
+													<div data-fls-gallery="" class="swiper-wrapper">
+														<a href="./assets/img/examples/01.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/01.webp">
+														</a>
+														<a href="./assets/img/examples/02.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/02.webp">
+														</a>
+														<a href="./assets/img/examples/03.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/03.webp">
+														</a>
+														<a href="./assets/img/examples/04.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/04.webp">
+														</a>
+													</div>
+													<!--
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+-->
+												</div>
+												<!-- Вертикальный слайдер миниатюр -->
+												<div class="thumbs-swiper-container">
+													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/01.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/02.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/03.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/04.webp">
+															</div>
+														</div>
+													</div>
+													<div class="thumbs-prev">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+													<div class="thumbs-next">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="example__items">
+												<div class="example__item">
+													<div class="example__item-title">Исходные данные:</div>
+													<p class="example__item-text">
+														Владелец Kia Ceed приехал к нам с пожеланием развести
+                      выхлопную систему на две стороны и установить насадки,
+                      подходящие под стиль бампера.
+													</p>
+												</div>
+												<div class="example__item">
+													<div class="example__item-title">Наше решение:</div>
+													<p class="example__item-text">
+														Изготовили раздвоение глушителя, установили насадки
+                      глушителя фирмы Buzzer
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Слайд 3 -->
+									<div class="swiper-slide">
+										<div class="example">
+											<div class="example__top">
+												<div class="example__title">Тюнинг глушителя</div>
+												<div class="example__auto">Kia Ceed</div>
+											</div>
+											<div class="example__sliders">
+												<!-- Большой превью слайдер -->
+												<div class="swiper preview-swiper" data-preview-swiper="">
+													<div data-fls-gallery="" class="swiper-wrapper">
+														<a href="./assets/img/examples/01.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/01.webp">
+														</a>
+														<a href="./assets/img/examples/02.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/02.webp">
+														</a>
+														<a href="./assets/img/examples/03.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/03.webp">
+														</a>
+														<a href="./assets/img/examples/04.webp" class="swiper-slide">
+															<img alt="" src="./assets/img/examples/04.webp">
+														</a>
+													</div>
+													<!--
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+-->
+												</div>
+												<!-- Вертикальный слайдер миниатюр -->
+												<div class="thumbs-swiper-container">
+													<div class="swiper thumbs-swiper" data-thumbs-swiper="">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/01.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/02.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/03.webp">
+															</div>
+															<div class="swiper-slide">
+																<img alt="" src="./assets/img/examples/04.webp">
+															</div>
+														</div>
+													</div>
+													<div class="thumbs-prev">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+													<div class="thumbs-next">
+														<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512">
+															<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="example__items">
+												<div class="example__item">
+													<div class="example__item-title">Исходные данные:</div>
+													<p class="example__item-text">
+														Владелец Kia Ceed приехал к нам с пожеланием развести
+                      выхлопную систему на две стороны и установить насадки,
+                      подходящие под стиль бампера.
+													</p>
+												</div>
+												<div class="example__item">
+													<div class="example__item-title">Наше решение:</div>
+													<p class="example__item-text">
+														Изготовили раздвоение глушителя, установили насадки
+                      глушителя фирмы Buzzer
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="examples-navigacions">
+						<div class="examples-parent-pagination"></div>
+						<div class="examples-navigacions-arrows">
+							<div class="examples-parent-prev">
+								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+									<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+								</svg>
+							</div>
+							<div class="examples-parent-next">
+								<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+									<path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="popular">
+					<div class="popular__container">
+						<h2 data-fls-title="" class="title">
+							<span>Популярные</span>
+							виды работ
+						</h2>
+						<div data-fls-tabs="" data-fls-tabs-animate="1000" class="popular__tabs">
+							<nav data-fls-tabs-titles="" class="popular__navigation">
+								<button type="button" class="popular__title --tab-active">Отделка балконов</button>
+								<button type="button" class="popular__title">Остекление балконов</button>
+								<button type="button" class="popular__title">Ремонт балконов</button>
+								<button type="button" class="popular__title">Утепление балконов</button>
+							</nav>
+							<div data-fls-tabs-body="" class="popular__content">
+								<div class="popular__body tab-popular">
+									<div class="tab-popular__body">
+										<div data-fls-gallery="" class="tab-popular__images">
+											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
+												<img alt="Image" src="./assets/img/gallery/01.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
+												<img alt="Image" src="./assets/img/gallery/02.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
+												<img alt="Image" src="./assets/img/gallery/04.webp">
+											</a>
+										</div>
+										<div class="tab-popular__content">
+											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
+											<p class="tab-popular__text">
+												Система позволяет не использовать потолочную вставку.
+                  Достигается минимальное расстояние от потолка к стене.
+                  Бесщелевая система применяется в любых помещениях. Профили
+                  образуют прочное основание.
+											</p>
+											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
+											<ul class="tab-popular__list">
+												<li>нет зазора между стеной и потолком</li>
+												<li>стык не надо маскировать вставкой</li>
+												<li>четкие и ровные углы</li>
+												<li>внешне похож на гипсокартон</li>
+												<li>можно установить тканевые и пвх полотна</li>
+											</ul>
+											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
+										</div>
+									</div>
+								</div>
+								<div class="popular__body tab-popular">
+									<div class="tab-popular__body">
+										<div data-fls-gallery="" class="tab-popular__images">
+											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
+												<img alt="Image" src="./assets/img/gallery/01.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
+												<img alt="Image" src="./assets/img/gallery/02.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
+												<img alt="Image" src="./assets/img/gallery/04.webp">
+											</a>
+										</div>
+										<div class="tab-popular__content">
+											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
+											<p class="tab-popular__text">
+												Система позволяет не использовать потолочную вставку.
+                  Достигается минимальное расстояние от потолка к стене.
+                  Бесщелевая система применяется в любых помещениях. Профили
+                  образуют прочное основание.
+											</p>
+											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
+											<ul class="tab-popular__list">
+												<li>нет зазора между стеной и потолком</li>
+												<li>стык не надо маскировать вставкой</li>
+												<li>четкие и ровные углы</li>
+												<li>внешне похож на гипсокартон</li>
+												<li>можно установить тканевые и пвх полотна</li>
+											</ul>
+											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
+										</div>
+									</div>
+								</div>
+								<div class="popular__body tab-popular">
+									<div class="tab-popular__body">
+										<div data-fls-gallery="" class="tab-popular__images">
+											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
+												<img alt="Image" src="./assets/img/gallery/01.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
+												<img alt="Image" src="./assets/img/gallery/02.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
+												<img alt="Image" src="./assets/img/gallery/04.webp">
+											</a>
+										</div>
+										<div class="tab-popular__content">
+											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
+											<p class="tab-popular__text">
+												Система позволяет не использовать потолочную вставку.
+                  Достигается минимальное расстояние от потолка к стене.
+                  Бесщелевая система применяется в любых помещениях. Профили
+                  образуют прочное основание.
+											</p>
+											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
+											<ul class="tab-popular__list">
+												<li>нет зазора между стеной и потолком</li>
+												<li>стык не надо маскировать вставкой</li>
+												<li>четкие и ровные углы</li>
+												<li>внешне похож на гипсокартон</li>
+												<li>можно установить тканевые и пвх полотна</li>
+											</ul>
+											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
+										</div>
+									</div>
+								</div>
+								<div class="popular__body tab-popular">
+									<div class="tab-popular__body">
+										<div data-fls-gallery="" class="tab-popular__images">
+											<a class="tab-popular__img-bg" href="./assets/img/gallery/01.webp">
+												<img alt="Image" src="./assets/img/gallery/01.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/02.webp">
+												<img alt="Image" src="./assets/img/gallery/02.webp">
+											</a>
+											<a class="tab-popular__img" href="./assets/img/gallery/04.webp">
+												<img alt="Image" src="./assets/img/gallery/04.webp">
+											</a>
+										</div>
+										<div class="tab-popular__content">
+											<h3 class="tab-popular__title">Бесщелевые натяжные потолки Kraab 4.0</h3>
+											<p class="tab-popular__text">
+												Система позволяет не использовать потолочную вставку.
+                  Достигается минимальное расстояние от потолка к стене.
+                  Бесщелевая система применяется в любых помещениях. Профили
+                  образуют прочное основание.
+											</p>
+											<p class="tab-popular__text">Особенности бесщелевых потолков:</p>
+											<ul class="tab-popular__list">
+												<li>нет зазора между стеной и потолком</li>
+												<li>стык не надо маскировать вставкой</li>
+												<li>четкие и ровные углы</li>
+												<li>внешне похож на гипсокартон</li>
+												<li>можно установить тканевые и пвх полотна</li>
+											</ul>
+											<a href="@" data-fls-popup-link="popup" class="tab-popular__button button">Оставить заявку</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="stamps">
+					<div class="stamps__container">
+						<div data-fls-title="" class="stamps__title title">
+							<span>Марки,</span>
+							с которыми мы работаем
+						</div>
+					</div>
+					<div data-fls-marquee="" data-fls-marquee-pause="">
+						<div>
+							<img src="./assets/img/stamps/01.svg" alt="Image">
+						</div>
+						<div>
+							<img src="./assets/img/stamps/02.svg" alt="Image">
+						</div>
+						<div>
+							<img src="./assets/img/stamps/03.svg" alt="Image">
+						</div>
+						<div>
+							<img src="./assets/img/stamps/04.svg" alt="Image">
+						</div>
+						<div>
+							<img src="./assets/img/stamps/06.svg" alt="Image">
+						</div>
+					</div>
+				</section>
+				<section class="answers">
+					<div class="answers__container">
+						<h2 data-fls-title="" class="title">Часто задаваемые вопросы</h2>
+						<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
+								<div class="spollers__body">
+									<p>
+										Выхлопная система автомобиля заводской сборки предназначена для
+              снижения шума отработанных газов, выходящих из двигателя, что
+              неизбежно приводит к уменьшению его мощности и лишает машину части
+              своих возможностей, делает звук выхлопа более мягким и
+              приглушенным. И далеко не всем автовладельцам такая ситуация
+              нравится: они хотят в полной мере раскрыть возможности мотора,
+              услышать истинный звук мощи в его голосе. Сделать это помогает
+              тюнинг выхлопной системы, который реализуется по нескольким
+              векторам.
+									</p>
+									<ol>
+										<li>Внешний тюнинг.</li>
+										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
+										<li>Повышение мощности.</li>
+									</ol>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Внешний тюнинг выхлопной системы: что это и зачем?</summary>
+								<div class="spollers__body">
+									<p>
+										Раздвоение трубы. Выпускная труба разводится на две части, как у
+              спорткаров. Раздвоение может быть полным – на каждый отвод
+              ставится свой глушитель, или неполным – один глушитель подает
+              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
+              турбодизельными ДВС, как разделение трубы на две части.
+									</p>
+									<p>
+										Раздвоение трубы. Выпускная труба разводится на две части, как у
+              спорткаров. Раздвоение может быть полным – на каждый отвод
+              ставится свой глушитель, или неполным – один глушитель подает
+              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
+              турбодизельными ДВС, как разделение трубы на две части.
+									</p>
+									<ul>
+										<li>Внешний тюнинг.</li>
+										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
+										<li>Повышение мощности.</li>
+									</ul>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
+								<div class="spollers__body">
+									<p>
+										Изменение звучания выхлопа с приданием ему спортивных нот, рокота,
+              рева, басовитых звуков осуществляется с помощью различных методов:
+									</p>
+									<ul>
+										<li>
+											монтаж новой банки глушителя – штатный элемент заменяют на
+                прямоточную заднюю банку, что меняет тональность выхлопа и
+                делает его громче;
+										</li>
+										<li>
+											модернизация стандартной банки глушителя – к такому способу
+                обычно прибегают владельцы машин на гарантии или тех, для
+                которых очень сложно подобрать банку для тюнинга по параметрам.
+                Специалисты вскрывают элемент и изменяют его устройство для
+                того, чтобы он зазвучал по-новому;
+										</li>
+										<li>
+											активный выхлоп – в данном варианте специалисты устанавливают
+                под днищем ТС источники звука (1 или 2), имитирующие звучание
+                выхлопа спорткара. Они работают синхронно с двигателем благодаря
+                сап-шине, могут воспроизводить запись конкретной модели авто или
+                создавать оригинальный звук выхлопа.
+										</li>
+										<li></li>
+									</ul>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
+								<div class="spollers__body">
+									<p>
+										Выхлопная система автомобиля заводской сборки предназначена для
+              снижения шума отработанных газов, выходящих из двигателя, что
+              неизбежно приводит к уменьшению его мощности и лишает машину части
+              своих возможностей, делает звук выхлопа более мягким и
+              приглушенным. И далеко не всем автовладельцам такая ситуация
+              нравится: они хотят в полной мере раскрыть возможности мотора,
+              услышать истинный звук мощи в его голосе. Сделать это помогает
+              тюнинг выхлопной системы, который реализуется по нескольким
+              векторам.
+									</p>
+									<ol>
+										<li>Внешний тюнинг.</li>
+										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
+										<li>Повышение мощности.</li>
+									</ol>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Внешний тюнинг выхлопной системы: что это и зачем?</summary>
+								<div class="spollers__body">
+									<p>
+										Раздвоение трубы. Выпускная труба разводится на две части, как у
+              спорткаров. Раздвоение может быть полным – на каждый отвод
+              ставится свой глушитель, или неполным – один глушитель подает
+              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
+              турбодизельными ДВС, как разделение трубы на две части.
+									</p>
+									<p>
+										Раздвоение трубы. Выпускная труба разводится на две части, как у
+              спорткаров. Раздвоение может быть полным – на каждый отвод
+              ставится свой глушитель, или неполным – один глушитель подает
+              выхлоп на два выхода. Есть и такой вариант для машин с турбо- и
+              турбодизельными ДВС, как разделение трубы на две части.
+									</p>
+									<ul>
+										<li>Внешний тюнинг.</li>
+										<li>Изменение звучания выхлопа (аудио- или акустический тюнинг).</li>
+										<li>Повышение мощности.</li>
+									</ul>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Задачи и виды тюнинга выхлопной системы</summary>
+								<div class="spollers__body">
+									<p>
+										Изменение звучания выхлопа с приданием ему спортивных нот, рокота,
+              рева, басовитых звуков осуществляется с помощью различных методов:
+									</p>
+									<ul>
+										<li>
+											монтаж новой банки глушителя – штатный элемент заменяют на
+                прямоточную заднюю банку, что меняет тональность выхлопа и
+                делает его громче;
+										</li>
+										<li>
+											модернизация стандартной банки глушителя – к такому способу
+                обычно прибегают владельцы машин на гарантии или тех, для
+                которых очень сложно подобрать банку для тюнинга по параметрам.
+                Специалисты вскрывают элемент и изменяют его устройство для
+                того, чтобы он зазвучал по-новому;
+										</li>
+										<li>
+											активный выхлоп – в данном варианте специалисты устанавливают
+                под днищем ТС источники звука (1 или 2), имитирующие звучание
+                выхлопа спорткара. Они работают синхронно с двигателем благодаря
+                сап-шине, могут воспроизводить запись конкретной модели авто или
+                создавать оригинальный звук выхлопа.
+										</li>
+										<li></li>
+									</ul>
+								</div>
+							</details>
+						</div>
+					</div>
+				</section>
+				<section class="questions">
+					<div class="questions__container">
+						<div data-fls-parallax-parent="" class="questions__body">
+							<img class="questions__decor" src="./assets/img/questions/question.svg" alt="Image">
+							<div class="questions__content">
+								<h2 data-fls-title="" class="title title--white title--notmargin">Остались вопросы?</h2>
+								<p class="questions__text">
+									Оставьте заявку на бесплатную консультацию по телефону или переписке
+            в удобном вам менеджере, и мы свяжемся с вами в ближайшее время.
+								</p>
+								<a data-fls-popup-link="popup" class="questions__button button button--black button--h-45" href="#">Получить консультацию</a>
+							</div>
+							<picture data-fls-parallax="" data-fls-parallax-coefficient="20" class="questions__image">
+								<img alt="Image" src="./assets/img/questions/avto.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="contacts">
+					<div class="contacts__container">
+						<div class="contacts__body">
+							<h2 class="contacts__title">
+								Контакты
+								<span>КАК НАС НАЙТИ</span>
+							</h2>
+							<div class="contacts__items">
+								<div class="contacts__item">
+									<div class="contacts__icon">
+										<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.19549 8.66668C2.29474 7.14061 1.6988 5.36467 1.45635 3.38747C1.38533 2.80823 1.34982 2.51862 1.45369 2.22371C1.56053 1.92038 1.83049 1.6153 2.11856 1.47234C2.39863 1.33334 2.72994 1.33334 3.39257 1.33334C3.93243 1.33334 4.20235 1.33334 4.42988 1.41919C4.68305 1.51472 4.90117 1.68502 5.05525 1.90747C5.19372 2.10738 5.25919 2.36924 5.39012 2.89298L5.47165 3.21909C5.66529 3.99364 5.76211 4.38091 5.74752 4.76097C5.7346 5.09753 5.65804 5.4286 5.52189 5.73667C5.36814 6.08454 5.11113 6.39 4.59711 7.00088L3.19549 8.66668ZM3.19549 8.66668C4.16556 10.3101 5.48916 11.6637 7.10548 12.6667M7.10548 12.6667C8.68161 13.6447 10.5361 14.2892 12.6126 14.5439C13.1919 14.6149 13.4816 14.6504 13.7765 14.5465C14.0798 14.4397 14.3849 14.1697 14.5279 13.8817C14.6669 13.6016 14.6669 13.2635 14.6669 12.5874C14.6669 12.0611 14.6669 11.7979 14.581 11.5703C14.4855 11.3171 14.3152 11.0991 14.0927 10.9449C13.8928 10.8065 13.6309 10.741 13.1072 10.6101L12.635 10.4921C11.912 10.3113 11.5505 10.2209 11.1933 10.2285C10.8769 10.2353 10.5643 10.2983 10.27 10.4146C9.93781 10.5459 9.63955 10.7693 9.04295 11.2159L7.10548 12.6667ZM9.33355 4.66668C9.81528 4.66668 10.2969 4.97606 10.6669 5.37128C11.0649 5.79652 11.3335 6.32114 11.3335 6.66668M9.33355 2.66668C11.5427 2.66668 13.3335 4.45754 13.3335 6.66668" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+									<a class="contacts__phone" href="tel:78125096653">+7 (812) 509-66-53</a>
+								</div>
+								<div class="contacts__item">
+									<div class="contacts__icon">
+										<svg width="14" height="16" viewbox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M12.1543 4.00001C12.6919 4.84958 13 5.86703 13 7.00001C13 12.2345 8.33333 14.6665 7 14.6665C5.66667 14.6665 1 12.2345 1 7.00001C1 3.66668 3.66667 1.33334 7 1.33334C8.0614 1.33334 9.05513 1.56992 9.9168 2.00001M5 7.33334C5 8.43794 5.8954 9.33334 7 9.33334C8.1046 9.33334 9 8.43794 9 7.33334C9 6.22878 8.1046 5.33334 7 5.33334" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+									<address class="contacts__address">
+										Санкт-Петербург, Заневский пр-т, 77 ул. Бухарестская, 16 ул.
+              Руставели, 11а
+									</address>
+								</div>
+								<a href="#" class="contacts__item">
+									<div class="contacts__icon">
+										<img alt="Image" src="./assets/img/icon-social/viber.webp">
+									</div>
+									<div class="contacts__text">Whatsapp</div>
+								</a>
+								<a href="#" class="contacts__item">
+									<div class="contacts__icon">
+										<img alt="Image" src="./assets/img/icon-social/telegram.webp">
+									</div>
+									<div class="contacts__text">Telegram</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__map">
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae341eea60766637d6229388975a5fbd8469a3bccecc82f0fb13ec4f3b2cc10a8&amp;source=constructor" frameborder="0"></iframe>
 					</div>
 				</section>
 			</main>
 			<footer data-fls-footer="" class="footer">
 				<div class="footer__container">
-					<div data-fls-spollers="992,max" class="footer__contact">
-						<details class="footer__contact-body">
-							<summary class="footer__contact-title">Контакты:</summary>
-							<div class="footer__contact-content">
-								<div class="footer__contact-block">
-									<div class="footer__contact-item">
-										<div class="footer__contact-name">Почта:</div>
-										<div class="footer__contact-link">
-											<i class="--icon-arrow-right-2"></i>
-											<a href="mailto:ADR-OOO@yandex.ru" class="footer__contact-link">ADR-OOO@yandex.ru</a>
-										</div>
+					<div class="footer__top">
+						<div class="footer__info info-footer">
+							<a class="info-footer__logo" href="#">
+								<img src="./assets/img/header/Logo.svg" alt="Image">
+							</a>
+							<div class="info-footer__socials">
+								<a href="tel:" class="info-footer__social info-footer__social--phone">
+									<div class="info-footer__social-icon">
+										<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.19549 8.66668C2.29474 7.14061 1.6988 5.36467 1.45635 3.38747C1.38533 2.80823 1.34982 2.51862 1.45369 2.22371C1.56053 1.92038 1.83049 1.6153 2.11856 1.47234C2.39863 1.33334 2.72994 1.33334 3.39257 1.33334C3.93243 1.33334 4.20235 1.33334 4.42988 1.41919C4.68305 1.51472 4.90117 1.68502 5.05525 1.90747C5.19372 2.10738 5.25919 2.36924 5.39012 2.89298L5.47165 3.21909C5.66529 3.99364 5.76211 4.38091 5.74752 4.76097C5.7346 5.09753 5.65804 5.4286 5.52189 5.73667C5.36814 6.08454 5.11113 6.39 4.59711 7.00088L3.19549 8.66668ZM3.19549 8.66668C4.16556 10.3101 5.48916 11.6637 7.10548 12.6667M7.10548 12.6667C8.68161 13.6447 10.5361 14.2892 12.6126 14.5439C13.1919 14.6149 13.4816 14.6504 13.7765 14.5465C14.0798 14.4397 14.3849 14.1697 14.5279 13.8817C14.6669 13.6016 14.6669 13.2635 14.6669 12.5874C14.6669 12.0611 14.6669 11.7979 14.581 11.5703C14.4855 11.3171 14.3152 11.0991 14.0927 10.9449C13.8928 10.8065 13.6309 10.741 13.1072 10.6101L12.635 10.4921C11.912 10.3113 11.5505 10.2209 11.1933 10.2285C10.8769 10.2353 10.5643 10.2983 10.27 10.4146C9.93781 10.5459 9.63955 10.7693 9.04295 11.2159L7.10548 12.6667ZM9.33355 4.66668C9.81528 4.66668 10.2969 4.97606 10.6669 5.37128C11.0649 5.79652 11.3335 6.32114 11.3335 6.66668M9.33355 2.66668C11.5427 2.66668 13.3335 4.45754 13.3335 6.66668" stroke="#DBD9D9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
 									</div>
-									<div class="footer__contact-item">
-										<div class="footer__contact-name">Телефон:</div>
-										<div class="footer__contact-link">
-											<i class="--icon-arrow-right-2"></i>
-											<a href="tel:79242424343" class="footer__contact-link">+7 92 42 42 43 43</a>
-										</div>
+									<div class="info-footer__social-number">+7 (812) 509-66-53</div>
+								</a>
+								<a href="#" class="info-footer__social">
+									<div class="info-footer__social-icon">
+										<img alt="Image" src="./assets/img/icon-social/viber.webp">
 									</div>
-									<ul class="footer__contact-mess">
-										<li>
-											<a href="https://t.me/adrdv25" target="_blank">
-												<img alt="Telegram" src="./assets/img/icon-social/telegram.png">
-												<span>Telegram</span>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr" target="_blank">
-												<img alt="Vk" src="./assets/img/icon-social/instagram.png">
-												<span>instagram</span>
-											</a>
-										</li>
-									</ul>
-									<a data-fls-popup-link="popup" class="footer__button footer__button--icon-arrow-right-2" href="#">Заказать консультацию</a>
-								</div>
-							</div>
-						</details>
-					</div>
-					<div class="footer__bottom bottom-footer">
-						<div class="bottom-footer__info">
-							<div class="bottom-footer__info-item">
-								<span class="bottom-footer__info-title">Наименование:</span>
-								<span class="bottom-footer__info-text">ООО «АДР-ДВ»</span>
-							</div>
-							<div class="bottom-footer__info-item">
-								<span class="bottom-footer__info-title">Юридический адрес:</span>
-								<span class="bottom-footer__info-text">690105, Россия, Приморский край, г Владивосток, ул. Бородинская, д. 26, офис 8</span>
-							</div>
-							<div class="bottom-footer__info-item">
-								<span class="bottom-footer__info-title">ИНН:</span>
-								<span class="bottom-footer__info-text">2543185502</span>
+									<div class="info-footer__social-number">Whatsapp</div>
+								</a>
+								<a href="#" class="info-footer__social">
+									<div class="info-footer__social-icon">
+										<img alt="Image" src="./assets/img/icon-social/telegram.webp">
+									</div>
+									<div class="info-footer__social-number">Telegram</div>
+								</a>
 							</div>
 						</div>
-						<div class="bottom-footer__info">
-							<div class="bottom-footer__info-item">
-								<span class="bottom-footer__info-title">ОГРН:</span>
-								<span class="bottom-footer__info-text">1242500015504</span>
+						<div class="footer__navigacion navigacion-footer">
+							<div class="navigacion-footer__item">
+								<a class="navigacion-footer__item-rewies" href="#">Отзывы</a>
 							</div>
-							<div class="bottom-footer__info-item">
-								<span class="bottom-footer__info-title">КПП:</span>
-								<span class="bottom-footer__info-text">254301001</span>
-							</div>
-							<a class="bottom-footer__info-policy" href="#">Политика конфиденциальности</a>
+							<!-- data-fls-scrollto=".класс блока"   для нужной навигации -->
+							<nav class="navigacion-footer__item">
+								<ul class="navigacion-footer__list">
+									<li>
+										<a href="#">Замена банок глушителя</a>
+									</li>
+									<li>
+										<a href="#">Управляемый выхлоп</a>
+									</li>
+									<li>
+										<a href="#">Активный выхлоп</a>
+									</li>
+									<li>
+										<a href="#">Раздвоение выхлопной системы</a>
+									</li>
+									<li>
+										<a href="#">Насадки глушителя</a>
+									</li>
+									<li>
+										<a href="#">Тюнинг звука выхлопа</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="navigacion-footer__item">
+								<ul class="navigacion-footer__list">
+									<li>
+										<a href="#">Даунпайп</a>
+									</li>
+									<li>
+										<a href="#">Изготовление выхлопной системы</a>
+									</li>
+									<li>
+										<a href="#">Настройка звука выхлопа</a>
+									</li>
+									<li>
+										<a href="#">Установка спортивного катализатора</a>
+									</li>
+									<li>
+										<a href="#">Тюнинг выпускного коллектора</a>
+									</li>
+									<li>
+										<a href="#">Обмотка коллектора</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<div class="footer__copyright">Copyright © 2026</div>
+						<div class="footer__privacy">
+							<a href="#" target="_blank">Политика конфиденциальности</a>
+							<a href="#" target="_blank">Обработка персональных данных</a>
+							<a href="#" target="_blank">Публичная оферта</a>
+							<a href="#" target="_blank">Рекламные и информационные рассылки</a>
 						</div>
 					</div>
 				</div>
