@@ -139,6 +139,12 @@ let bodyLock = (delay = 500) => {
     }, delay);
   }
 };
+function getDigFormat(item, sepp = " ") {
+  return item.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, `$1${sepp}`);
+}
+function uniqArray(array) {
+  return array.filter((item, index, self2) => self2.indexOf(item) === index);
+}
 function dataMediaQueries(array, dataSetValue) {
   const media = Array.from(array).filter((item) => item.dataset[dataSetValue]).map((item) => {
     const [value, type = "max"] = item.dataset[dataSetValue].split(",");
@@ -9369,6 +9375,48 @@ function initSliders() {
   });
 }
 document.querySelector("[data-fls-slider]") ? window.addEventListener("load", initSliders) : null;
+function digitsCounter() {
+  function digitsCountersInit(digitsCountersItems) {
+    let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-fls-digcounter]");
+    if (digitsCounters.length) {
+      digitsCounters.forEach((digitsCounter2) => {
+        if (digitsCounter2.hasAttribute("data-fls-digcounter-go")) return;
+        digitsCounter2.setAttribute("data-fls-digcounter-go", "");
+        digitsCounter2.dataset.flsDigcounter = digitsCounter2.innerHTML;
+        digitsCounter2.innerHTML = `0`;
+        digitsCountersAnimate(digitsCounter2);
+      });
+    }
+  }
+  function digitsCountersAnimate(digitsCounter2) {
+    let startTimestamp = null;
+    const duration = parseFloat(digitsCounter2.dataset.flsDigcounterSpeed) ? parseFloat(digitsCounter2.dataset.flsDigcounterSpeed) : 1e3;
+    const startValue = parseFloat(digitsCounter2.dataset.flsDigcounter);
+    const format = digitsCounter2.dataset.flsDigcounterFormat ? digitsCounter2.dataset.flsDigcounterFormat : " ";
+    const startPosition = 0;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress * (startPosition + startValue));
+      digitsCounter2.innerHTML = typeof digitsCounter2.dataset.flsDigcounterFormat !== "undefined" ? getDigFormat(value, format) : value;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        digitsCounter2.removeAttribute("data-fls-digcounter-go");
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+  function digitsCounterAction(e) {
+    const entry = e.detail.entry;
+    const targetElement = entry.target;
+    if (targetElement.querySelectorAll("[data-fls-digcounter]").length && !targetElement.querySelectorAll("[data-fls-watcher]").length && entry.isIntersecting) {
+      digitsCountersInit(targetElement.querySelectorAll("[data-fls-digcounter]"));
+    }
+  }
+  document.addEventListener("watcherCallback", digitsCounterAction);
+}
+document.querySelector("[data-fls-digcounter]") ? window.addEventListener("load", digitsCounter) : null;
 class BeforeAfter {
   constructor(props) {
     let defaultConfig = {
@@ -9452,6 +9500,124 @@ if (document.readyState === "loading") {
 } else {
   new BeforeAfter({});
 }
+class ScrollWatcher {
+  constructor(props) {
+    let defaultConfig = {
+      logging: true
+    };
+    this.config = Object.assign(defaultConfig, props);
+    this.observer;
+    !document.documentElement.hasAttribute("data-fls-watch") ? this.scrollWatcherRun() : null;
+  }
+  // Обновляем конструктор
+  scrollWatcherUpdate() {
+    this.scrollWatcherRun();
+  }
+  // Запускаем конструктор
+  scrollWatcherRun() {
+    document.documentElement.setAttribute("data-fls-watch", "");
+    this.scrollWatcherConstructor(document.querySelectorAll("[data-fls-watcher]"));
+  }
+  // Конструктор наблюдателей
+  scrollWatcherConstructor(items) {
+    if (items.length) {
+      let uniqParams = uniqArray(Array.from(items).map(function(item) {
+        if (item.dataset.flsWatcher === "navigator" && !item.dataset.flsWatcherThreshold) {
+          let valueOfThreshold;
+          if (item.clientHeight > 2) {
+            valueOfThreshold = window.innerHeight / 2 / (item.clientHeight - 1);
+            if (valueOfThreshold > 1) {
+              valueOfThreshold = 1;
+            }
+          } else {
+            valueOfThreshold = 1;
+          }
+          item.setAttribute(
+            "data-fls-watcher-threshold",
+            valueOfThreshold.toFixed(2)
+          );
+        }
+        return `${item.dataset.flsWatcherRoot ? item.dataset.flsWatcherRoot : null}|${item.dataset.flsWatcherMargin ? item.dataset.flsWatcherMargin : "0px"}|${item.dataset.flsWatcherThreshold ? item.dataset.flsWatcherThreshold : 0}`;
+      }));
+      uniqParams.forEach((uniqParam) => {
+        let uniqParamArray = uniqParam.split("|");
+        let paramsWatch = {
+          root: uniqParamArray[0],
+          margin: uniqParamArray[1],
+          threshold: uniqParamArray[2]
+        };
+        let groupItems = Array.from(items).filter(function(item) {
+          let watchRoot = item.dataset.flsWatcherRoot ? item.dataset.flsWatcherRoot : null;
+          let watchMargin = item.dataset.flsWatcherMargin ? item.dataset.flsWatcherMargin : "0px";
+          let watchThreshold = item.dataset.flsWatcherThreshold ? item.dataset.flsWatcherThreshold : 0;
+          if (String(watchRoot) === paramsWatch.root && String(watchMargin) === paramsWatch.margin && String(watchThreshold) === paramsWatch.threshold) {
+            return item;
+          }
+        });
+        let configWatcher = this.getScrollWatcherConfig(paramsWatch);
+        this.scrollWatcherInit(groupItems, configWatcher);
+      });
+    }
+  }
+  // Функция создания настроек
+  getScrollWatcherConfig(paramsWatch) {
+    let configWatcher = {};
+    if (document.querySelector(paramsWatch.root)) {
+      configWatcher.root = document.querySelector(paramsWatch.root);
+    } else if (paramsWatch.root !== "null") ;
+    configWatcher.rootMargin = paramsWatch.margin;
+    if (paramsWatch.margin.indexOf("px") < 0 && paramsWatch.margin.indexOf("%") < 0) {
+      return;
+    }
+    if (paramsWatch.threshold === "prx") {
+      paramsWatch.threshold = [];
+      for (let i = 0; i <= 1; i += 5e-3) {
+        paramsWatch.threshold.push(i);
+      }
+    } else {
+      paramsWatch.threshold = paramsWatch.threshold.split(",");
+    }
+    configWatcher.threshold = paramsWatch.threshold;
+    return configWatcher;
+  }
+  // Функция создания нового наблюдателя с вашими настройками
+  scrollWatcherCreate(configWatcher) {
+    this.observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        this.scrollWatcherCallback(entry, observer);
+      });
+    }, configWatcher);
+  }
+  // Функция инициализации наблюдателя с его настройками
+  scrollWatcherInit(items, configWatcher) {
+    this.scrollWatcherCreate(configWatcher);
+    items.forEach((item) => this.observer.observe(item));
+  }
+  // Функция обработки базовых действий точек срабатывания
+  scrollWatcherIntersecting(entry, targetElement) {
+    if (entry.isIntersecting) {
+      !targetElement.classList.contains("--watcher-view") ? targetElement.classList.add("--watcher-view") : null;
+    } else {
+      targetElement.classList.contains("--watcher-view") ? targetElement.classList.remove("--watcher-view") : null;
+    }
+  }
+  // Функция отключения слежения за объектом
+  scrollWatcherOff(targetElement, observer) {
+    observer.unobserve(targetElement);
+  }
+  // Функция обработки наблюдения
+  scrollWatcherCallback(entry, observer) {
+    const targetElement = entry.target;
+    this.scrollWatcherIntersecting(entry, targetElement);
+    targetElement.hasAttribute("data-fls-watcher-once") && entry.isIntersecting ? this.scrollWatcherOff(targetElement, observer) : null;
+    document.dispatchEvent(new CustomEvent("watcherCallback", {
+      detail: {
+        entry
+      }
+    }));
+  }
+}
+document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", () => new ScrollWatcher({})) : null;
 (function() {
   const state = {
     step: 1,
@@ -12498,58 +12664,3 @@ if (galleries.length) {
   });
 }
 window.addEventListener("load", initGallery());
-document.addEventListener("DOMContentLoaded", () => {
-  const counters = document.querySelectorAll("[data-count]");
-  const animateCounter = (el) => {
-    const target = parseInt(el.getAttribute("data-count"));
-    const suffix = el.getAttribute("data-suffix") || "";
-    let current = 0;
-    const increment = Math.ceil(target / 60);
-    const duration = 1500;
-    const stepTime = Math.floor(duration / 60);
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        current = target;
-        clearInterval(timer);
-      }
-      el.textContent = current + suffix;
-    }, stepTime);
-  };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        animateCounter(el);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  counters.forEach((counter) => observer.observe(counter));
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const block = document.querySelector("[data-fls-blocktext]");
-  const content = block?.querySelector("[data-fls-showmore-content]");
-  const button = block?.querySelector("[data-fls-showmore-button]");
-  if (content && button) {
-    const originalHeight = content.scrollHeight;
-    const maxHeight = parseInt(content.getAttribute("data-fls-showmore-content")) || 300;
-    if (originalHeight <= maxHeight) {
-      button.hidden = true;
-      return;
-    }
-    content.style.maxHeight = maxHeight + "px";
-    content.style.overflow = "hidden";
-    button.hidden = false;
-    button.addEventListener("click", () => {
-      const isOpen = content.style.maxHeight !== maxHeight + "px";
-      if (isOpen) {
-        content.style.maxHeight = maxHeight + "px";
-        button.classList.remove("open");
-      } else {
-        content.style.maxHeight = originalHeight + "px";
-        button.classList.add("open");
-      }
-    });
-  }
-});
