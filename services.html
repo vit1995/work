@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Home Page</title>
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1788783602406"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1788783602406">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-header="" class="header header--black">
+				<div class="header__container">
+					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"services"}'></include> -->
+					<div class="header__top top-header">
+						<a href="index.html" class="top-header__logo">
+							<span class="top-header__logo-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield">
+									<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+								</svg>
+							</span>
+							<div class="top-header__logo-text">
+								<b>NoxGuard</b>
+								<small>защита от коррозии</small>
+							</div>
+						</a>
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item">
+										<a href="services.html" class="menu__link">Наши услуги</a>
+									</li>
+									<li class="menu__item">
+										<a href="company.html" class="menu__link">О компании</a>
+									</li>
+									<li class="menu__item">
+										<a href="portfolio.html" class="menu__link">Портфолио</a>
+									</li>
+									<li class="menu__item">
+										<a href="contacts.html" class="menu__link">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="top-header__social">
+							<p class="top-header__social-text">Напишите нам напрямую</p>
+							<div class="top-header__social-icons">
+								<a target="_blank" href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr">
+									<picture>
+										<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/instagram.webp">
+									</picture>
+								</a>
+								<a target="_blank" href="https://t.me/adrdv25">
+									<picture>
+										<img class="top-header__social-icon" alt="Image" src="./assets/img/icon-social/telegram.webp">
+									</picture>
+								</a>
+							</div>
+						</div>
+						<div data-fls-dynamic=".menu__body, 600" class="top-header__info">
+							<p class="top-header__info-text">Звоните, мы сейчас работаем</p>
+							<a class="top-header__info-phone" href="tel:+79242424343">+7 92 42 42 43 43</a>
+							<a data-fls-popup-link="popup" class="top-header__info-button" href="#">позвоните нам</a>
+						</div>
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+					</div>
+					<!--
+как добовлять подменю
+<div class="header__menu menu">
+<nav class="menu__body">
+<ul class="menu__list">
+<li data-spollers="1200,max" class="menu__item _has-submenu">
+<a
+href="convert.html"
+type="button"
+data-spoller
+class="menu__link"
+>
+Переоборудование
+</a>
+<ul class="sub-menu">
+<li><a href="services.html">Вывоз строительного мусора</a></li>
+<li><a href="#">Вывоз старой мебели</a></li>
+<li><a href="#">Квартирный переезд</a></li>
+<li><a href="#">Офисный переезд</a></li>
+<li><a href="#">Дачный переезд</a></li>
+<li><a href="#">Перевозка мебели</a></li>
+</ul>
+</li>
+<li class="menu__item">
+<a href="order.html" class="menu__link">Заказ авто</a>
+</li>
+<li class="menu__item">
+<a href="company.html" class="menu__link">О компании</a>
+</li>
+<li class="menu__item">
+<a href="" class="menu__link">Портфолио</a>
+</li>
+<li class="menu__item">
+<a href="contacts.html" class="menu__link">Контакты</a>
+</li>
+<li class="menu__item"><a href="" class="menu__link">Блог</a></li>
+</ul>
+</nav>
+</div>
+-->
+				</div>
+			</header>
+			<!--
+============================================================
+СТРАНИЦА УСЛУГИ
+============================================================
+-->
+			<div data-fls-popup="popup" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__box">
+							<div class="popup__header">
+								<div class="popup__icon-wrapper">
+									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+									</svg>
+								</div>
+								<h2 class="popup__title">Оставить заявку</h2>
+								<p class="popup__subtitle">Заполните форму и мы перезвоним за 15 минут</p>
+							</div>
+							<form class="popup__form" data-fls-form="dev" data-fls-form-popup="popup-message" method="POST" action="sendmail/sendmail.php">
+								<div class="popup__field">
+									<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Как вас зовут?" class="popup__input input">
+								</div>
+								<div class="popup__field">
+									<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7 (___) ___-__-__" class="popup__input input">
+								</div>
+								<div class="popup__field">
+									<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Марка и модель автомобиля (например, Toyota Camry 2019)" data-fls-form-errtext="Заполните поле" class="popup__input input popup__textarea"></textarea>
+								</div>
+								<button data-fls-button="" type="submit" class="popup__button button button--arrow">
+									<span>Отправить заявку</span>
+									<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_49_641)">
+											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+										</g>
+										<defs>
+											<clipPath id="clip0_49_641">
+												<rect width="24" height="24" fill="white"></rect>
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="popup-message" aria-hidden="true" class="popup popup--success">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+							</svg>
+						</button>
+						<div data-fls-popup-content="" class="popup__box popup__box--success">
+							<div class="popup__success-icon">
+								<svg width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="30" cy="30" r="28" fill="url(#gradient)"></circle>
+									<path d="M20 30L27 37L40 23" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+									<defs>
+										<linearGradient id="gradient" x1="0" y1="0" x2="60" y2="60">
+											<stop offset="0%" stop-color="#22D3EE"></stop>
+											<stop offset="100%" stop-color="#2563EB"></stop>
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<h2 class="popup__title popup__title--success">Заявка отправлена!</h2>
+							<div class="popup__message">
+								<p class="popup__text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.</p>
+								<p class="popup__hint">⚡ Обычно перезваниваем в течение 15 минут</p>
+							</div>
+							<button data-fls-popup-close="" type="button" class="popup__button popup__button--success button">Понятно, спасибо</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<main class="page">
+				<section class="services services--catalog" id="services">
+					<div class="services__container">
+						<div data-fls-blockhead="" class="blockhead blockhead--main">
+							<span class="blockhead__subtitle">Все услуги</span>
+							<h2 class="blockhead__title">
+								Что мы предлагаем
+								<span>и сколько это стоит</span>
+							</h2>
+						</div>
+						<ul class="services__list services__list--catalog">
+							<!-- 1. Обработка днища -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-underbody-600.webp" type="image/webp">
+										<img alt="Обработка днища мастикой" loading="lazy" src="./assets/img/service-underbody.webp">
+									</picture>
+									<span class="services__item-price">от 7 000 ₽</span>
+								</div>
+								<h3 class="services__item-title">Обработка днища мастикой</h3>
+								<p class="services__item-text">
+									Плотный защитный слой в 2 слоя — устойчив к сколам, соли и влаге.
+            Основа любой антикоррозийной обработки.
+								</p>
+								<span class="services__item-tag">1 день</span>
+								<ul class="services__item-features">
+									<li>Мойка и сушка днища</li>
+									<li>Обезжиривание</li>
+									<li>Нанесение мастики в 2 слоя</li>
+									<li>Контроль толщины покрытия</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+							<!-- 2. Скрытые полости -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-cavities-600.webp" type="image/webp">
+										<img alt="Скрытые полости — воск" loading="lazy" src="./assets/img/service-cavities.webp">
+									</picture>
+									<span class="services__item-price">от 5 500 ₽</span>
+								</div>
+								<h3 class="services__item-title">Скрытые полости — воск</h3>
+								<p class="services__item-text">
+									Пороги, стойки, лонжероны и усилители. Воск вытесняет влагу и
+            блокирует ржавчину там, где её не видно.
+								</p>
+								<span class="services__item-tag">3–5 часов</span>
+								<ul class="services__item-features">
+									<li>Осмотр порогов и стоек</li>
+									<li>Очистка технологических отверстий</li>
+									<li>Закачка воска под давлением</li>
+									<li>Проверка заполнения</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+							<!-- 3. Колёсные арки -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-arches-600.webp" type="image/webp">
+										<img alt="Колёсные арки + антигравий" loading="lazy" src="./assets/img/service-arches.webp">
+									</picture>
+									<span class="services__item-price">от 4 000 ₽</span>
+								</div>
+								<h3 class="services__item-title">Колёсные арки + антигравий</h3>
+								<p class="services__item-text">
+									Усиленное покрытие от камней, песка и грязи. Самая нагруженная зона
+            — страдает при каждой поездке.
+								</p>
+								<span class="services__item-tag">2–3 часа</span>
+								<ul class="services__item-features">
+									<li>Демонтаж и установка колёс</li>
+									<li>Очистка и обезжиривание</li>
+									<li>Антигравий или мастика</li>
+									<li>Обработка подкрылков</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+							<!-- 4. Антигравийная плёнка -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-film-600.webp" type="image/webp">
+										<img alt="Антигравийная плёнка" loading="lazy" src="./assets/img/service-film.webp">
+									</picture>
+									<span class="services__item-price">от 18 000 ₽</span>
+								</div>
+								<h3 class="services__item-title">Антигравийная плёнка</h3>
+								<p class="services__item-text">
+									Прозрачная полиуретановая плёнка на капот, бампер и зеркала.
+            Защищает ЛКП от сколов и царапин.
+								</p>
+								<span class="services__item-tag">1–2 дня</span>
+								<ul class="services__item-features">
+									<li>Подготовка поверхности</li>
+									<li>Поклейка плёнки</li>
+									<li>Прогрев и фиксация</li>
+									<li>Проверка на пузыри и заломы</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+							<!-- 5. Шумоизоляция -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-soundproofing-600.webp" type="image/webp">
+										<img alt="Дополнительная шумоизоляция" loading="lazy" src="./assets/img/service-soundproofing.webp">
+									</picture>
+									<span class="services__item-price">от 25 000 ₽</span>
+								</div>
+								<h3 class="services__item-title">Дополнительная шумоизоляция</h3>
+								<p class="services__item-text">
+									Тише в салоне и меньше вибраций. Делаем вместе с антикором — одна
+            подготовка, двойная выгода.
+								</p>
+								<span class="services__item-tag">2–3 дня</span>
+								<ul class="services__item-features">
+									<li>Днище и арки</li>
+									<li>Двери и капот</li>
+									<li>Вибро- и шумопоглощение</li>
+									<li>Скидка при заказе с антикором</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+							<!-- 6. Антикор нового авто -->
+							<li class="services__item">
+								<div class="services__item-image">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/service-newcar-600.webp" type="image/webp">
+										<img alt="Антикор нового автомобиля" loading="lazy" src="./assets/img/service-newcar.webp">
+									</picture>
+									<span class="services__item-price">от 25 000 ₽</span>
+								</div>
+								<h3 class="services__item-title">Антикор нового автомобиля</h3>
+								<p class="services__item-text">
+									Обработка «с нуля»: днище, полости и арки. Идеально для нового авто
+            — ржавчина не успеет начаться.
+								</p>
+								<span class="services__item-tag">1–2 дня</span>
+								<ul class="services__item-features">
+									<li>Полный комплекс зон</li>
+									<li>Мастика + воск + антигравий</li>
+									<li>Гарантия до 3 лет</li>
+									<li>Документы для дилера</li>
+								</ul>
+								<button class="services__item-button js-open-lead">
+									Оставить заявку
+									<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+										<line x1="5" y1="12" x2="19" y2="12"></line>
+										<polyline points="12 5 19 12 12 19"></polyline>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="zones-block">
+					<div class="zones-block__inner">
+						<span class="zones-block__badge">Зоны защиты</span>
+						<h2 class="zones-block__title">
+							Где ржавеет автомобиль?
+							<span class="zones-block__highlight">Нажмите на зону</span>
+						</h2>
+						<p class="zones-block__desc">
+							Отметьте любую зону на схеме — расскажем, чем обрабатываем и сколько это
+        стоит.
+						</p>
+						<div class="zones-block__wrapper">
+							<!-- Схема с точками -->
+							<div class="zones-block__map">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/car-zones-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/car-zones-1200.webp" type="image/webp">
+									<img class="zones-block__img" alt="Схема зон обработки автомобиля" loading="lazy" src="./assets/img/car-zones.webp">
+								</picture>
+								<button class="zones-block__point" data-zone="floor" style="left: 50%; top: 63%" aria-label="Днище">
+									<span class="zones-block__dot">
+										<svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+											<polyline points="14 2 14 8 20 8"></polyline>
+											<line x1="16" y1="13" x2="8" y2="13"></line>
+											<line x1="16" y1="17" x2="8" y2="17"></line>
+											<polyline points="10 9 9 9 8 9"></polyline>
+										</svg>
+									</span>
+									<span class="zones-block__point-label">Днище</span>
+								</button>
+								<button class="zones-block__point" data-zone="cavity" style="left: 33%; top: 38%" aria-label="Скрытые полости">
+									<span class="zones-block__dot">
+										<svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M3 21h18"></path>
+											<path d="M8 21V10l-4 2V9l6-5h6l6 5v3l-4-2v11"></path>
+											<path d="M16 21V9"></path>
+										</svg>
+									</span>
+									<span class="zones-block__point-label">Полости</span>
+								</button>
+								<button class="zones-block__point" data-zone="arch" style="left: 18%; top: 51%" aria-label="Колёсные арки">
+									<span class="zones-block__dot">
+										<svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<circle cx="12" cy="12" r="10"></circle>
+										</svg>
+									</span>
+									<span class="zones-block__point-label">Арки</span>
+								</button>
+								<button class="zones-block__point" data-zone="film" style="left: 70%; top: 38%" aria-label="Антигравийная плёнка">
+									<span class="zones-block__dot">
+										<svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+											<path d="M9 12l2 2 4-4"></path>
+										</svg>
+									</span>
+									<span class="zones-block__point-label">Плёнка</span>
+								</button>
+							</div>
+							<!-- Панели с информацией -->
+							<div class="zones-block__panels">
+								<!-- Панель: Днище -->
+								<div class="zones-block__panel is-visible" data-zone-panel="floor">
+									<div class="zones-block__panel-head">
+										<span class="zones-block__icon zones-block__icon--blue">
+											<svg width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+												<polyline points="14 2 14 8 20 8"></polyline>
+												<line x1="16" y1="13" x2="8" y2="13"></line>
+												<line x1="16" y1="17" x2="8" y2="17"></line>
+												<polyline points="10 9 9 9 8 9"></polyline>
+											</svg>
+										</span>
+										<span class="zones-block__price">от 7 000 ₽</span>
+									</div>
+									<h3 class="zones-block__panel-title">Днище</h3>
+									<p class="zones-block__panel-text">
+										Мастика в 2 слоя: прочный барьер от соли, влаги и сколов. Самая
+              уязвимая зона — страдает от каждого сезона реагентов.
+									</p>
+									<ul class="zones-block__list">
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Мойка и сушка
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Обезжиривание
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Мастика в 2 слоя
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Контроль толщины
+										</li>
+									</ul>
+									<button class="zones-block__btn zones-block__btn--gradient js-open-lead">
+										Оставить заявку
+										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+											<polyline points="12 5 19 12 12 19"></polyline>
+										</svg>
+									</button>
+								</div>
+								<!-- Панель: Полости -->
+								<div class="zones-block__panel" data-zone-panel="cavity">
+									<div class="zones-block__panel-head">
+										<span class="zones-block__icon zones-block__icon--cyan">
+											<svg width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M3 21h18"></path>
+												<path d="M8 21V10l-4 2V9l6-5h6l6 5v3l-4-2v11"></path>
+												<path d="M16 21V9"></path>
+											</svg>
+										</span>
+										<span class="zones-block__price">от 5 500 ₽</span>
+									</div>
+									<h3 class="zones-block__panel-title">Скрытые полости</h3>
+									<p class="zones-block__panel-text">
+										Воск закачивается в пороги, стойки и лонжероны — вытесняет влагу и
+              блокирует ржавчину изнутри, где она незаметна.
+									</p>
+									<ul class="zones-block__list">
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Осмотр порогов и стоек
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Воск под давлением
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Заполнение лонжеронов
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Проверка проникновения
+										</li>
+									</ul>
+									<button class="zones-block__btn zones-block__btn--gradient js-open-lead">
+										Оставить заявку
+										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+											<polyline points="12 5 19 12 12 19"></polyline>
+										</svg>
+									</button>
+								</div>
+								<!-- Панель: Арки -->
+								<div class="zones-block__panel" data-zone-panel="arch">
+									<div class="zones-block__panel-head">
+										<span class="zones-block__icon zones-block__icon--violet">
+											<svg width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<circle cx="12" cy="12" r="10"></circle>
+											</svg>
+										</span>
+										<span class="zones-block__price">от 4 000 ₽</span>
+									</div>
+									<h3 class="zones-block__panel-title">Колёсные арки</h3>
+									<p class="zones-block__panel-text">
+										Антигравийное покрытие против камней, песка и грязи — там, где
+              кузов страдает при каждой поездке.
+									</p>
+									<ul class="zones-block__list">
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Демонтаж колёс
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Очистка и обезжиривание
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Нанесение антигравия
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Установка колёс
+										</li>
+									</ul>
+									<button class="zones-block__btn zones-block__btn--gradient js-open-lead">
+										Оставить заявку
+										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+											<polyline points="12 5 19 12 12 19"></polyline>
+										</svg>
+									</button>
+								</div>
+								<!-- Панель: Плёнка -->
+								<div class="zones-block__panel" data-zone-panel="film">
+									<div class="zones-block__panel-head">
+										<span class="zones-block__icon zones-block__icon--green">
+											<svg width="25" height="25" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+												<path d="M9 12l2 2 4-4"></path>
+											</svg>
+										</span>
+										<span class="zones-block__price">от 18 000 ₽</span>
+									</div>
+									<h3 class="zones-block__panel-title">Антигравийная плёнка</h3>
+									<p class="zones-block__panel-text">
+										Прозрачная полиуретановая плёнка на бампер и капот — защищает
+              краску от сколов и царапин.
+									</p>
+									<ul class="zones-block__list">
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Подготовка поверхности
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Поклейка плёнки
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Прогрев и фиксация
+										</li>
+										<li>
+											<svg width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+												<polyline points="20 6 9 17 4 12"></polyline>
+											</svg>
+											Проверка на пузыри
+										</li>
+									</ul>
+									<button class="zones-block__btn zones-block__btn--gradient js-open-lead">
+										Оставить заявку
+										<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+											<polyline points="12 5 19 12 12 19"></polyline>
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--
+============================================================
+ПРАЙС-ЛИСТ
+============================================================
+-->
+				<section class="price" id="prices">
+					<div class="price__container">
+						<div class="price__header">
+							<div class="price__header-left">
+								<span class="price__badge">Прайс-лист</span>
+								<h2 class="price__title">Цены на популярные услуги</h2>
+							</div>
+							<span class="price__note-label">*цены ориентировочные</span>
+						</div>
+						<ul class="price__list">
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">01</span>
+									<div class="price__row-text">
+										<b>Обработка днища</b>
+										<small>мастика, 2 слоя</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 7 000 ₽</span>
+							</li>
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">02</span>
+									<div class="price__row-text">
+										<b>Скрытые полости</b>
+										<small>воск / мастика</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 5 500 ₽</span>
+							</li>
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">03</span>
+									<div class="price__row-text">
+										<b>Колёсные арки + антигравий</b>
+										<small>антигравий / мастика</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 4 000 ₽</span>
+							</li>
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">04</span>
+									<div class="price__row-text">
+										<b>Антигравийная плёнка</b>
+										<small>капот + бампер + зеркала</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 18 000 ₽</span>
+							</li>
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">05</span>
+									<div class="price__row-text">
+										<b>Антикор нового авто (комплекс)</b>
+										<small>мастика + воск + арки</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 25 000 ₽</span>
+							</li>
+							<li class="price__row">
+								<div class="price__row-info">
+									<span class="price__row-num">06</span>
+									<div class="price__row-text">
+										<b>Шумоизоляция (комплекс)</b>
+										<small>днище + арки + двери</small>
+									</div>
+								</div>
+								<span class="price__row-price">от 25 000 ₽</span>
+							</li>
+						</ul>
+						<p class="price__note">
+							В цену входят мойка, подготовка и гарантия. Точная стоимость — после
+        бесплатного осмотра мастера.
+						</p>
+					</div>
+				</section>
+				<!--
+============================================================
+КАК МЫ РАБОТАЕМ (ЭТАПЫ)
+============================================================
+-->
+				<section class="section section--steps">
+					<div class="section__container">
+						<span class="section__badge">Процесс</span>
+						<h2 class="section__title">Как проходит работа</h2>
+						<div class="steps">
+							<div class="grid grid--4">
+								<div class="step">
+									<span class="step__num">01</span>
+									<h3>Заявка и осмотр</h3>
+									<p>
+										Оставляете заявку, мастер бесплатно осматривает авто и оценивает
+              состояние.
+									</p>
+								</div>
+								<div class="step">
+									<span class="step__num">02</span>
+									<h3>Расчёт и договор</h3>
+									<p>Называем точную стоимость и сроки, фиксируем всё в договоре.</p>
+								</div>
+								<div class="step">
+									<span class="step__num">03</span>
+									<h3>Обработка</h3>
+									<p>
+										Моем, сушим, обезжириваем и наносим составы по технологии
+              производителя.
+									</p>
+								</div>
+								<div class="step">
+									<span class="step__num">04</span>
+									<h3>Выдача и гарантия</h3>
+									<p>
+										Показываем результат, выдаём документы и гарантийный талон до 3
+              лет.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="banner banner--grad">
+							<div>
+								<h3>Не знаете, что подойдёт вашему авто?</h3>
+								<p>
+									Позвоните или оставьте заявку — мастер подскажет оптимальный состав
+            и рассчитает стоимость.
+								</p>
+							</div>
+							<button class="banner__btn btn btn--white js-open-lead">
+								Оставить заявку
+								<svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<line x1="5" y1="12" x2="19" y2="12"></line>
+									<polyline points="12 5 19 12 12 19"></polyline>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</section>
+				<!--
+============================================================
+СТАТИСТИКА
+============================================================
+-->
+				<section class="stats">
+					<div class="stats__container">
+						<div class="stats__body">
+							<div class="stats__info">
+								<span class="stats__badge">Почему мы</span>
+								<h2 class="stats__title">
+									Почему нам можно
+									<span class="stats__title-highlight">доверить машину</span>
+								</h2>
+								<p class="stats__text">
+									Используем только сертифицированные составы — Noxudol, Mercasol и
+            Dinitrol — и выдаём гарантию на все виды работ. Работаем с
+            физическими и юридическими лицами, в том числе по 44-ФЗ.
+								</p>
+								<ul class="stats__list">
+									<li>Договор и полный пакет документов</li>
+									<li>Гарантия на работы до 3 лет</li>
+									<li>Работаем по всей России</li>
+									<li>Выезд мастера на осмотр</li>
+								</ul>
+								<a class="stats__link" href="company.html">Подробнее о компании</a>
+							</div>
+							<ul class="stats__numbers">
+								<li class="stats__number">
+									<span class="stats__number-value">10 лет</span>
+									<span class="stats__number-label">на рынке</span>
+								</li>
+								<li class="stats__number">
+									<span class="stats__number-value">5000+</span>
+									<span class="stats__number-label">авто обработано</span>
+								</li>
+								<li class="stats__number">
+									<span class="stats__number-value">70</span>
+									<span class="stats__number-label">филиалов по стране</span>
+								</li>
+								<li class="stats__number">
+									<span class="stats__number-value">95</span>
+									<span class="stats__number-label">специалистов в штате</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!--
+============================================================
+CTA / ЗАЯВКА
+============================================================
+-->
+				<section data-fls-cta="" class="cta">
+					<div class="cta__container">
+						<div class="cta__body">
+							<div class="cta__text">
+								<span class="cta__icon"></span>
+								<h2 class="cta__title">Расскажем об обработке именно вашего авто</h2>
+								<p class="cta__subtitle">
+									Оставьте контакты — подскажем оптимальный состав, сроки и точную
+          стоимость по вашей машине.
+								</p>
+							</div>
+							<form class="cta__form">
+								<input class="cta__input" type="text" name="name" placeholder="Имя" required>
+								<input class="cta__input" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+								<textarea class="cta__input cta__input--textarea" name="text" rows="2" placeholder="Сообщение"></textarea>
+								<button class="cta__button">Оставить заявку</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" class="footer">
+				<div class="footer__container">
+					<div data-fls-spollers="992,max" class="footer__contact">
+						<details class="footer__contact-body">
+							<summary class="footer__contact-title">Контакты:</summary>
+							<div class="footer__contact-content">
+								<div class="footer__contact-block">
+									<div class="footer__contact-item">
+										<div class="footer__contact-name">Почта:</div>
+										<div class="footer__contact-link">
+											<i class="--icon-arrow-right-2"></i>
+											<a href="mailto:ADR-OOO@yandex.ru" class="footer__contact-link">ADR-OOO@yandex.ru</a>
+										</div>
+									</div>
+									<div class="footer__contact-item">
+										<div class="footer__contact-name">Телефон:</div>
+										<div class="footer__contact-link">
+											<i class="--icon-arrow-right-2"></i>
+											<a href="tel:79242424343" class="footer__contact-link">+7 92 42 42 43 43</a>
+										</div>
+									</div>
+									<ul class="footer__contact-mess">
+										<li>
+											<a href="https://t.me/adrdv25" target="_blank">
+												<picture>
+													<img alt="Telegram" src="./assets/img/icon-social/telegram.webp">
+												</picture>
+												<span>Telegram</span>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/adr_dv125?igsh=OXJ0dWt4N2xlNGcw&utm_source=qr" target="_blank">
+												<picture>
+													<img alt="Vk" src="./assets/img/icon-social/instagram.webp">
+												</picture>
+												<span>instagram</span>
+											</a>
+										</li>
+									</ul>
+									<a data-fls-popup-link="popup" class="footer__button footer__button--icon-arrow-right-2" href="#">Заказать консультацию</a>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div class="footer__bottom bottom-footer">
+						<div class="bottom-footer__info">
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">Наименование:</span>
+								<span class="bottom-footer__info-text">ООО «АДР-ДВ»</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">Юридический адрес:</span>
+								<span class="bottom-footer__info-text">690105, Россия, Приморский край, г Владивосток, ул. Бородинская, д. 26, офис 8</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">ИНН:</span>
+								<span class="bottom-footer__info-text">2543185502</span>
+							</div>
+						</div>
+						<div class="bottom-footer__info">
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">ОГРН:</span>
+								<span class="bottom-footer__info-text">1242500015504</span>
+							</div>
+							<div class="bottom-footer__info-item">
+								<span class="bottom-footer__info-title">КПП:</span>
+								<span class="bottom-footer__info-text">254301001</span>
+							</div>
+							<a class="bottom-footer__info-policy" href="#">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
