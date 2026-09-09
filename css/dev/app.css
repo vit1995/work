@@ -8229,7 +8229,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .price {
     padding-bottom: 0.9375rem;
   }
-  .services--catalog {
+  .services-catalog {
     padding-top: 6.25rem;
   }
   .portfolio-hero {
@@ -8497,7 +8497,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .price {
     padding-bottom: clamp( 0.9375rem , 0.14204545454375rem  +  3.9772727273vw , 3.125rem );
   }
-  .services--catalog {
+  .services-catalog {
     padding-top: clamp( 6.25rem , 5.56818181818125rem  +  3.4090909091vw , 8.125rem );
   }
   .portfolio-hero {
@@ -8818,7 +8818,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .price {
     padding-bottom: 3.125rem;
   }
-  .services--catalog {
+  .services-catalog {
     padding-top: 8.125rem;
   }
   .portfolio-hero {
