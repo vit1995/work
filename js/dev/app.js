@@ -12664,3 +12664,25 @@ if (galleries.length) {
   });
 }
 window.addEventListener("load", initGallery());
+document.addEventListener("DOMContentLoaded", () => {
+  const filtersContainer = document.querySelector(".blog-list__filters");
+  const articlesGrid = document.querySelector(".blog-list__grid");
+  const articles = articlesGrid.querySelectorAll(".blog-card");
+  if (filtersContainer && articlesGrid && articles.length > 0) {
+    filtersContainer.addEventListener("click", (event) => {
+      const target = event.target.closest(".blog-list__filter-btn");
+      if (!target) return;
+      filtersContainer.querySelector(".is-active")?.classList.remove("is-active");
+      target.classList.add("is-active");
+      const filter = target.dataset.filter;
+      articles.forEach((article) => {
+        const category = article.dataset.category;
+        if (filter === "all" || filter === category) {
+          article.style.display = "";
+        } else {
+          article.style.display = "none";
+        }
+      });
+    });
+  }
+});
