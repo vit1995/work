@@ -12049,82 +12049,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 50);
     });
   });
-  loadMoreBtn.addEventListener("click", () => {
-    const visibleItems = getVisibleItems();
-    const startIndex = visibleCount;
-    visibleCount += itemsPerPage;
-    if (visibleCount > visibleItems.length) {
-      visibleCount = visibleItems.length;
-    }
-    for (let i = startIndex; i < visibleCount && i < visibleItems.length; i++) {
-      const item = visibleItems[i];
-      item.style.display = "";
-      item.style.animation = "none";
-      item.offsetHeight;
-      item.style.animation = `portfolioFadeIn 0.4s ease forwards`;
-      item.style.animationDelay = `${(i - startIndex) * 0.08}s`;
-    }
-    if (visibleCount >= visibleItems.length) {
-      loadMoreWrap.style.display = "none";
-    }
-  });
-  updateVisibility();
-  const lightbox = document.createElement("div");
-  lightbox.className = "portfolio-lightbox";
-  lightbox.innerHTML = `
-        <button class="portfolio-lightbox__close">✕</button>
-        <button class="portfolio-lightbox__nav prev">‹</button>
-        <button class="portfolio-lightbox__nav next">›</button>
-        <div class="portfolio-lightbox__content">
-            <img src="" alt="Просмотр фото" />
-        </div>
-    `;
-  document.body.appendChild(lightbox);
-  const lightboxImg = lightbox.querySelector("img");
-  const closeBtn = lightbox.querySelector(".portfolio-lightbox__close");
-  const prevBtn = lightbox.querySelector(".prev");
-  const nextBtn = lightbox.querySelector(".next");
-  let currentIndex = 0;
-  let galleryItems = [];
-  document.querySelectorAll(".portfolio-gallery__link[data-lightbox]").forEach((link) => {
-    galleryItems.push(link);
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      currentIndex = galleryItems.indexOf(link);
-      openLightbox(link.href);
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener("click", () => {
+      const visibleItems = getVisibleItems();
+      const startIndex = visibleCount;
+      visibleCount += itemsPerPage;
+      if (visibleCount > visibleItems.length) {
+        visibleCount = visibleItems.length;
+      }
+      for (let i = startIndex; i < visibleCount && i < visibleItems.length; i++) {
+        const item = visibleItems[i];
+        item.style.display = "";
+        item.style.animation = "none";
+        item.offsetHeight;
+        item.style.animation = `portfolioFadeIn 0.4s ease forwards`;
+        item.style.animationDelay = `${(i - startIndex) * 0.08}s`;
+      }
+      if (visibleCount >= visibleItems.length) {
+        loadMoreWrap.style.display = "none";
+      }
     });
-  });
-  function openLightbox(src) {
-    lightboxImg.src = src;
-    lightbox.classList.add("active");
-    document.body.style.overflow = "hidden";
   }
-  function closeLightbox() {
-    lightbox.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-  function navigateLightbox(direction) {
-    let newIndex = currentIndex + direction;
-    while (newIndex >= 0 && newIndex < galleryItems.length && galleryItems[newIndex].closest(".portfolio-gallery__item")?.classList.contains("hidden")) {
-      newIndex += direction;
-    }
-    if (newIndex >= 0 && newIndex < galleryItems.length && !galleryItems[newIndex].closest(".portfolio-gallery__item")?.classList.contains("hidden")) {
-      currentIndex = newIndex;
-      openLightbox(galleryItems[currentIndex].href);
-    }
-  }
-  closeBtn.addEventListener("click", closeLightbox);
-  prevBtn.addEventListener("click", () => navigateLightbox(-1));
-  nextBtn.addEventListener("click", () => navigateLightbox(1));
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("active")) return;
-    if (e.key === "Escape") closeLightbox();
-    if (e.key === "ArrowLeft") navigateLightbox(-1);
-    if (e.key === "ArrowRight") navigateLightbox(1);
-  });
+  updateVisibility();
 });
 function digitsCounter() {
   function digitsCountersInit(digitsCountersItems) {
