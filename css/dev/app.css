@@ -3309,7 +3309,7 @@ body::after {
 .popup__body--project {
   max-width: 58.75rem;
   width: 100%;
-  padding: 0;
+  padding: 0rem !important;
   background: #fff;
   border-radius: var(--radius);
   overflow: hidden;
