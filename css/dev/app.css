@@ -2592,9 +2592,6 @@ textarea.input {
 .blog-hero {
   background: var(--bg);
 }
-.blog-hero__container {
-  max-width: 48.75rem;
-}
 .blog-hero__badge {
   display: inline-flex;
   align-items: center;
@@ -2801,79 +2798,10 @@ textarea.input {
 }
 
 /* ============================================================
-   БЛОГ — FAQ
-   ============================================================ */
-.blog-faq {
-  background: var(--bg);
-}
-.blog-faq__container {
-  max-width: 53.75rem;
-}
-.blog-faq__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.blog-faq__item {
-  background: #fff;
-  border: 0.0625rem solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 0.25rem 1.375rem;
-}
-.blog-faq__item[open] {
-  box-shadow: var(--shadow-sm);
-}
-.blog-faq__item[open] .blog-faq__question::before {
-  transform: rotate(45deg);
-}
-.blog-faq__question {
-  position: relative;
-  list-style: none;
-  cursor: pointer;
-  padding: 1.125rem 2.5rem 1.125rem 0;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--secondary);
-}
-.blog-faq__question::-webkit-details-marker {
-  display: none;
-}
-.blog-faq__question::before {
-  content: "+";
-  position: absolute;
-  right: 0.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.375rem;
-  font-weight: 400;
-  color: var(--primary);
-  transition: transform 0.2s;
-  line-height: 1;
-}
-.blog-faq__answer {
-  padding: 0 0 1.25rem;
-  color: var(--muted);
-  font-size: 0.9375rem;
-  line-height: 1.65;
-}
-.blog-faq__answer p {
-  margin: 0;
-}
-.blog-faq__answer a {
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-/* ============================================================
    СТАТЬЯ БЛОГА — общие стили для всех article-*
    ============================================================ */
 .article-hero {
   background: var(--bg);
-}
-.article-hero__container {
-  max-width: 48.75rem;
 }
 .article-hero__meta {
   display: flex;
@@ -2914,15 +2842,14 @@ textarea.input {
   color: var(--muted);
   margin: 0;
 }
-.article-media__container {
-  max-width: 56.25rem;
-}
 .article-media img {
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   display: block;
+  object-fit: cover;
+  aspect-ratio: 2/1;
 }
 .article-media figcaption {
   margin-top: 0.75rem;
@@ -2934,7 +2861,7 @@ textarea.input {
   display: grid;
   grid-template-columns: minmax(0, 43.75rem) 1fr;
   gap: 3.75rem;
-  max-width: 58.75rem;
+  position: relative;
 }
 .article-body__content {
   font-size: 1.0625rem;
@@ -4947,6 +4874,7 @@ PORTFOLIO PAGE - БЕСШОВНАЯ MASONRY СЕТКА
   display: block;
   min-height: 25rem;
   object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 [data-fls-beforeafter-after] {
@@ -4965,6 +4893,7 @@ PORTFOLIO PAGE - БЕСШОВНАЯ MASONRY СЕТКА
   top: 0;
   right: 0;
   width: auto;
+  aspect-ratio: 1/1;
   min-height: 25rem;
   object-fit: cover;
 }
@@ -5199,9 +5128,6 @@ PORTFOLIO PAGE - БЕСШОВНАЯ MASONRY СЕТКА
   max-width: 30rem;
   margin: 0;
 }
-.calc__body {
-  padding: 1.625rem 2.5rem 1.875rem;
-}
 .calc__progress {
   margin-bottom: 1.5rem;
 }
@@ -5244,7 +5170,6 @@ PORTFOLIO PAGE - БЕСШОВНАЯ MASONRY СЕТКА
   display: flex;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-top: 1.5rem;
 }
 .calc__btn {
   display: inline-flex;
@@ -8306,6 +8231,9 @@ CONTACTS PAGE
   .--spoller-init .footer__menu-title.--spoller-active::after {
     transform: rotate(40deg);
   }
+  .article-body__container {
+    grid-template-columns: 1fr;
+  }
   .zones-block__wrapper {
     grid-template-columns: 1fr;
   }
@@ -8400,12 +8328,6 @@ CONTACTS PAGE
   .company-form__button {
     width: 100%;
     justify-content: center;
-  }
-}
-@media (max-width: 56.25rem){
-  .article-body__container {
-    grid-template-columns: 1fr;
-    gap: 1.875rem;
   }
 }
 @media (max-width: 53.75rem){
@@ -8550,9 +8472,6 @@ CONTACTS PAGE
   }
   .calc__sub {
     font-size: 0.875rem;
-  }
-  .calc__body {
-    padding: 1.25rem;
   }
   .calc-options {
     grid-template-columns: repeat(2, 1fr);
@@ -9034,14 +8953,8 @@ CONTACTS PAGE
   .calc__title {
     font-size: 1.25rem;
   }
-  .calc__body {
-    padding: 1rem;
-  }
   .calc__steps {
     min-height: 17.5rem;
-  }
-  .calc__nav {
-    flex-direction: column-reverse;
   }
   .calc__btn {
     width: 100%;
@@ -9122,6 +9035,9 @@ CONTACTS PAGE
   }
   .portfolio-gallery__grid {
     grid-template-columns: repeat(auto-fill, minmax(8.125rem, 1fr));
+  }
+  .calc__nav {
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 20em){
@@ -9230,12 +9146,6 @@ CONTACTS PAGE
   .blog-list {
     padding-bottom: 1.875rem;
   }
-  .blog-faq {
-    padding-top: 1.25rem;
-  }
-  .blog-faq {
-    padding-bottom: 2.1875rem;
-  }
   .article-hero {
     padding-top: 7.5rem;
   }
@@ -9322,6 +9232,12 @@ CONTACTS PAGE
   }
   .before-after__info .before-after__details .before-after__detail:not(:last-child)::after {
     margin-left: 0.5rem;
+  }
+  .calc__body {
+    padding: 0.9375rem;
+  }
+  .calc__nav {
+    padding: 0.9375rem;
   }
   .hero {
     padding-top: 3.125rem;
@@ -9555,12 +9471,6 @@ CONTACTS PAGE
   .blog-list {
     padding-bottom: clamp( 1.875rem , 1.19318181818125rem  +  3.4090909091vw , 3.75rem );
   }
-  .blog-faq {
-    padding-top: clamp( 1.25rem , 0.79545454545625rem  +  2.2727272727vw , 2.5rem );
-  }
-  .blog-faq {
-    padding-bottom: clamp( 2.1875rem , 1.39204545454375rem  +  3.9772727273vw , 4.375rem );
-  }
   .article-hero {
     padding-top: clamp( 7.5rem , 6.93181818181875rem  +  2.8409090909vw , 9.0625rem );
   }
@@ -9647,6 +9557,12 @@ CONTACTS PAGE
   }
   .before-after__info .before-after__details .before-after__detail:not(:last-child)::after {
     margin-left: clamp( 0.5rem , 0.34090909090625rem  +  0.7954545455vw , 0.9375rem );
+  }
+  .calc__body {
+    padding: clamp( 0.9375rem , 0.48295454545625rem  +  2.2727272727vw , 2.1875rem );
+  }
+  .calc__nav {
+    padding: clamp( 0.9375rem , 0.48295454545625rem  +  2.2727272727vw , 2.1875rem );
   }
   .hero {
     padding-top: clamp( 3.125rem , 0.852272727275rem  +  11.3636363636vw , 9.375rem );
@@ -9785,6 +9701,13 @@ CONTACTS PAGE
 		-o-transition: border-color 0.25s ease;
 		transition: border-color 0.25s ease;
 	}
+}
+@media (min-width: 61.99875em){
+  .article-sidebar {
+    position: sticky;
+    top: 1.25rem;
+    align-self: flex-start;
+  }
 }
 @media (min-width: 75rem){
   .menu__item {
@@ -9933,12 +9856,6 @@ CONTACTS PAGE
   .blog-list {
     padding-bottom: 3.75rem;
   }
-  .blog-faq {
-    padding-top: 2.5rem;
-  }
-  .blog-faq {
-    padding-bottom: 4.375rem;
-  }
   .article-hero {
     padding-top: 9.0625rem;
   }
@@ -10025,6 +9942,12 @@ CONTACTS PAGE
   }
   .before-after__info .before-after__details .before-after__detail:not(:last-child)::after {
     margin-left: 0.9375rem;
+  }
+  .calc__body {
+    padding: 2.1875rem;
+  }
+  .calc__nav {
+    padding: 2.1875rem;
   }
   .hero {
     padding-top: 9.375rem;

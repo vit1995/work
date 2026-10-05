@@ -12414,6 +12414,25 @@ document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", (
     state.step = step;
     updateUI();
   }
+  function fillHiddenFields() {
+    const price = calcPrice();
+    const bodyInput = document.getElementById("calc-input-body");
+    const ageInput = document.getElementById("calc-input-age");
+    const zonesInput = document.getElementById("calc-input-zones");
+    const priceInput = document.getElementById("calc-input-price");
+    const textInput = document.getElementById("calc-input-text");
+    const bodyName = NAMES[state.body] || "—";
+    const ageName = NAMES[state.age] || "—";
+    const zonesName = state.zones.map((z) => NAMES[z]).join(", ") || "не выбраны";
+    const priceText = "от " + price.toLocaleString("ru-RU") + " BYN";
+    if (bodyInput) bodyInput.value = bodyName;
+    if (ageInput) ageInput.value = ageName;
+    if (zonesInput) zonesInput.value = zonesName;
+    if (priceInput) priceInput.value = priceText;
+    if (textInput) {
+      textInput.value = "Расчёт калькулятора: тип кузова — " + bodyName + "; возраст — " + ageName + "; зоны обработки — " + zonesName + "; предварительная цена — " + priceText + ".";
+    }
+  }
   function updateUI() {
     const isResult = state.step === 4;
     const progress = document.getElementById("calc-progress");
@@ -12433,9 +12452,7 @@ document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", (
       3: "Что обрабатываем? Можно несколько",
       4: "Ваш расчёт готов"
     };
-    if (hint) {
-      hint.textContent = labels[state.step] || "";
-    }
+    if (hint) hint.textContent = labels[state.step] || "";
     if (prevBtn) {
       prevBtn.style.visibility = state.step === 1 ? "hidden" : "visible";
     }
@@ -12453,9 +12470,13 @@ document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", (
       if (totalPrice) {
         totalPrice.textContent = "от " + price.toLocaleString("ru-RU") + " BYN";
       }
-      document.getElementById("calc-summary-body").textContent = NAMES[state.body] || "—";
-      document.getElementById("calc-summary-age").textContent = NAMES[state.age] || "—";
-      document.getElementById("calc-summary-zones").textContent = state.zones.map((z) => NAMES[z]).join(", ") || "не выбраны";
+      const sumBody = document.getElementById("calc-summary-body");
+      const sumAge = document.getElementById("calc-summary-age");
+      const sumZones = document.getElementById("calc-summary-zones");
+      if (sumBody) sumBody.textContent = NAMES[state.body] || "—";
+      if (sumAge) sumAge.textContent = NAMES[state.age] || "—";
+      if (sumZones) sumZones.textContent = state.zones.map((z) => NAMES[z]).join(", ") || "не выбраны";
+      fillHiddenFields();
     }
   }
   function init() {
@@ -12476,66 +12497,47 @@ document.querySelector("[data-fls-watcher]") ? window.addEventListener("load", (
           } else {
             state.zones.push(id);
           }
-          console.log("Зоны:", state.zones);
         } else {
           const parent = this.closest(".calc-options");
           parent.querySelectorAll(".calc-option").forEach((el) => el.classList.remove("is-selected"));
           this.classList.add("is-selected");
           if (currentStep === 1) {
             state.body = id;
-            console.log("Кузов:", state.body);
           } else if (currentStep === 2) {
             state.age = id;
-            console.log("Возраст:", state.age);
           }
         }
       });
     });
-    document.getElementById("calc-next").addEventListener("click", function() {
-      const currentStep = state.step;
-      if (currentStep === 1 && !state.body) {
-        alert("Выберите тип кузова");
-        return;
-      }
-      if (currentStep === 2 && !state.age) {
-        alert("Выберите возраст автомобиля");
-        return;
-      }
-      if (currentStep === 3 && state.zones.length === 0) {
-        alert("Выберите хотя бы одну зону");
-        return;
-      }
-      if (currentStep === 3) {
-        showStep(4);
-      } else {
-        showStep(currentStep + 1);
-      }
-    });
-    document.getElementById("calc-prev").addEventListener("click", function() {
-      if (state.step > 1) {
-        showStep(state.step - 1);
-      }
-    });
-    document.getElementById("calc-lead-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = this.querySelector('[name="name"]').value.trim();
-      const phone = this.querySelector('[name="phone"]').value.trim();
-      if (!name || !phone) {
-        alert("Заполните имя и телефон");
-        return;
-      }
-      const data = {
-        name,
-        phone,
-        price: "от " + calcPrice().toLocaleString("ru-RU") + " BYN",
-        body: NAMES[state.body] || "—",
-        age: NAMES[state.age] || "—",
-        zones: state.zones.map((z) => NAMES[z]).join(", ") || "не выбраны"
-      };
-      console.log("Заявка:", data);
-      alert("Спасибо! Расчёт отправлен. Перезвоним в течение 15 минут.");
-      this.reset();
-    });
+    const nextBtn = document.getElementById("calc-next");
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function() {
+        const currentStep = state.step;
+        if (currentStep === 1 && !state.body) {
+          alert("Выберите тип кузова");
+          return;
+        }
+        if (currentStep === 2 && !state.age) {
+          alert("Выберите возраст автомобиля");
+          return;
+        }
+        if (currentStep === 3 && state.zones.length === 0) {
+          alert("Выберите хотя бы одну зону");
+          return;
+        }
+        if (currentStep === 3) {
+          showStep(4);
+        } else {
+          showStep(currentStep + 1);
+        }
+      });
+    }
+    const prevBtn = document.getElementById("calc-prev");
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function() {
+        if (state.step > 1) showStep(state.step - 1);
+      });
+    }
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
