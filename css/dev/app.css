@@ -3146,6 +3146,9 @@ body::after {
   color: var(--text);
   transform: rotate(90deg);
 }
+.popup__box--project {
+  padding: 0rem;
+}
 .popup__box--success {
   text-align: center;
   padding: 3.125rem 1.875rem 2.5rem;
