@@ -9170,7 +9170,7 @@ CONTACTS PAGE
   .article-related {
     padding-bottom: 2.1875rem;
   }
-  .popup__box {
+  [data-fls-popup-body] {
     padding: 0.9375rem;
   }
   .project-popup__info {
@@ -9495,7 +9495,7 @@ CONTACTS PAGE
   .article-related {
     padding-bottom: clamp( 2.1875rem , 1.39204545454375rem  +  3.9772727273vw , 4.375rem );
   }
-  .popup__box {
+  [data-fls-popup-body] {
     padding: clamp( 0.9375rem , 0.59659090909375rem  +  1.7045454545vw , 1.875rem );
   }
   .project-popup__info {
@@ -9880,7 +9880,7 @@ CONTACTS PAGE
   .article-related {
     padding-bottom: 4.375rem;
   }
-  .popup__box {
+  [data-fls-popup-body] {
     padding: 1.875rem;
   }
   .project-popup__info {
