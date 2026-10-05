@@ -1,6 +1,4 @@
 import "./app.min.js";
-/* empty css        */
-/* empty css              */
 document.addEventListener("DOMContentLoaded", function() {
   const points = document.querySelectorAll(".zones-block__point");
   const panels = document.querySelectorAll(".zones-block__panel");

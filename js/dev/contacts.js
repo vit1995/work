@@ -1,5 +1,4 @@
 import "./app.min.js";
-/* empty css              */
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector('[data-toggle="details"]');
   const content = document.querySelector('[data-content="details"]');
