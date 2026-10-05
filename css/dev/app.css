@@ -71,7 +71,7 @@ h6 {
 @font-face { 
 	font-family: "iconfont"; 
 	font-display: swap;
-	src: url("../assets/fonts/iconfont.woff2?ee092b29d8beda20f3c06f2f57737695") format("woff2"); 
+	src: url("C://Users/gavrik/Desktop/копия антикора , можно менять и т д/avtotwo/src/assets/svgicons/preview/iconfont.woff2?ee092b29d8beda20f3c06f2f57737695") format("woff2"); 
 } 
 [class*="--icon-"]::before{
 	font-family: iconfont; 
