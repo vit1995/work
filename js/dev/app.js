@@ -8946,7 +8946,6 @@ function initGallery() {
     lightGallery(gallery, {
       plugins: [lgZoom, lgThumbnail],
       licenseKey: KEY,
-      selector: "a",
       speed: 500,
       mobileSettings: {
         showCloseIcon: true,
