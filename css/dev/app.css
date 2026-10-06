@@ -3313,7 +3313,7 @@ body::after {
 }
 
 .popup__box--project {
-  padding: 0;
+  padding: 0rem !important;
 }
 
 .popup__body--project .popup__close {
