@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1792918029611"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1792918029611">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1792921865537"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1792921865537">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -120,10 +120,11 @@ class="menu__link"
 -->
 				</div>
 			</header>
+			<!-- ===== Заявка на заказ. Открывается кнопкой с data-fls-popup-link="popup" ===== -->
 			<div data-fls-popup="popup" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
-						<button data-fls-popup-close="" type="button" class="popup__close">
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Закрыть">
 							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
 							</svg>
@@ -131,503 +132,78 @@ class="menu__link"
 						<div data-fls-popup-content="" class="popup__box">
 							<div class="popup__header">
 								<div class="popup__icon-wrapper">
-									<svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+									<svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M8.5 9 9.6 4.6a1 1 0 0 1 .97-.6h3.86a1 1 0 0 1 .97.6L16.5 9"></path>
+										<path d="M4.2 9h15.6l-1.35 10.1a2 2 0 0 1-1.98 1.9H7.53a2 2 0 0 1-1.98-1.9L4.2 9Z"></path>
 									</svg>
 								</div>
-								<h2 class="popup__title">Оставить заявку</h2>
-								<p class="popup__subtitle">Заполните форму и мы перезвоним за 15 минут</p>
+								<h2 class="popup__title">Ваша заявка</h2>
+								<p class="popup__subtitle">Оплаты на сайте нет. Мы получим заявку и ответим вам на почту</p>
 							</div>
-							<form class="popup__form" data-fls-form-popup="popup-message" data-fls-form="ajax" method="POST" action="sendmail/sendmail.php">
+							<!-- Список выбранных товаров. Заполняет components/custom/order/order.js -->
+							<!--
+<div class="popup__order" data-fls-order-box>
+<p class="popup__order-empty" data-fls-order-empty>
+Пока ничего не выбрано. Добавьте товары кнопкой «+» в каталоге, либо отправьте заявку с комментарием.
+</p>
+<ul class="popup__order-list" data-fls-order-list></ul>
+<div class="popup__order-total" data-fls-order-totalbox hidden>
+<span>Ориентировочно</span>
+<strong><span data-fls-order-total>0</span> руб.</strong>
+</div>
+</div>
+-->
+							<form class="popup__form" data-fls-form="ajax" data-fls-form-popup="popup-message" method="POST" action="#">
 								<div class="popup__field">
-									<input required data-fls-input="" type="text" name="name" data-fls-form-errtext="Заполните поле" placeholder="Как вас зовут?" class="popup__input input">
+									<input required data-fls-input="" autocomplete="name" type="text" name="name" data-fls-form-errtext="Укажите имя" placeholder="Как вас зовут?" class="popup__input input">
 								</div>
 								<div class="popup__field">
-									<input required data-fls-input="" data-fls-input-mask="+7(99) 99-99-99-99" autocomplete="off" type="text" name="phone" data-fls-form-errtext="Заполните поле" placeholder="+7 (___) ___-__-__" class="popup__input input">
+									<input required data-fls-input="" data-fls-input-mask="+375 (99) 999-99-99" autocomplete="tel" type="tel" name="phone" data-fls-form-errtext="Укажите телефон" placeholder="+375 (__) ___-__-__" class="popup__input input">
 								</div>
 								<div class="popup__field">
-									<textarea required data-fls-input="" data-fls-input-autoheight-min="100" data-fls-input-autoheight-max="200" data-fls-input-autoheight="" autocomplete="off" name="text" placeholder="Марка и модель автомобиля (например, Toyota Camry 2019)" data-fls-form-errtext="Заполните поле" class="popup__input input popup__textarea"></textarea>
+									<input required data-fls-input="" autocomplete="email" type="email" name="email" data-fls-form-errtext="Укажите почту для ответа" placeholder="Почта для ответа" class="popup__input input">
 								</div>
+								<div class="popup__field">
+									<textarea data-fls-input="" data-fls-input-autoheight="" data-fls-input-autoheight-min="80" data-fls-input-autoheight-max="180" autocomplete="off" name="comment" placeholder="Комментарий (необязательно)" class="popup__input input popup__textarea"></textarea>
+								</div>
+								<!-- Состав заявки в JSON. Заполняется скриптом перед отправкой -->
+								<input type="hidden" name="order" data-fls-order-field="" value="">
+								<!-- Ловушка для ботов: человек это поле не видит и не заполняет -->
+								<input class="popup__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
 								<button type="submit" class="popup__button button button--arrow">
 									<span>Отправить заявку</span>
-									<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_49_641)">
-											<path d="M12 19L19 12L12 5M19 12L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-										</g>
-										<defs>
-											<clipPath id="clip0_49_641">
-												<rect width="24" height="24" fill="white"></rect>
-											</clipPath>
-										</defs>
+									<svg width="20" height="20" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<path d="M12 19L19 12L12 5M19 12L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 									</svg>
 								</button>
+								<p class="popup__note">Нажимая кнопку, вы соглашаетесь на обработку данных для ответа по заявке.</p>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- ===== Заявка отправлена ===== -->
 			<div data-fls-popup="popup-message" aria-hidden="true" class="popup popup--success">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
-						<button data-fls-popup-close="" type="button" class="popup__close">
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Закрыть">
 							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
 							</svg>
 						</button>
 						<div data-fls-popup-content="" class="popup__box popup__box--success">
 							<div class="popup__success-icon">
-								<svg width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="30" cy="30" r="28" fill="url(#gradient)"></circle>
+								<svg width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<circle cx="30" cy="30" r="28" fill="#2A471F"></circle>
 									<path d="M20 30L27 37L40 23" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-									<defs>
-										<linearGradient id="gradient" x1="0" y1="0" x2="60" y2="60">
-											<stop offset="0%" stop-color="#22D3EE"></stop>
-											<stop offset="100%" stop-color="#2563EB"></stop>
-										</linearGradient>
-									</defs>
 								</svg>
 							</div>
-							<h2 class="popup__title popup__title--success">Заявка отправлена!</h2>
+							<h2 class="popup__title popup__title--success">Заявка отправлена</h2>
 							<div class="popup__message">
-								<p class="popup__text">Спасибо за обращение! Мы свяжемся с вами в ближайшее время.</p>
-								<p class="popup__hint">⚡ Обычно перезваниваем в течение 15 минут</p>
+								<p class="popup__text">Спасибо! Мы получили заявку и ответим вам на почту.</p>
+								<p class="popup__hint">Обычно отвечаем в течение рабочего дня</p>
 							</div>
-							<button data-fls-popup-close="" type="button" class="popup__button popup__button--success button">Понятно, спасибо</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ======================= 1. BMW X5 ======================= -->
-			<div data-fls-popup="project-1" aria-hidden="true" class="popup">
-				<div data-fls-popup-wrapper="" class="popup__wrapper">
-					<div data-fls-popup-body="" class="popup__body popup__body--project">
-						<button data-fls-popup-close="" type="button" class="popup__close">
-							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--project">
-							<div class="project-popup">
-								<div class="project-popup__gallery">
-									<div data-fls-slider="" class="project-popup__slider swiper">
-										<div data-fls-gallery="" class="swiper-wrapper">
-											<a href="./assets/img/portfolio/underbody/01.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/01-600.webp" type="image/webp">
-													<img alt="BMW X5 — обработка днища, фото 1" loading="lazy" src="./assets/img/portfolio/underbody/01.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/02.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/02-600.webp" type="image/webp">
-													<img alt="BMW X5 — обработка днища, фото 1" loading="lazy" src="./assets/img/portfolio/underbody/02.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/03.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/03-600.webp" type="image/webp">
-													<img alt="BMW X5 — обработка днища, фото 1" loading="lazy" src="./assets/img/portfolio/underbody/03.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/04.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/04-600.webp" type="image/webp">
-													<img alt="BMW X5 — обработка днища, фото 1" loading="lazy" src="./assets/img/portfolio/underbody/04.webp">
-												</picture>
-											</a>
-										</div>
-										<div class="project-popup__dots swiper-pagination"></div>
-									</div>
-									<div class="project-popup__nav">
-										<button type="button" class="project-popup__arrow project-popup__arrow--prev" aria-label="Предыдущее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="15 18 9 12 15 6"></polyline>
-											</svg>
-										</button>
-										<button type="button" class="project-popup__arrow project-popup__arrow--next" aria-label="Следующее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="9 6 15 12 9 18"></polyline>
-											</svg>
-										</button>
-									</div>
-								</div>
-								<div class="project-popup__info">
-									<span class="project-popup__badge">Внедорожник</span>
-									<h3 class="project-popup__title">BMW X5</h3>
-									<p class="project-popup__service">Антикор + шумоизоляция</p>
-									<h4 class="project-popup__subhead">Что делали</h4>
-									<ul class="project-popup__list">
-										<li>Мойка и сушка днища и арок перед обработкой</li>
-										<li>Обработка днища мастикой Mercasol</li>
-										<li>Антикор скрытых полостей порогов и лонжеронов</li>
-										<li>Шумоизоляция арок и дверей</li>
-										<li>Финальный осмотр на подъёмнике</li>
-									</ul>
-									<div class="project-popup__meta">
-										<div class="project-popup__meta-item">
-											<span>Срок</span>
-											<strong>1 день</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Гарантия</span>
-											<strong>3 года</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Стоимость</span>
-											<strong>от 3000 BYN</strong>
-										</div>
-									</div>
-									<a data-fls-popup-link="popup" href="#" class="project-popup__cta">Оставить заявку на такую же обработку</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ======================= 2. Mercedes GLE ======================= -->
-			<div data-fls-popup="project-2" aria-hidden="true" class="popup">
-				<div data-fls-popup-wrapper="" class="popup__wrapper">
-					<div data-fls-popup-body="" class="popup__body popup__body--project">
-						<button data-fls-popup-close="" type="button" class="popup__close">
-							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--project">
-							<div class="project-popup">
-								<div class="project-popup__gallery">
-									<div data-fls-slider="" class="project-popup__slider swiper">
-										<div data-fls-gallery="" class="swiper-wrapper">
-											<a href="./assets/img/portfolio/arches/01.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/arches/01-600.webp" type="image/webp">
-													<img alt="Mercedes GLE — обработка арок, фото 1" loading="lazy" src="./assets/img/portfolio/arches/01.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/arches/02.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/arches/02-600.webp" type="image/webp">
-													<img alt="Mercedes GLE — обработка арок, фото 2" loading="lazy" src="./assets/img/portfolio/arches/02.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/arches/03.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/arches/03-600.webp" type="image/webp">
-													<img alt="Mercedes GLE — обработка арок, фото 3" loading="lazy" src="./assets/img/portfolio/arches/03.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/arches/04.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/arches/04-600.webp" type="image/webp">
-													<img alt="Mercedes GLE — обработка арок, фото 4" loading="lazy" src="./assets/img/portfolio/arches/04.webp">
-												</picture>
-											</a>
-										</div>
-										<div class="project-popup__dots swiper-pagination"></div>
-									</div>
-									<div class="project-popup__nav">
-										<button type="button" class="project-popup__arrow project-popup__arrow--prev" aria-label="Предыдущее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="15 18 9 12 15 6"></polyline>
-											</svg>
-										</button>
-										<button type="button" class="project-popup__arrow project-popup__arrow--next" aria-label="Следующее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="9 6 15 12 9 18"></polyline>
-											</svg>
-										</button>
-									</div>
-								</div>
-								<div class="project-popup__info">
-									<span class="project-popup__badge">Кроссовер</span>
-									<h3 class="project-popup__title">Mercedes GLE</h3>
-									<p class="project-popup__service">Антикор + антигравийная плёнка</p>
-									<h4 class="project-popup__subhead">Что делали</h4>
-									<ul class="project-popup__list">
-										<li>Полировка и обезжиривание кузовных элементов</li>
-										<li>Оклейка передней части антигравийной плёнкой</li>
-										<li>Обработка арок мастикой Noxudol</li>
-										<li>Антикор скрытых полостей воском Dinitrol</li>
-										<li>Контроль качества на финальном осмотре</li>
-									</ul>
-									<div class="project-popup__meta">
-										<div class="project-popup__meta-item">
-											<span>Срок</span>
-											<strong>1–2 дня</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Гарантия</span>
-											<strong>3 года</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Стоимость</span>
-											<strong>от 42 000 BYN</strong>
-										</div>
-									</div>
-									<a data-fls-popup-link="popup" href="#" class="project-popup__cta">Оставить заявку на такую же обработку</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ======================= 3. Audi Q7 ======================= -->
-			<div data-fls-popup="project-3" aria-hidden="true" class="popup">
-				<div data-fls-popup-wrapper="" class="popup__wrapper">
-					<div data-fls-popup-body="" class="popup__body popup__body--project">
-						<button data-fls-popup-close="" type="button" class="popup__close">
-							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--project">
-							<div class="project-popup">
-								<div class="project-popup__gallery">
-									<div data-fls-slider="" class="project-popup__slider swiper">
-										<div data-fls-gallery="" class="swiper-wrapper">
-											<a href="./assets/img/portfolio/newcar/01.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/newcar/01-600.webp" type="image/webp">
-													<img alt="Audi Q7 — комплексный антикор, фото 1" loading="lazy" src="./assets/img/portfolio/newcar/01.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/newcar/02.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/newcar/02-600.webp" type="image/webp">
-													<img alt="Audi Q7 — комплексный антикор, фото 2" loading="lazy" src="./assets/img/portfolio/newcar/02.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/newcar/03.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/newcar/03-600.webp" type="image/webp">
-													<img alt="Audi Q7 — комплексный антикор, фото 3" loading="lazy" src="./assets/img/portfolio/newcar/03.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/newcar/04.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/newcar/04-600.webp" type="image/webp">
-													<img alt="Audi Q7 — комплексный антикор, фото 4" loading="lazy" src="./assets/img/portfolio/newcar/04.webp">
-												</picture>
-											</a>
-										</div>
-										<div class="project-popup__dots swiper-pagination"></div>
-									</div>
-									<div class="project-popup__nav">
-										<button type="button" class="project-popup__arrow project-popup__arrow--prev" aria-label="Предыдущее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="15 18 9 12 15 6"></polyline>
-											</svg>
-										</button>
-										<button type="button" class="project-popup__arrow project-popup__arrow--next" aria-label="Следующее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="9 6 15 12 9 18"></polyline>
-											</svg>
-										</button>
-									</div>
-								</div>
-								<div class="project-popup__info">
-									<span class="project-popup__badge">Новый автомобиль</span>
-									<h3 class="project-popup__title">Audi Q7</h3>
-									<p class="project-popup__service">Комплексный антикор нового авто</p>
-									<h4 class="project-popup__subhead">Что делали</h4>
-									<ul class="project-popup__list">
-										<li>Диагностика заводской защиты кузова</li>
-										<li>Обработка сварных швов и скрытых полостей воском</li>
-										<li>Нанесение мастики на днище и арки</li>
-										<li>Обработка порогов изнутри</li>
-										<li>Выдача гарантии на 3 года</li>
-									</ul>
-									<div class="project-popup__meta">
-										<div class="project-popup__meta-item">
-											<span>Срок</span>
-											<strong>1 день</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Гарантия</span>
-											<strong>3 года</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Стоимость</span>
-											<strong>от 48 000 BYN</strong>
-										</div>
-									</div>
-									<a data-fls-popup-link="popup" href="#" class="project-popup__cta">Оставить заявку на такую же обработку</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ======================= 4. Toyota Land Cruiser ======================= -->
-			<div data-fls-popup="project-4" aria-hidden="true" class="popup">
-				<div data-fls-popup-wrapper="" class="popup__wrapper">
-					<div data-fls-popup-body="" class="popup__body popup__body--project">
-						<button data-fls-popup-close="" type="button" class="popup__close">
-							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--project">
-							<div class="project-popup">
-								<div class="project-popup__gallery">
-									<div data-fls-slider="" class="project-popup__slider swiper">
-										<div data-fls-gallery="" class="swiper-wrapper">
-											<a href="./assets/img/portfolio/underbody/05.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/05-600.webp" type="image/webp">
-													<img alt="Toyota Land Cruiser — защита картера, фото 1" loading="lazy" src="./assets/img/portfolio/underbody/05.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/06.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/06-600.webp" type="image/webp">
-													<img alt="Toyota Land Cruiser — защита картера, фото 2" loading="lazy" src="./assets/img/portfolio/underbody/06.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/07.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/07-600.webp" type="image/webp">
-													<img alt="Toyota Land Cruiser — защита картера, фото 3" loading="lazy" src="./assets/img/portfolio/underbody/07.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/underbody/08.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/underbody/08-600.webp" type="image/webp">
-													<img alt="Toyota Land Cruiser — защита картера, фото 4" loading="lazy" src="./assets/img/portfolio/underbody/08.webp">
-												</picture>
-											</a>
-										</div>
-										<div class="project-popup__dots swiper-pagination"></div>
-									</div>
-									<div class="project-popup__nav">
-										<button type="button" class="project-popup__arrow project-popup__arrow--prev" aria-label="Предыдущее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="15 18 9 12 15 6"></polyline>
-											</svg>
-										</button>
-										<button type="button" class="project-popup__arrow project-popup__arrow--next" aria-label="Следующее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="9 6 15 12 9 18"></polyline>
-											</svg>
-										</button>
-									</div>
-								</div>
-								<div class="project-popup__info">
-									<span class="project-popup__badge">Внедорожник</span>
-									<h3 class="project-popup__title">Toyota Land Cruiser</h3>
-									<p class="project-popup__service">Антикор + защита картера</p>
-									<h4 class="project-popup__subhead">Что делали</h4>
-									<ul class="project-popup__list">
-										<li>Мойка ходовой части и картера</li>
-										<li>Установка защиты картера двигателя</li>
-										<li>Обработка днища мастикой</li>
-										<li>Антикор арок и порогов</li>
-										<li>Обработка скрытых полостей воском</li>
-									</ul>
-									<div class="project-popup__meta">
-										<div class="project-popup__meta-item">
-											<span>Срок</span>
-											<strong>1–2 дня</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Гарантия</span>
-											<strong>3 года</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Стоимость</span>
-											<strong>от 55 000 BYN</strong>
-										</div>
-									</div>
-									<a data-fls-popup-link="popup" href="#" class="project-popup__cta">Оставить заявку на такую же обработку</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- ======================= 5. Porsche Cayenne ======================= -->
-			<div data-fls-popup="project-5" aria-hidden="true" class="popup">
-				<div data-fls-popup-wrapper="" class="popup__wrapper">
-					<div data-fls-popup-body="" class="popup__body popup__body--project">
-						<button data-fls-popup-close="" type="button" class="popup__close">
-							<svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-							</svg>
-						</button>
-						<div data-fls-popup-content="" class="popup__box popup__box--project">
-							<div class="project-popup">
-								<div class="project-popup__gallery">
-									<div data-fls-slider="" class="project-popup__slider swiper">
-										<div data-fls-gallery="" class="swiper-wrapper">
-											<a href="./assets/img/portfolio/cavities/01.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/cavities/01-600.webp" type="image/webp">
-													<img alt="Porsche Cayenne — полный антикор, фото 1" loading="lazy" src="./assets/img/portfolio/cavities/01.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/cavities/02.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/cavities/02-600.webp" type="image/webp">
-													<img alt="Porsche Cayenne — полный антикор, фото 2" loading="lazy" src="./assets/img/portfolio/cavities/02.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/cavities/03.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/cavities/03-600.webp" type="image/webp">
-													<img alt="Porsche Cayenne — полный антикор, фото 3" loading="lazy" src="./assets/img/portfolio/cavities/03.webp">
-												</picture>
-											</a>
-											<a href="./assets/img/portfolio/cavities/04.webp" class="swiper-slide">
-												<picture>
-													<source media="(max-width: 600px)" srcset="./assets/img/portfolio/cavities/04-600.webp" type="image/webp">
-													<img alt="Porsche Cayenne — полный антикор, фото 4" loading="lazy" src="./assets/img/portfolio/cavities/04.webp">
-												</picture>
-											</a>
-										</div>
-										<div class="project-popup__dots swiper-pagination"></div>
-									</div>
-									<div class="project-popup__nav">
-										<button type="button" class="project-popup__arrow project-popup__arrow--prev" aria-label="Предыдущее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="15 18 9 12 15 6"></polyline>
-											</svg>
-										</button>
-										<button type="button" class="project-popup__arrow project-popup__arrow--next" aria-label="Следующее фото">
-											<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-												<polyline points="9 6 15 12 9 18"></polyline>
-											</svg>
-										</button>
-									</div>
-								</div>
-								<div class="project-popup__info">
-									<span class="project-popup__badge">Премиум-кроссовер</span>
-									<h3 class="project-popup__title">Porsche Cayenne</h3>
-									<p class="project-popup__service">Полный антикор + шумоизоляция</p>
-									<h4 class="project-popup__subhead">Что делали</h4>
-									<ul class="project-popup__list">
-										<li>Полная мойка и сушка кузова</li>
-										<li>Обработка днища, арок и порогов мастикой</li>
-										<li>Антикор скрытых полостей воском</li>
-										<li>Шумоизоляция дверей, арок и пола</li>
-										<li>Финальная диагностика на подъёмнике</li>
-									</ul>
-									<div class="project-popup__meta">
-										<div class="project-popup__meta-item">
-											<span>Срок</span>
-											<strong>2 дня</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Гарантия</span>
-											<strong>3 года</strong>
-										</div>
-										<div class="project-popup__meta-item">
-											<span>Стоимость</span>
-											<strong>от 65 000 BYN</strong>
-										</div>
-									</div>
-									<a data-fls-popup-link="popup" href="#" class="project-popup__cta">Оставить заявку на такую же обработку</a>
-								</div>
-							</div>
+							<button data-fls-popup-close="" type="button" class="popup__button popup__button--success button">Хорошо</button>
 						</div>
 					</div>
 				</div>
@@ -961,7 +537,7 @@ class="menu__link"
 								<button class="popular__nav-btn swiper-button-next" aria-label="Вперед"></button>
 							</div>
 						</div>
-						<div class="popular__slider swiper">
+						<div data-fls-slider="" class="popular__slider swiper">
 							<div class="swiper-wrapper">
 								<!-- Карточка 1 -->
 								<div class="swiper-slide popular__slide">
@@ -1156,7 +732,7 @@ class="menu__link"
 							</div>
 						</div>
 						<!-- Слайдер отзывов -->
-						<div class="testimonials__slider swiper">
+						<div data-fls-slider="" class="testimonials__slider swiper">
 							<div class="testimonials__wrapper swiper-wrapper">
 								<!-- Отзыв 1 -->
 								<div class="testimonials__slide swiper-slide">
@@ -1315,6 +891,34 @@ class="menu__link"
 						<div class="testimonials__pagination swiper-pagination"></div>
 					</div>
 				</section>
+				<!-- ===== Как заказать ===== -->
+				<section id="how" class="how">
+					<div class="how__container">
+						<div data-fls-blockhead="" class="blockhead">
+							<span class="blockhead__subtitle">Как заказать</span>
+							<h2 class="blockhead__title">Три шага, и никакой оплаты на сайте</h2>
+						</div>
+						<ol class="how__list">
+							<li class="how__item">
+								<span class="how__num" aria-hidden="true">1</span>
+								<h3 class="how__title">Выберите продукты</h3>
+								<p class="how__text">
+									Нажмите «+» на карточках товаров. Всё выбранное соберётся в заявку, её можно менять.
+								</p>
+							</li>
+							<li class="how__item">
+								<span class="how__num" aria-hidden="true">2</span>
+								<h3 class="how__title">Оставьте контакты</h3>
+								<p class="how__text">Имя, телефон и почта. Оплачивать на сайте ничего не нужно.</p>
+							</li>
+							<li class="how__item">
+								<span class="how__num" aria-hidden="true">3</span>
+								<h3 class="how__title">Получите ответ</h3>
+								<p class="how__text">Мы ответим на вашу почту: подтвердим наличие и сумму и согласуем детали заказа.</p>
+							</li>
+						</ol>
+					</div>
+				</section>
 				<section class="cta">
 					<picture>
 						<source media="(max-width: 600px)" srcset="./assets/img/hero/01-600.webp" type="image/webp">
@@ -1432,6 +1036,77 @@ class="menu__link"
 									</svg>
 								</button>
 							</form>
+						</div>
+					</div>
+				</section>
+				<!-- ===== Вопросы ===== -->
+				<section id="faq" class="faq">
+					<div class="faq__container">
+						<div class="faq__head">
+							<div data-fls-blockhead="" class="blockhead">
+								<span class="blockhead__subtitle">Вопросы</span>
+								<h2 class="blockhead__title">Частые вопросы</h2>
+								<p class="blockhead__text">Не нашли ответ? Напишите нам, ответим в течение рабочего дня.</p>
+							</div>
+						</div>
+						<div class="faq__body">
+							<div data-fls-spollers="" data-fls-spollers-one="" class="spollers">
+								<details class="spollers__item" open>
+									<summary class="spollers__title">Как купить, если на сайте нет оплаты?</summary>
+									<div class="spollers__body">
+										<p>
+											Соберите заявку и отправьте её. Мы напишем вам на почту, подтвердим наличие и сумму и договоримся обо всём остальном. Деньги на сайте не списываются.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Чем фермерские продукты отличаются от магазинных?</summary>
+									<div class="spollers__body">
+										<p>
+											Их делают небольшими партиями, без консервантов, красителей и усилителей вкуса. Поэтому вкус ярче, а срок хранения короче и честнее.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Почему они дороже?</summary>
+									<div class="spollers__body">
+										<p>
+											Больше ручного труда, корма без промышленных закупок и малые объёмы. Вы платите за качество, а фермер получает справедливую долю.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Что происходит после отправки заявки?</summary>
+									<div class="spollers__body">
+										<p>
+											Вам приходит письмо с копией заявки, нам приходит такое же. Если какой-то позиции не окажется, предложим замену от другого хозяйства.
+										</p>
+									</div>
+								</details>
+								<details class="spollers__item">
+									<summary class="spollers__title">Что с моими данными?</summary>
+									<div class="spollers__body">
+										<p>
+											Имя, телефон и почту мы используем только для ответа по заявке и не передаём третьим лицам.
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- ===== Призыв оставить заявку ===== -->
+				<section id="order" class="cta-order">
+					<div class="cta-order__container">
+						<div class="cta-order__box">
+							<div class="cta-order__content">
+								<h2 class="cta-order__title">Готовы заказать?</h2>
+								<p class="cta-order__text">Оставьте заявку без оплаты. Мы ответим на вашу почту в течение рабочего дня.</p>
+							</div>
+							<div class="cta-order__actions">
+								<button type="button" class="cta-order__button" data-fls-popup-link="popup">Оставить заявку</button>
+								<a class="cta-order__mail" href="mailto:hello@example.by">hello@example.by</a>
+							</div>
 						</div>
 					</div>
 				</section>
