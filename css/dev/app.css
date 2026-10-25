@@ -3387,6 +3387,12 @@ body::after {
   .spollers__body {
     gap: 0.3125rem;
   }
+  .header__logo img {
+    width: 8.75rem;
+  }
+  .header__logo img {
+    height: 2.5rem;
+  }
   .menu__list {
     gap: 0.625rem;
   }
@@ -3622,6 +3628,12 @@ body::after {
   }
   .spollers__body {
     gap: clamp( 0.3125rem , -0.02840909090625rem  +  1.7045454545vw , 1.25rem );
+  }
+  .header__logo img {
+    width: clamp( 8.75rem , 7.84090909090625rem  +  4.5454545455vw , 11.25rem );
+  }
+  .header__logo img {
+    height: clamp( 2.5rem , 2.3863636363625rem  +  0.5681818182vw , 2.8125rem );
   }
   .menu__list {
     gap: clamp( 0.625rem , 0.397727272725rem  +  1.1363636364vw , 1.25rem );
@@ -3944,6 +3956,12 @@ body::after {
   }
   .spollers__body {
     gap: 1.25rem;
+  }
+  .header__logo img {
+    width: 11.25rem;
+  }
+  .header__logo img {
+    height: 2.8125rem;
   }
   .menu__list {
     gap: 1.25rem;
